@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>咖波</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            padding: 0;
+            margin: 0 auto;
+            font-family: 微軟正黑體;
+            box-sizing: border-box;
+
+        }
+
+        .liStyle {
+            width: 60px;
+            height: 60px;
+            background-image: url("img/liStyle.gif");
+            background-repeat: no-repeat;
+        }
+
+        .m-t {
+            margin-top: 15px;
+        }
+
+
+        .nav {
+            background-color: #F2DD9D;
+            width: 100%;
+            height: 84px;
+            justify-content: space-around;
+        }
+
+        .display-flex {
+            display: flex;
+
+        }
+
+        .space-between {
+            justify-content: space-between;
+        }
+
+
+        ul {
+            font-size: 20px;
+            display: flex;
+
+        }
+
+
+        li {
+            line-height: 84px;
+            margin: auto 20px;
+            list-style: none;
+
+        }
+
+        .none {
+            display: none;
+        }
+
+        li:hover .none {
+            display: inline;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+
+
+        h1 {
+            line-height: 5;
+        }
+
+        .opening {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #606060;
+            opacity: 1;
+            z-index: 9999;
+            animation-name: opening;
+            animation-delay: 1s;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
+
+        .opencoopo {
+            background-image: url("img/opening.gif");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            animation-name: opencoopo;
+            animation-fill-mode: forwards;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-image: url("img/banner.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .width50 {
+            width: 50%;
+        }
+
+        .container {
+            width: 1140px;
+            margin: auto;
+        }
+
+        .margin_auto {
+            margin: auto;
+        }
+
+        .author {
+            width: 50%;
+            height: 500px;
+            background-image: url("img/亞拉.jpg");
+            background-position: center;
+        }
+
+        .intro {
+            width: 40%;
+            line-height: 45px;
+        }
+
+
+        .parallax {
+            width: 100%;
+            height: 80vh;
+            background-attachment: fixed;
+        }
+
+        .table1 {
+            background-image: url("img/table1.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .table2 {
+            background-image: url("img/table2.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .relative {
+            position: relative;
+            height: 60vh;
+        }
+
+        .guideTop {
+            position: absolute;
+            top: 100px;
+        }
+
+        .guideBot {
+            position: absolute;
+            right: -200px;
+            bottom: 0px;
+
+        }
+
+
+
+        .swiper-container {
+            width: 500px;
+            height: 400px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -250px;
+            margin-top: -250px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: contain;
+            border-radius: 5px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 25vh;
+            background-color: #5AC9E8;
+        }
+
+        .m-t-10 {
+            margin-top: 10vh;
+        }
+        .goToTop{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #F2DD9D;
+            transition-delay: 2s;
+        }
+
+        
+
+        /* 動畫 */
+
+        @keyframes opening {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                z-index: -9999;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="opening">
+        <div class="opencoopo"></div>
+    </div>
+    <div id="top" class="nav display-flex">
+        <div class="logo">
+            <img src="img/icon_正式版.png" alt="">
+        </div>
+        <ul>
+            <li><img class="none" src="img/liStyle.gif" alt=""><a href="">咖波作者</a></li>
+            <li><img class="none" src="img/liStyle.gif" alt=""><a href="">咖波成員</a></li>
+            <li><img class="none" src="img/liStyle.gif" alt=""><a href="">咖波周邊</a></li>
+            <li><img class="none" src="img/liStyle.gif" alt=""><a href="">實體店面</a></li>
+            <li><img class="none" src="img/liStyle.gif" alt=""><a href="">合作資訊</a></li>
+
+        </ul>
+    </div>
+
+
+    <!-- 咖波圖banner -->
+
+    <div class="banner"></div>
+
+    <!-- 作者資訊 -->
+    <h1 style="text-align:center">咖波作者</h1>
+    <div class="container display-flex space-between">
+
+
+        <div class="author" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="1500">
+        </div>
+        <div class="intro" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
+            <p>亞拉是「貓貓蟲-咖波」的創作者，也是Line 2017年的十大爆紅貼圖作者之一，他的Facebook專頁坐擁近60萬fans，除了紅遍台灣本土，海外fans也佔一半。
+
+                亞拉原本修讀資訊管理相關學科，可是讀完後發覺志不在此，然後做過遊戲設計工作一年，便與朋友開設工作室接job，但收入卻不穩定。亞拉試過整個月只賺得幾千台幣，但花了5,000台幣交租後，生活已經捉襟見肘，卻仍要跟父母說「自己過得很好」。
+
+                還好喜歡畫畫的亞拉一邊返工一邊堅持創作，更在2014年創出在Facebook廣受歡迎的「貓貓蟲-咖波」，在fans的熱烈要
+                求下，他於同年10月製作出一組40張的貼圖放上Line「原創巿集」售賣，結果一炮而紅。</p>
+        </div>
+    </div>
+
+    <!-- 咖波成員 -->
+    <div class="container">
+        <h1 class="m-t100" style="text-align:center">咖波成員</h1>
+        <div class="display-flex m-t">
+            <div class="intro" data-aos="fade-down-right">
+                <h1>咖波</h1>
+                <p> 像貓又像蟲的不明物種， 平時有六隻腳，身體會伸縮不固定。
+                    看到甚麼都想吃</p>
+            </div>
+            <div class="width50" data-aos="fade-down-left">
+                <img src="img/咖波.jpg" alt="">
+
+            </div>
+        </div>
+        <div class="display-flex m-t">
+            <div class="width50" data-aos="fade-down-right">
+                <img src="img/拉拉.jpg" alt="">
+            </div>
+            <div class="width50" data-aos="fade-down-left">
+                <h1>拉拉</h1>
+                <p>收養咖波跟狗狗的主人，唯一可以制服咖波的人，咖波做蠢事時會揍他。</p>
+            </div>
+        </div>
+        <div class="display-flex m-t">
+            <div class="width50" data-aos="fade-down-right">
+                <h1>狗狗</h1>
+                <p>一隻再生能力很強的生物（連亞拉也不確定他是不是一隻狗），不管怎麼殺都會復原。個性很溫和、呆呆的，是咖波的最愛的糧食與朋友。</p>
+            </div>
+            <div class="width50" data-aos="fade-down-left">
+                <img src="img/狗狗.jpg" alt="" width="300" height="300">
+            </div>
+        </div>
+        <div class="display-flex m-t">
+            <div class="width50" data-aos="fade-down-right">
+                <img src="img/兔兔.png" alt="">
+            </div>
+            <div class="width50" data-aos="fade-down-left">
+                <h1>兔兔</h1>
+                <p>很喜歡咖波的兔子，有著抖M屬性，就算一直被吞食還是很想跟咖波在一起。</p>
+            </div>
+        </div>
+        <div class="display-flex m-t">
+            <div class="width50" data-aos="fade-down-right">
+                <h1>暴龍姊</h1>
+                <p>雖然很大隻但是很弱的母暴龍，常常被咖波搶走食物，跟咖波是好朋友。</p>
+            </div>
+            <div class="width50" data-aos="fade-down-left">
+                <img src="img/暴龍姊.jpg" alt="">
+            </div>
+        </div>
+        <div class="display-flex m-t">
+            <div class="width50" data-aos="fade-down-right">
+                <img src="img/小雞.jpg" alt="">
+            </div>
+            <div class="width50 " data-aos="fade-down-left">
+                <h1>小雞</h1>
+                <p>糧食般的存在，數量很多，吃都吃不完。</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="parallax table1 m-t-10"></div>
+
+    <!-- 漫畫輪播 -->
+    <!-- Swiper -->
+    <h1 style="text-align:center">咖波漫畫</h1>
+    <div class="container">
+
+        <div class="relative">
+            <!-- <div><img src="img/咖波漫畫.jpg" alt=""></div> -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(img/4格-1.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/4格-2.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/4格-3.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/4格-4.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/4格-5.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/4格-6.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/4格-7.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/4格-8.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(img/4格-9.jpg)"></div>
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination" style="bottom: -30px;"></div>
+                <div class="guideBot"><img src="img/漫畫可以轉哦.jpg" alt=""></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="parallax table2"></div>
+
+    <!-- 咖波周邊 -->
+    <h1 class="m-t" style="text-align:center">咖波周邊</h1>
+    <div class="container display-flex flex-wrap">
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/千萬兩娃娃.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">招財娃娃</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/卡片.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">卡片</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/娃娃100cm.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">100cm 娃娃</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/存錢筒.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">存錢筒</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/床組.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">咖波床組</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/拖鞋.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">拖鞋</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/提袋.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">提袋</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/杯蓋.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">杯蓋</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/法郎杯.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">琺瑯杯</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/玻璃吸管.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">吸管組合</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/睡衣.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">睡衣</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/紅包.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">紅包</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/運動毛巾.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">運動毛巾</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/鉛筆盒.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">造型筆戴</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/隔熱玻璃杯.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">隔熱玻璃杯</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 17rem;">
+            <img src="img/商品/頸枕.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="card-body">
+                <h5 class="card-title">咖波頸枕</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+
+    </div>
+
+    <h1 class=" m-t-10" style="text-align:center">實體店面</h1>
+
+    <div class="container">
+        <img src="/img/咖波屋.jpg" alt="" width="100%">
+        <div class="display-flex  m-t-10" style="justify-content:space-between;">
+
+            <p>咖波屋<br>
+                地址：台中市 西區模範街8巷23號<br>
+                營業時間：10:00~20:00 <br>
+                公休：星期一<br>
+                電話： 0926 047 399 <br></p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.687955358712!2d120.66532835098269!3d24.147594379325866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d75a1cf2d63%3A0x1a7802409ffebd31!2zNDAz5Y-w5Lit5biC6KW_5Y2A5qih56-E6KGXOOW3tzIz6Jmf!5e0!3m2!1szh-TW!2stw!4v1576566063583!5m2!1szh-TW!2stw"
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </div>
+
+    <div class="footer" style="margin-top: 50px;">
+        <div class="goToTop"><a href="#top"> goToTop</a></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'cube',
+            grabCursor: true,
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+
+    </script>
+</body>
+
+</html>

@@ -20,7 +20,7 @@
             margin: 0 auto;
             font-family: 微軟正黑體;
             box-sizing: border-box;
-            
+
 
         }
 
@@ -30,7 +30,7 @@
             background-image: url("img/liStyle.gif");
             background-repeat: no-repeat;
         }
-     
+
         .nav {
             background-color: #F2DD9D;
             width: 100%;
@@ -40,12 +40,19 @@
             justify-content: space-around;
         }
 
-        .display-flex {
+        .author {
             display: flex;
+            align-items: center;
         }
 
-        .space-between {
-            justify-content: space-between;
+        .member {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+        .hamburger{
+            display: none;
         }
 
         .space-around {
@@ -56,8 +63,9 @@
             justify-content: center;
         }
 
-        .container{
+        .container {
             overflow: hidden;
+            margin: 0 auto;
         }
 
         ul {
@@ -66,7 +74,8 @@
             margin: 0;
             padding: 0;
         }
-        p{
+
+        p {
             margin: 0;
         }
 
@@ -129,51 +138,37 @@
             animation-fill-mode: forwards;
         }
 
-        .banner {
-            width: 100%;
-            height: 100vh;
-            background-image: url("img/banner.jpg");
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
+
 
         .width50 {
             width: 50%;
         }
 
-        .author {
-            width: 50%;
-            height: 500px;
-            background-image: url("img/亞拉.jpg");
-            background-position: center;
-            align-items: center;
-        }
-
         .intro {
             width: 45%;
             line-height: 40px;
+            margin-left: 5%;
         }
 
-
-        .parallax {
-            width: 100%;
-            height: 50vh;
-            background-attachment: fixed;
-            
-        }
 
         .table1 {
+            width: 100%;
+            height: 50vh;
             background-image: url("img/table1.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            background-attachment: fixed;
         }
 
         .table2 {
+            width: 100%;
+            height: 50vh;
             background-image: url("img/table2.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            background-attachment: fixed;
         }
 
         .relative {
@@ -217,7 +212,7 @@
             margin-top: 10vh;
         }
 
-        .card{
+        .card {
             margin: 5px;
         }
 
@@ -254,18 +249,31 @@
         }
 
         /* RWD */
-        @media (max-width: 950px){
+        @media (max-width: 768px) {
+            .author {
+                flex-direction: column;
+            }
 
-            .mask{
+            .intro {
+                width: 100%;
+                margin: 30px 0 0 0;
+            }
+
+            .nav {
                 display: none;
             }
 
-        
+            .hamburger{
+                display: block;
+                background-color: #F2DD9D;
+            }
+            .active{
+                display: none;
+            }
 
-       
+
 
         }
-
     </style>
 </head>
 
@@ -275,97 +283,111 @@
     </div>
     <div class="nav">
         <img id="top" src="img/icon_正式版.png" alt="">
-            <ul>
-                <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                        href="A">咖波作者</a></li>
-                <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                        href="B">咖波成員</a></li>
-                <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                        href="C">咖波周邊</a></li>
-                <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                        href="D">實體店面</a></li>
-            </ul>
+        <ul>
+            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                    href="A">咖波作者</a></li>
+            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                    href="B">咖波成員</a></li>
+            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                    href="C">咖波周邊</a></li>
+            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                    href="D">實體店面</a></li>
+        </ul>
+    </div>
+
+    <div class="hamburger">
+        <img id="top" src="img/icon_正式版.png" alt="">
+        <img src="" alt="">
+        <ul class="active">
+            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                    href="A">咖波作者</a></li>
+            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                    href="B">咖波成員</a></li>
+            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                    href="C">咖波周邊</a></li>
+            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                    href="D">實體店面</a></li>
+        </ul>
+    </div>
     </div>
 
 
-    
-    
 
 
     <!-- 咖波圖banner -->
 
-    <div class="banner "></div>
+    <div class=""><img style="width: 100%;" src="img/banner.jpg" alt=""></div>
 
     <!-- 作者資訊 -->
-    <h1 id="A" style="text-align:center">咖波作者</h1>
-    <div class="container display-flex space-between">
+    <div class="container">
+        <h1 id="A" style="text-align:center">咖波作者</h1>
+        <div class="author">
+            <div class="" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+                <img style="width: 100%;max-width: 555px;" src="img/亞拉.jpg" alt="">
+            </div>
+            <div class="intro" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+                <p><strong>亞拉</strong>是「貓貓蟲-咖波」的創作者，也是Line 2017年的十大爆紅貼圖作者之一，他的Facebook專頁坐擁近60萬fans，除了紅遍台灣本土，海外fans也佔一半。
 
+                    亞拉原本修讀資訊管理相關學科，可是讀完後發覺志不在此，然後做過遊戲設計工作一年，便與朋友開設工作室接job，但收入卻不穩定。亞拉試過整個月只賺得幾千台幣，但花了5,000台幣交租後，生活已經捉襟見肘，卻仍要跟父母說「自己過得很好」。
 
-        <div class="author" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="1500">
-        </div>
-        <div class="intro" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="1500">
-            <p>亞拉是「貓貓蟲-咖波」的創作者，也是Line 2017年的十大爆紅貼圖作者之一，他的Facebook專頁坐擁近60萬fans，除了紅遍台灣本土，海外fans也佔一半。
-
-                亞拉原本修讀資訊管理相關學科，可是讀完後發覺志不在此，然後做過遊戲設計工作一年，便與朋友開設工作室接job，但收入卻不穩定。亞拉試過整個月只賺得幾千台幣，但花了5,000台幣交租後，生活已經捉襟見肘，卻仍要跟父母說「自己過得很好」。
-
-                還好喜歡畫畫的亞拉一邊返工一邊堅持創作，更在2014年創出在Facebook廣受歡迎的「貓貓蟲-咖波」，在fans的熱烈要
-                求下，他於同年10月製作出一組40張的貼圖放上Line「原創巿集」售賣，結果一炮而紅。</p>
+                    還好喜歡畫畫的亞拉一邊返工一邊堅持創作，更在2014年創出在Facebook廣受歡迎的「貓貓蟲-咖波」，在fans的熱烈要
+                    求下，他於同年10月製作出一組40張的貼圖放上Line「原創巿集」售賣，結果一炮而紅。</p>
+            </div>
         </div>
     </div>
-
     <!-- 咖波成員 -->
     <div class="container">
         <h1 class="m-t100" style="text-align:center">咖波成員</h1>
-        <div class="display-flex m-t space-around">
+        <div class="member">
             <div class="width50" data-aos="fade-up-right">
                 <h2 style="color: #5AC9E8;">咖波</h2>
                 <p> 像貓又像蟲的不明物種， 平時有六隻腳，身體會伸縮不固定。
                     看到甚麼都想吃</p>
             </div>
             <div class="" data-aos="fade-up-left">
-                <img src="img/咖波-修.png" alt="">
+                <img style="width: 100%;" src="img/咖波-修.png" alt="">
 
             </div>
         </div>
-        <div class="display-flex m-t space-around">
+        <div class="member">
             <div class="" data-aos="fade-up-right">
-                <div><img src="img/拉拉.png" alt=""></div>
+                <div><img style="width: 100%;" src="img/拉拉.png" alt=""></div>
             </div>
             <div class="width50" data-aos="fade-up-left">
                 <h2 style="color: #de7d6d;">拉拉</h2>
                 <p>收養咖波跟狗狗的主人，唯一可以制服咖波的人，咖波做蠢事時會揍他。</p>
             </div>
         </div>
-        <div class="display-flex m-t space-around">
+        <div class="member">
             <div class="width50" data-aos="fade-up-right">
                 <h2 style="color: rgb(240, 196, 65);">狗狗</h2>
                 <p>一隻再生能力很強的生物（連亞拉也不確定他是不是一隻狗），不管怎麼殺都會復原。個性很溫和、呆呆的，是咖波的最愛的糧食與朋友。</p>
             </div>
             <div class="" data-aos="fade-up-left">
-                <img src="img/狗狗.png" alt="">
+                <img style="width: 100%;" src="img/狗狗.png" alt="">
             </div>
         </div>
-        <div class="display-flex m-t space-around">
+        <div class="member">
             <div class="" data-aos="fade-up-right">
-                <img src="img/兔兔.png" alt="">
+                <img style="width: 100%;" src="img/兔兔.png" alt="">
             </div>
             <div class="width50" data-aos="fade-up-left">
                 <h2 style="color: #888787;">兔兔</h2>
                 <p>很喜歡咖波的兔子，有著抖M屬性，就算一直被吞食還是很想跟咖波在一起。</p>
             </div>
         </div>
-        <div class="display-flex m-t space-around">
+        <div class="member">
             <div class="width50" data-aos="fade-up-right">
                 <h2 style="color: #fbb0af;">暴龍姊</h2>
                 <p>雖然很大隻但是很弱的母暴龍，常常被咖波搶走食物，跟咖波是好朋友。</p>
             </div>
             <div class="" data-aos="fade-up-left">
-                <img src="img/恐龍姊.png" alt="">
+                <img style="width: 100%;" src="img/恐龍姊.png" alt="">
             </div>
         </div>
-        <div class="display-flex m-t space-around">
+        <div class="member">
             <div class="" data-aos="fade-up-right">
-                <img src="img/小雞.png" alt="">
+                <img style="width: 100%;" src="img/小雞.png" alt="">
             </div>
             <div class="width50 " data-aos="fade-up-left">
                 <h2 style="color: #fbdc36;">小雞</h2>
@@ -375,7 +397,7 @@
 
     </div>
 
-    <div class="parallax table1"></div>
+    <div class="table1"></div>
 
     <!-- 漫畫輪播 -->
     <!-- Swiper -->
@@ -397,13 +419,13 @@
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination" style="bottom: -18px;"></div>
-                <!-- <div class="guideBot"><img src="img/漫畫可以轉哦.jpg" alt=""></div> -->
+                <div class="guideBot"><img src="img/漫畫可以轉哦.jpg" alt=""></div>
             </div>
 
         </div>
     </div>
 
-    <div class="parallax table2"></div>
+    <div class="table2"></div>
 
     <!-- 咖波周邊 -->
     <h1 class="" style="text-align:center">咖波周邊</h1>
@@ -634,7 +656,7 @@
 
     <div class="container">
         <img src="img/咖波屋.jpg" alt="" width="100%">
-        <div class="display-flex  m-t-10">
+        <div class="d-flex  m-t-10">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.687955358712!2d120.66532835098269!3d24.147594379325866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d75a1cf2d63%3A0x1a7802409ffebd31!2zNDAz5Y-w5Lit5biC6KW_5Y2A5qih56-E6KGXOOW3tzIz6Jmf!5e0!3m2!1szh-TW!2stw!4v1576566063583!5m2!1szh-TW!2stw"
                 width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
@@ -649,10 +671,8 @@
 
 
     <div class="footer" style="margin-top: 50px;">
-       <p style="font-size: 12px; color: rgb(51, 51, 51);"> 本網站為學習網頁製作用途，無任何商業營利性質<br> &copy; 2019 JayLee All rights Reserved.</p>
-       <!-- <p>https://www.facebook.com/capoocat</p>
-       <p>https://www.instagram.com/bugcat_capoo/?hl=zh-tw</p>
-       <p>capoocat@gmail.com</p> -->
+        <p style="font-size: 12px; color: rgb(51, 51, 51);"> 本網站為學習網頁製作用途，無任何商業營利性質<br> &copy; 2019 JayLee All rights
+            Reserved.</p>
         <div class="goToTop"><a href="#top"><img style="width: 150px;height: 150px;" src="img/gototop-無延遲版本.gif"
                     alt=""></a></div>
 

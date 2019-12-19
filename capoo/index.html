@@ -30,15 +30,41 @@
             background-image: url("img/liStyle.gif");
             background-repeat: no-repeat;
         }
-
-        .nav {
-            background-color: #F2DD9D;
+        .nav{
             width: 100%;
-            margin: auto;
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-around;
+            height: 84px;
         }
+
+
+        .nav_Btn{
+            width: 100%;
+            display: flex;
+            background-color: #F2DD9D;
+            justify-content: space-around
+        }
+        .nav_Btn ul {
+            display: flex;
+        }
+        .hamburger{
+            width: 100%;
+            height: 84px;
+            background-color: #F2DD9D;
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9;
+        }
+        .hamburger ul{
+            position: fixed;
+            top: 84px;
+            left: 200px;
+        }
+
+        .mobile {
+            display: none;
+        }
+        
 
         .author {
             display: flex;
@@ -50,9 +76,6 @@
             align-items: center;
             justify-content: space-around;
 
-        }
-        .hamburger{
-            display: none;
         }
 
         .space-around {
@@ -70,7 +93,6 @@
 
         ul {
             font-size: 20px;
-            display: flex;
             margin: 0;
             padding: 0;
         }
@@ -78,10 +100,10 @@
         p {
             margin: 0;
         }
-
-        li {
+        ul li{
             list-style: none;
-            margin: 16px 0;
+            text-align: center;
+            padding: 14px 0;
         }
 
         .none {
@@ -258,20 +280,17 @@
                 width: 100%;
                 margin: 30px 0 0 0;
             }
-
-            .nav {
+            .pc{
                 display: none;
             }
-
-            .hamburger{
-                display: block;
-                background-color: #F2DD9D;
-            }
-            .active{
-                display: none;
+            .mobile{
+                display: flex;
+                justify-content: space-around;
             }
 
-
+            .active:hover .hamburger ul{
+               left: 0;
+            }
 
         }
     </style>
@@ -282,34 +301,40 @@
         <div class="opencoopo"></div>
     </div>
     <div class="nav">
-        <img id="top" src="img/icon_正式版.png" alt="">
-        <ul>
-            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                    href="A">咖波作者</a></li>
-            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                    href="B">咖波成員</a></li>
-            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                    href="C">咖波周邊</a></li>
-            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                    href="D">實體店面</a></li>
-        </ul>
+        <div class="nav_Btn pc">
+            <img id="top" src="img/icon_正式版.png" alt="">
+            <ul>
+                <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                        href="A">咖波作者</a></li>
+                <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                        href="B">咖波成員</a></li>
+                <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                        href="C">咖波周邊</a></li>
+                <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                        href="D">實體店面</a></li>
+            </ul>
+        </div>
+        <div class="hamburger mobile">
+            <div><img id="top" src="img/icon_正式版.png" alt=""></div>
+            <div>
+                <img  class="active" src="img/漢堡.png" alt="">
+                <ul>
+                    <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                            href="A">咖波作者</a></li>
+                    <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                            href="B">咖波成員</a></li>
+                    <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                            href="C">咖波周邊</a></li>
+                    <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                            href="D">實體店面</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    
     </div>
 
-    <div class="hamburger">
-        <img id="top" src="img/icon_正式版.png" alt="">
-        <img src="" alt="">
-        <ul class="active">
-            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                    href="A">咖波作者</a></li>
-            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                    href="B">咖波成員</a></li>
-            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                    href="C">咖波周邊</a></li>
-            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                    href="D">實體店面</a></li>
-        </ul>
-    </div>
-    </div>
+    
 
 
 

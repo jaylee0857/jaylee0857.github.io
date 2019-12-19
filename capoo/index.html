@@ -29,7 +29,7 @@
             background-image: url("img/liStyle.gif");
             background-repeat: no-repeat;
         }
-
+     
         .nav {
             background-color: #F2DD9D;
             width: 100%;
@@ -37,7 +37,6 @@
             display: flex;
             flex-wrap: nowrap;
             justify-content: space-around;
-
         }
 
         .display-flex {
@@ -56,17 +55,19 @@
             justify-content: center;
         }
 
+        .container{
+            max-width: 1140px;
+        }
 
         ul {
             font-size: 20px;
             display: flex;
             margin: 0;
-
+            padding: 0;
         }
         p{
             margin: 0;
         }
-
 
         li {
             list-style: none;
@@ -85,13 +86,9 @@
             display: none;
         }
 
-
         a {
             text-decoration: none;
         }
-
-
-
 
         h1 {
             margin-top: 7vh;
@@ -162,6 +159,7 @@
             width: 100%;
             height: 50vh;
             background-attachment: fixed;
+            
         }
 
         .table1 {
@@ -180,10 +178,8 @@
 
         .relative {
             position: relative;
-            height: 35vh;
+            height: 60vh;
         }
-
-
 
         .guideBot {
             position: absolute;
@@ -191,8 +187,6 @@
             bottom: 0px;
 
         }
-
-
 
         .swiper-container {
             width: 500px;
@@ -219,10 +213,6 @@
             text-align: center;
         }
 
-        .icon {
-            margin: 0 20px;
-        }
-
         .m-t-10 {
             margin-top: 10vh;
         }
@@ -238,11 +228,6 @@
             bottom: 10%;
             z-index: 1;
         }
-
-
-
-
-
 
         /* 動畫 */
 
@@ -269,7 +254,13 @@
         }
 
         /* RWD */
-        @media
+        @media (max-width: 950px){
+
+        
+
+       
+
+        }
 
     </style>
 </head>
@@ -278,32 +269,31 @@
     <div class="opening">
         <div class="opencoopo"></div>
     </div>
-    <div id="top" class="nav">
-        <img src="img/icon_正式版.png" alt="">
-        <ul>
-            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                    href="">咖波作者</a></li>
-            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                    href="">咖波成員</a></li>
-            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                    href="">咖波周邊</a></li>
-            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                    href="">實體店面</a></li>
-            <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                    href="">合作資訊</a></li>
-    
-        </ul>
+    <div class="nav">
+        <img id="top" src="img/icon_正式版.png" alt="">
+            <ul>
+                <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                        href="A">咖波作者</a></li>
+                <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                        href="B">咖波成員</a></li>
+                <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                        href="C">咖波周邊</a></li>
+                <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                        href="D">實體店面</a></li>
+            </ul>
     </div>
+
+
     
     
 
 
     <!-- 咖波圖banner -->
 
-    <div class="banner"></div>
+    <div class="banner "></div>
 
     <!-- 作者資訊 -->
-    <h1 style="text-align:center">咖波作者</h1>
+    <h1 id="A" style="text-align:center">咖波作者</h1>
     <div class="container display-flex space-between">
 
 
@@ -386,7 +376,7 @@
     <!-- 漫畫輪播 -->
     <!-- Swiper -->
     <h1 style="text-align:center">咖波漫畫</h1>
-    <div class="container" style="min-height: 500px;">
+    <div class="container">
         <div class="relative">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -403,7 +393,7 @@
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination" style="bottom: -18px;"></div>
-                <div class="guideBot"><img src="img/漫畫可以轉哦.jpg" alt=""></div>
+                <!-- <div class="guideBot"><img src="img/漫畫可以轉哦.jpg" alt=""></div> -->
             </div>
 
         </div>
@@ -655,7 +645,10 @@
 
 
     <div class="footer" style="margin-top: 50px;">
-       <p> 本網站為學習網頁製作用途，無任何商業營利性質<br> Copyright 2019 JayLee All rights Reserved.</p>
+       <p style="font-size: 12px; color: rgb(51, 51, 51);"> 本網站為學習網頁製作用途，無任何商業營利性質<br> Copyright 2019 JayLee All rights Reserved.</p>
+       <!-- <p>https://www.facebook.com/capoocat</p>
+       <p>https://www.instagram.com/bugcat_capoo/?hl=zh-tw</p>
+       <p>capoocat@gmail.com</p> -->
         <div class="goToTop"><a href="#top"><img style="width: 150px;height: 150px;" src="img/gototop-無延遲版本.gif"
                     alt=""></a></div>
 

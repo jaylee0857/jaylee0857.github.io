@@ -44,6 +44,7 @@
 
         .display-flex {
             display: flex;
+            align-items: center;
 
         }
 
@@ -95,7 +96,7 @@
 
 
         h1 {
-            line-height: 5;
+            margin-top: 7vh;
         }
 
         .opening {
@@ -142,20 +143,12 @@
             width: 50%;
         }
 
-        .container {
-            width: 1140px;
-            margin: auto;
-        }
-
-        .margin_auto {
-            margin: auto;
-        }
-
         .author {
             width: 50%;
             height: 500px;
             background-image: url("img/亞拉.jpg");
             background-position: center;
+            align-items: center;
         }
 
         .intro {
@@ -186,13 +179,10 @@
 
         .relative {
             position: relative;
-            height: 50vh;
+            height: 35vh;
         }
 
-        .guideTop {
-            position: absolute;
-            top: 100px;
-        }
+
 
         .guideBot {
             position: absolute;
@@ -209,8 +199,7 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            margin-left: -250px;
-            margin-top: -250px;
+            transform: translate(-50%, -40%);
         }
 
         .swiper-slide {
@@ -227,15 +216,16 @@
             align-items: center;
         }
 
-        .icon{
+        .icon {
             margin: 0 20px;
         }
 
         .m-t-10 {
             margin-top: 10vh;
         }
-        .card_Margin{
-            margin: 5px 0;
+
+        .card_Margin {
+            margin: 5px;
         }
 
         .goToTop {
@@ -247,8 +237,8 @@
             right: 5%;
             bottom: 10%;
         }
-       
-      
+
+
 
 
 
@@ -318,58 +308,58 @@
     <div class="container">
         <h1 class="m-t100" style="text-align:center">咖波成員</h1>
         <div class="display-flex m-t space-around">
-            <div class="width50" data-aos="fade-down-right">
-                <h1 style="color: #5AC9E8;">咖波</h1>
+            <div class="width50" data-aos="fade-up-right">
+                <h2 style="color: #5AC9E8;">咖波</h2>
                 <p> 像貓又像蟲的不明物種， 平時有六隻腳，身體會伸縮不固定。
                     看到甚麼都想吃</p>
             </div>
-            <div class="" data-aos="fade-down-left">
+            <div class="" data-aos="fade-up-left">
                 <img src="img/咖波-修.png" alt="">
 
             </div>
         </div>
         <div class="display-flex m-t space-around">
-            <div class="" data-aos="fade-down-right">
+            <div class="" data-aos="fade-up-right">
                 <div><img src="img/拉拉.png" alt=""></div>
             </div>
-            <div class="width50" data-aos="fade-down-left">
-                <h1 style="color: #de7d6d;">拉拉</h1>
+            <div class="width50" data-aos="fade-up-left">
+                <h2 style="color: #de7d6d;">拉拉</h2>
                 <p>收養咖波跟狗狗的主人，唯一可以制服咖波的人，咖波做蠢事時會揍他。</p>
             </div>
         </div>
         <div class="display-flex m-t space-around">
-            <div class="width50" data-aos="fade-down-right">
-                <h1 style="color: rgb(240, 196, 65);">狗狗</h1>
+            <div class="width50" data-aos="fade-up-right">
+                <h2 style="color: rgb(240, 196, 65);">狗狗</h2>
                 <p>一隻再生能力很強的生物（連亞拉也不確定他是不是一隻狗），不管怎麼殺都會復原。個性很溫和、呆呆的，是咖波的最愛的糧食與朋友。</p>
             </div>
-            <div class="" data-aos="fade-down-left">
+            <div class="" data-aos="fade-up-left">
                 <img src="img/狗狗.png" alt="">
             </div>
         </div>
         <div class="display-flex m-t space-around">
-            <div class="" data-aos="fade-down-right">
+            <div class="" data-aos="fade-up-right">
                 <img src="img/兔兔.png" alt="">
             </div>
-            <div class="width50" data-aos="fade-down-left">
-                <h1 style="color: #888787;">兔兔</h1>
+            <div class="width50" data-aos="fade-up-left">
+                <h2 style="color: #888787;">兔兔</h2>
                 <p>很喜歡咖波的兔子，有著抖M屬性，就算一直被吞食還是很想跟咖波在一起。</p>
             </div>
         </div>
         <div class="display-flex m-t space-around">
-            <div class="width50" data-aos="fade-down-right">
-                <h1 style="color: #fbb0af;">暴龍姊</h1>
+            <div class="width50" data-aos="fade-up-right">
+                <h2 style="color: #fbb0af;">暴龍姊</h2>
                 <p>雖然很大隻但是很弱的母暴龍，常常被咖波搶走食物，跟咖波是好朋友。</p>
             </div>
-            <div class="" data-aos="fade-down-left">
+            <div class="" data-aos="fade-up-left">
                 <img src="img/恐龍姊.png" alt="">
             </div>
         </div>
         <div class="display-flex m-t space-around">
-            <div class="" data-aos="fade-down-right">
+            <div class="" data-aos="fade-up-right">
                 <img src="img/小雞.png" alt="">
             </div>
-            <div class="width50 " data-aos="fade-down-left">
-                <h1 style="color: #fbdc36;">小雞</h1>
+            <div class="width50 " data-aos="fade-up-left">
+                <h2 style="color: #fbdc36;">小雞</h2>
                 <p>糧食般的存在，數量很多，吃都吃不完。</p>
             </div>
         </div>
@@ -381,7 +371,7 @@
     <!-- 漫畫輪播 -->
     <!-- Swiper -->
     <h1 style="text-align:center">咖波漫畫</h1>
-    <div class="container">
+    <div class="container" style="min-height: 500px;">
         <div class="relative">
             <!-- <div><img src="img/咖波漫畫.jpg" alt=""></div> -->
             <div class="swiper-container">
@@ -398,7 +388,7 @@
 
                 </div>
                 <!-- Add Pagination -->
-                <div class="swiper-pagination" style="bottom: -30px;"></div>
+                <div class="swiper-pagination" style="bottom: -18px;"></div>
                 <div class="guideBot"><img src="img/漫畫可以轉哦.jpg" alt=""></div>
             </div>
 
@@ -408,223 +398,226 @@
     <div class="parallax table2"></div>
 
     <!-- 咖波周邊 -->
-    <h1 class="m-t" style="text-align:center">咖波周邊</h1>
-    <div class="container display-flex flex-wrap">
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/千萬兩娃娃.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">招財娃娃</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：23 x 24 x 26 cm <br> 
-                    材質：100%聚酯纖維 <br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
+    <h1 class="" style="text-align:center">咖波周邊</h1>
+    <div class="container">
+        <div class="row">
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/千萬兩娃娃.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">招財娃娃</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：23 x 24 x 26 cm <br> 
+                        材質：100%聚酯纖維 <br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/娃娃100cm.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">100CM娃娃</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：100cm x 25cm x 25cm <br>
+                        材質：絨毛、聚酯棉<br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/卡片.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">卡片</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：20 x 24  cm <br> 
+                        材質：再生紙 <br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/紅包.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">紅包</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：20 x 24  cm <br> 
+                        材質：再生紙 <br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/床組.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">咖波床組</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：200 x 240  cm <br> 
+                        材質：蠶絲 <br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+    
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/睡衣.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">睡衣</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：180 x 90  cm <br> 
+                        材質：絨毛、聚酯棉 <br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+    
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/拖鞋.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">拖鞋</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：30 x 15  cm <br> 
+                        材質：絨毛、聚酯棉<br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+    
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/頸枕.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">頸枕</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：23 x 24 x 26 cm <br> 
+                        材質：絨毛、聚酯棉<br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+    
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/法郎杯.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">琺瑯杯</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：9.5 x 8 cm <br> 
+                        材質：搪瓷<br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+    
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/隔熱玻璃杯.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">隔熱玻璃杯</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：9.5 x 8 cm <br> 
+                        材質：搪瓷<br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+    
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/杯蓋.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">杯蓋</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：9.5 x 2 cm <br> 
+                        材質：搪瓷<br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+    
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/玻璃吸管.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">玻璃吸管</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：20 x 0.6 cm <br> 
+                        材質：玻璃<br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+    
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/運動毛巾.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">運動毛巾</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：50 x 20 cm <br> 
+                        材質：純棉<br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+    
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/提袋.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">飲料提袋</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：18 x 10.5 cm <br> 
+                        材質：淺水布<br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+    
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/存錢筒.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">存錢筒</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：10 x 7 x 10 cm <br> 
+                        材質：搪瓷<br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
+            </div>
+    
+            <div class="card " style="width: 17rem;">
+                <img src="img/商品/鉛筆盒.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">造型筆袋</h5>
+                    <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
+                        尺寸：23 x 8 x 8 cm <br> 
+                        材質：絨毛、不織布<br>
+                        產地：台灣</p>
+                    <a href="#" class="btn btn-primary">了解詳情</a>
+                </div>
             </div>
         </div>
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/娃娃100cm.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">100CM娃娃</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：100cm x 25cm x 25cm <br>
-                    材質：絨毛、聚酯棉<br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/卡片.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">卡片</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：20 x 24  cm <br> 
-                    材質：再生紙 <br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/紅包.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">紅包</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：20 x 24  cm <br> 
-                    材質：再生紙 <br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/床組.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">咖波床組</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：200 x 240  cm <br> 
-                    材質：蠶絲 <br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/睡衣.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">睡衣</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：180 x 90  cm <br> 
-                    材質：絨毛、聚酯棉 <br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/拖鞋.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">拖鞋</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：30 x 15  cm <br> 
-                    材質：絨毛、聚酯棉<br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/頸枕.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">頸枕</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：23 x 24 x 26 cm <br> 
-                    材質：絨毛、聚酯棉<br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/法郎杯.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">琺瑯杯</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：9.5 x 8 cm <br> 
-                    材質：搪瓷<br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/隔熱玻璃杯.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">隔熱玻璃杯</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：9.5 x 8 cm <br> 
-                    材質：搪瓷<br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/杯蓋.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">杯蓋</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：9.5 x 2 cm <br> 
-                    材質：搪瓷<br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/玻璃吸管.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">玻璃吸管</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：20 x 0.6 cm <br> 
-                    材質：玻璃<br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/運動毛巾.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">運動毛巾</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：50 x 20 cm <br> 
-                    材質：純棉<br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/提袋.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">飲料提袋</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：18 x 10.5 cm <br> 
-                    材質：淺水布<br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/存錢筒.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">存錢筒</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：10 x 7 x 10 cm <br> 
-                    材質：搪瓷<br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-
-        <div class="card card_Margin" style="width: 17rem;">
-            <img src="img/商品/鉛筆盒.jpg" class="card-img-top" alt="..." height="200px">
-            <div class="card-body">
-                <h5 class="card-title">造型筆袋</h5>
-                <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：23 x 8 x 8 cm <br> 
-                    材質：絨毛、不織布<br>
-                    產地：台灣</p>
-                <a href="#" class="btn btn-primary">了解詳情</a>
-            </div>
-        </div>
-
     </div>
+
 
     <h1 class=" m-t-10" style="text-align:center">實體店面</h1>
 
     <div class="container">
         <img src="img/咖波屋.jpg" alt="" width="100%">
-        <div class="display-flex  m-t-10" >
+        <div class="display-flex  m-t-10">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.687955358712!2d120.66532835098269!3d24.147594379325866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d75a1cf2d63%3A0x1a7802409ffebd31!2zNDAz5Y-w5Lit5biC6KW_5Y2A5qih56-E6KGXOOW3tzIz6Jmf!5e0!3m2!1szh-TW!2stw!4v1576566063583!5m2!1szh-TW!2stw"
                 width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
-                <p style="padding: 0 20px; font-size: 25px;">咖波屋<br>
-                    地址：台中市 西區模範街8巷23號<br>
-                    營業時間：10:00~20:00 <br>
-                    公休：星期一<br>
-                    電話： 0926 047 399 <br></p>
+            <p style="padding: 0 20px; font-size: 25px;">咖波屋<br>
+                地址：台中市 西區模範街8巷23號<br>
+                營業時間：10:00~20:00 <br>
+                公休：星期一<br>
+                電話： 0926 047 399 <br></p>
         </div>
     </div>
-    
-    
+
+
     <div class="footer display-flex" style="margin-top: 50px;">
         <div class="icon"><a href="https://www.facebook.com/capoocat"><img src="img/FB.png" alt=""></a></div>
-        <div class="icon"><a href="https://www.instagram.com/bugcat_capoo/?hl=zh-tw"><img src="img/IG.png" alt=""></a></div>
+        <div class="icon"><a href="https://www.instagram.com/bugcat_capoo/?hl=zh-tw"><img src="img/IG.png" alt=""></a>
+        </div>
         <div class="goToTop"><a href="#top"><strong>TOP</strong></a></div>
-          
+
     </div>
-    
+
 
 
 

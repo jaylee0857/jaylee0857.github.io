@@ -12,7 +12,9 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
         html {
+            
             scroll-behavior: smooth;
+            height: 100%;
         }
 
         body {
@@ -23,19 +25,7 @@
 
 
         }
-        body:before { 
-    content : "" ; 
-    position : fixed ; 
-    z-index : -1 ; 
-    top : 0 ; 
-    right : 0 ; 
-    bottom : 0 ; 
-    left : 0 ; 
-    background-image : inherit ; 
-    -webkit-background-size : cover!important ; 
-    -o-background-size : cover ; 
-    background-size :cover!important ;
-}
+        
 
         .liStyle {
             width: 60px;
@@ -241,6 +231,11 @@
             border-radius: 5px;
         }
 
+        .card-img-top{
+            width: 100%;
+            height: 80%;
+        }
+
         .footer {
             width: 100%;
             background-color: #5AC9E8;
@@ -343,12 +338,15 @@
                 bottom: 0;
             }
             .guideBot{
-                top: -150px;
+                top: -180px;
                 left: 50%;
             }
+        }
 
-
-
+        @media (max-width: 576px){
+            .row{
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -517,9 +515,9 @@
     <h1 id="D" class="" style="text-align:center">咖波周邊</h1>
     <div class="container">
         <div class="row">
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/千萬兩娃娃.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/千萬兩娃娃.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">招財娃娃</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
@@ -530,22 +528,22 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/娃娃100cm.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/娃娃100cm.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">100CM娃娃</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
-                            尺寸：100cm x 25cm x 25cm <br>
+                            尺寸：1m x 25cm x 25cm <br>
                             材質：絨毛、聚酯棉<br>
                             產地：台灣</p>
                         <a href="#" class="btn btn-primary">了解詳情</a>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/卡片.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/卡片.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">卡片</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
@@ -556,9 +554,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/紅包.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/紅包.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">紅包</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
@@ -569,9 +567,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/床組.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/床組.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">咖波床組</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
@@ -582,9 +580,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/睡衣.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/睡衣.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">睡衣</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
@@ -595,9 +593,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/拖鞋.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/拖鞋.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">拖鞋</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
@@ -609,9 +607,9 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/頸枕.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/頸枕.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">頸枕</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
@@ -623,9 +621,9 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/法郎杯.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/法郎杯.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">琺瑯杯</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
@@ -637,9 +635,9 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/隔熱玻璃杯.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/隔熱玻璃杯.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">隔熱玻璃杯</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
@@ -651,9 +649,9 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/杯蓋.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/杯蓋.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">杯蓋</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
@@ -665,9 +663,9 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/玻璃吸管.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/玻璃吸管.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">玻璃吸管</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
@@ -679,9 +677,9 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/運動毛巾.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/運動毛巾.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">運動毛巾</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
@@ -693,9 +691,9 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/提袋.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/提袋.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">飲料提袋</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
@@ -707,9 +705,9 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/存錢筒.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/存錢筒.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">存錢筒</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>
@@ -721,9 +719,9 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
-                <div class="card " style="width: 17rem;">
-                    <img src="img/商品/鉛筆盒.jpg" class="card-img-top" alt="..." height="200px">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/商品/鉛筆盒.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">造型筆袋</h5>
                         <p class="card-text">貓貓蟲-咖波 唯一授權製作販售<br>

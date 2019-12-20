@@ -54,6 +54,7 @@
             background-color: #F2DD9D;
             display: flex;
             position: fixed;
+            justify-content: space-between;
             top: 0;
             left: 0;
             z-index: 9;
@@ -143,7 +144,7 @@
             background-position: center;
             z-index: 10;
             animation-name: opening;
-            animation-duration: 3s;
+            animation-duration: 2s;
             animation-delay: 2s;
             animation-fill-mode: forwards;
 
@@ -160,9 +161,9 @@
             top: 30%;
             left: 0;
             width: 100%;
-            height: 10vh;
+            height: 15vh;
             animation-name: opencapoo;
-            animation-duration: 3000ms;
+            animation-duration: 2000ms;
             animation-delay: 900ms;
             animation-fill-mode: forwards;
         }
@@ -183,63 +184,21 @@
         .table1 {
             width: 100%;
             height: 50vh;
-            -moz-background-image: url("img/table1.jpg");
-            -webkit-background-image: url("img/table1.jpg");
-            -ms-background-image: url("img/table1.jpg");
-            -o-background-image: url("img/table1.jpg");
             background-image: url("img/table1.jpg");
             background-repeat: no-repeat;
-            -moz-background-repeat: no-repeat;
-            -webkit-background-repeat: no-repeat;
-            -ms-background-repeat: no-repeat;
-            -o-background-repeat: no-repeat;
             background-position: center;
-            -moz-background--position: center;
-            -webkit-background--position: center;
-            -ms-background--position: center;
-            -o-background--position: center;
             background-size: cover;
-            -moz-background-size: cover;
-            -webkit-background-size: cover;
-            -ms-background-size: cover;
-            -o-background-size: cover;
             background-attachment: fixed;
-            -moz-background-attachment: fixed;
-            -webkit-background-attachment: fixed;
-            -ms-background-attachment: fixed;
-            -o-background-attachment: fixed;
-            
         }
 
         .table2 {
             width: 100%;
             height: 50vh;
-            -moz-background-image: url("img/table2.jpg");
-            -webkit-background-image: url("img/table2.jpg");
-            -ms-background-image: url("img/table2.jpg");
-            -o-background-image: url("img/table2.jpg");
             background-image: url("img/table2.jpg");
             background-repeat: no-repeat;
-            -moz-background-repeat: no-repeat;
-            -webkit-background-repeat: no-repeat;
-            -ms-background-repeat: no-repeat;
-            -o-background-repeat: no-repeat;
             background-position: center;
-            -moz-background--position: center;
-            -webkit-background--position: center;
-            -ms-background--position: center;
-            -o-background--position: center;
             background-size: cover;
-            -moz-background-size: cover;
-            -webkit-background-size: cover;
-            -ms-background-size: cover;
-            -o-background-size: cover;
             background-attachment: fixed;
-            -moz-background-attachment: fixed;
-            -webkit-background-attachment: fixed;
-            -ms-background-attachment: fixed;
-            -o-background-attachment: fixed;
-            
         }
 
         .relative {
@@ -250,7 +209,7 @@
         .guideBot {
             position: absolute;
             right: -200px;
-            bottom: 0px;
+            bottom: 0;
 
         }
 
@@ -326,8 +285,6 @@
         @media (max-width: 900px) {
             li {
                 font-size: 14px;
-
-
             }
         }
 
@@ -339,6 +296,7 @@
             .intro {
                 width: 100%;
                 margin: 30px 0 0 0;
+                line-height: unset;
             }
 
             .pc {
@@ -355,14 +313,22 @@
                 background-color: #F2DD9D;
                 position: absolute;
                 right: 0;
-            }
-            li{
                 padding: 0;
+                left: 0;
+                
+            }
+            ul li{
+                padding: 0;
+
             }
             .goToTop{
                 padding: 0;
                 right: 0;
                 bottom: 0;
+            }
+            .guideBot{
+                top: -150px;
+                left: 50%;
             }
 
 
@@ -427,7 +393,7 @@
         <h1 id="A" style="text-align:center">咖波作者</h1>
         <div class="author">
             <div class="" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="900">
-                <img style="width: 100%;max-width: 555px;" src="img/亞拉.jpg" alt="">
+                <img style="width:100%;max-width: 400px;" src="img/亞拉.jpg" alt="">
             </div>
             <div class="intro" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="900">
                 <p><strong>亞拉</strong>是「貓貓蟲-咖波」的創作者，也是Line 2017年的十大爆紅貼圖作者之一，他的Facebook專頁坐擁近60萬fans，除了紅遍台灣本土，海外fans也佔一半。

@@ -194,6 +194,15 @@
             background-attachment: fixed;
         }
 
+        .houseNews {
+            font-size: 25px;
+            padding: 0 15px;
+        }
+
+        .ph {
+            display: flex;
+        }
+
         .footer {
             width: 100%;
             background-color: #5AC9E8;
@@ -240,6 +249,11 @@
         }
 
         /* RWD */
+        @media(max-width: 994px){
+            .F{
+                width: 100%;
+            }
+        }
         @media (max-width: 900px) {
             li {
                 font-size: 14px;
@@ -295,6 +309,9 @@
                 top: -180px;
                 left: 50%;
             }
+        }
+
+        @media(max-width: 576) {
         }
     </style>
 </head>
@@ -431,22 +448,24 @@
     <!-- 咖波周邊 -->
     <h1 id="D" class="" style="text-align:center">咖波周邊</h1>
     <div class="container"></div>
-<!-- 實體店面 -->
+    <!-- 實體店面 -->
     <h1 id="E" class=" m-t-10" style="text-align:center">實體店面</h1>
 
     <div class="container">
-        <img src="img/咖波屋.jpg" alt="" width="100%">
-        <div class="d-flex  m-t-10">
-            <iframe
+        <img src="img/咖波屋.jpg" alt="" style="width: 100%;min-width: 500px;">
+        <div class="author">
+            <div class="F" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="900">
+                <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.687955358712!2d120.66532835098269!3d24.147594379325866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d75a1cf2d63%3A0x1a7802409ffebd31!2zNDAz5Y-w5Lit5biC6KW_5Y2A5qih56-E6KGXOOW3tzIz6Jmf!5e0!3m2!1szh-TW!2stw!4v1576566063583!5m2!1szh-TW!2stw"
                 width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-
-            <p style="padding: 0 20px; font-size: 25px;">咖波屋<br>
-                地址：台中市 西區模範街8巷23號<br>
-                營業時間：10:00~20:00 <br>
-                公休：星期一<br>
-                電話： 0926 047 399 <br></p>
-        </div>
+            </div>
+            <div class="intro" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="900">
+                <h2 >咖波屋</h2>
+                <p>地址：台中市 西區模範街8巷23號<br>
+                    營業時間：10:00~20:00 <br>
+                    公休：星期一<br>
+                    電話： 0926 047 399 <br></p>
+            </div>
     </div>
 
 

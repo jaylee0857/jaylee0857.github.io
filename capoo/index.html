@@ -30,22 +30,25 @@
             background-image: url("img/liStyle.gif");
             background-repeat: no-repeat;
         }
-        .nav{
+
+        .nav {
             width: 100%;
             height: 84px;
         }
 
 
-        .nav_Btn{
+        .nav_Btn {
             width: 100%;
             display: flex;
             background-color: #F2DD9D;
             justify-content: space-around
         }
+
         .nav_Btn ul {
             display: flex;
         }
-        .hamburger{
+
+        .hamburger {
             width: 100%;
             height: 84px;
             background-color: #F2DD9D;
@@ -55,7 +58,8 @@
             left: 0;
             z-index: 9;
         }
-        .hamburger ul{
+
+        .hamburger ul {
             position: fixed;
             top: 84px;
             left: 200px;
@@ -64,7 +68,7 @@
         .mobile {
             display: none;
         }
-        
+
 
         .author {
             display: flex;
@@ -100,7 +104,8 @@
         p {
             margin: 0;
         }
-        ul li{
+
+        ul li {
             list-style: none;
             text-align: center;
             padding: 14px 0;
@@ -133,28 +138,28 @@
             width: 100%;
             height: 100vh;
             background-color: #606060;
-            background-image: url("img/opening1.gif");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
             z-index: 99;
             animation-name: opening;
-            animation-delay: 2s;
-            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-duration: 3s;
             animation-fill-mode: forwards;
+
         }
 
+        
         .opencoopo {
             background-image: url("img/opening1.gif");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
             position: fixed;
-            top: 0;
+            top: 30%;
             left: 0;
             width: 100%;
-            height: 100vh;
-            animation-delay: 2s;
+            height: 10vh;
             animation-duration: 2s;
             animation-name: opencapoo;
             animation-fill-mode: forwards;
@@ -251,24 +256,29 @@
         @keyframes opening {
             0% {
                 opacity: 1;
+
             }
+
+
 
             100% {
                 opacity: 0;
                 z-index: -1;
+                transform: translateZ(0px)
             }
         }
 
-        @keyframes opencapoo {
-            0% {
-                opacity: 1;
+        @keyframes opencapoo{
+            0%{
+                
             }
-
-            100% {
-                opacity: 0;
-                z-index: -1;
+            100%{
+                height: 100vh;
+                top: 0%;
             }
         }
+
+
 
         /* RWD */
         @media (max-width: 768px) {
@@ -280,10 +290,12 @@
                 width: 100%;
                 margin: 30px 0 0 0;
             }
-            .pc{
+
+            .pc {
                 display: none;
             }
-            .mobile{
+
+            .mobile {
                 display: flex;
                 justify-content: space-around;
             }
@@ -302,9 +314,9 @@
     <div class="opening">
         <div class="opencoopo"></div>
     </div>
-    <div class="nav">
+    <div id="top" class="nav">
         <div class="nav_Btn pc">
-            <img id="top" src="img/icon_正式版.png" alt="">
+            <img src="img/icon_正式版.png" alt="">
             <ul>
                 <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
                         href="A">咖波作者</a></li>
@@ -317,9 +329,9 @@
             </ul>
         </div>
         <div class="hamburger mobile">
-            <div><img id="top" src="img/icon_正式版.png" alt=""></div>
+            <div><img src="img/icon_正式版.png" alt=""></div>
             <div>
-                <img  class="active" src="img/漢堡.png" alt="">
+                <img class="active" src="img/漢堡.png" alt="">
                 <ul>
                     <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
                             href="A">咖波作者</a></li>
@@ -332,11 +344,11 @@
                 </ul>
             </div>
         </div>
-        
-    
+
+
     </div>
 
-    
+
 
 
 
@@ -702,7 +714,6 @@
             Reserved.</p>
         <div class="goToTop"><a href="#top"><img style="width: 150px;height: 150px;" src="img/gototop-無延遲版本.gif"
                     alt=""></a></div>
-
     </div>
 
 

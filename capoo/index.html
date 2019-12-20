@@ -23,6 +23,19 @@
 
 
         }
+        body:before { 
+    content : "" ; 
+    position : fixed ; 
+    z-index : -1 ; 
+    top : 0 ; 
+    right : 0 ; 
+    bottom : 0 ; 
+    left : 0 ; 
+    background-image : inherit ; 
+    -webkit-background-size : cover!important ; 
+    -o-background-size : cover ; 
+    background-size :cover!important ;
+}
 
         .liStyle {
             width: 60px;
@@ -306,6 +319,9 @@
             .mobile {
                 display: flex;
                 justify-content: space-around;
+            }
+            .mask{
+                display: none;
             }
 
             .hamburger ul {

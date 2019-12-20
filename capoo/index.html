@@ -141,27 +141,29 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
-            z-index: 99;
+            z-index: 10;
             animation-name: opening;
-            animation-delay: 1s;
             animation-duration: 3s;
+            animation-delay: 2s;
             animation-fill-mode: forwards;
 
         }
 
-        
+
         .opencoopo {
             background-image: url("img/opening1.gif");
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
             position: fixed;
+            z-index: 11;
             top: 30%;
             left: 0;
             width: 100%;
             height: 10vh;
-            animation-duration: 2s;
             animation-name: opencapoo;
+            animation-duration: 3000ms;
+            animation-delay: 900ms;
             animation-fill-mode: forwards;
         }
 
@@ -264,15 +266,13 @@
             100% {
                 opacity: 0;
                 z-index: -1;
-                transform: translateZ(0px)
             }
         }
 
-        @keyframes opencapoo{
-            0%{
-                
-            }
-            100%{
+        @keyframes opencapoo {
+            0% {}
+
+            100% {
                 height: 100vh;
                 top: 0%;
             }
@@ -281,6 +281,14 @@
 
 
         /* RWD */
+        @media (max-width: 900px) {
+            li {
+                font-size: 14px;
+
+
+            }
+        }
+
         @media (max-width: 768px) {
             .author {
                 flex-direction: column;
@@ -302,6 +310,9 @@
 
             .hamburger ul {
                 display: none;
+                background-color: #F2DD9D;
+                position: absolute;
+                right: 0;
             }
 
 
@@ -319,13 +330,15 @@
             <img src="img/icon_正式版.png" alt="">
             <ul>
                 <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                        href="A">咖波作者</a></li>
+                        href="#A">咖波作者</a></li>
                 <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                        href="B">咖波成員</a></li>
+                        href="#B">咖波成員</a></li>
                 <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                        href="C">咖波周邊</a></li>
+                        href="#C">咖波漫畫</a></li>
                 <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                        href="D">實體店面</a></li>
+                        href="#D">咖波周邊</a></li>
+                <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                        href="#E">實體店面</a></li>
             </ul>
         </div>
         <div class="hamburger mobile">
@@ -334,13 +347,15 @@
                 <img class="active" src="img/漢堡.png" alt="">
                 <ul>
                     <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                            href="A">咖波作者</a></li>
+                            href="#A">咖波作者</a></li>
                     <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                            href="B">咖波成員</a></li>
+                            href="#B">咖波成員</a></li>
                     <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                            href="C">咖波周邊</a></li>
+                            href="#C">咖波漫畫</a></li>
                     <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
-                            href="D">實體店面</a></li>
+                            href="#D">咖波周邊</a></li>
+                    <li><img class="mask" src="img/mask.jpg" alt=""><img class="none" src="img/liStyle.gif" alt=""><a
+                            href="#E">實體店面</a></li>
                 </ul>
             </div>
         </div>
@@ -361,10 +376,10 @@
     <div class="container">
         <h1 id="A" style="text-align:center">咖波作者</h1>
         <div class="author">
-            <div class="" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+            <div class="" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="900">
                 <img style="width: 100%;max-width: 555px;" src="img/亞拉.jpg" alt="">
             </div>
-            <div class="intro" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+            <div class="intro" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="900">
                 <p><strong>亞拉</strong>是「貓貓蟲-咖波」的創作者，也是Line 2017年的十大爆紅貼圖作者之一，他的Facebook專頁坐擁近60萬fans，除了紅遍台灣本土，海外fans也佔一半。
 
                     亞拉原本修讀資訊管理相關學科，可是讀完後發覺志不在此，然後做過遊戲設計工作一年，便與朋友開設工作室接job，但收入卻不穩定。亞拉試過整個月只賺得幾千台幣，但花了5,000台幣交租後，生活已經捉襟見肘，卻仍要跟父母說「自己過得很好」。
@@ -376,7 +391,7 @@
     </div>
     <!-- 咖波成員 -->
     <div class="container">
-        <h1 class="m-t100" style="text-align:center">咖波成員</h1>
+        <h1 id="B" class="m-t100" style="text-align:center">咖波成員</h1>
         <div class="member">
             <div class="width50" data-aos="fade-up-right">
                 <h2 style="color: #5AC9E8;">咖波</h2>
@@ -440,7 +455,7 @@
 
     <!-- 漫畫輪播 -->
     <!-- Swiper -->
-    <h1 style="text-align:center">咖波漫畫</h1>
+    <h1 id="C" style="text-align:center">咖波漫畫</h1>
     <div class="container">
         <div class="relative">
             <div class="swiper-container">
@@ -467,7 +482,7 @@
     <div class="table2"></div>
 
     <!-- 咖波周邊 -->
-    <h1 class="" style="text-align:center">咖波周邊</h1>
+    <h1 id="D" class="" style="text-align:center">咖波周邊</h1>
     <div class="container">
         <div class="row">
             <div class="col-6 col-md-3">
@@ -691,7 +706,7 @@
     </div>
 
 
-    <h1 class=" m-t-10" style="text-align:center">實體店面</h1>
+    <h1 id="E" class=" m-t-10" style="text-align:center">實體店面</h1>
 
     <div class="container">
         <img src="img/咖波屋.jpg" alt="" width="100%">
@@ -748,6 +763,12 @@
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        $(".active").click(function () {
+            $(".hamburger ul").toggle();
+        })
+    </script>
+    <script>
+
         AOS.init();
         var swiper = new Swiper('.swiper-container', {
             effect: 'cube',

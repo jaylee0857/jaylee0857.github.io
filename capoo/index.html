@@ -139,6 +139,7 @@
         }
 
 
+
         .table1 {
             width: 100%;
             height: 50vh;
@@ -157,6 +158,43 @@
             background-position: center;
             background-size: cover;
             background-attachment: fixed;
+        }
+
+        .comic_relative {
+            position: relative;
+            height: 60vh;
+            overflow: hidden;
+        }
+
+        .guideTot {
+            position: absolute;
+            top: 0;
+            left: -30%;
+            z-index: 10;
+        }
+
+        .guideBot {
+            position: absolute;
+            right: -35%;
+            bottom: 0;
+            z-index: 10;
+
+        }
+
+        .swiper-container {
+            width: 600px;
+            height: 600px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-radius: 5px;
         }
 
         .shop {
@@ -179,6 +217,13 @@
 
         .cardNews h3 {
             text-align: center;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .cardNews p {
+            padding: 0 5px 5px 5px;
+
         }
 
         .mapContent {
@@ -325,15 +370,27 @@
 
             }
 
+            .comic_relative {
+                height: 60vh;
+            }
+
+            .guideTot {
+                position: absolute;
+                top: 75%;
+                left: -15%;
+            }
+
+            .guideBot {
+                position: absolute;
+                right: -15%;
+                bottom: 75%;
+
+            }
+
             .goToTop {
                 padding: 0;
                 right: 0;
                 bottom: 0;
-            }
-
-            .guideBot {
-                top: -180px;
-                left: 50%;
             }
 
             .map {
@@ -349,6 +406,22 @@
         @media(max-width: 576px) {
             .map {
                 height: 300px;
+            }
+            .comic_relative {
+                height: 70vh;
+            }
+
+            .guideTot {
+                position: absolute;
+                top: 86%;
+                left: 0%;
+            }
+
+            .guideBot {
+                position: absolute;
+                right: 0%;
+                bottom: 85%;
+
             }
         }
 
@@ -485,7 +558,25 @@
     <!-- 漫畫輪播 -->
     <!-- Swiper -->
     <h1 id="C" style="text-align:center">咖波漫畫</h1>
-
+    <div class="comic_relative">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(img/4格-1.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/4格-2.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/4格-3.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/4格-4.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/4格-5.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/4格-6.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/4格-7.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/4格-8.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/4格-9.jpg)"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <div class="guideTot"><img src="img/好看.png" alt=""></div>
+            <div class="guideBot"><img src="img/漫畫可以轉哦.png" alt=""></div>
+        </div>
+    </div>
     <!-- parallax -->
     <div class="table2"></div>
 
@@ -511,6 +602,7 @@
                     尺寸：23 x 24 x 26 cm<br>
                     材質：100%聚酯纖維<br>
                     產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
         <div class="cardContant">
@@ -521,6 +613,7 @@
                     尺寸：23 x 24 x 26 cm<br>
                     材質：100%聚酯纖維<br>
                     產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
         <div class="cardContant">
@@ -531,6 +624,7 @@
                     尺寸：23 x 24 x 26 cm<br>
                     材質：100%聚酯纖維<br>
                     產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
         <div class="cardContant">
@@ -541,6 +635,7 @@
                     尺寸：23 x 24 x 26 cm<br>
                     材質：100%聚酯纖維<br>
                     產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
         <div class="cardContant">
@@ -551,6 +646,7 @@
                     尺寸：23 x 24 x 26 cm<br>
                     材質：100%聚酯纖維<br>
                     產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
         <div class="cardContant">
@@ -561,6 +657,7 @@
                     尺寸：23 x 24 x 26 cm<br>
                     材質：100%聚酯纖維<br>
                     產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
         <div class="cardContant">
@@ -571,6 +668,7 @@
                     尺寸：23 x 24 x 26 cm<br>
                     材質：100%聚酯纖維<br>
                     產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
         <div class="cardContant">
@@ -581,6 +679,7 @@
                     尺寸：23 x 24 x 26 cm<br>
                     材質：100%聚酯纖維<br>
                     產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
         <div class="cardContant">
@@ -591,6 +690,7 @@
                     尺寸：23 x 24 x 26 cm<br>
                     材質：100%聚酯纖維<br>
                     產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
         <div class="cardContant">
@@ -601,6 +701,7 @@
                     尺寸：23 x 24 x 26 cm<br>
                     材質：100%聚酯纖維<br>
                     產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
         <div class="cardContant">
@@ -611,6 +712,7 @@
                     尺寸：23 x 24 x 26 cm<br>
                     材質：100%聚酯纖維<br>
                     產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
         <div class="cardContant">
@@ -621,6 +723,7 @@
                     尺寸：23 x 24 x 26 cm<br>
                     材質：100%聚酯纖維<br>
                     產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
         <div class="cardContant">
@@ -631,6 +734,7 @@
                     尺寸：23 x 24 x 26 cm<br>
                     材質：100%聚酯纖維<br>
                     產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
         <div class="cardContant">
@@ -641,16 +745,7 @@
                     尺寸：23 x 24 x 26 cm<br>
                     材質：100%聚酯纖維<br>
                     產地：台灣</p>
-            </div>
-        </div>
-        <div class="cardContant">
-            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
-            <div class="cardNews">
-                <h3>招財娃娃</h3>
-                <p>貓貓蟲-咖波 唯一授權製作販售<br>
-                    尺寸：23 x 24 x 26 cm<br>
-                    材質：100%聚酯纖維<br>
-                    產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
     </div>
@@ -675,49 +770,49 @@
         </div>
     </div>
 
-        <div class="footer" style="margin-top: 50px;">
-            <p style="font-size: 12px; color: rgb(51, 51, 51);"> 本網站為學習網頁製作用途，無任何商業營利性質<br> &copy; 2019 JayLee All
-                rights
-                Reserved.</p>
-            <div class="goToTop"><a href="#top"><img style="width: 150px;height: 150px;" src="img/gototop-無延遲版本.gif"
-                        alt=""></a></div>
-        </div>
+    <div class="footer" style="margin-top: 50px;">
+        <p style="font-size: 12px; color: rgb(51, 51, 51);"> 本網站為學習網頁製作用途，無任何商業營利性質<br> &copy; 2019 JayLee All
+            rights
+            Reserved.</p>
+        <div class="goToTop"><a href="#top"><img style="width: 150px;height: 150px;" src="img/gototop-無延遲版本.gif"
+                    alt=""></a></div>
+    </div>
 
-        <!-- js -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            $(".active").click(function () {
-                $(".hamburger ul").toggle();
-            })
-        </script>
-        <script>
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(".active").click(function () {
+            $(".hamburger ul").toggle();
+        })
+    </script>
+    <script>
 
-            AOS.init();
-            var swiper = new Swiper('.swiper-container', {
-                effect: 'cube',
-                grabCursor: true,
-                cubeEffect: {
-                    shadow: true,
-                    slideShadows: true,
-                    shadowOffset: 20,
-                    shadowScale: 0.94,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-            });
+        AOS.init();
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'cube',
+            grabCursor: true,
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
 
-        </script>
+    </script>
 </body>
 
 </html>

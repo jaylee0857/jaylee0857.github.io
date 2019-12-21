@@ -121,10 +121,97 @@
 
         a {
             text-decoration: none;
+            color: #5AC9E8;
         }
 
         h1 {
             margin-top: 7vh;
+        }
+
+        .width50 {
+            width: 50%;
+        }
+
+        .intro {
+            width: 45%;
+            line-height: 40px;
+            margin-left: 5%;
+        }
+
+
+        .table1 {
+            width: 100%;
+            height: 50vh;
+            background-image: url("img/table1.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .table2 {
+            width: 100%;
+            height: 50vh;
+            background-image: url("img/table2.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .shop {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cardContant {
+            border: 1px solid rgb(233, 233, 233);
+            border-radius: 5px;
+            margin: 5px;
+
+        }
+
+        .btn-primary {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cardNews h3 {
+            text-align: center;
+        }
+
+        .mapContent {
+            width: 50%;
+            margin-top: 15px;
+        }
+
+
+        .map {
+            width: 100%;
+            height: 400px;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #5AC9E8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .m-t-10 {
+            margin-top: 10vh;
+        }
+
+        .goToTop {
+            padding: 15px;
+            position: fixed;
+            right: 5%;
+            bottom: 4%;
+            z-index: 1;
         }
 
         .opening {
@@ -163,68 +250,6 @@
             animation-fill-mode: forwards;
         }
 
-        .width50 {
-            width: 50%;
-        }
-
-        .intro {
-            width: 45%;
-            line-height: 40px;
-            margin-left: 5%;
-        }
-
-
-        .table1 {
-            width: 100%;
-            height: 50vh;
-            background-image: url("img/table1.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-        .table2 {
-            width: 100%;
-            height: 50vh;
-            background-image: url("img/table2.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-        .houseNews {
-            font-size: 25px;
-            padding: 0 15px;
-        }
-
-        .ph {
-            display: flex;
-        }
-
-        .footer {
-            width: 100%;
-            background-color: #5AC9E8;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .m-t-10 {
-            margin-top: 10vh;
-        }
-
-        .goToTop {
-            padding: 15px;
-            position: fixed;
-            right: 5%;
-            bottom: 4%;
-            z-index: 1;
-        }
-
         /* 動畫 */
 
         @keyframes opening {
@@ -249,11 +274,12 @@
         }
 
         /* RWD */
-        @media(max-width: 994px){
-            .F{
+        @media(max-width: 994px) {
+            .F {
                 width: 100%;
             }
         }
+
         @media (max-width: 900px) {
             li {
                 font-size: 14px;
@@ -309,9 +335,27 @@
                 top: -180px;
                 left: 50%;
             }
+
+            .map {
+                height: 300px;
+            }
+
+            .mapContent {
+                width: 100%;
+                height: 100%;
+            }
         }
 
-        @media(max-width: 576) {
+        @media(max-width: 576px) {
+            .map {
+                height: 300px;
+            }
+        }
+
+        @media(max-width: 414px) {
+            .map {
+                height: 185px;
+            }
         }
     </style>
 </head>
@@ -447,70 +491,233 @@
 
     <!-- 咖波周邊 -->
     <h1 id="D" class="" style="text-align:center">咖波周邊</h1>
-    <div class="container"></div>
+    <div class="container shop">
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+                <a href="#" class="btn btn-primary">了解詳情</a>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+        <div class="cardContant">
+            <div class="cardimg"><img src="img/商品/千萬兩娃娃.png" alt=""></div>
+            <div class="cardNews">
+                <h3>招財娃娃</h3>
+                <p>貓貓蟲-咖波 唯一授權製作販售<br>
+                    尺寸：23 x 24 x 26 cm<br>
+                    材質：100%聚酯纖維<br>
+                    產地：台灣</p>
+            </div>
+        </div>
+    </div>
     <!-- 實體店面 -->
     <h1 id="E" class=" m-t-10" style="text-align:center">實體店面</h1>
 
     <div class="container">
-        <img src="img/咖波屋.jpg" alt="" style="width: 100%;min-width: 500px;">
+        <img src="img/咖波屋.jpg" alt="" style="width: 100%;">
         <div class="author">
-            <div class="F" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="900">
-                <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.687955358712!2d120.66532835098269!3d24.147594379325866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d75a1cf2d63%3A0x1a7802409ffebd31!2zNDAz5Y-w5Lit5biC6KW_5Y2A5qih56-E6KGXOOW3tzIz6Jmf!5e0!3m2!1szh-TW!2stw!4v1576566063583!5m2!1szh-TW!2stw"
-                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <div class="mapContent" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="900">
+                <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.687955358712!2d120.66532835098269!3d24.147594379325866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d75a1cf2d63%3A0x1a7802409ffebd31!2zNDAz5Y-w5Lit5biC6KW_5Y2A5qih56-E6KGXOOW3tzIz6Jmf!5e0!3m2!1szh-TW!2stw!4v1576566063583!5m2!1szh-TW!2stw"
+                    frameborder="0" style="border:0;" allowfullscreen=""></iframe>
             </div>
             <div class="intro" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="900">
-                <h2 >咖波屋</h2>
+                <h2>咖波屋</h2>
                 <p>地址：台中市 西區模範街8巷23號<br>
                     營業時間：10:00~20:00 <br>
                     公休：星期一<br>
                     電話： 0926 047 399 <br></p>
             </div>
+        </div>
     </div>
 
+        <div class="footer" style="margin-top: 50px;">
+            <p style="font-size: 12px; color: rgb(51, 51, 51);"> 本網站為學習網頁製作用途，無任何商業營利性質<br> &copy; 2019 JayLee All
+                rights
+                Reserved.</p>
+            <div class="goToTop"><a href="#top"><img style="width: 150px;height: 150px;" src="img/gototop-無延遲版本.gif"
+                        alt=""></a></div>
+        </div>
 
-    <div class="footer" style="margin-top: 50px;">
-        <p style="font-size: 12px; color: rgb(51, 51, 51);"> 本網站為學習網頁製作用途，無任何商業營利性質<br> &copy; 2019 JayLee All rights
-            Reserved.</p>
-        <div class="goToTop"><a href="#top"><img style="width: 150px;height: 150px;" src="img/gototop-無延遲版本.gif"
-                    alt=""></a></div>
-    </div>
+        <!-- js -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            $(".active").click(function () {
+                $(".hamburger ul").toggle();
+            })
+        </script>
+        <script>
 
-    <!-- js -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        $(".active").click(function () {
-            $(".hamburger ul").toggle();
-        })
-    </script>
-    <script>
+            AOS.init();
+            var swiper = new Swiper('.swiper-container', {
+                effect: 'cube',
+                grabCursor: true,
+                cubeEffect: {
+                    shadow: true,
+                    slideShadows: true,
+                    shadowOffset: 20,
+                    shadowScale: 0.94,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
 
-        AOS.init();
-        var swiper = new Swiper('.swiper-container', {
-            effect: 'cube',
-            grabCursor: true,
-            cubeEffect: {
-                shadow: true,
-                slideShadows: true,
-                shadowOffset: 20,
-                shadowScale: 0.94,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-            },
-        });
-
-    </script>
+        </script>
 </body>
 
 </html>

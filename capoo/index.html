@@ -187,7 +187,7 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, -60%);
+            transform: translate(-50%, -50%);
         }
 
         .swiper-slide {
@@ -290,7 +290,7 @@
             width: 100%;
             height: 15vh;
             animation-name: opencapoo;
-            animation-duration: 2500ms;
+            animation-duration: 2000ms;
             animation-delay: 1500ms;
             animation-fill-mode: forwards;
         }
@@ -345,9 +345,6 @@
             .pc {
                 display: none;
             }
-            .swiper-container{
-                transform: translate(-50%,-50%);
-            }
 
             .mobile {
                 display: flex;
@@ -399,6 +396,9 @@
             .map {
                 height: 300px;
             }
+            .sin{
+                flex-direction: column-reverse;
+            }
 
             .mapContent {
                 width: 100%;
@@ -447,50 +447,19 @@
 
             .guideBot {
                 position: absolute;
-                right: 27%;
+                right: 30%;
                 bottom: 85%;
             }
             .swiper-container{
-                width: 430px;
-                height: 430px;
-            }
-           
-        }
-        /* @media(max-width: 375px) and (max-height:667px){
-            .comic_relative {
-                height: 110vh;
-            }
-            .guideTot {
-                left: 25%;
-            }
-            .guideBot {
-                position: absolute;
-                right: 27%;
-                bottom: 83%;
-            }
-            .swiper-container{
-                width: 390px;
-                height: 390px;
-            }
-        } */
-        @media(max-width: 375px) and (min-height:667px){
-            .comic_relative {
-                height: 100vh;
-            }
-            .guideTot {
-                left: 25%;
-            }
-            .guideBot {
-                position: absolute;
-                right: 27%;
-                bottom: 83%;
-            }
-            .swiper-container{
-                width: 390px;
-                height: 390px;
+                width: 500px;
+                height: 500px;
             }
         }
-
+        @media(max-width: 375px){
+            .comic_relative {
+                height: 115vh;
+            }
+        }
         @media(max-width: 320px){
             .comic_relative {
                 height: 100vh;
@@ -660,7 +629,7 @@
         </div>
     </div>
     <!-- parallax -->
-    <div class="table2 "></div>
+    <div class="table2"></div>
 
     <!-- 咖波周邊 -->
     <h1 id="D" class="" style="text-align:center">咖波周邊</h1>
@@ -836,7 +805,7 @@
 
     <div class="container">
         <img src="img/咖波屋.jpg" alt="" style="width: 100%;">
-        <div class="author">
+        <div class="author sin">
             <div class="mapContent" data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="900">
                 <iframe class="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.687955358712!2d120.66532835098269!3d24.147594379325866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d75a1cf2d63%3A0x1a7802409ffebd31!2zNDAz5Y-w5Lit5biC6KW_5Y2A5qih56-E6KGXOOW3tzIz6Jmf!5e0!3m2!1szh-TW!2stw!4v1576566063583!5m2!1szh-TW!2stw"

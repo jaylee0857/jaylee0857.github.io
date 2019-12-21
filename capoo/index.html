@@ -187,7 +187,7 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -60%);
         }
 
         .swiper-slide {
@@ -345,6 +345,9 @@
             .pc {
                 display: none;
             }
+            .swiper-container{
+                transform: translate(-50%,-50%);
+            }
 
             .mobile {
                 display: flex;
@@ -432,10 +435,13 @@
             .comic_relative {
                 height: 100vh;
             }
+            .swiper-container{
+                transform: translate(-50%,-57%);
+            }
 
             .guideTot {
                 position: absolute;
-                top: 97%;
+                top: 100%;
                 left: 30%;
             }
 
@@ -448,10 +454,22 @@
                 width: 500px;
                 height: 500px;
             }
+           
         }
+        @media(max-width: 375px) and (max-height:667px){
+            .comic_relative {
+                height: 110vh;
+            }
+            .guideBot {
+                position: absolute;
+                right: 31%;
+                bottom: 83%;
+            }
+        }
+
         @media(max-width: 320px){
             .comic_relative {
-                height: 120vh;
+                height: 100vh;
             }
             .swiper-container{
                 width: 300px;
@@ -618,7 +636,7 @@
         </div>
     </div>
     <!-- parallax -->
-    <div class="table2"></div>
+    <div class="table2 "></div>
 
     <!-- 咖波周邊 -->
     <h1 id="D" class="" style="text-align:center">咖波周邊</h1>

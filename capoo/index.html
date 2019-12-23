@@ -121,7 +121,7 @@
 
         a {
             text-decoration: none;
-            color: #5AC9E8;
+            color: rgb(0, 84, 112);
         }
 
         h1 {
@@ -164,9 +164,12 @@
             position: relative;
             height: 60vh;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .guideTot {
+        .guideTop {
             position: absolute;
             top: 1%;
             left: -30%;
@@ -183,11 +186,7 @@
 
         .swiper-container {
             width: 600px;
-            height: 600px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+            height: calc(600px/1.212824010914052);
         }
 
         .swiper-slide {
@@ -257,6 +256,11 @@
             right: 5%;
             bottom: 4%;
             z-index: 1;
+        }
+
+        .gototopgif {
+            width: 150px;
+            height: 150px;
         }
 
         .opening {
@@ -374,7 +378,7 @@
                 height: 60vh;
             }
 
-            .guideTot {
+            .guideTop {
                 position: absolute;
                 top: 75%;
                 left: -15%;
@@ -396,7 +400,8 @@
             .map {
                 height: 300px;
             }
-            .sin{
+
+            .sin {
                 flex-direction: column-reverse;
             }
 
@@ -410,82 +415,43 @@
             .map {
                 height: 300px;
             }
-            .comic_relative {
-                height: 70vh;
-            }
 
-            .guideTot {
-                top: 86%;
-                left: 0%;
-            }
-
-            .guideBot {
-                right: 0%;
-                bottom: 85%;
-
-            }
-        }
-
-        @media(max-width: 414px) {
-            .map {
-                height: 185px;
-            }
             .comic_relative {
                 height: 90vh;
             }
-            .guideTot {
-                top: 100%;
-                left: 25%;
-            }
 
-            .guideBot {
-                right: 25%;
-                bottom: 85%;
-            }
-            .swiper-container{
-                width: 400px;
-                height: 400px;
-                transform: translate(-50%,-57%);
-            }
-        }
-        @media(max-width: 375px){
-            .comic_relative {
-                height: 100vh;
-            }
-            .swiper-container{
-                width: 390px;
-                height: 390px;
-                transform: translate(-50%,-60%);
-            }
-            .guideTot {
+            .guideTop {
                 top: 100%;
-                left: 25%;
-            }
-
-            .guideBot {
-                right: 25%;
-                bottom: 85%;
-            }
-        }
-        @media(max-width: 320px){
-            .comic_relative {
-                height: 100vh;
-            }
-            .swiper-container{
-                width: 300px;
-                height: 300px;
-            }
-            .guideBot {
-                right: 0%;
-                bottom: 80%;
-            }
-            
-            .guideTot {
-                top: 97%;
                 left: 0%;
             }
 
+            .guideBot {
+                right: -10%;
+                bottom: 100%;
+
+            }
+
+            .gototopgif {
+                width: 75px;
+                height: 75px;
+            }
+
+            .swiper-container {
+                width: 400px;
+                height: calc(400px/1.212824010914052);
+            }
+            .comicTop{
+                width: 75%;
+                height: 75%;
+            }
+            .comicBot{
+                width: 75%;
+                height: 75%;
+            }
+            
         }
+
+
     </style>
 </head>
 
@@ -629,8 +595,8 @@
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
-            <div class="guideTot"><img src="img/好看.png" alt=""></div>
-            <div class="guideBot"><img src="img/漫畫可以轉哦.png" alt=""></div>
+            <div class="guideTop"><img class="comicTop" src="img/好看.png" alt=""></div>
+            <div class="guideBot"><img  class="comicBot" src="img/漫畫可以轉哦.png" alt=""></div>
         </div>
     </div>
     <!-- parallax -->
@@ -701,7 +667,8 @@
                 <p>貓貓蟲-咖波 唯一授權製作販售<br>
                     尺寸：200 x 240 cm <br>
                     材質：蠶絲 <br>
-                    產地：台灣</p></p>
+                    產地：台灣</p>
+                </p>
                 <a href="#" class="btn btn-primary">了解詳情</a>
             </div>
         </div>
@@ -830,8 +797,7 @@
         <p style="font-size: 12px; color: rgb(51, 51, 51);"> 本網站為學習網頁製作用途，無任何商業營利性質<br> &copy; 2019 JayLee All
             rights
             Reserved.</p>
-        <div class="goToTop"><a href="#top"><img style="width: 150px;height: 150px;" src="img/gototop-無延遲版本.gif"
-                    alt=""></a></div>
+        <div class="goToTop"><a href="#top"><img class="gototopgif" src="img/gototop-無延遲版本.gif" alt=""></a></div>
     </div>
 
     <!-- js -->

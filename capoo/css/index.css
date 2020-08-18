@@ -1,0 +1,518 @@
+
+html {
+
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    font-family: 微軟正黑體;
+    box-sizing: border-box;
+
+
+}
+
+
+.liStyle {
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/liStyle.gif");
+    background-repeat: no-repeat;
+}
+
+.nav {
+    width: 100%;
+    height: 84px;
+}
+
+
+.nav_Btn {
+    width: 100%;
+    display: flex;
+    background-color: #F2DD9D;
+    justify-content: space-around
+}
+
+.nav_Btn ul {
+    display: flex;
+}
+
+.hamburger {
+    width: 100%;
+    height: 84px;
+    background-color: #F2DD9D;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.hamburger ul {
+    position: fixed;
+    top: 84px;
+    left: 200px;
+}
+
+.mobile {
+    display: none;
+}
+
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.container {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+ul {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+    text-align: center;
+    padding: 14px 0;
+}
+
+.none {
+    display: none;
+}
+
+li:hover .none {
+    display: inline;
+}
+
+li:hover .mask {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(8, 15, 22);
+
+}
+
+h1 {
+    margin-top: 7vh;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.intro {
+    width: 45%;
+    line-height: 40px;
+    margin-left: 5%;
+}
+
+
+
+.table1 {
+    width: 100%;
+    height: 50vh;
+    background-image: url("../img/table1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    -webkit-background-image: url("../img/table1.jpg");
+    -webkit-background-repeat: no-repeat;
+    -webkit-background-position: center;
+    -webkit-background-size: cover;
+    -webkit-background-attachment: fixed;
+    
+    -moz-background-image: url("../img/table1.jpg");
+    -moz-background-repeat: no-repeat;
+    -moz-background-position: center;
+    -moz-background-size: cover;
+    -moz-background-attachment: fixed;
+
+    -o-background-image: url("../img/table1.jpg");
+    -o-background-repeat: no-repeat;
+    -o-background-position: center;
+    -o-background-size: cover;
+    -o-background-attachment: fixed;
+
+    -ms-background-image: url("../img/table1.jpg");
+    -ms-background-repeat: no-repeat;
+    -ms-background-position: center;
+    -ms-background-size: cover;
+    -ms-background-attachment: fixed;
+}
+
+.table2 {
+    width: 100%;
+    height: 50vh;
+    background-image: url("../img/table2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+                
+    -webkit-background-image: url("../img/table2.jpg");
+    -webkit-background-repeat: no-repeat;
+    -webkit-background-position: center;
+    -webkit-background-size: cover;
+    -webkit-background-attachment: fixed;
+    
+    -moz-background-image: url("../img/table2.jpg");
+    -moz-background-repeat: no-repeat;
+    -moz-background-position: center;
+    -moz-background-size: cover;
+    -moz-background-attachment: fixed;
+
+    -o-background-image: url("../img/table2.jpg");
+    -o-background-repeat: no-repeat;
+    -o-background-position: center;
+    -o-background-size: cover;
+    -o-background-attachment: fixed;
+
+    -ms-background-image: url("../img/table2.jpg");
+    -ms-background-repeat: no-repeat;
+    -ms-background-position: center;
+    -ms-background-size: cover;
+    -ms-background-attachment: fixed;
+}
+
+.comic_relative {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.guideTop {
+    position: absolute;
+    top: 1%;
+    left: -30%;
+    z-index: 11;
+}
+
+.guideBot {
+    position: absolute;
+    right: -35%;
+    bottom: 0;
+    z-index: 11;
+
+}
+
+.swiper-container {
+    width: 600px;
+    height: calc(600px/1.212824010914052);
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+.shop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cardContant {
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    margin: 5px;
+
+}
+
+.btn-primary {
+    display: flex;
+    justify-content: center;
+}
+
+.cardNews h3 {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.cardNews p {
+    padding: 0 5px 5px 5px;
+
+}
+
+.mapContent {
+    width: 50%;
+    margin-top: 15px;
+}
+
+
+.map {
+    width: 100%;
+    height: 400px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #5AC9E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.m-t-10 {
+    margin-top: 10vh;
+}
+
+.goToTop {
+    padding: 15px;
+    position: fixed;
+    right: 5%;
+    bottom: 4%;
+    z-index: 1;
+}
+
+.gototopgif {
+    width: 150px;
+    height: 150px;
+}
+
+.opening {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #606060;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 10;
+    animation-name: opening;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+}
+
+
+.opencoopo {
+    background-image: url("../img/opening1.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: fixed;
+    z-index: 11;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    animation-name: opencapoo;
+    animation-duration: 2000ms;
+    animation-delay: 1500ms;
+    animation-fill-mode: forwards;
+}
+
+/* 動畫 */
+
+@keyframes opening {
+    0% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes opencapoo {
+    0% {}
+
+    100% {
+        height: 100vh;
+        top: 0%;
+    }
+}
+
+/* RWD */
+@media(max-width: 994px) {
+    .F {
+        width: 100%;
+    }
+    ul li {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .author {
+        flex-direction: column;
+    }
+
+    .intro {
+        width: 100%;
+        margin: 30px 0 0 0;
+        line-height: unset;
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .mask {
+        display: none;
+    }
+
+    .hamburger ul {
+        display: none;
+        background-color: #F2DD9D;
+        position: absolute;
+        right: 0;
+        padding: 0;
+        left: 0;
+
+    }
+
+    ul li {
+        padding: 0;
+        font-size: 20px;
+    }
+
+    .comic_relative {
+        height: 60vh;
+    }
+
+    .guideTop {
+        position: absolute;
+        top: 75%;
+        left: -15%;
+    }
+
+    .guideBot {
+        position: absolute;
+        right: -15%;
+        bottom: 80%;
+
+    }
+
+    .goToTop {
+        padding: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .map {
+        height: 300px;
+    }
+
+    .sin {
+        flex-direction: column-reverse;
+    }
+
+    .mapContent {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media(max-width: 800px){
+    .nav_icon{
+        width: 170px;
+    }
+}
+
+@media(max-width: 576px) {
+    .map {
+        height: 300px;
+    }
+
+    .comic_relative {
+        height: 90vh;
+    }
+
+    .guideTop {
+        top: 100%;
+        left: 0%;
+    }
+
+    .guideBot {
+        right: -10%;
+        bottom: 95%;
+
+    }
+
+    .gototopgif {
+        width: 75px;
+        height: 75px;
+    }
+
+    .swiper-container {
+        width: 400px;
+        height: calc(400px/1.212824010914052);
+    }
+
+    .comicTop {
+        width: 75%;
+        height: 75%;
+    }
+
+    .comicBot {
+        width: 75%;
+        height: 75%;
+    }
+    .table1{
+        background-attachment: initial
+        /* background-size: contain; */
+    }
+    .table2{
+        background-attachment: initial
+        /* background-size: contain; */
+    }
+}
+
+@media(max-width:320px) {
+    .comic_relative {
+        height: 100vh;
+    }
+
+    .guideBot {
+        right: -5%;
+        bottom: 90%;
+    }
+
+    .guideTop {
+        top: 100%;
+        left: 10%;
+    }
+}

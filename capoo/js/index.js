@@ -10,6 +10,7 @@
     })
 
     var swiper = new Swiper('.swiper-container', {
+        lazy: true,
         loop: true,
         effect: 'cube',
         grabCursor: true,
@@ -23,6 +24,6 @@
             el: '.swiper-pagination',
         },
     });
-
+    mySwiper.lazy.load();
 })()
 

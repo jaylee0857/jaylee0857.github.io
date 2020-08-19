@@ -20,6 +20,9 @@
             shadowOffset: 20,
             shadowScale: 0.94,
         },
+          lazy: {
+            loadPrevNext: true,
+        },
         pagination: {
             el: '.swiper-pagination',
         },

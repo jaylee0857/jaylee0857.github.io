@@ -109,10 +109,13 @@ li:hover .mask {
     display: none;
 }
 
-a {
+li:hover a{
     text-decoration: none;
-    color: rgb(8, 15, 22);
+    color: rgb(78, 78, 78);
+}
 
+ul li a {
+    color: rgb(44, 44, 44);
 }
 
 h1 {

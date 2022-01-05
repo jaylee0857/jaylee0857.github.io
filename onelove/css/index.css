@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:800|Lobster|Pacifico");
 body {
   padding-left: 20px;
   padding-right: 20px;
+  background-color: #ff93a6;
+  height: calc(100% + 200px);
 }
 
 h1 {
@@ -36,6 +39,7 @@ figcaption {
           transition-duration: 800ms;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
+  color: #FCE3E9;
 }
 
 .image-wrapper img {
@@ -81,5 +85,140 @@ figcaption {
 
 .b-lazy.b-loaded {
   opacity: 1;
+}
+
+body {
+  background: #222;
+}
+
+.container {
+  min-width: 320px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.heart {
+  position: relative;
+  left: 50%;
+  top: 150px;
+  width: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: inline-block;
+  z-index: 2;
+}
+
+.heart:hover {
+  cursor: pointer;
+}
+
+.heart .shape-heart {
+  -webkit-transition: fill .25s ease-in;
+  transition: fill .25s ease-in;
+}
+
+.heart.active .shape-heart {
+  fill: #FF4136;
+}
+
+svg {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.clickme {
+  position: relative;
+  left: 70%;
+  top: 130px;
+  -webkit-transform: scale(4);
+          transform: scale(4);
+  z-index: 1;
+}
+
+@media screen and (min-width: 480px) {
+  .clickme {
+    left: 60%;
+  }
+}
+
+#pink {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#pink #canvas {
+  background: #ff93a6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#pink #canvas.active {
+  opacity: 1;
+  -webkit-transition: all 600ms ease-in-out;
+  transition: all 600ms ease-in-out;
+}
+
+#pink .o_heart {
+  fill: #FFB3C3;
+}
+
+#pink .i_heart {
+  fill: #FCE3E9;
+}
+
+#pink .text {
+  z-index: 1000;
+  position: fixed;
+  font-size: 2em;
+  letter-spacing: 3px;
+  font-family: 'Dosis';
+  font-weight: bold;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #FFB3C3;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 3px solid #FCE3E9;
+  -webkit-box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#pink .text.active {
+  opacity: 1;
+  -webkit-transition: all 600ms ease-in-out;
+  transition: all 600ms ease-in-out;
+}
+
+#pink .arrow_container {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  border: 1px solid black;
+  z-index: 1000;
+  bottom: 15px;
+  left: 0px;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
 /*# sourceMappingURL=index.css.map */

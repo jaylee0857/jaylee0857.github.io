@@ -55,6 +55,9 @@ body{
     padding-top: 40vh;
     padding-bottom: 40vh;
     height: 0;
+    &.pinktime{
+      padding-bottom: 0;
+    }
   }
   .b-lazy {
     max-width: 100%;
@@ -89,7 +92,7 @@ body{
   .heart {
     position: relative;
     left: 50%;
-    top: 150px;
+    top: 0px;
     width: auto;
     transform: translateX(-50%);
     display: inline-block;
@@ -118,7 +121,7 @@ body{
     @media screen and (min-width: 480px) {
       left: 60%;
     }
-    top: 130px;
+    top: -20px;
     transform: scale(4);
     z-index: 1;
   }

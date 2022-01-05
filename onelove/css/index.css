@@ -71,6 +71,10 @@ figcaption {
   height: 0;
 }
 
+.ratio_16-9.pinktime {
+  padding-bottom: 0;
+}
+
 .b-lazy {
   max-width: 100%;
 }
@@ -100,7 +104,7 @@ body {
 .heart {
   position: relative;
   left: 50%;
-  top: 150px;
+  top: 0px;
   width: auto;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -130,7 +134,7 @@ svg {
 .clickme {
   position: relative;
   left: 70%;
-  top: 130px;
+  top: -20px;
   -webkit-transform: scale(4);
           transform: scale(4);
   z-index: 1;

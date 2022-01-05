@@ -1,0 +1,72 @@
+body{
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+  
+  h1{
+    font-size: 10rem;
+  }
+  
+  figure{
+    margin: 0;
+  }
+  
+  figcaption{
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .wrapper{
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  
+  .image-wrapper {
+    background: url("")
+      center center no-repeat;
+    width: 100%;
+    position: relative;
+    transform: scale(0.8);
+    transition-property: transform;
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+    img{
+      transform: perspective(400px) rotateX(5deg);
+      transition-property: transform;
+    transition-duration: 400ms;
+    transition-timing-function: ease;
+    }
+  }
+  
+  .zap{
+  
+      transform: scale(1);
+    img{
+      transform: perspective(0) rotateX(0);
+    }
+  }
+  
+  .ratio_16-9 {
+    padding-bottom: calc(56.25% + 100px);
+    height: 0;
+  }
+  .b-lazy {
+    max-width: 100%;
+    
+  }
+  
+  /* transition */
+  .b-lazy {
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    max-width: 100%;
+    opacity: 0.2;
+  }
+  .b-lazy.b-loaded {
+    opacity: 1;
+  }
+  

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+    <!-- Used: 
+http://dinbror.dk/blog/blazy/
+Blazy for lazy loading
+
+Scrollmagic for scroll animations
+
+-->
+
+    <div class="wrapper">
+        <!-- Fun with figure and figcaption -->
+        <figure class="image-wrapper ratio_16-9">
+            <img class="b-lazy"
+                src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==data-src="https://picsum.photos/1600/900random?sig=100"
+                data-src-small="https://picsum.photos/800/450random?sig=100" alt="This is a sample 16 x 9 image" />
+            <!-- Fallback for non JavaScript browsers -->
+            <noscript><img src="image.jpg" alt="alt-text" /></noscript>
+            <figcaption>親愛的簡郁容</figcaption>
+        </figure>
+
+        <figure class="image-wrapper ratio_16-9">
+            <img class="b-lazy"
+                src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==data-src="https://picsum.photos/1600/900random?sig=110"
+                data-src-small="https://picsum.photos/800/450random?sig=110" alt="This is a sample 16 x 9 image" />
+            <!-- Fallback for non JavaScript browsers -->
+            <noscript><img src="image.jpg" alt="alt-text" /></noscript>
+            <figcaption>雖然我對同事已經深感絕望</figcaption>
+        </figure>
+        <figure class="image-wrapper ratio_16-9">
+            <img class="b-lazy"
+                src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==data-src="https://picsum.photos/1600/900random?sig=120"
+                data-src-small="https://picsum.photos/800/450random?sig=120" alt="This is a sample 16 x 9 image" />
+            <!-- Fallback for non JavaScript browsers -->
+            <noscript><img src="image.jpg" alt="alt-text" /></noscript>
+            <figcaption>但是這一年來的情誼</figcaption>
+        </figure>
+
+        <figure class="image-wrapper ratio_16-9">
+            <img class="b-lazy"
+                src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==data-src="https://picsum.photos/1600/900random?sig=130"
+                data-src-small="https://picsum.photos/800/450random?sig=130" alt="This is a sample 16 x 9 image" />
+            <!-- Fallback for non JavaScript browsers -->
+            <noscript><img src="image.jpg" alt="alt-text" /></noscript>
+            <figcaption>覺得有你真好</figcaption>
+        </figure>
+
+        <figure class="image-wrapper ratio_16-9">
+            <img class="b-lazy"
+                src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==data-src="https://picsum.photos/1600/900random?sig=155"
+                data-src-small="https://picsum.photos/800/450random?sig=155" alt="This is a sample 16 x 9 image" />
+            <!-- Fallback for non JavaScript browsers -->
+            <noscript><img src="image.jpg" alt="alt-text" /></noscript>
+            <figcaption>厡未來的幾十年</figcaption>
+        </figure>
+
+        <figure class="image-wrapper ratio_16-9">
+            <img class="b-lazy"
+                src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==data-src="https://picsum.photos/1600/900random?sig=160"
+                data-src-small="https://picsum.photos/800/450random?sig=160" alt="This is a sample 16 x 9 image" />
+            <!-- Fallback for non JavaScript browsers -->
+            <noscript><img src="image.jpg" alt="alt-text" /></noscript>
+            <figcaption>都能與平安度過每個年終</figcaption>
+        </figure>
+        <figure class="image-wrapper ratio_16-9">
+            <img class="b-lazy"
+                src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==data-src="https://picsum.photos/1600/900random?sig=170"
+                data-src-small="https://picsum.photos/800/450random?sig=170" alt="This is a sample 16 x 9 image" />
+            <!-- Fallback for non JavaScript browsers -->
+            <noscript><img src="image.jpg" alt="alt-text" /></noscript>
+            <figcaption>爽爽花錢</figcaption>
+        </figure>
+
+        <figure class="image-wrapper ratio_16-9">
+            <img class="b-lazy"
+                src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==data-src="https://picsum.photos/1600/900random?sig=190"
+                data-src-small="https://picsum.photos/800/450random?sig=190" alt="This is a sample 16 x 9 image" />
+            <!-- Fallback for non JavaScript browsers -->
+            <noscript><img src="image.jpg" alt="alt-text" /></noscript>
+            <figcaption>鳩咪</figcaption>
+        </figure>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/jquery.ScrollMagic.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

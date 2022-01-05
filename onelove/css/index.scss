@@ -24,19 +24,18 @@ body{
   }
   
   .image-wrapper {
-    background: url("")
-      center center no-repeat;
+    background: url("") center center no-repeat;
     width: 100%;
     position: relative;
-    transform: scale(0.8);
+    transform: scale(0);
     transition-property: transform;
-    transition-duration: 400ms;
+    transition-duration: 800ms;
     transition-timing-function: ease-out;
     img{
       transform: perspective(400px) rotateX(5deg);
       transition-property: transform;
-    transition-duration: 400ms;
-    transition-timing-function: ease;
+      transition-duration: 800ms;
+      transition-timing-function: ease;
     }
   }
   
@@ -49,7 +48,8 @@ body{
   }
   
   .ratio_16-9 {
-    padding-bottom: calc(56.25% + 300px);
+    padding-top: 40vh;
+    padding-bottom: 40vh;
     height: 0;
   }
   .b-lazy {
@@ -59,10 +59,10 @@ body{
   
   /* transition */
   .b-lazy {
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
+    -webkit-transition: all 600ms ease-in-out;
+    -moz-transition: all 600ms ease-in-out;
+    -o-transition: all 600ms ease-in-out;
+    transition: all 600ms ease-in-out;
     max-width: 100%;
     opacity: 0.2;
   }

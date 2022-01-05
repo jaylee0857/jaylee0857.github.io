@@ -208,3 +208,167 @@ body{
   height: 100vh;
   z-index: -1;
 }
+
+
+
+
+label {
+    vertical-align: top;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.loading-indicators:before,
+.loading-indicators:after {
+    content: "";
+    display: table;
+}
+
+.loading-indicators:after {
+    clear: both;
+}
+
+.loading-indicator {
+    display: block;
+    position: relative;
+    width: 1em;
+    height: 1em;
+}
+
+.loading-indicator,
+.loading-indicator:before,
+.loading-indicator:after {
+    animation-iteration-count: infinite;
+}
+
+input[type="radio"]:checked + label {
+    color: darkslategrey;
+    background-color: #FFF;
+}
+
+.li-spin {
+    animation-name: spin;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+}
+
+.li-spin-dotted {
+    border-radius: 50%;
+    border: dotted 0.125em;
+}
+
+.li-spin-dashed {
+    border-radius: 50%;
+    border: dashed 0.125em;
+}
+
+.li-spin-solid,
+.li-spin-solid-svg {
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.4s;
+}
+
+.li-spin-solid:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.8em;
+    height: 0.8em;
+    border: solid 0.2em;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+}
+
+.li-spin-solid-svg svg  {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.li-spin-solid-svg svg circle  {
+    stroke: currentColor;
+}
+
+.li-flash {
+    background-color: currentColor;
+    animation-name: flash;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.li-grow {
+    background-color: currentColor;
+    animation-name: grow;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.li-boxy {
+    position: relative;
+    overflow: hidden;
+}
+
+.li-boxy:before,
+.li-boxy:after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: currentColor;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.li-boxy:before {
+    right: 100%;
+    width: 100%;
+    height: 0.1em;
+    animation-name: slideHorizontal;
+}
+
+.li-boxy:after {
+    bottom: 100%;
+    width: 0.1em;
+    height: 100%;
+    animation-name: slideVertical;
+}
+
+.li-ellipsis:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    animation-name: ellipsis;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+}
+
+
+
+@keyframes ellipsis  {
+    0%, 100% {
+        box-shadow: 0 0 0 0.1em transparent,
+            0.5em 0 0 0.1em transparent,
+            1em 0 0 0.1em transparent;
+    }
+    25% {
+        box-shadow: 0 0 0 0.1em currentColor,
+            0.5em 0 0 0.1em transparent,
+            1em 0 0 0.1em transparent;
+    }
+    50% {
+        box-shadow: 0 0 0 0.1em currentColor,
+            0.5em 0 0 0.1em currentColor,
+            1em 0 0 0.1em transparent;
+    }
+    75% {
+        box-shadow: 0 0 0 0.1em currentColor,
+            0.5em 0 0 0.1em currentColor,
+            1em 0 0 0.1em currentColor;
+    }
+}

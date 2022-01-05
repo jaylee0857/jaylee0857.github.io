@@ -62,7 +62,7 @@ figcaption {
 }
 
 .ratio_16-9 {
-  padding-bottom: calc(56.25% + 100px);
+  padding-bottom: calc(56.25% + 300px);
   height: 0;
 }
 

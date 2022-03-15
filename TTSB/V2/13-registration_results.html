@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TTSB</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <!-- layout -->
+    <link rel="stylesheet" href="./css/main_v2.css">
+
+
+    <!-- page css  -->
+    <link rel="stylesheet" href="./css/13-registration_results.css">
+    <!-- page css  -->
+
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./img/template/logo-06.png" alt="">
+                    </a>
+                </div>
+                <div class="title">
+                    <h1>會議與訓練</h1>
+                </div>
+
+                <!-- 電腦版 -->
+                <div class="btn_group d-none d-xl-flex">
+                    <div class="information d-flex">
+                        <ul class="d-flex">
+                            <li><a href="#">回首頁</a></li>
+                            <li><a href="#">網站導覽</a></li>
+                            <li><a href="#">意見信箱</a></li>
+                            <li><a href="#">English</a></li>
+                        </ul>
+                        <div class="inputArea">
+                            <form action="" method="GET">
+                                <input class="col" type="text" placeholder="請輸入關鍵字">
+                                <button type="submit" class="btn icon_position">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="item_btn">
+                        <ul class="d-flex">
+                            <li><a href="#">項目01</a></li>
+                            <li><a href="#">項目02</a></li>
+                            <li><a href="#">項目03</a></li>
+                            <li><a href="#">項目04</a></li>
+                            <li><a href="#">項目05</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 平板以下 -->
+
+                <div class="hamburgerBar d-xl-none">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="hamburgerBarItemArea ">
+                        <div class="information d-flex">
+                            <ul class="d-flex">
+                                <li><a href="#">回首頁</a></li>
+                                <li><a href="#">網站導覽</a></li>
+                                <li><a href="#">意見信箱</a></li>
+                                <li><a href="#">English</a></li>
+                            </ul>
+                        </div>
+                        <div class="item_btn">
+                            <ul class="">
+                                <li><a href="#">項目01</a></li>
+                                <li><a href="#">項目02</a></li>
+                                <li><a href="#">項目03</a></li>
+                                <li><a href="#">項目04</a></li>
+                                <li><a href="#">項目05</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+<!-- 內頁放這 -->
+    <main>
+        <section id="topline">
+            <div
+                class="container flex_control d-flex align-items-start justify-content-xl-between flex-wrap flex-xl-nowrap">
+                <!-- 麵包屑 -->
+                <div aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><i class="fas fa-home mr-3"></i><a href="#">首頁</a></li>
+                        <li class="breadcrumb-item"><a href="#">報名內容</a></li>
+                    </ol>
+                </div>
+                <div class="topline-button" >
+                    <div onclick="back()" class="button">回上一頁</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="CP-title" class="block-title">
+            <div class="container d-flex justify-content-md-between flex-wrap flex-md-nowrap ">
+                <div class="title-text d-flex">
+                    <i class="fas fa-caret-right d-none d-md-block"></i>
+                    <h2>案件查詢結果</h2>
+                </div>
+            </div>
+        </section>
+
+        <section id="table-area">
+
+            <form action="">
+                <div class="container d-flex justify-content-center flex-wrap">
+                    <div class="table-group">
+                        <div class="table-info d-flex">
+                            <div class="table-title">報名場次</div>
+                            <input class="table-value border-0 hide-input" name="" readonly value="國家運輸安全調查委員會「2019年飛航事故調查員年度複訓」"></input>
+                        </div>
+                        <div class="table-info d-flex">
+                            <div class="table-title">參加者姓名</div>
+                            <input class="table-value border-0 hide-input" name="" readonly value="王大明王大明"></input>
+                        </div>
+                        <div class="table-info d-flex">
+                            <div class="table-title">公司/組織</div>
+                            <input class="table-value border-0 hide-input" name="" readonly value="長榮航空"></input>
+                        </div>
+                        <div class="table-info d-flex">
+                            <div class="table-title">部門/職稱</div>
+                            <input class="table-value border-0 hide-input" name="" readonly value="經理"></input>
+                        </div>
+                        <div class="table-info d-flex">
+                            <div class="table-title">身分證字號</div>
+                            <input class="table-value border-0 hide-input" name="" readonly value="A123456789"></input>
+                        </div>
+                        <div class="table-info d-flex">
+                            <div class="table-title">出生年月日</div>
+                            <input class="table-value border-0 hide-input" name="" readonly value="1987/12/01"></input>
+                        </div>
+                        <div class="table-info d-flex">
+                            <div class="table-title">行動電話</div>
+                            <input class="table-value border-0 hide-input" name="" readonly value="0912345678"></input>
+                        </div>
+                        <div class="table-info d-flex">
+                            <div class="table-title">電子信箱</div>
+                            <div id="e-mail" class="table-value ">
+                                <input class="mail" value="hyweb@hyweb.com.tw"></input>
+                                <div class="again_btn_area">
+                                    <button type="submit" class="btn again_btn">重寄確認信</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-info d-flex">
+                            <div class="table-title">(葷/素餐選擇)</div>
+                            <input class="table-value border-0 hide-input" name="" readonly value="素"></input>
+                        </div>
+                        <div class="table-info d-flex">
+                            <div class="table-title">報名狀態</div>
+                            <input class="table-value border-0 hide-input" name="" readonly value="報名成功" style="color:#E03663"></input>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+    </main>
+    
+<!-- 內頁放這 -->
+    
+
+    <a id="gotop" href="#navbar" class="goToTop "></a>
+
+    <footer>
+        <div class="photo">
+            <img class="" src="./img/template/Foote_fix.png" alt="">
+        </div>
+        <div class="item_group">
+            <div class="item_group_container">
+                <ul class="">
+                    <li><a href="#">項目01</a></li>
+                    <li><a href="#">項目02</a></li>
+                    <li><a href="#">項目03</a></li>
+                    <li><a href="#">項目04</a></li>
+                    <li><a href="#">項目05</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="information_container">
+            <div class="information">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./img/template/LOGO-06.png" alt="">
+                    </a>
+                </div>
+                <div class="text">
+                    <div class="title">
+                        <a href="#"><span>政府網站資料開方宣告</span></a>
+                        <a href="#"><span>隱私權及安全政策</span></a>
+                    </div>
+                    <ul class="connection">
+                        <li>
+                            <span>電話：886-2-89127388</span>
+                        </li>
+                        <li>
+                            <span>傳真：886-2-89127399</span>
+                        </li>
+                        <li>
+                            <span>地址：新北市231新店區北新路三段200號11樓</span>
+                        </li>
+                    </ul>
+                    <div class="record">
+                        <ul class="d-flex">
+                            <li>
+                                <span>更新日期：2020/02/06</span>
+                            </li>
+                            <li>
+                                <span>累計瀏覽人次：76576653</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="./js/nav.js"></script>
+
+</body>
+
+</html>

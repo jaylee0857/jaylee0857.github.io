@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="zh_Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <noscript>
+        <div>本頁面需要瀏覽器支持（啟用）JavaScript</div>
+    </noscript>
+    <a id="aU" class="accesskey" href="#aU" accesskey="U" title="上方標題區">:::</a>
+    <!-- 8/15 id="aU"無障礙超連結 -->
+    <nav id="index_navbar">
+        <div class="container">
+            <div class="row">
+                <div class="mobile-toggle-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="col-auto logo">
+                    <a href="/" title="國家運輸安全調查委員會網站首頁連結" aria-label="網站首頁連結">
+                        <img class="img-fluid" src="/images/logo/logo.png" alt="國家運輸安全調查委員會Logo"
+                            aria-label="國家運輸安全調查委員會Logo">
+                        <h1 class="d-none">國家運輸安全調查委員會</h1>
+                    </a>
+                </div>
+                <!-- !8/12  以下 for en版本修改 修正手機板搜尋功能 -->
+                <div id="mb_open" class="mobile-search-btn">
+                    <button type="button" class="btn search-btn" onclick="dropSearch()">
+                        <i class="fas fa-search" aria-label="開始搜尋"></i>
+                    </button>
+                </div>
+                <div id="mb_close" class="mobile-search-btn">
+                    <button type="button" class="btn search-btn" onclick="CollapseSearch()">
+                        <i class="closed fas fa-times" aria-label="關閉搜尋"></i>
+                    </button>
+                </div>
+                <!-- !8/12  以上 for en版本修改 修正手機板搜尋功能 -->
+
+
+                <div id="navbar-collapse" class="col">
+                    <div id="sub-nav">
+                        <ul class="nav-links">
+                            <li><a href="" title="提供瞭解網站整體架構及鍵盤快捷鍵" aria-label="次要導覽列項目 網站導覽">網站導覽</a></li>
+                            <li><a href="" title="國家運輸安全委員會：回首頁" aria-label="次要導覽列項目 回首頁">回首頁</a></li>
+                            <li><a href="" title="國家運輸安全委員會：切換英文版" aria-label="次要導覽列項目 切換為English版">English</a></li>
+                            <li><a href="" title="訂閱國家運輸安全委員會電子報" aria-label="次要導覽列項目 訂閱電子報">訂閱電子報</a></li>
+                        </ul>
+
+                        <div class="font-size-change-box">
+                            <span>字型:</span>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary btn-sm" title="小字級" aria-label="改變字型為小"
+                                    data-size="14px">小</button>
+                                <button type="button" class="btn btn-warning btn-sm active" title="中字級"
+                                    aria-label="改變字型為中" data-size="16px">中</button>
+                                <button type="button" class="btn btn-success btn-sm" title="大字級" aria-label="改變字型為大"
+                                    data-size="18px">大</button>
+                            </div>
+                        </div>
+
+                        <div class="search-box">
+                            <div class="search-input">
+                                <form action="">
+                                    <label for="search-keywords" class="d-none">搜尋</label>
+                                    <input class="form-control search-keywords" id="search-keywords"
+                                        name="search-keywords" type="text" aria-label="網站內容搜尋 請輸入關鍵字"
+                                        placeholder="請輸入關鍵字" accesskey="S" title="關鍵字搜尋：文章關鍵字搜尋">
+                                    <button type="button" class="btn btn-primary search-btn">
+                                        <i class="fas fa-search" aria-label="開始搜尋" title="送出文章關鍵字查詢"></i>
+                                    </button>
+                                </form>
+
+                                <button type="button" class="btn btn-primary" id="advanced_search_btn" title="進階關鍵字查詢"
+                                    aria-label="進階搜尋">進階查詢</button>
+                            </div>
+                            <div class="search-hot-keywords">
+                                <div class="popular">熱門：
+                                    <a href="#" title="調查報告" aria-label="熱門搜尋關鍵字 調查報告">調查報告</a>、
+                                    <a href="#" title="事故調查" aria-label="熱門搜尋關鍵字 事故調查">事故調查</a>、
+                                    <a href="#" title="黑盒子" aria-label="熱門搜尋關鍵字 黑盒子">黑盒子</a>、
+                                    <a href="#" title="飛安事故" aria-label="熱門搜尋關鍵字 飛安事故">飛安事故</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="main-nav">
+                        <ul class="nav-links">
+                            <li class="active"><a href="" title="查詢過去事故調查案件" aria-label="主要導覽列項目 事故調查">事故調查</a></li>
+                            <li><a href="" title="查看事故統計資訊" aria-label="主要導覽列項目 統計資訊">統計資訊</a></li>
+                            <li><a href="" title="查看所有自願報告" aria-label="主要導覽列項目 自願報告">自願報告</a></li>
+                            <li><a href="" title="查看相關新聞與最新公告" aria-label="主要導覽列項目 新聞與公告">新聞與公告</a></li>
+                            <li><a href="" title="提供聯絡本會之方式" aria-label="主要導覽列項目 聯絡本會">聯絡本會</a></li>
+                            <li><a href="" title="查看關於本會的資訊" aria-label="主要導覽列項目 關於本會">關於本會</a></li>
+                            <li><a href="" title="查看相關法規與資訊" aria-label="主要導覽列項目 法規與資訊">法規與資訊</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mb_search" class="mb-search-box">
+                <div class="search-input">
+                    <form action="">
+                        <input class="form-control search-keywords" name="search-keywords" type="text"
+                            aria-label="網站內容搜尋 請輸入關鍵字" placeholder="請輸入關鍵字">
+                        <button type="button" class="btn btn-primary search-btn">
+                            <i class="fas fa-search" aria-label="開始搜尋"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="search-hot-keywords">
+                    <div class="popular">熱門：
+                        <a href="#" title="調查報告" aria-label="熱門搜尋關鍵字 調查報告">調查報告</a>、
+                        <a href="#" title="事故調查" aria-label="熱門搜尋關鍵字 事故調查">事故調查</a>、
+                        <a href="#" title="黑盒子" aria-label="熱門搜尋關鍵字 黑盒子">黑盒子</a>、
+                        <a href="#" title="飛安事故" aria-label="熱門搜尋關鍵字 飛安事故">飛安事故</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="index">
+        <div id="banner" class="swiper-container">
+            <div id="banner-content" class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(/images/bg-img/slide_img2.jpg)">
+                    <!-- 8/23 Banner標語自訂修改 -->
+                    <div>
+                        <span class="bannerTitle">運輸安全，人民安心</span><br>
+                        <span>獨立、公正、專業</span>
+                    </div>
+                    <!-- 8/23 Banner標語自訂修改 -->
+                </div>
+                <div class="swiper-slide" style="background-image:url(/images/bg-img/slide_img2.jpg)"
+                    title="國家運輸安全調查委員會網站主視覺"></div>
+                <div class="swiper-slide" style="background-image:url(/images/bg-img/slide_img2.jpg)"
+                    title="國家運輸安全調查委員會網站主視覺"></div>
+            </div>
+            <i title="換下張照片" class=" far fa-angle-right banner-button-next"></i>
+            <i title="換上張照片" class="fas fa-angle-left banner-button-prev"></i>
+            <div class="swiper-pagination"></div>
+
+            <div id="card" class="text text-center">
+                <button title="收起立即通報卡片" id="closed" type="button" class="btn btn-link x-sign" onclick="closed()">
+                    <i title="點擊收起卡片" class="closed fas fa-times"></i>
+                </button>
+                <button title="展開立即通報卡片" id="open" type="button" class="btn btn-link x-sign" onclick="opened()">
+                    <i title="點擊展開卡片" class="open fas fa-angle-left"></i>
+                </button>
+                <ul class="mb-0 pl-0">
+                    <!-- <li></li>  -->
+                    <li><a title="進入立即通報頁面" class="" href="">立即通報<i class="fas fa-angle-double-right"></i></a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="mb_banner" class="swiper-container">
+            <div id="mb_banner_content" class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/images/bg-img/slide_img2.jpg" alt="國際運輸交通安全委員會首頁圖">
+                    <!-- 8/23 Banner標語自訂修改 -->
+                    <div>
+                        <span class="bannerTitle">運輸安全，人民安心</span>
+                        <span>獨立、公正、專業</span>
+                    </div>
+                    <!-- 8/23 Banner標語自訂修改 -->
+                </div>
+                <div class=" swiper-slide">
+                    <img src="/images/bg-img/slide_img2.jpg" alt="國際運輸交通安全委員會首頁圖">
+                    <!-- 8/23 Banner標語自訂修改 -->
+                    <div>
+                        <span class="bannerTitle">運輸安全，人民安心</span>
+                        <span>獨立、公正、專業</span>
+                    </div>
+                    <!-- 8/23 Banner標語自訂修改 -->
+                </div>
+                <div class=" swiper-slide">
+                    <img src="/images/bg-img/slide_img2.jpg" alt="國際運輸交通安全委員會首頁圖">
+                    <!-- 8/23 Banner標語自訂修改 -->
+                    <div>
+                        <span class="bannerTitle">運輸安全，人民安心</span>
+                        <span>獨立、公正、專業</span>
+                    </div>
+                    <!-- 8/23 Banner標語自訂修改 -->
+                </div>
+            </div>
+
+            <i class=" far fa-angle-right banner-button-next"></i>
+            <i class="fas fa-angle-left banner-button-prev"></i>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="container">
+            <div id="navCard" class="cardsgroup">
+                <div class="allcards row no-gutters">
+                    <div class="col">
+                        <a href="" class="nav-link" title="進入事故調查頁面">事故調查</a>
+                    </div>
+                    <div class="col">
+                        <a href="" class="nav-link" title="進入統計資訊頁面">統計資訊</a>
+                    </div>
+                    <div class="col">
+                        <a href="" class="nav-link" title="進入自願報告頁面">自願報告</a>
+                    </div>
+                    <div class="col">
+                        <a href="" class="nav-link" title="進入新聞與公告頁面">新聞與公告</a>
+                    </div>
+                    <div class="col">
+                        <a href="" class="nav-link" title="進入聯絡本會頁面">聯絡本會</a>
+                    </div>
+                    <div class="col">
+                        <a href="" class="nav-link" title="進入關於本會頁面">關於本會</a>
+                    </div>
+                    <div class="col">
+                        <a href="" class="nav-link" title="進入法規與資訊頁面">法規與資訊</a>
+                    </div>
+                </div>
+
+                <div id="navButton" class="row no-gutters">
+                    <div class="mb_button col-12 justify-content-center align-items-center">24小時事故通報專線<i
+                            class="fas fa-angle-double-right"></i></div>
+                    <div class="Mask col-lg-3 col-md-6">
+                        <a href="" class="nav-link blue" title="進入交通頁面:航空"><img src="/images/icons/air.png"
+                                alt="點擊進入查看航空頁面"> 航空</a>
+                    </div>
+                    <div class="Mask col-lg-3 col-md-6">
+                        <a href="" class="nav-link gray" title="進入交通頁面:鐵道"><img src="/images/icons/train-black.png"
+                                alt="點擊進入查看鐵道頁面">鐵道</a>
+                    </div>
+                    <div class="Mask col-lg-3 col-md-6">
+                        <a href="" class="nav-link red" title="進入交通頁面:水路"><img src="/images/icons/boat.png"
+                                alt="點擊進入查看水路頁面">水路</a>
+                    </div>
+                    <div class="Mask col-lg-3 col-md-6">
+                        <a href="" class="nav-link green" title="進入交通頁面:公路"><img src="/images/icons/car.png"
+                                alt="點擊進入查看公路頁面">公路</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 8/20 id="aC"無障礙超連結 -->
+        <a id="aC" class="accesskey" href="#aC" accesskey="C" title="中央內容區">:::</a>
+    </div>
+    <div class="news">
+        <div class="container">
+            <h2>最新消息</h2>
+            <!-- 新聞標題列 -->
+            <div class="newscontainer">
+                <a class="row no-gutters" href="" title="新聞標題">
+                    <hr>
+                    <div class="time col-12 col-lg-1">2019.01.11</div>
+                    <div class="news-title col-11 col-lg-9">飛航安全調查委員會「飛越20 安全邁向安心」成立20週年茶會</div>
+                    <div class="col-1 col-lg-2 text-right"><i class="fas fa-angle-double-right"></i></div>
+                </a>
+            </div>
+            <div class="newscontainer">
+                <a class="row no-gutters" href="" title="新聞標題">
+                    <hr>
+                    <div class="time col-12 col-lg-1">2018.08.22</div>
+                    <div class="news-title col-11 col-lg-9">政府將成立獨立調查重大運輸事故之「國家運輸安全調查委員會」以維護全民行的安全</div>
+                    <div class="col-1 col-lg-2 text-right"><i class="fas fa-angle-double-right"></i></div>
+                </a>
+            </div>
+            <div class="newscontainer">
+                <a class="row no-gutters" href="" title="新聞標題">
+                    <hr>
+                    <div class="time col-12 col-lg-1">2018.05.22</div>
+                    <div class="news-title col-11 col-lg-9">成立國家運輸安全委員調查會 以獨立、公正、專業的精神，執行陸、海、空重大運輸事故調查...</div>
+                    <div class="col-1 col-lg-2  text-right"><i class="fas fa-angle-double-right"></i></div>
+                </a>
+            </div>
+            <div class="newscontainer">
+                <a class="row no-gutters d-flex aling-items-center" href="">
+                    <hr>
+                    <div class="time col-12 col-lg-1">2019.99.99</div>
+                    <div class="news-title col-11 col-lg-9">
+                        這裡最多顯示50個字，這裡最多顯示50個字，這裡最多顯示50個字，這裡最多顯示50個字，這裡最多顯示50個字，這裡最多顯示50個字，</div>
+                    <div class="col-1 col-lg-2 text-right"><i class="fas fa-angle-double-right"></i></div>
+                </a>
+            </div>
+            <div class="newscontainer">
+                <a class="row no-gutters" href="" title="新聞標題">
+                    <hr>
+                    <div class="time col-12 col-lg-1">2019.99.99</div>
+                    <div class="news-title col-11 col-lg-9">飛航安全調查委員會「飛越20 安全邁向安心」成立20週年茶會</div>
+                    <div class="col-1 col-lg-2 text-right"><i class="fas fa-angle-double-right"></i></div>
+                </a>
+            </div>
+
+            <!-- 查看更多按鈕 -->
+            <div class="d-flex justify-content-center">
+                <a title="點擊進入查看更多內容" class="watchmore rounded" href="">
+                    更多內容
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="related-data">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <h2 class="col-auto">相關數據</h2>
+                <div class="icons col col-lg-auto">
+                    <a title="航空數據" href="#related-tab-air">
+                        <div class="icon">
+                            <img src="/images/icons/air.png" alt="切換至航空數據">
+                            <div>航空</div>
+                        </div>
+                    </a>
+                    <a title="鐵道數據" href="#related-tab-train">
+                        <div class="icon">
+                            <img src="/images/icons/train.png" alt="切換至鐵道數據">
+                            <div>鐵道</div>
+                        </div>
+                    </a>
+                    <a title="水路數據" href="#related-tab-boat">
+                        <div class="icon">
+                            <img src="/images/icons/boat.png" alt="切換至水路數據">
+                            <div>水路</div>
+                        </div>
+                    </a>
+                    <a title="公路數據" href="#related-tab-car">
+                        <div class="icon">
+                            <img src="/images/icons/car.png" alt="切換至公路數據">
+                            <div>公路</div>
+                        </div>
+                    </a>
+                    <a title="統計數據" href="#related-tab-statistics">
+                        <div class="icon">
+                            <img src="/images/icons/statistics.png" alt="切換至統計數據">
+                            <div>統計</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="related-content row">
+                <div class="tab-content w-100">
+                    <div class="tab-pane active" id="related-tab-air" role="tabpanel" aria-labelledby="air-tab">
+                        <div class="content-left col-12 col-lg-3">
+                            <div data-number="10" class="data-number">
+                                10
+                            </div>
+                            <div class="text text-center">2017飛航事故件數</div>
+                            <div class="date-bg-image" style="background-image: url('/images/bg-img/air.png')">
+                            </div>
+                        </div>
+                        <div class="content-right col-12 col-lg-9">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div data-number="3342" class="data-number text-center">
+                                        3342
+                                    </div>
+                                    <div class="text text-center">2017飛航事故件數</div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div data-number="2" class="data-number text-center">
+                                        2
+                                    </div>
+                                    <div class="text text-center">2017飛航事故件數</div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div data-number="55" class="data-number text-center">
+                                        55
+                                    </div>
+                                    <div class="text text-center">2017飛航事故件數</div>
+                                </div>
+                                <div class="col-12">
+                                    <ul class="row related-content-links">
+                                        <li class="col-6 col-lg-3">
+                                            <a title="調查中事故" href="">調查中事故</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="期中通告" href="">期中通告</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="調查報告檢索" href="">調查報告檢索</a>
+                                        </li>
+                                        <li class="w-100 d-none d-lg-block"></li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="已結案事故" href="">已結案事故</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="related-tab-train" role="tabpanel" aria-labelledby="train-tab">
+                        <div class="content-left col-12 col-lg-3">
+                            <div data-number="33" class="data-number text-center">
+                                33
+                            </div>
+                            <div class="text text-center">2017飛航事故件數</div>
+                            <div class="date-bg-image" style="background-image: url('/images/bg-img/train.png')">
+                            </div>
+                        </div>
+                        <div class="content-right col-12 col-lg-9">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div data-number="2341" class="data-number text-center">
+                                        2341
+                                    </div>
+                                    <div class="text text-center">2017飛航事故件數</div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div data-number="82" class="data-number text-center">
+                                        82
+                                    </div>
+                                    <div class="text text-center">2017飛航事故件數</div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div data-number="11" class="data-number text-center">
+                                        11
+                                    </div>
+                                    <div class="text text-center">2017飛航事故件數</div>
+                                </div>
+                                <div class="col-12">
+                                    <ul class="row related-content-links">
+                                        <li class="col-6 col-lg-3">
+                                            <a title="調查中事故" href="">調查中事故</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="期中通告" href="">期中通告</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="調查報告檢索" href="">調查報告檢索</a>
+                                        </li>
+                                        <li class="w-100 d-none d-lg-block"></li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="已結案事故" href="">已結案事故</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="改善建議" href="">改善建議</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="統計資訊" href="">統計資訊</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="related-tab-boat" role="tabpanel" aria-labelledby="boat-tab">
+                        <div class="content-left col-12 col-lg-3">
+                            <div data-number="14" class="data-number text-center">
+                                14
+                            </div>
+                            <div class="text text-center">2017飛航事故件數</div>
+                            <div class="date-bg-image" style="background-image: url('/images/bg-img/boat.png')">
+                            </div>
+                        </div>
+                        <div class="content-right col-12 col-lg-9">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div data-number="542" class="data-number text-center">
+                                        542
+                                    </div>
+                                    <div class="text text-center">2017飛航事故件數</div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div data-number="2" class="data-number text-center">
+                                        2
+                                    </div>
+                                    <div class="text text-center">2017飛航事故件數</div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div data-number="14" class="data-number text-center">
+                                        14
+                                    </div>
+                                    <div class="text text-center">2017飛航事故件數</div>
+                                </div>
+                                <div class="col-12">
+                                    <ul class="row related-content-links">
+                                        <li class="col-6 col-lg-3">
+                                            <a title="調查中事故" href="">調查中事故</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="期中通告" href="">期中通告</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="調查報告檢索" href="">調查報告檢索</a>
+                                        </li>
+                                        <li class="w-100 d-none d-lg-block"></li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="已結案事故" href="">已結案事故</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="改善建議" href="">改善建議</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="統計資訊" href="">統計資訊</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="related-tab-car" role="tabpanel" aria-labelledby="car-tab">
+                        <div class="content-left col-12 col-lg-3">
+                            <div data-number="55" class="data-number text-center">
+                                55
+                            </div>
+                            <div class="text text-center">2017飛航事故件數</div>
+                            <div class="date-bg-image" style="background-image: url('/images/bg-img/car.png')">
+                            </div>
+                        </div>
+                        <div class="content-right col-12 col-lg-9">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div data-number="32" class="data-number text-center">
+                                        32
+                                    </div>
+                                    <div class="text text-center">2017飛航事故件數</div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div data-number="12" class="data-number text-center">
+                                        12
+                                    </div>
+                                    <div class="text text-center">2017飛航事故件數</div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div data-number="41" class="data-number text-center">
+                                        41
+                                    </div>
+                                    <div class="text text-center">2017飛航事故件數</div>
+                                </div>
+                                <div class="col-12">
+                                    <ul class="row related-content-links">
+                                        <li class="col-6 col-lg-3">
+                                            <a title="調查中事故" href="">調查中事故</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="期中通告" href="">期中通告</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="調查報告檢索" href="">調查報告檢索</a>
+                                        </li>
+                                        <li class="w-100 d-none d-lg-block"></li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="已結案事故" href="">已結案事故</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="改善建議" href="">改善建議</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="統計資訊" href="">統計資訊</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="related-tab-statistics" role="tabpanel" aria-labelledby="statistics-tab">
+                        <div class="content-text col-12">
+                            <div class="row">
+                                <div class="col-11 offset-1">
+                                    <div class="date-bg-image"
+                                        style="background-image: url('/images/bg-img/statistics.png')">
+                                    </div>
+                                    <div id="info" class="info-text">
+                                        每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，每類說明最多顯示200個字，
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-center">
+                                        <a title="點擊查看更多內容" class="watchmore rounded" href="">
+                                            更多內容
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <ul class="row related-content-links">
+                                        <li class="col-6 col-lg-3">
+                                            <a title="調查中事故" href="">調查中事故</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="期中通告" href="">期中通告</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="調查報告檢索" href="">調查報告檢索</a>
+                                        </li>
+                                        <li class="w-100 d-none d-lg-block"></li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="已結案事故" href="">已結案事故</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="改善建議" href="">改善建議</a>
+                                        </li>
+                                        <li class="col-6 col-lg-3">
+                                            <a title="統計資訊" href="">統計資訊</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="event">
+        <div class="container-hanks">
+            <div class="left-section">
+                <div class="container-fluid">
+                    <div class="event-mb-bg"></div>
+                    <div class="row no-gutters">
+                        <div class="menu-bg col-lg-6">
+                            <div class="event-bg-wrap">
+                                <div class="event-bg"></div>
+                            </div>
+                        </div>
+                        <div class="menu col-lg-6">
+                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                <li class="nav-item col">
+                                    <a title="切換至新聞紀要" class="nav-link d-flex align-items-center active"
+                                        id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                                        aria-controls="pills-home" aria-selected="true">
+                                        <div class="tab-btn">
+                                            <div class="icon_bg mr-2"></div>
+                                            新聞紀要
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item col">
+                                    <a title="切換至調查中事故" class="nav-link" id="pills-profile-tab" data-toggle="pill"
+                                        href="#pills-profile" role="tab" aria-controls="pills-profile"
+                                        aria-selected="false">
+                                        <div class="tab-btn">
+                                            <div class="icon_bg mr-2"></div>
+                                            調查中事故
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item col">
+                                    <a title="切換至已結案事故" class="nav-link" id="pills-contact-tab" data-toggle="pill"
+                                        href="#pills-contact" role="tab" aria-controls="pills-contact"
+                                        aria-selected="false">
+                                        <div class="tab-btn">
+                                            <div class="icon_bg mr-2"></div>
+                                            已結案事故
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                    aria-labelledby="pills-home-tab">
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                    aria-labelledby="pills-profile-tab">
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                    aria-labelledby="pills-contact-tab">
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="events">
+                                        <a title="新聞標題" class="row no-gutters" href="">
+                                            <div class="col-12 col-lg-2">2019.04.01</div>
+                                            <div class="col-11 col-lg-9">測試文字測試文字測試文字</div>
+                                            <div class="col-1 text-right"><i class="fas fa-angle-double-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="more-content">
+                                <a title="點擊進入查看更多內容" class="more-content-btn" href="">更多內容</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-section"></div>
+        </div>
+    </div>
+
+    <div class="international">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center">
+                <h2>國際運安</h2>
+            </div>
+            <div class="country">
+                <div id="safety" class="swiper-container col-12 col-lg-9">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a title="點擊進入網站(另開視窗)" href="">美國</a></div>
+                        <div class="swiper-slide"><a title="點擊進入網站(另開視窗)" href="">英國</a></div>
+                        <div class="swiper-slide"><a title="點擊進入網站(另開視窗)" href="">加拿大</a></div>
+                        <div class="swiper-slide"><a title="點擊進入網站(另開視窗)" href="">義大利</a></div>
+                        <div class="swiper-slide"><a title="點擊進入網站(另開視窗)" href="">日本</a></div>
+                        <div class="swiper-slide"><a title="點擊進入網站(另開視窗)" href="">國際民航組織ICAO</a></div>
+                        <div class="swiper-slide"><a title="點擊進入網站(另開視窗)" href="">英國</a></div>
+                        <div class="swiper-slide"><a title="點擊進入網站(另開視窗)" href="">加拿大</a></div>
+                        <div class="swiper-slide"><a title="點擊進入網站(另開視窗)" href="">義大利</a></div>
+                        <div class="swiper-slide"><a title="點擊進入網站(另開視窗)" href="">日本</a></div>
+                    </div>
+                </div>
+                <i title="向右滑動瀏覽區域" class="far fa-angle-right button-next"></i>
+                <i title="向左滑動瀏覽區域" class="fas fa-angle-left button-prev"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <div class="container">
+            <div class="cards row">
+                <div class="col-lg-4 col-mb-12">
+                    <div class="card left shadow rounded">
+                        <img class="topimg" src="/images/demo-img/buttomcard-left.png" alt="事故通報圖片">
+                        <div class="content">
+                            <h3 class="card-title rounded shadow-sm mb-5 bg-white">事故通報</h3>
+                            <!-- 卡片內容 -->
+                            <div class="text text-center">
+                                <ul class="mb-0 px-0">
+                                    <li>24小時通報專線</li>
+                                    <li>免付費專線</li>
+                                    <li>0800-004-066</li>
+                                    <li>值日官手機</li>
+                                    <li>0935-628-217</li>
+                                    <li>
+                                        <a title="點擊通報事故" class="Mask d-flex justify-content-center align-items-center"
+                                            href="">
+                                            <span>立即通報</span>
+                                            <i class="fas fa-angle-double-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-mb-12">
+                    <div class="card right shadow rounded">
+                        <img class="topimg" src="/images/demo-img/buttomcard-middle.png" alt="快速選單圖片">
+                        <div class="content">
+                            <h3 class="card-title rounded shadow-sm mb-5 bg-white">快速選單</h3>
+                            <!-- 卡片內容 -->
+                            <div class="text text-center">
+                                <div class="row no-gutters justify-content-center">
+                                    <div class="col-5 mb-4">
+                                        <a title="點擊進入自願報告系統" href="#">
+                                            <div class="rounded-circle icon">
+                                                <img src="/images/icons/report-btn.png" alt="自願報告系統圖標">
+                                            </div>
+                                            <span class="text-center">自願報告系統</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-5 mb-4">
+                                        <a title="點擊查看調查報告" href="#">
+                                            <div class="rounded-circle icon">
+                                                <img src="/images/icons/related-btn.png" alt="調查報告圖標">
+                                            </div>
+                                            <span class="text-center">調查報告</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row no-gutters justify-content-center">
+                                    <div class="col-5 mb-4">
+                                        <a title="點擊進入填寫運輸安全改善建議" href="#">
+                                            <div class="rounded-circle icon">
+                                                <img src="/images/icons/advice-btn.png" alt="運輸安全改善建議圖標">
+                                            </div>
+                                            <span class="text-center">運輸安全改善建議</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-5 mb-4">
+                                        <a title="點擊查看常見問答FAQ" href="#">
+                                            <div class="rounded-circle icon">
+                                                <img src="/images/icons/qa-btn.png" alt="常見問答FAQ圖標">
+                                            </div>
+                                            <span class="text-center">常見問答FAQ</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-mb-12">
+                    <div class="card right shadow rounded">
+                        <img class="topimg" src="/images/demo-img/buttomcard-right.png" alt="相關連結圖片">
+                        <div class="content">
+                            <h3 class="card-title rounded shadow-sm mb-5 bg-white">相關連結</h3>
+                            <!-- 卡片內容 -->
+                            <div class="text text-center">
+                                <div class="row no-gutters justify-content-center">
+                                    <div class="col-5 mb-4">
+                                        <a title="點擊查看飛安季刊" href="#">
+                                            <div class="rounded-circle icon">
+                                                <img src="/images/icons/report-btn.png" alt="飛安季刊圖標">
+                                            </div>
+                                            <span>飛安季刊</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-5 mb-4">
+                                        <a title="點擊查看國際運輸交通調查委員會官方Facebook(另開視窗)" href="#">
+                                            <div class="rounded-circle icon">
+                                                <img src="/images/icons/related-btn.png" alt="Facebook圖標(另開視窗)">
+                                            </div>
+                                            <span>
+                                                Facebook
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row no-gutters justify-content-center">
+                                    <div class="col-5 mb-4">
+                                        <a title="點擊查看國際運輸交通調查委員會官方Youtube(另開視窗)" href="#">
+                                            <div class="rounded-circle icon">
+                                                <img src="/images/icons/advice-btn.png" alt="Youtube圖標(另開視窗)">
+                                            </div>
+                                            <span>Youtube</span>
+                                        </a>
+                                    </div>
+                                    <div class="col-5 mb-4">
+                                        <a title="點擊查看國際運輸交通調查委員會官方Flickr(另開視窗)" href="#">
+                                            <div class="rounded-circle icon">
+                                                <img src="/images/icons/qa-btn.png" alt="Flickr圖標(另開視窗)">
+                                            </div>
+                                            <span>Flickr</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logos">
+                <div id="logo" class="swiper-container col-lg-9 col-mb-12">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a title="點擊查看分頁網站名稱(另開視窗)" href=""><img
+                                    src="/images/demo-img/goverment.png" alt="進入分頁網站名稱(另開視窗)"><a></div>
+                        <div class="swiper-slide"><a href=""><img src="/images/demo-img/sexual.png"
+                                    alt="進入分頁網站名稱(另開視窗)"></a>
+                        </div>
+                        <div class="swiper-slide"><a title="點擊查看分頁網站名稱(另開視窗)" href=""><img
+                                    src="/images/demo-img/e-quarterly.png" alt="進入分頁網站名稱(另開視窗)"></a>
+                        </div>
+                        <div class="swiper-slide"><a title="點擊查看分頁網站名稱(另開視窗)" href=""><img
+                                    src="/images/demo-img/database.png" alt="進入分頁網站名稱(另開視窗)"></a></div>
+                        <div class="swiper-slide"><a title="點擊查看分頁網站名稱(另開視窗)" href=""><img
+                                    src="/images/demo-img/goverment.png" alt="進入分頁網站名稱(另開視窗)"><a></div>
+                        <div class="swiper-slide"><a title="點擊查看分頁網站名稱(另開視窗)" href=""><img
+                                    src="/images/demo-img/sexual.png" alt="進入分頁網站名稱(另開視窗)"></a>
+                        </div>
+                        <div class="swiper-slide"><a title="點擊查看分頁網站名稱(另開視窗)" href=""><img
+                                    src="/images/demo-img/e-quarterly.png" alt="進入分頁網站名稱(另開視窗)"></a>
+                        </div>
+                        <div class="swiper-slide"><a title="點擊查看分頁網站名稱(另開視窗)" href=""><img
+                                    src="/images/demo-img/database.png" alt="進入分頁網站名稱(另開視窗)"></a></div>
+                    </div>
+                </div>
+                <i title="向右查看圖片" class="far fa-angle-right logo-button-next"></i>
+                <i title="向左查看圖片" class="fas fa-angle-left logo-button-prev"></i>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <img class="img-fluid" src="/images/bg-img/footer_bg.png" alt="頁尾背景圖片">
+        </div>
+
+        <div class="sitemaps">
+            <a id="aZ" class="accesskey" href="#aZ" accesskey="Z" title="下方功能區">:::</a>
+            <!-- 8/15 id="aZ"無障礙超連結 -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg">
+                        <a class="footer-title" title="查看事故調查" href="/" data-toggle="dp-collapse" data-toggleid="accident_investigation">
+                            <p>事故調查</p>
+                        </a>
+                        <div class="content" data-toggleid="accident_investigation">
+                            <ul>
+                                <li><a href="" title="查看事故調查流程" aria-label="頁尾項目 事故調查流程">事故調查流程</a></li>
+                                <li><a title="查看重大調查案件" href="">重大調查案件</a></li>
+                                <li><a title="查看調查中事故" href="">調查中事故</a></li>
+                                <li><a title="查看已結案事故" href="">已結案事故</a></li>
+                                <li><a title="查看調查報告檢索" href="">調查報告檢索</a></li>
+                                <li><a title="查看飛安改善建議" href="">飛安改善建議</a></li>
+                                <li><a title="查看期中飛安通告" href="">期中飛安通告</a></li>
+                                <li><a title="查看調查中飛航事故彙整表" href="">調查中飛航事故彙整表</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg">
+                        <a title="所有統計資訊" href="#" data-toggle="dp-collapse" data-toggleid="statistical_information">
+                            <p>統計資訊</p>
+                        </a>
+                        <div class="content" data-toggleid="statistical_information">
+                            <ul>
+                                <li><a title="查看飛安統計" href="">飛安統計</a></li>
+                                <li><a title="查看飛航事故資料庫" href="">飛航事故資料庫</a></li>
+                                <li><a title="查看紀錄器普查" href="">紀錄器普查</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg">
+                        <a title="新聞與公告" href="#" data-toggle="dp-collapse" data-toggleid="news_and_announcements">
+                            <p>新聞與公告</p>
+                        </a>
+                        <div class="content" data-toggleid="news_and_announcements">
+                            <ul>
+                                <li><a title="查看新聞稿" href="#">新聞稿</a></li>
+                                <li><a title="查看媒體處理原則" href="#">媒體處理原則</a></li>
+                                <li><a title="查看影片及動畫" href="#">影片及動畫</a></li>
+                                <li><a title="查看公關聯絡人" href="#">公關聯絡人</a></li>
+                                <li><a title="查看本會公告" href="#">本會公告</a></li>
+                                <li><a title="查看爭議訊息澄清專區" href="#">爭議訊息澄清專區</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg">
+                        <a title="聯絡本會方式" href="#" data-toggle="dp-collapse" data-toggleid="contact">
+                            <p>聯絡本會</p>
+                        </a>
+                        <div class="content" data-toggleid="contact">
+                            <ul>
+                                <li><a title="查看聯絡資訊" href="#">聯絡資訊</a></li>
+                                <li><a title="查看民意信箱" href="#">民意信箱</a></li>
+                                <li><a title="查看事故通報" href="#">事故通報</a></li>
+                                <li><a title="查看飛安自願報告" href="#">飛安自願報告</a></li>
+                                <li><a title="查看公關聯絡人" href="#">公關聯絡人</a></li>
+                                <li><a title="查看本會地理位置" href="#">本會地理位置</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg">
+                        <a title="關於本會" href="#" data-toggle="dp-collapse" data-toggleid="about">
+                            <p>關於本會</p>
+                        </a>
+                        <div class="content" data-toggleid="about">
+                            <ul>
+                                <li><a title="查看主委的話" href="">主委的話</a></li>
+                                <li><a title="查看組織概況" href="">組織概況</a></li>
+                                <li><a title="查看委員會" href="">委員會</a></li>
+                                <li><a title="查看組室介紹" href="">組室介紹</a></li>
+                                <li><a title="查看顯著提升飛安之改善建議" href="">顯著提升飛安之改善建議</a></li>
+                                <li><a title="查看本會簡介影片" href="">本會簡介影片</a></li>
+                                <li><a title="查看工作報告" href="">工作報告</a></li>
+                                <li><a title="查看本會聯絡資訊" href="">本會聯絡資訊</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg">
+                        <a title="法規與資訊" href="#" data-toggle="dp-collapse" data-toggleid="regulations_and_information">
+                            <p>法規與資訊</p>
+                        </a>
+                        <div class="content" data-toggleid="regulations_and_information">
+                            <ul>
+                                <li><a title="查看相關法規" href="">相關法規</a></li>
+                                <li><a title="查看政府資訊公開" href="">政府資訊公開</a></li>
+                                <li><a title="查看出版品與著作" href="">出版品與著作</a></li>
+                                <li><a title="查看本會公告" href="">本會公告</a></li>
+                                <li><a title="查看資料下載" href="">資料下載</a></li>
+                                <li><a title="查看公文附件下載" href="">公文附件下載</a></li>
+                                <li><a title="查看性別平等專區" href="">性別平等專區</a></li>
+                                <li><a title="查看飛航事故調查常用名詞百科" href="">飛航事故調查常用名詞百科</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-4">
+                        <img class="img-fluid logo" src="/images/logo/logo-inverse.png" alt="國家運輸安全調查委員會Logo">
+                    </div>
+
+                    <div class="col-md-12 col-lg-auto">
+                        <div class="footer-information">
+                            <div class="information-text">
+                                <div class="social-icons">
+                                    <ul>
+                                        <li>
+                                            <a title="查看國際運輸交通安全委員會官方facebook(另開視窗)" href="">
+                                                <img class="icon" src="/images/icons/facebook.png"
+                                                    alt="facebook圖標(另開視窗)">
+                                                <img class="icon" src="/images/icons/facebook-active.png"
+                                                    alt="facebook-hover圖標(另開視窗)">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="查看國際運輸交通安全委員會官方twitter(另開視窗)" href="">
+                                                <img class="icon" src="/images/icons/twitter.png" alt="twitter圖標(另開視窗)">
+                                                <img class="icon" src="/images/icons/twitter-active.png"
+                                                    alt="twitter-active圖標(另開視窗)">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="查看國際運輸交通安全委員會官方Line(另開視窗)" href="">
+                                                <img class="icon" src="/images/icons/line.png" alt="line圖標(另開視窗)">
+                                                <img class="icon" src="/images/icons/line-active.png"
+                                                    alt="line-hover圖標(另開視窗)">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="查看國際運輸交通安全委員會官方Youtube(另開視窗)" href="">
+                                                <img class="icon" src="/images/icons/youtube.png" alt="youtube圖標(另開視窗)">
+                                                <img class="icon" src="/images/icons/youtube-active.png"
+                                                    alt="youtube-hover圖標(另開視窗)">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="查看國際運輸交通安全委員會官方Instagram(另開視窗)" href="">
+                                                <img class="icon" src="/images/icons/instagram.png"
+                                                    alt="instagram圖標(另開視窗)">
+                                                <img class="icon" src="/images/icons/instagram-active.png"
+                                                    alt="instagram-hover圖標(另開視窗)">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="查看國際運輸交通安全委員會官方LinkedIn(另開視窗)" href="">
+                                                <img class="icon" src="/images/icons/linkedin.png"
+                                                    alt="linkedin圖標(另開視窗)">
+                                                <img class="icon" src="/images/icons/linkedin-active.png"
+                                                    alt="linkedin-hover圖標(另開視窗)">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a title="查看國際運輸交通安全委員會官方RSS(另開視窗)" href="">
+                                                <img class="icon" src="/images/icons/rss.png" alt="rss圖標(另開視窗)">
+                                                <img class="icon" src="/images/icons/rss-active.png"
+                                                    alt="rss-active圖標(另開視窗)">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="accessibility-icon">
+                                    <img class="img-fluid" src="/images/demo-img/accessibility-icon.png" alt="無障礙網站圖標">
+                                </div>
+                                <div class="mb-3">
+                                    <a title="查看政府網站資料開放宣告" class="mr-4" href="">政府網站資料開放宣告</a>
+                                    <a title="隱私權及安全政策" href="">隱私權及安全政策</a>
+                                </div>
+                                <p>電話：886-2-89127388</p>
+                                <p>傳真：886-2-89127399</p>
+                                <p>地址：新北市231新店區北新路三段200號11樓</p>
+                                <br>
+                                <p><span>更新日期：2019/07/16</span>　　<span>累計瀏覽人次:99999999</span></p>
+                                <p>本網站支援IE、Chrome及Firefox等瀏覽器，建議使用螢幕解析度1024x768可得到最佳瀏覽效果</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="GoTop">
+        <div class="img">
+            <!-- 8/28無障礙修改 回到最上層也須有按鈕觸發 -->
+            <a title="回到最上方" accesskey="T" href="#">
+                <div class="go-to-top-btn"></div>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+
+
+</body>
+
+</html>

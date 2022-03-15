@@ -1,0 +1,132 @@
+main {
+  padding-bottom: 155px;
+}
+
+@media (max-width: 576px) {
+  main {
+    padding-bottom: 105px;
+  }
+}
+
+@media (max-width: 767px) {
+  main #CP-title {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  main #topline .flex_control {
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
+}
+
+main #topline .topline-button {
+  border: none;
+  width: 140px;
+}
+
+@media (max-width: 1200px) {
+  main #topline .topline-button {
+    width: 100%;
+  }
+}
+
+main #topline .topline-button .button {
+  width: 100%;
+  border: 1px solid black;
+}
+
+@media (max-width: 1200px) {
+  main #topline .topline-button .button {
+    width: 140px;
+    margin: auto;
+  }
+}
+
+main #inquire_list .table-group {
+  width: 100%;
+  font-size: 20px;
+  border: 2px solid #5CC3B1;
+}
+
+main #inquire_list .table-group .table-info {
+  border-bottom: 2px solid #5CC3B1;
+}
+
+main #inquire_list .table-group .table-info:nth-child(odd) {
+  background-color: #E7F2F0;
+}
+
+main #inquire_list .table-group .table-info:nth-child(even) {
+  background-color: white;
+}
+
+main #inquire_list .table-group .table-info:first-child {
+  background-color: #24A296;
+  color: white;
+  font-weight: bold;
+}
+
+main #inquire_list .table-group .table-info:last-child {
+  border: none;
+}
+
+main #inquire_list .table-group .table-info .table-number {
+  min-width: 350px;
+  text-align: center;
+  border-right: 2px solid #5CC3B1;
+  height: 45px;
+  line-height: 45px;
+}
+
+main #inquire_list .table-group .table-info .table-name {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  letter-spacing: 1px;
+  height: 45px;
+  line-height: 45px;
+}
+
+main #inquire_list .table-mb-group .table-info {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 14px;
+  border: 2px solid #5CC3B1;
+}
+
+main #inquire_list .table-mb-group .table-info:nth-child(even) .table-number-content {
+  background-color: #E7F2F0;
+}
+
+main #inquire_list .table-mb-group .table-info:nth-child(even) .table-name-content {
+  background-color: #E7F2F0;
+}
+
+main #inquire_list .table-mb-group .table-info .table-number {
+  background-color: #24A296;
+  color: white;
+  font-weight: bold;
+  border-bottom: 2px solid #5CC3B1;
+}
+
+main #inquire_list .table-mb-group .table-info .table-name {
+  background-color: #24A296;
+  color: white;
+  font-weight: bold;
+  border-top: 2px solid #5CC3B1;
+  border-bottom: 2px solid #5CC3B1;
+}
+
+main #inquire_list .table-mb-group .table-info .table-number-content, main #inquire_list .table-mb-group .table-info .table-name-content {
+  background-color: white;
+}
+
+main #inquire_list .table-mb-group .table-info .table-name-content {
+  text-align: justify;
+  padding: 10px 12px;
+}
+/*# sourceMappingURL=12-inquire_list.css.map */

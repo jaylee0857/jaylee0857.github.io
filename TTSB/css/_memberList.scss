@@ -1,0 +1,105 @@
+@import "color";
+@import "variable";
+
+.pageTitle {
+    font-size: $font-h2;
+    color: $darkgreen2;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.photocard {
+    font-size: $font-h3;
+
+    @media(max-width:991px) {
+        font-size: $font-mb-p;
+    }
+
+    .title {
+        color: $font-color-white;
+        background-color: $darkgreen;
+        // 8/26 增加間距和字體粗度
+        padding: 10px 0px;
+        font-weight: bold;
+         // 8/26 增加間距和字體粗度
+    }
+
+    &:nth-child(3) {
+        .title {
+            background-color: $darkgreen2;
+        }
+    }
+
+    &:nth-child(4) {
+        .title {
+            color: $font-color-black;
+            background-color: $green2;
+        }
+    }
+
+    &:last-child {
+        .title {
+            color: $font-color-black;
+            background-color: $lightgreen2
+        }
+    }
+
+    .content {
+        width: 80%;
+        // 8/26 py-2 padding移到CSS
+        padding: 15px 0px 20px;
+        // 8/26 py-2 padding移到CSS
+        #Detection{
+            justify-content:center;
+
+            a {
+                color: $font-color-black;
+                text-decoration: none;
+
+                &:hover,&:focus {
+                    outline: none !important;
+
+                    .photo{
+                        border:3px solid #d00;
+                        border-bottom:none;
+                    }
+                    .name{
+                        border:3px solid #d00;
+                        border-top:none;
+                    }
+                }
+    
+                .photo {
+                    width: 100%;
+                    height: 4.5cm;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-image: url('../images/demo-img/merber_list_bg_img.png');
+    
+                    @media (max-width:576px) {
+                        background-size: cover;
+                        height: 2.5cm
+                    }
+                }
+    
+                .name {
+                    display: flex;
+                    justify-content: center;
+                    // 8/26 委員名稱文字置中+粗體
+                    text-align: center;
+                    font-weight: bold;
+                     // 8/26 委員名稱文字置中+粗體
+                     // 8/26 en 英文版名稱行距，中文版不衝突
+                     line-height: 24px;
+                     // 8/26 en 英文版名稱行距，中文版不衝突
+                     // 10/21 新增名稱間距
+                    padding:10px 0;
+                    // 10/21 新增名稱間距
+                }
+            }
+        }
+
+    }
+
+}

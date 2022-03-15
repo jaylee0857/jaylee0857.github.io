@@ -1,0 +1,165 @@
+@import "./variable";
+
+main{
+    .title-text{
+        border-bottom: 1px solid $gray;
+        padding-bottom: 10px;
+
+        h2{
+            color: #24A89C;
+            font-weight: 900;
+            font-size: 35px;
+        }
+    }
+    #pathBtn{
+        
+        .row{
+            .btn_block{
+                
+                height: 120px ;
+                background:  $btn_green;
+                border-radius: 19px;
+                line-height: 120px;
+                text-align: center;
+                color: $font-color-white;
+                
+                cursor: pointer;
+                
+                &:hover{
+                    background: $btn_orange;
+                }
+                @media (max-width:1200px) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    .registrationInformation{
+        text-align: justify;
+        .title{
+            font-weight: bold;
+            font-size: $fs-20;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+        }
+        .text{
+            font-size: $fs-18;
+            P{
+                margin-bottom: 30px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .BTN{
+            width: 290px ;
+            height: 60px;
+            border-radius: 10px;
+            background: $btn_pink;
+            font-size: $fs-30;
+            color:$font-color-white;
+            font-weight: bold;
+            text-align: center;
+            line-height: 60px;
+            margin: 50px 0;
+            transition: .3s;
+
+            &:hover{
+                background: $orange;
+            }
+
+            a{
+                text-decoration: none;
+                color:$font-color-white;
+            }
+        }
+
+    }
+    .btnGroupArea{
+        padding: 50px 0;
+        background-color: #F1F1F1;
+        
+        .container{
+            .row{
+                position: relative;
+                padding: 0 15px;
+                
+                .mask{
+                    
+                    position: absolute;
+                    top: 0;
+                    left: 15px;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('../img/04-LP/2020-03-20-單一活動-03.png');
+                    background-repeat: no-repeat;
+                    // background-size: contain;
+                    background-position: 61% 200%;
+                    z-index: 100;
+                    pointer-events: none;
+                    @media (max-width:1200px) {
+                        display: none;
+                    }
+                }
+                .box{
+                    max-width: 200px;
+                    height: 200px;
+                    background:  $btn_green;
+                    border-radius: 15px;
+                    text-align: center;
+                    line-height: 200px;
+                    color: $font-color-white;
+                    font-size: $fs-30;
+                    font-weight: bold;
+                    text-decoration: none;
+
+                    &:hover{
+                        background:  $btn_orange;
+                    }
+
+                    @media (max-width:1200px) {
+                        max-width: unset;
+                        height: 60px;
+                        line-height: 60px;
+                        border-radius: 10px;
+                        margin-bottom: 15px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #swiperArea{
+        padding: 50px 15px 150px 15px;
+        @media (max-width:1200px) {
+            padding: 50px 15px 100px 15px;
+        }
+        .row{
+            .col-12{
+                
+                @media (max-width:1200px) {
+                    padding: 0;
+                }
+                .swiper-container{
+                    width: 100%;
+                    .swiper-wrapper{
+                        .swiper-slide{
+                            width: 100%;
+                        }
+                    }
+                }
+                .swiper-button-next,
+                .swiper-button-prev{
+                    color: $font-color-white;
+                }
+            }
+
+        }
+    }
+}
+
+main .block-title .title-underline::after {
+    display: none;;
+}

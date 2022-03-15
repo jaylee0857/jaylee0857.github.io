@@ -1,0 +1,39 @@
+<mj-section padding-bottom="0">
+  <mj-column width="100%">
+    <mj-image width="600px" src="../images/bg-img/footer_bg.png" alt="TTSB LOGO" padding="0" />
+  </mj-column>
+</mj-section>
+<mj-section mj-class="green">
+  <mj-column>
+    <mj-button mj-class="gray font-white" font-size="18px" href="#">
+      取消/訂閱電子報
+    </mj-button>
+  </mj-column>
+</mj-section>
+<mj-section mj-class="green" padding="0">
+  <mj-column css-class="media">
+    <mj-button align="right" mj-class="font-yellow green"   inner-padding="0 10px" padding="0" href="#">
+      文字連結01
+    </mj-button>
+  </mj-column>
+  <mj-column css-class="media">
+    <mj-button align="left" mj-class="font-yellow green" padding="0" inner-padding="0 10px" href="#">
+      文字連結02
+    </mj-button>
+  </mj-column>
+</mj-section>
+<mj-section mj-class="green" padding="10px">
+  <mj-column>
+    <mj-text align="center" mj-class="font-white" font-size="14px">電話：886-2-89127388</mj-text>
+  </mj-column>
+</mj-section>
+<mj-section mj-class="green" padding="0">
+  <mj-column>
+    <mj-text align="center" mj-class="font-white" font-size="14px">傳真：886-2-89127399</mj-text>
+  </mj-column>
+</mj-section>
+<mj-section mj-class="green" padding-top="10px" padding-bottom="30px">
+  <mj-column>
+    <mj-text align="center" mj-class="font-white" font-size="14px">地址：新北市231新店區北新路三段200號11樓</mj-text>
+  </mj-column>
+</mj-section>

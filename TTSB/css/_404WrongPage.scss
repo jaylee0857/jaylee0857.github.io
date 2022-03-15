@@ -1,0 +1,126 @@
+@import "color";
+@import "variable";
+
+html,body {
+    padding: 0;
+    overflow:hidden;
+}
+
+#content_bg{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/404/404-bg.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    position:absolute;
+    background-size:70%;
+    right:0;
+
+    @media (max-width: 1200px){
+        background-size:100%; 
+    }
+
+    @media screen and (max-width:991px) {
+        width:100%;
+        height: calc(100vh - 50px);
+        background-size: 130%;
+        bottom: -80px;
+    }
+}
+
+#content {
+    padding-top: 30px;
+    box-sizing: border-box;
+
+    @media screen and (max-width:991px) {
+        padding:0;
+    }
+
+    .btn {
+        width: 300px;
+        @media screen and (max-width:991px) {
+            margin: auto;
+        }
+    }
+}
+
+.logo {
+    margin-bottom: 50px;
+
+    @media (max-width:991px) {
+        margin:10px 0 20px 0;
+    }
+
+    .hidden-title{
+        font-size:1rem;
+        position:absolute;
+        left:-500px;
+    }
+}
+
+.text {
+    margin-bottom: 30px;
+
+    @media (max-width:991px) {
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: $font-h3;
+        color: $darkgreen2;
+        font-weight: 900;
+        letter-spacing: 3px;
+
+        @media screen and (max-width:991px) {
+            letter-spacing: unset;
+        }
+
+        span {
+            @media screen and (max-width:991px) {
+                text-align: center;
+            }
+        }
+    }
+
+    h3 {
+        font-size: $font-mb-p;
+        letter-spacing: 2.5px;
+
+        @media screen and (max-width:991px) {
+            margin: auto;
+            text-align: center;
+        }
+
+        .sec {
+            display: contents;
+        }
+    }
+
+}
+
+.change {
+    color: $orange2;
+    display:contents;
+}
+
+.watchmore {
+    @include green-gradient;
+    color: white;
+    width: 120px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    text-align: center;
+    margin: 30px 0;
+    font-size: $font-h3;
+
+    @media (max-width:991px){
+        margin:0 5px;
+    }
+
+    &:hover,&:focus {
+        text-decoration: none;
+
+        @include orange-gradient;
+    }
+}

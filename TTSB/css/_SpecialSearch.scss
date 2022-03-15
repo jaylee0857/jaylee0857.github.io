@@ -1,0 +1,587 @@
+@import "color";
+@import "variable";
+
+* {
+    box-sizing: border-box;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
+.pc {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+        padding: 0px;
+        text-align: center;
+    }
+}
+
+.button {
+    background-color: white;
+    border: 1px solid $darkgreen2;
+    text-align: center;
+    border-radius: 3px;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $darkgreen2;
+
+        .btn-text {
+            color: white;
+        }
+    }
+
+    .btn-text {
+        color: $darkgreen2;
+        text-decoration: none;
+    }
+
+    .btn-text.active {
+        color: white;
+    }
+}
+
+.button.active {
+    background-color: $darkgreen2;
+}
+
+.datepicker {
+    border: solid 1px $darkgreen2;
+    border-radius: 2px;
+}
+
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover:active,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled:hover.active {
+    background: linear-gradient(90deg, #f8bb00 0%, #ed7a00 100%);
+}
+
+#SpecialSearch {
+    @media screen and (max-width: 991px) {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: $font-h2;
+        line-height: $font-h2;
+        letter-spacing: 2px;
+        color: $darkgreen2;
+        font-weight: 900;
+        position: relative;
+        margin-bottom: 40px;
+
+        @media(max-width:991px) {
+            font-weight: 600;
+        }
+    }
+
+    h3 {
+        font-size: $font-h3;
+        line-height: $font-h3;
+        color: $darkgreen2;
+        font-weight: 900;
+        margin: 20px 0;
+    }
+
+    hr {
+        background: $gray2;
+        height: 1px;
+        margin: 15px 0;
+    }
+
+    .specialSearchForm {
+        @media screen and (max-width: 991px) {
+            margin: 0;
+        }
+    }
+
+    .suggestForm {
+        padding-bottom: 40px;
+
+        .datepicker {
+            border: solid $lightgray 1px;
+            width: 127px;
+
+            @media screen and (max-width: 991px) {
+                width: 45%;
+            }
+        }
+
+        label {
+            text-align: left;
+            min-width: 100px;
+
+            @media screen and (max-width: 991px) {
+                width: 100%;
+            }
+        }
+
+        .endDate {
+            min-width: 50px;
+
+            @media screen and (max-width: 991px) {
+                display: none;
+            }
+        }
+
+        input {
+            padding-left: 5px;
+        }
+
+        input:focus {
+            outline-color: $darkgreen2
+        }
+
+        select:focus {
+            outline-color: $darkgreen2
+        }
+
+        select {
+            width: calc(100% - 105px);
+
+            @media screen and (max-width: 991px) {
+                width: 100%;
+            }
+        }
+
+        .double {
+            width: calc(50% - 105px);
+
+            @media screen and (max-width: 991px) {
+                width: 100%;
+                margin: 5px 0px;
+            }
+
+        }
+
+        .keySearch {
+            @media screen and (max-width: 991px) {
+                width: 100%;
+            }
+        }
+
+        .advancedSearch {
+            @include green-gradient;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            text-decoration: none;
+            float: right;
+            display: inline-block;
+
+            &:hover,&:focus {
+                @include orange-gradient;
+            }
+
+            @media screen and (max-width: 991px) {
+                float: none;
+                margin-top: 20px;
+            }
+        }
+
+    }
+
+    .suggestBtnArea {
+        @media screen and (max-width: 991px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .suggestBtn {
+        @include green-gradient;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 3px;
+        text-decoration: none;
+        display: inline-block;
+
+        &:hover,&:focus {
+            @include orange-gradient;
+        }
+
+    }
+
+    #paginationBlock {
+        position: relative;
+
+        .btn-text{
+            color:$darkgreen2;
+
+            &:hover,&:focus{
+                color:$font-color-white;
+
+                .button{
+                    background-color:$darkgreen2;
+                }
+            }
+
+            &:focus{
+                .button{
+                    border:3px solid #d00;
+                    line-height: 24px;
+                }
+            }
+
+            .button {
+                height: 30px;
+                padding: 0 15px;
+                line-height: 28px;
+            }
+        }
+
+        .pagination-btn {
+            .pagination {
+                margin: 0;
+                transform: translateY(3px);
+
+                .page-item {
+                    border-radius: 50%;
+                    width: 25px;
+                    height: 25px;
+                    text-align: center;
+
+                    a {
+                        color: $font-color-black;
+                        text-decoration: none;
+                    }
+
+                    &.active {
+                        background-color: $darkgreen2;
+
+                        a {
+                            color: white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 991px) {
+            .pagination-btn {
+                width: 100%;
+                margin: 30px 0 20px 0;
+            }
+
+            .pagination {
+                justify-content: center;
+            }
+
+            .button {
+                padding: 0 6px;
+                display: inline-block;
+
+                .btn-text {
+                    font-size: $font-mb-p;
+                }
+            }
+        }
+
+    }
+
+    #suggestEvent {
+        .eventNum {
+            .eventNumColor {
+                color: $darkgreen2;
+            }
+
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+
+            // 10/20 新增項目 電腦版表格和手機板表格
+            //10/27 表格獨立分開分開
+            &.table.pc{
+                thead{
+                    tr{
+                        th{
+                            text-align: center;
+                            &:nth-child(1){
+                                width: 130px;
+                                // min-width: 100px;
+                            }
+                            &:nth-child(2){
+                                max-width: 500px;
+                                @media screen and (max-width: 1200px){
+                                    width: 40%;
+                                }
+                                @media screen and (max-width: 991px){
+                                    width: 43%;
+                                }
+                            }
+                            &:nth-child(3){
+                                width: 130px;
+                                // min-width: 100px;
+                                
+                            }
+                            &:nth-child(4){
+                                width: 130px;
+                                // min-width: 80px;
+                            }
+                        }
+                    }
+
+                }
+                tbody{
+                    tr:first-child{
+                        td{
+                            text-align: left;
+                        }
+                        
+                    }
+                    tr:nth-child(odd){
+                        td{
+                            background-color: rgba($lightgreen2,.5); 
+                            .links:hover,.link:focus{
+                                color: #000;
+                                font-weight: bold;
+                                text-decoration: underline;
+                            }
+                        }
+                        
+                    }
+                    tr{
+                        td{
+                            text-align: left;
+                            &:nth-child(1){
+                                width: 130px;
+                                min-width: 100px;
+                            }
+                            &:nth-child(2){
+                                min-width: 240px;
+                            }
+                            &:nth-child(3){
+                                width: 130px;
+                                min-width: 100px;
+                            }
+                            &:nth-child(4){
+                                width: 130px;
+                                min-width: 80px;
+                            }
+                            &.title{
+                                background-color: $darkgreen2;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &.table.mobile{
+                tbody{
+                    tr{
+                        &:nth-child(2n+1){
+                            font-weight: bolder;
+                        }
+                        &:nth-child(4){
+                            text-align: justify;
+                        }
+                    }
+                }
+            }
+            // 10/20 新增項目
+
+        }
+
+        .mt-30 {
+            margin-top: 30px;
+        }
+
+        th {
+            background-color: $white2;
+        }
+
+        th,
+        td {
+            border: solid 1px $gray2;
+        }
+
+        .title {
+            background-color: $darkgreen2;
+            color: white;
+
+            img {
+                width: 30px;
+            }
+        }
+
+        .links {
+            color: black;
+            text-decoration: none;
+            &:hover,&:focus{
+                color: $darkgreen2;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+
+    }
+
+    // 10/20 新增項目
+    .PageTitle {
+        margin-bottom: 15px;
+
+        .PageTitle-text {
+            font-size: $font-h2;
+            line-height: $font-h2;
+            letter-spacing: 2px;
+            color: $darkgreen2;
+            font-weight: 900;
+            margin-right: 20px;
+
+            @media(max-width:991px) {
+                font-weight: 600;
+            }
+        }
+
+        .PageTitle-btn {
+            width: 160px;
+            height: 30px;
+            line-height: 28px;
+            border-radius: 5px;
+            text-decoration: none;
+            @media (max-width: 1200px) {
+                margin-top:30px;
+            }
+
+            &:hover,&:focus,&:active {
+                background-color: $darkgreen2;
+
+                .btn-text {
+                    color: white;
+                }
+            }
+
+            .btn-text {
+                color: $darkgreen2;
+                text-decoration: none;
+            }
+
+            .btn-text.active {
+                color: white;
+            }
+        }
+
+        .PageTitle-btn.active {
+            background-color: $darkgreen2;
+        }
+    }
+    
+    // 10/20 新增項目
+    .info-text {
+        letter-spacing: 0.5px;
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .PageTitle.justify-content-start {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    #multiCollapseExample1 {
+        .card {
+            border: none;
+            padding: 30px 0;
+            background-color: rgba(128, 128, 128, 0.2);
+            margin-bottom: 30px;
+
+            .searchBlcok {
+                width: 428px;
+
+                .inputBar {
+                    margin-bottom: 20px;
+
+                    .inputText {
+                        width: 100px;
+                        margin-right: 50px;
+                        width: calc(40% - 25px);
+
+                        @media (max-width: 768px) {
+                            margin-right: 0;
+                            width: 40%;
+                        }
+
+                        p {
+                            margin-bottom: 0px;
+                            padding-top: 2px;
+
+                            @media (max-width: 576px) {
+                                font-size: $font-mb-p;
+                            }
+                        }
+                    }
+
+                    input {
+                        width: calc(60% - 25px);
+
+                        @media (max-width: 768px) {
+                            width: 60%;
+                        }
+
+                        &:focus {
+                            outline: $cyan-green auto 1px;
+                        }
+                    }
+                }
+
+                .button {
+                    width: 100px;
+                    height: 30px;
+                    margin-left: 10px;
+                    line-height: 28px;
+                }
+
+                @media (max-width: 768px) {
+                    width: 80%;
+                }
+            }
+
+            .searchBlcok-btn {
+                width: 100px;
+                height: 30px;
+                border: 1px solid $darkgreen2;
+                background-color: white;
+                line-height: 10px;
+                margin-left: 10px;
+                color: $darkgreen2;
+
+                &:focus {
+                    outline: $darkgreen2 auto 0px;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,46 @@
+@import url(" ");
+main #pathBtn {
+  margin-top: 60px;
+}
+
+@media (max-width: 576px) {
+  main #pathBtn {
+    margin-top: 50px;
+  }
+}
+
+main #pathBtn .row .btn_block {
+  display: block;
+  height: 120px;
+  background: -webkit-gradient(linear, left top, right top, from(#5CBCAA), to(#24A296));
+  background: linear-gradient(to right, #5CBCAA, #24A296);
+  font-size: 20px;
+  border-radius: 15px;
+  line-height: 120px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  main #pathBtn .row .btn_block {
+    height: 60px;
+    line-height: 60px;
+  }
+}
+
+main #pathBtn .row .btn_block:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#F6B900), to(#EB7A00));
+  background: linear-gradient(to right, #F6B900, #EB7A00);
+}
+
+@media (max-width: 1200px) {
+  main #pathBtn .row .btn_block {
+    margin-bottom: 15px;
+  }
+}
+
+main .block-title .title-underline::after {
+  display: none;
+}
+/*# sourceMappingURL=02-NP.css.map */

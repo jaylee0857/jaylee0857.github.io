@@ -1,0 +1,252 @@
+main {
+  padding-bottom: 155px;
+}
+
+@media (max-width: 576px) {
+  main {
+    padding-bottom: 105px;
+  }
+}
+
+main #announcement-area {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+  main #announcement-area .container {
+    background-color: #F1F1F1;
+  }
+}
+
+main #announcement-area .announcement-text {
+  padding: 35px 95px;
+  width: 100%;
+  background-color: #F1F1F1;
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 900;
+}
+
+@media (max-width: 1199px) {
+  main #announcement-area .announcement-text {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  main #announcement-area .announcement-text {
+    padding: 30px 0px;
+  }
+}
+
+main #form-area .container form {
+  width: 100%;
+  max-width: 730px;
+  margin: auto;
+}
+
+main #form-area .container form .from-block {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 576px) {
+  main #form-area .container form .from-block {
+    margin-bottom: 20px;
+  }
+}
+
+main #form-area .container form .from-block label {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+main #form-area .container form .from-block input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #9F9F9F;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+
+main #form-area .container form .from-block input::-webkit-input-placeholder {
+  color: #9F9F9F;
+}
+
+main #form-area .container form .from-block input:-ms-input-placeholder {
+  color: #9F9F9F;
+}
+
+main #form-area .container form .from-block input::-ms-input-placeholder {
+  color: #9F9F9F;
+}
+
+main #form-area .container form .from-block input::placeholder {
+  color: #9F9F9F;
+}
+
+main #form-area .container form .from-block input:focus {
+  outline: #24AB9F auto 5px;
+}
+
+main #form-area .container form .from-block select {
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  background-image: url("../img/arrow.png");
+  padding-left: 10px;
+  background-position: 98% 50%;
+  background-size: 2.5%;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  visibility: initial !important;
+}
+
+main #form-area .container form .certification-block label {
+  min-width: 55px;
+  font-size: 18px;
+  margin: 0 40px 0 0;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+@media (max-width: 768px) {
+  main #form-area .container form .certification-block label {
+    -ms-flex-item-align: unset;
+        -ms-grid-row-align: unset;
+        align-self: unset;
+    margin: 0 55px 10px 0;
+  }
+}
+
+@media (max-width: 420px) {
+  main #form-area .container form .certification-block label {
+    margin: 0 0 10px 0;
+  }
+}
+
+main #form-area .container form .certification-block .certification-img {
+  width: 255px;
+  height: 60px;
+}
+
+main #form-area .container form .certification-block .certification-img img {
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  main #form-area .container form .certification-block .certification-img {
+    width: calc(100% - 110px);
+    height: 70px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 420px) {
+  main #form-area .container form .certification-block .certification-img {
+    width: 100%;
+  }
+}
+
+main #form-area .container form .certification-block .support-btn {
+  padding: 0 30px;
+}
+
+@media (max-width: 768px) {
+  main #form-area .container form .certification-block .support-btn {
+    padding: 0;
+    margin-right: 20px;
+  }
+}
+
+main #form-area .container form .certification-block .support-btn a img {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  main #form-area .container form .certification-block .support-btn a img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+main #form-area .container form .certification-block .support-btn a:first-child {
+  margin-right: 20px;
+}
+
+main #form-area .container form .certification-block input {
+  width: 100%;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #9F9F9F;
+  padding: 0 10px;
+}
+
+main #form-area .container form .certification-block input::-webkit-input-placeholder {
+  color: #b2b2b2;
+}
+
+main #form-area .container form .certification-block input:-ms-input-placeholder {
+  color: #b2b2b2;
+}
+
+main #form-area .container form .certification-block input::-ms-input-placeholder {
+  color: #b2b2b2;
+}
+
+main #form-area .container form .certification-block input::placeholder {
+  color: #b2b2b2;
+}
+
+@media (max-width: 768px) {
+  main #form-area .container form .certification-block input {
+    width: calc(100% - 110px);
+  }
+}
+
+main #form-area .container form .certification-explain {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #B2B3B2;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  main #form-area .container form .certification-explain {
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+}
+
+main #form-area .container form .submit-area .submit-btn-group {
+  margin-bottom: 15px;
+}
+
+main #form-area .container form .submit-area .submit-btn-group button {
+  width: 100px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #24A89C;
+  color: #24A89C;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+main #form-area .container form .submit-area .submit-btn-group button:hover {
+  background-color: #24A89C;
+  color: white;
+}
+
+main #form-area .container form .submit-area .submit-btn-group button:first-child {
+  margin-right: 30px;
+}
+
+main #form-area .container form .submit-area .text {
+  font-size: 14px;
+  color: #B2B3B2;
+  letter-spacing: 0px;
+}
+/*# sourceMappingURL=09-SignUp.css.map */

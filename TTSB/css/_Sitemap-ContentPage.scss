@@ -1,0 +1,77 @@
+@import "color";
+@import "variable";
+
+.sitemap-ContentPage {
+    @media screen and (max-width: 991px) {
+        margin-top: 0;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    .page-title {
+        font-size: $font-h2;
+        line-height: $font-h2;
+        color: $darkgreen2;
+        font-weight: 500;
+    }
+    hr {
+        background: $gray;
+        height: 1px;
+        margin: 19px 0;
+    }
+    .content {
+        font-size: $font-p;
+        margin-bottom: 50px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 35px;
+        
+        li{
+            margin-bottom: 4px;
+            @media screen and (max-width: 991px) {
+                margin-left: 25px;
+            }
+            a {
+                line-height: 26px;
+                text-decoration: none;
+                letter-spacing: 1px;
+                word-break: break-all;
+                width: 150px;
+                display: inline-block;
+                color: #000000;
+                font-size: $font-p;
+                text-indent : -2rem;
+                &:hover,&:focus {
+                    color: $darkgreen2;
+                    font-weight: bold;
+                    text-decoration: underline;
+                }
+                @media screen and (max-width: 991px) {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    a:focus {
+        .ul-title {
+            border:3px solid #d00;
+        }
+    }
+    .ul-title {
+        color: $darkgreen2;
+        font-size: $font-h3;
+        letter-spacing: 1px;
+    }
+    .mobile {
+        display: none;
+        @media screen and (max-width: 991px) {
+            display: block;
+        }
+    }
+}

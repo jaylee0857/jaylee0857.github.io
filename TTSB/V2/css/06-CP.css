@@ -1,0 +1,206 @@
+main #article-area .article-content {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 50px;
+  text-align: justify;
+}
+
+main #article-area .contact-preson {
+  font-size: 18px;
+  color: #4D4D4D;
+}
+
+main #table .col-tb {
+  min-width: 220px;
+  border: 2px solid #5CC3B1;
+  border-left: none;
+}
+
+@media (max-width: 767px) {
+  main #table .col-tb {
+    border-left: 2px solid #5CC3B1;
+  }
+}
+
+main #table .col-tb:first-child {
+  border: 2px solid #5CC3B1;
+}
+
+@media (max-width: 1200px) {
+  main #table .col-tb {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+main #table .col-tb div {
+  width: 100%;
+  padding: 6.5px 0;
+  text-align: center;
+}
+
+main #table .col-tb .tb-title {
+  font-size: 20px;
+  background-color: #24A296;
+  color: white;
+  font-weight: 900;
+  padding: 7.5px 0;
+}
+
+main #table .col-tb .tb-content {
+  font-size: 20px;
+  background-color: white;
+  color: black;
+  border-bottom: 2px solid #5CC3B1;
+}
+
+main #table .col-tb .tb-content:nth-child(odd) {
+  background-color: #E7F2F0;
+}
+
+main #table .col-tb .tb-content:last-child {
+  border-bottom: none;
+}
+
+main #related-photo .container .swiper-container {
+  height: 195px;
+}
+
+@media (max-width: 767px) {
+  main #related-photo .container .swiper-container {
+    height: 180px;
+  }
+}
+
+main #related-photo .container .swiper-container .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+main #related-photo .container .swiper-button {
+  width: 30px;
+  height: 40px;
+  position: absolute;
+  top: 55%;
+  z-index: 99;
+}
+
+@media (max-width: 767px) {
+  main #related-photo .container .swiper-button {
+    top: 40%;
+  }
+}
+
+main #related-photo .container .swiper-button.next {
+  right: -30px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  main #related-photo .container .swiper-button.next {
+    right: 25px;
+  }
+}
+
+main #related-photo .container .swiper-button.prev {
+  left: -30px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  main #related-photo .container .swiper-button.prev {
+    left: 25px;
+  }
+}
+
+main #related-file .container .hover-box-area .hover-box,
+main #related-link .container .hover-box-area .hover-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 22px 20px 22px  30px;
+  background-color: white;
+  border-bottom: 1.5px solid #9F9F9F;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  main #related-file .container .hover-box-area .hover-box,
+  main #related-link .container .hover-box-area .hover-box {
+    padding: 20px;
+  }
+}
+
+main #related-file .container .hover-box-area .hover-box:first-child,
+main #related-link .container .hover-box-area .hover-box:first-child {
+  border-top: 1.5px solid #9F9F9F;
+}
+
+main #related-file .container .hover-box-area .hover-box span,
+main #related-link .container .hover-box-area .hover-box span {
+  font-size: 18px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #4D4D4D;
+}
+
+main #related-file .container .hover-box-area .hover-box i,
+main #related-link .container .hover-box-area .hover-box i {
+  font-size: 24px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #00B18E;
+}
+
+@media (max-width: 767px) {
+  main #related-file .container .hover-box-area .hover-box i,
+  main #related-link .container .hover-box-area .hover-box i {
+    display: none;
+  }
+}
+
+main #related-file .container .hover-box-area .hover-box:hover,
+main #related-link .container .hover-box-area .hover-box:hover {
+  background-color: #B9E2DA;
+}
+
+main #related-file .container .hover-box-area .hover-box:hover span,
+main #related-link .container .hover-box-area .hover-box:hover span {
+  font-weight: 900;
+}
+
+main #related-file .container .hover-box-area .hover-box:hover i,
+main #related-link .container .hover-box-area .hover-box:hover i {
+  color: #F5911E;
+}
+
+main #page-info {
+  margin-bottom: 220px;
+}
+
+@media (max-width: 767px) {
+  main #page-info {
+    margin-bottom: 95px;
+  }
+}
+
+main #page-info p {
+  font-size: 18px;
+  color: #4D4D4D;
+  margin-right: 40px;
+  float: left;
+}
+
+@media (max-width: 767px) {
+  main #page-info p {
+    margin-right: 0px;
+    margin-bottom: 10px;
+    float: unset;
+  }
+}
+/*# sourceMappingURL=06-CP.css.map */

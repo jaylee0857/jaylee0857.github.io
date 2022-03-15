@@ -1,0 +1,59 @@
+.caseSearchResult{
+    .title{
+        font-size: $font-h2;
+        line-height: $font-h2;
+        letter-spacing: 2px;
+        color: $darkgreen2;
+        font-weight: 900;
+        position: relative;
+        margin-bottom: 40px;
+
+        @media(max-width:991px) {
+            font-weight: 600;
+        }
+
+    }
+
+    .resultTable{
+        margin: 0;
+        .th,.td{
+            border: 1px solid $lightwhite;
+            padding: 10px;
+            text-align: center;
+            @media screen and (max-width: 991px){
+                padding: 5px;
+            }
+        }
+        .th{
+            background-color: $white2;
+            font-weight: 900;
+        }
+        .button{
+            color: $font-color-white;
+            @include green-gradient;
+            padding: 5px 40px;
+            text-decoration: none;
+            border-radius: 3px;
+            margin-left: 10px;
+            @media screen and (max-width: 991px){
+                margin: 0;
+                margin-top: 5px;
+                display: inline-block;
+            }
+            &:hover,&:focus{
+                @include orange-gradient;
+            }
+        }
+        input{
+            @media screen and (max-width: 991px){
+                text-align: center;
+            }
+        }
+        .description{
+                text-align: left;
+                padding: 25px;
+            }
+        
+    }
+
+}

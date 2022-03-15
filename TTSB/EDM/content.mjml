@@ -1,0 +1,140 @@
+<mj-section padding-bottom="0">
+  <mj-column width="100%" mj-class="border">
+    <mj-text mj-class="title font-green">最新消息</mj-text>
+  </mj-column>
+</mj-section>
+<mj-section padding="20px 0" mj-class="border">
+  <mj-column css-class="day-media" width="20%" padding="0">
+    <mj-text mj-class="text font-black white">108.09.13</mj-text>
+  </mj-column>
+  <mj-column css-class="title-media" width="80%" padding="0">
+    <mj-button mj-class="text font-black white" href="#">
+      天豐1號重大水路事故初報
+    </mj-button>
+  </mj-column>
+</mj-section>
+<mj-section padding="20px 0" mj-class="border">
+  <mj-column css-class="day-media" width="20%" padding="0">
+    <mj-text mj-class="text font-black white">108.09.11</mj-text>
+  </mj-column>
+  <mj-column css-class="title-media" width="80%" padding="0">
+    <mj-button mj-class="text font-black white" href="#">
+      澎湖籍漁船「漁吉福號」重大水路事故初報
+    </mj-button>
+  </mj-column>
+</mj-section>
+<mj-section padding="20px 0" mj-class="border">
+  <mj-column css-class="day-media" width="20%" padding="0">
+    <mj-text mj-class="text font-black white">108.09.08</mj-text>
+  </mj-column>
+  <mj-column css-class="title-media" width="80%" padding="0">
+    <mj-button mj-class="text font-black white" href="#">
+      交通部臺灣鐵路管理局第3501與第333車次重大鐵...
+    </mj-button>
+  </mj-column>
+</mj-section>
+<mj-section padding="20px 0" mj-class="border">
+  <mj-column css-class="day-media" width="20%" padding="0">
+    <mj-text mj-class="text font-black white">108.09.02</mj-text>
+  </mj-column>
+  <mj-column css-class="title-media" width="80%" padding="0">
+    <mj-button mj-class="text font-black white" href="#">
+      基隆港籍信福1號雜貨船重大水路事故初報
+    </mj-button>
+  </mj-column>
+</mj-section>
+<mj-section>
+  <mj-column width="100%" padding="20px 0">
+    <mj-button width="100%" padding="0" mj-class="green font-white" font-size="18px" href="#">
+      更多訊息 &raquo;
+    </mj-button>
+  </mj-column>
+</mj-section>
+
+
+<mj-section padding-bottom="0">
+  <mj-column width="100%" mj-class="border">
+    <mj-text mj-class="title font-green">新聞稿</mj-text>
+  </mj-column>
+</mj-section>
+<mj-section padding="20px 0" mj-class="border">
+  <mj-column css-class="day-media" width="20%" padding="0">
+    <mj-text mj-class="text font-black white">108.09.13</mj-text>
+  </mj-column>
+  <mj-column css-class="title-media" width="80%" padding="0">
+    <mj-button mj-class="text font-black white" href="#">
+      天豐1號重大水路事故初報
+    </mj-button>
+  </mj-column>
+</mj-section>
+<mj-section padding="20px 0" mj-class="border">
+  <mj-column css-class="day-media" width="20%" padding="0">
+    <mj-text mj-class="text font-black white">108.09.11</mj-text>
+  </mj-column>
+  <mj-column css-class="title-media" width="80%" padding="0">
+    <mj-button mj-class="text font-black white" href="#">
+      澎湖籍漁船「漁吉福號」重大水路事故初報
+    </mj-button>
+  </mj-column>
+</mj-section>
+<mj-section padding="20px 0" mj-class="border">
+  <mj-column css-class="day-media" width="20%" padding="0">
+    <mj-text mj-class="text font-black white">108.09.08</mj-text>
+  </mj-column>
+  <mj-column css-class="title-media" width="80%" padding="0">
+    <mj-button mj-class="text font-black white" href="#">
+      交通部臺灣鐵路管理局第3501與第333車次重大鐵...
+    </mj-button>
+  </mj-column>
+</mj-section>
+<mj-section>
+  <mj-column width="100%" padding="20px 0">
+    <mj-button width="100%" padding="0" mj-class="green font-white" font-size="18px" href="#">
+      更多訊息 &raquo;
+    </mj-button>
+  </mj-column>
+</mj-section>
+
+
+<mj-section padding-bottom="0">
+  <mj-column width="100%" mj-class="border">
+    <mj-text mj-class="title font-green">調查中案件</mj-text>
+  </mj-column>
+</mj-section>
+<mj-section padding="20px 0" mj-class="border">
+  <mj-column css-class="day-media" width="20%" padding="0">
+    <mj-text mj-class="text font-black white">108.09.13</mj-text>
+  </mj-column>
+  <mj-column css-class="title-media" width="80%" padding="0">
+    <mj-button mj-class="text font-black white" href="#">
+      復興航空公司 GE235 班機 ATR72-212A 型機 國籍...
+    </mj-button>
+  </mj-column>
+</mj-section>
+<mj-section padding="20px 0" mj-class="border">
+  <mj-column css-class="day-media" width="20%" padding="0">
+    <mj-text mj-class="text font-black white">108.09.11</mj-text>
+  </mj-column>
+  <mj-column css-class="title-media" width="80%" padding="0">
+    <mj-button mj-class="text font-black white" href="#">
+      復興航空公司 GE222 班機 ATR72-212A 型機 國籍...
+    </mj-button>
+  </mj-column>
+</mj-section>
+<mj-section padding="20px 0" mj-class="border">
+  <mj-column css-class="day-media" width="20%" padding="0">
+    <mj-text mj-class="text font-black white">108.09.08</mj-text>
+  </mj-column>
+  <mj-column css-class="title-media" width="80%" padding="0">
+    <mj-button mj-class="text font-black white" href="#">
+      復興航空公司 GE791 貨機 ATR-72 型機 國籍標誌...
+    </mj-button>
+  </mj-column>
+</mj-section>
+<mj-section>
+  <mj-column width="100%" padding="20px 0">
+    <mj-button width="100%" padding="0" mj-class="green font-white" font-size="18px" href="#">
+      更多訊息 &raquo;
+    </mj-button>
+  </mj-column>
+</mj-section>

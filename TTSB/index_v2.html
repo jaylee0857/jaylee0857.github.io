@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TTSB</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <!-- layout -->
+    <link rel="stylesheet" href="./css/main_v2.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <!-- page css  -->
+    <link rel="stylesheet" href="./css/index_v2.css">
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <img src="./images/logo/logo_v2.png" alt="">
+                </div>
+                <div class="title">
+                    <h1>會議與訓練</h1>
+                </div>
+
+                <!-- 電腦版 -->
+                <div class="btn_group d-none d-xl-flex">
+                    <div class="information d-flex">
+                        <ul class="d-flex">
+                            <li><a href="">回首頁</a></li>
+                            <li><a href="">網站導覽</a></li>
+                            <li><a href="">意見信箱</a></li>
+                            <li><a href="">English</a></li>
+                        </ul>
+                        <div class="inputArea">
+                            <input class="col" type="text" placeholder="請輸入關鍵字">
+                            <div class="icon_position">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_btn">
+                        <ul class="d-flex">
+                            <li><a href="">項目01</a></li>
+                            <li><a href="">項目02</a></li>
+                            <li><a href="">項目03</a></li>
+                            <li><a href="">項目04</a></li>
+                            <li><a href="">項目05</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 平板以下 -->
+
+                <div class="hamburgerBar d-xl-none">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="hamburgerBarItemArea ">
+                        <div class="information d-flex">
+                            <ul class="d-flex">
+                                <li><a href="">回首頁</a></li>
+                                <li><a href="">網站導覽</a></li>
+                                <li><a href="">意見信箱</a></li>
+                                <li><a href="">English</a></li>
+                            </ul>
+                        </div>
+                        <div class="item_btn">
+                            <ul class="">
+                                <li><a href="">項目01</a></li>
+                                <li><a href="">項目02</a></li>
+                                <li><a href="">項目03</a></li>
+                                <li><a href="">項目04</a></li>
+                                <li><a href="">項目05</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hamburgerBarItemArea">
+
+    </div>
+
+
+    <!-- 內頁放這 -->
+    <main>
+        <!-- Swiper -->
+        <div class="wrapper container">
+            <div id="banner" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/template/Banner01.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/template/Banner01.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/template/Banner01.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/template/Banner01.png" alt="">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination d-none d-xl-block"></div>
+
+            </div>
+
+            <!-- Add Arrows -->
+            <div class="button-next">
+                <i class="fas fa-angle-right"></i>
+            </div>
+            <div class="button-prev">
+                <i class="fas fa-angle-left"></i>
+            </div>
+
+            <div class="teleport">
+                <div class="text">國家運輸安全調查委員會「2019年飛航事故調查員年度複訓」這三十五個字...</div>
+                <div class="btn">
+                    <a href="">
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="info container">
+            <div class="title">會議一覽</div>
+            <div class="time">
+                <div class="exchange">近期</div>
+                <div class="exchange">歷屆</div>
+            </div>
+            <div class="more d-none d-xl-block">更多內容</div>
+        </div>
+
+        <div class="container swiper-Area">
+            <div id="swiper-block" class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="infoBox">
+                            <img src="./images/template/最新消息 1.png" alt="">
+                            <div class="test">
+                                <div class="date">
+                                    108-10-23 <br>
+                                    國家運輸安全調查委員會「2019年飛航事故調查員年...
+                                </div>
+                                <div class="introduction">
+                                    國家運輸安全調查委員會（以下簡稱運安會）這裡內文顯示三十個字...
+                                </div>
+                                <div class="moreBtn">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="infoBox">
+                            <img src="./images/template/最新消息 2.png" alt="">
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="infoBox">
+                            <img src="./images/template/最新消息 3.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="infoBox">
+                            <img src="./images/template/最新消息 4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <i class="swiper-button-prev-custom swiper-button fas fa-angle-left"></i>
+            <i class="swiper-button-next-custom swiper-button fas fa-angle-right"></i>
+        </div>
+
+    </main>
+
+    <!-- gototop按鈕 -->
+
+    <a id="gotop" href="#navbar" class="goToTop ">
+
+    </a>
+
+
+
+    <footer>
+
+        <div class="photo">
+            <img class="" src="./images/template/Foote_fix.png" alt="">
+        </div>
+        <div class="item_group">
+            <div class="item_group_container">
+                <ul class="">
+                    <li><a href="">項目01</a></li>
+                    <li><a href="">項目02</a></li>
+                    <li><a href="">項目03</a></li>
+                    <li><a href="">項目04</a></li>
+                    <li><a href="">項目05</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="information_container">
+            <div class="information">
+                <div class="logo">
+                    <img src="./images/template/LOGO-06.png" alt="">
+                </div>
+
+                <div class="text">
+                    <div class="title">
+                        <a href=""><span>政府網站資料開方宣告</span></a>
+                        <a href=""><span>隱私權及安全政策</span></a>
+                    </div>
+                    <ul class="connection">
+                        <li>
+                            <span>電話</span>
+                            <span>:</span>
+                            <span>886-2-89127388</span>
+                        </li>
+                        <li>
+                            <span>傳真</span>
+                            <span>:</span>
+                            <span>886-2-89127399</span>
+                        </li>
+                        <li>
+                            <span>地址</span>
+                            <span>:</span>
+                            <span>新北市231新店區北新路三段200號11樓</span>
+                        </li>
+                    </ul>
+                    <div class="record">
+                        <ul class="d-flex">
+                            <li>
+                                <span>更新日期</span>
+                                <span>:</span>
+                                <span>2020/02/06</span>
+                            </li>
+                            <li>
+                                <span>累計瀏覽人次</span>
+                                <span>:</span>
+                                <span>76576653</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    <!-- page js -->
+    <script src=""></script>
+
+    <script type="text/javascript">
+
+        $(window).scroll(function () {
+
+            var window_scrollTop = $(window).scrollTop();
+
+            if (window_scrollTop > 50) {
+                $('#gotop').css({
+                    "opacity": "1",
+                    "pointer-events": "unset"
+                })
+
+            } else {
+                $('#gotop').css({
+                    "opacity": "0",
+                    "pointer-events": "none"
+                })
+            }
+
+        })
+
+
+
+    </script>
+
+    <script>
+        $(".hamburgerBar").click(function () {
+            $(".hamburgerBarItemArea").toggleClass('active')
+            $(this).toggleClass('active')
+        })
+    </script>
+
+    <script>
+        var swiper = new Swiper('#banner', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.wrapper .button-next',
+                prevEl: '.wrapper .button-prev',
+            },
+        });
+    </script>
+
+    <script>
+        var swiper = new Swiper("#swiper-block", {
+
+            loop: true,
+            grabCursor: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true
+            },
+           
+        },
+            $('.swiper-Area .swiper-button-next-custom').click(function () {
+                swiper.slideNext();
+            }),
+            $('.swiper-Area .swiper-button-prev-custom').click(function () {
+                swiper.slidePrev();
+            })
+        );
+    </script>
+
+
+
+</body>
+
+</html>

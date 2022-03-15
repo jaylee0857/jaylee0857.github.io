@@ -1,0 +1,84 @@
+
+//字型 (Noto Sans TC)
+@import url(' ');
+
+
+$font-h1: 3.125rem; //50px
+$font-h2: 2.1875rem; //35px
+$font-h3: 1.5rem; //24px
+$font-h4: 1.375rem; //22px
+$font-p: 1.125rem; //18px
+$font-en: 1.75rem; //28px
+
+
+$font-mb-h1: 2.5rem; //40px
+$font-mb-h2: 1.75rem; //28px
+$font-mb-h3: 1.3rem; //20.8px
+$font-mb-h4: 1.2rem; //19.2px
+$font-mb-p: 1rem; //16px
+
+
+$font-color-black: #000;
+$font-color-gray: #555;
+$font-color-yellow: #FF0;
+$font-color-orange: #F4901E;
+$font-color-white: #fff;
+$font-color-green:#146D62;
+$font-color-red: #c80000;
+
+$red:#c80000;
+$darkgreen:#146D62;
+$darkgreen2:#008282;
+$green: #24aa9e; //
+$green2: #5CC0AE; //
+$gray: #4D4D4D;
+$white: #fff;
+$white2: #f2f2f2;
+$lightgray: #999;
+$lightgray2: #707070;
+$gray2: #ccc;
+$cyan-green:#24AB9F; //
+$orange: #F7BA00;
+$lightblue: #7CCAF1;
+$lightpurple: #D78FFF;
+$lightgreen: #5CC3B1; //
+$lightgreen2: #bae3db; //
+$lightwhite: #e4e4e4;
+$lightwhite2: #f0f0f0;
+$orange2:#f38f1e;
+$yellow: #FF0;
+
+// 2020-03-21 會議專區字級
+
+    $fs-45:45px;
+    $fs-40:40px;
+    $fs-30:30px;
+    $fs-24:24px;
+    $fs-22:22px;
+    $fs-20:20px;
+    $fs-18:18px;
+    $fs-16:16px;
+    $fs-14:14px;
+
+// 2020-03-21 會議專區色票
+
+    $dark_green:#006961;
+    
+    $icon_green:#24AA9E;
+    $footer_green:#24A99D;
+
+    $orange:#F5911E;
+    $coffee:#231815;
+    $pink:#EB3267;
+    $btn_pink:#F23267;
+
+    $border_black:#1A1A1A;
+    $border_gray:#CBCBCB;
+    $input_placeholder:#A9A9A9;
+    $border_gary:#E8E8E8;
+
+    // 漸層
+    $btn_green:linear-gradient(to right,#5CBCAA,#24A296);
+    $btn_orange:linear-gradient(to right,#F6B900,#EB7A00);
+
+

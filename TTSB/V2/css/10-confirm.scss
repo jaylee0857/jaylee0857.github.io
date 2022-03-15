@@ -1,0 +1,99 @@
+main{
+    padding-bottom: 155px;
+
+    @media(max-width:576px){
+        padding-bottom: 105px;
+    }
+
+    #topline{
+        .flex_control{
+            @media(max-width:1200px){
+                justify-content: space-between !important;
+            }
+        }
+        .topline-button{
+            border:none; 
+            width:140px;
+            @media(max-width:1200px){
+                width: 100%;
+            }
+
+            .button{
+                width: 100%; 
+                border:1px solid black;
+                @media(max-width:1200px){
+                    width: 140px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    #text-area{
+        margin-bottom: 50px;
+        @media(max-width:576px){
+            margin-bottom: 45px;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 700;
+            text-align: justify;
+            &:first-child{
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    #table-area{
+        .table-group{
+            border: 2px solid #5CB9A8;
+            width: 100%;
+            max-width: 730px;
+
+            .table-info{
+                width: 100%;
+                min-height: 40px;
+                background-color: white;
+                border-bottom: 2px solid #5CB9A8;
+    
+                &:last-child{
+                    border-bottom: none;
+                }
+
+                @media(max-width:768px){
+                    flex-wrap: wrap;
+                }
+    
+                .table-title{
+                    width: 150px;
+                    min-height: 40px;
+                    font-size: 20px;
+                    color: white;
+                    background-color: #299F94;
+                    text-align: center;
+                    padding-top: 5px;
+                    border-right: 2px solid #5CB9A8;
+
+                    @media(max-width:768px){
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+    
+                .table-value{
+                    width: calc(100% - 150px);
+                    min-height: 40px;
+                    font-size: 18px;
+                    color: black;
+                    background-color: white;
+                    padding: 7px 10px 0 10px;
+
+                    @media(max-width:768px){
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

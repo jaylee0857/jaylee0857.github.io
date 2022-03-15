@@ -1,0 +1,18 @@
+<mj-section>
+
+  <mj-column css-class="media">
+    <mj-image width="100px" css-class="logo" src="../images/logo/logo.png" alt="TTSB LOGO" padding="0 25px" />
+  </mj-column>
+
+  <mj-column css-class="media">
+    <mj-button mj-class="orange date" width="143px" padding="0" inner-padding="10px 40px 10px 0">
+      <mj-text fon-size="14px" color="#fff">出刊日期</mj-text><br>
+      <mj-text font-size="18px" color="#fff">2018-08-30</mj-text>
+    </mj-button>
+  </mj-column>
+
+
+</mj-section>
+
+<mj-wrapper background-url="../images/bg-img/edm-banner.png" background-size="cover" background-repeat="no-repeat" padding="0" css-class="header">
+</mj-wrapper>

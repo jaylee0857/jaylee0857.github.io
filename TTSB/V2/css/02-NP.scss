@@ -1,0 +1,41 @@
+@import "./variable";
+
+main{
+    #pathBtn{
+        margin-top: 60px;
+
+        @media(max-width:576px){
+            margin-top: 50px;
+        }   
+
+        .row{
+            .btn_block{
+                display: block;
+                height: 120px ;
+                background:  $btn_green;
+                font-size: $fs-20;
+                border-radius: 15px;
+                line-height: 120px;
+                text-align: center;
+                color: $font-color-white;
+
+                @media(max-width:576px){
+                    height: 60px ;
+                    line-height: 60px;
+                } 
+                
+                cursor: pointer;
+                
+                &:hover{
+                    background: $btn_orange;
+                }
+                @media (max-width:1200px) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+main .block-title .title-underline::after {
+    display: none;;
+}

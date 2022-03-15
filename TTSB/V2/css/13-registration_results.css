@@ -1,0 +1,185 @@
+main {
+  padding-bottom: 155px;
+}
+
+@media (max-width: 576px) {
+  main {
+    padding-bottom: 105px;
+  }
+}
+
+@media (max-width: 767px) {
+  main #CP-title {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  main #topline .flex_control {
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
+}
+
+main #topline .topline-button {
+  border: none;
+  width: 140px;
+}
+
+@media (max-width: 1200px) {
+  main #topline .topline-button {
+    width: 100%;
+  }
+}
+
+main #topline .topline-button .button {
+  width: 100%;
+  border: 1px solid black;
+}
+
+@media (max-width: 1200px) {
+  main #topline .topline-button .button {
+    width: 140px;
+    margin: auto;
+  }
+}
+
+main #table-area .table-group {
+  border: 2px solid #5CB9A8;
+  width: 100%;
+  max-width: 730px;
+}
+
+main #table-area .table-group .table-info {
+  width: 100%;
+  min-height: 40px;
+  background-color: white;
+  border-bottom: 2px solid #5CB9A8;
+}
+
+main #table-area .table-group .table-info:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  main #table-area .table-group .table-info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+main #table-area .table-group .table-info .table-title {
+  width: 150px;
+  min-height: 40px;
+  font-size: 20px;
+  color: white;
+  background-color: #299F94;
+  text-align: center;
+  padding-top: 5px;
+  border-right: 2px solid #5CB9A8;
+}
+
+@media (max-width: 768px) {
+  main #table-area .table-group .table-info .table-title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+main #table-area .table-group .table-info .table-value {
+  width: calc(100% - 150px);
+  min-height: 40px;
+  font-size: 18px;
+  color: black;
+  background-color: white;
+  padding: 7px 10px 0 10px;
+}
+
+@media (max-width: 768px) {
+  main #table-area .table-group .table-info .table-value {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+main #table-area .table-group .table-info .hide-input {
+  outline: none;
+  cursor: default;
+}
+
+main #table-area .table-group .table-info #e-mail {
+  width: calc(100% - 150px);
+  min-height: 40px;
+  font-size: 18px;
+  color: black;
+  background-color: white;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  main #table-area .table-group .table-info #e-mail {
+    width: 100%;
+    text-align: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+main #table-area .table-group .table-info #e-mail .mail {
+  border: 1px solid #24AB9F;
+  border-radius: 3px;
+  padding-left: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  main #table-area .table-group .table-info #e-mail .mail {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+main #table-area .table-group .table-info #e-mail .again_btn_area {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (max-width: 768px) {
+  main #table-area .table-group .table-info #e-mail .again_btn_area {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+main #table-area .table-group .table-info #e-mail .again_btn_area .again_btn {
+  border: 1px solid #5CC3B1;
+  color: #24AB9F;
+  font-size: 14px;
+  border-radius: 3px;
+  padding: 4px 20px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+main #table-area .table-group .table-info #e-mail .again_btn_area .again_btn:hover {
+  color: white;
+  background-color: #5CC3B1;
+}
+
+@media (max-width: 768px) {
+  main #table-area .table-group .table-info #e-mail .again_btn_area .again_btn {
+    width: 110px;
+    text-align: center;
+    padding: 4px 10px;
+    margin-left: 0px;
+    margin: 5px auto 0 auto;
+  }
+}
+/*# sourceMappingURL=13-registration_results.css.map */

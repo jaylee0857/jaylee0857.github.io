@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>行政院人事行政總處公務人力發展學院</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui_admin.css">
+    <style>
+        .logo{
+            position: relative;
+        }
+        .logo .logoImg {
+            width: 200px;
+            position: relative;
+            top: 50px;
+            left: 10%;
+        }
+        @media screen and (max-width: 991px){
+            .admin_wrapper .login {
+                top: 20%;
+            }
+            .logo .logoImg{
+                top: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        @media screen and (max-width: 575px) {
+            .admin_wrapper .login {
+                top: 20%;
+            }
+            .logo .logoImg{
+                top: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="images/logo.png" alt="" class="logoImg">
+    </div>
+    <div class="admin_wrapper">
+        <div class="login">
+            <h1>行政院人事行政總處<br>公務人力發展學院</h1>
+            <div class="mask">
+                <div class="login_block">
+                    <form class="form_grid">
+                        <div class="form_grp">
+                            <label for="username" class="form_title">帳號</label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="" class="id" placeholder="請輸入帳號">
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label for="password" class="form_title">密碼</label>
+                            <div class="form_content">
+                                <input name="password" type="password" value="" class="pw" placeholder="請輸入密碼">
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label class="form_title"><span class="necessary">*</span>您輸入的帳號或密碼可能有錯誤</label>
+                            <div class="form_content">
+                                <img src="images/basic/captcha.gif" alt="" class="captcha">
+                                <input type="text" id="" value="" placeholder="請輸入驗證碼">
+                                <a href="#"><img src="images/icon_reload.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox">記住我</label>
+                        </div>
+                        <!-- 錯誤時才出現 -->
+                        <div class="notice_warning">您輸入的帳號密碼或驗證碼錯誤
+                        </div>
+                        <div class="btn_grp">
+                            <input name="" type="reset" value="清除重填" />
+                            <input name="" type="submit" value="確定登入" />
+                        </div>
+                    </form>
+                    <a href="#" class="forget">→ 忘記密碼?</a>
+                </div>
+                <div class="forget_block">
+                    <h2>忘記密碼</h2>
+                    <form class="form_grid">
+                        <div class="form_grp">
+                            <label for="email" class="form_title">請輸入電子郵件</label>
+                            <div class="form_content">
+                                <input type="text" id="username" value="" class="mail" placeholder="請輸入註冊電子信箱">
+                            </div>
+                        </div>
+                        <!-- 錯誤時才出現 -->
+                        <div class="notice_info">系統已經發送重設連結信件到您的電子信箱
+                        </div>
+                        <div class="btn_grp">
+                            <input name="" type="submit" value="送出" />
+                        </div>
+                        <a href="#" class="back">← 返回登入</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            $(function () {
+                $('.forget').click(function (event) {
+                    $('.login_block').animate({ 'left': '-100%' }, 400);
+                    $('.forget_block').animate({ 'left': '0' }, 400);
+                });
+                $('.back').click(function (event) {
+                    $('.login_block').animate({ 'left': '0%' }, 400);
+                    $('.forget_block').animate({ 'left': '100%' }, 400);
+                });
+            });
+        </script>
+</body>
+
+</html>

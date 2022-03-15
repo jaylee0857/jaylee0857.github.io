@@ -1,0 +1,530 @@
+@import "./variable";
+
+.bg {
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    background-image: url('../img/template/Footer2.png');
+    background-repeat: no-repeat;
+    bottom: calc(-18% + 16px);
+    z-index: -100;
+    background-size: contain;
+    background-position: bottom;
+
+    @media (max-width:1200px) {
+        bottom: -10%;
+    }
+
+    @media (max-width:767px) {
+        bottom: -5%;
+    }
+}
+
+main {
+    padding-bottom: 100px;
+    position: relative;
+
+    @media (max-width:767px) {
+        padding-top: 0px;
+        padding-bottom: 100px;
+    }
+
+    .wrapper {
+        position: relative;
+        width: 100%;
+
+        @media (max-width:767px) {
+            padding-left: 0;
+            padding-right: 0;
+            width: 100% !important;
+            max-width: unset;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 100%;
+
+            box-shadow: 0px 0px 10px -1px gray;
+
+        }
+
+        .swiper-wrapper {
+
+            .swiper-slide {
+                text-align: center;
+                /* Center slide text vertically */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media(max-width: 767px){
+                    padding-bottom: 135px;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+
+        .swiper-pagination-bullets {
+
+            left: calc(44% + 2px);
+            bottom: 15px;
+
+            span {
+
+                background: $font-color-white;
+                opacity: 1;
+
+                width: 10.5px;
+                height: 10.5px;
+
+            }
+
+            .swiper-pagination-bullet-active {
+
+                background: $orange;
+            }
+        }
+
+
+        .button-next {
+            position: absolute;
+            right: -0.5%;
+            top: 50%;
+            transform: translate(30%, -50%);
+            background-color: $icon_green;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+
+            @media (max-width:1199px) {
+                background-color: unset;
+                transform: translate(-20%, -50%);
+                z-index: 100;
+            }
+
+            @media (max-width:767px) {
+                right: -50px;
+                transform: translate(-50%, -50%);
+            }
+
+
+
+
+            .fa-angle-right {
+                font-size: 50px;
+                color: $font-color-white;
+                font-weight: 600;
+
+                position: absolute;
+                top: 50%;
+                right: 3px;
+                transform: translate(-40%, -50%);
+                z-index: 2;
+
+                @media (max-width:767px) {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .button-prev {
+            position: absolute;
+            left: -5.5%;
+            top: 50%;
+            transform: translate(30%, -50%);
+            background-color: $icon_green;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+
+            @media (max-width:1199px) {
+                background-color: unset;
+                transform: translate(70%, -50%);
+                z-index: 100;
+            }
+
+            @media (max-width:767px) {
+                transform: translate(0%, -50%);
+                left: 0px;
+            }
+
+            .fa-angle-left {
+                font-size: 50px;
+                color: $font-color-white;
+                font-weight: 600;
+
+                position: absolute;
+                top: 50%;
+                left: 3px;
+                transform: translate(40%, -50%);
+
+                @media (max-width:767px) {
+                    font-size: 30px;
+                }
+
+
+
+            }
+        }
+
+        .teleport_box {
+            width: 475px;
+            height: 110px;
+            background-color: #231815db;
+            position: absolute;
+            bottom: 50px;
+            left:0;
+            z-index: 100;
+            padding: 30px 20px 30px 20px;
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+            &:hover p{
+                color: $orange;
+            }
+            &:hover .btn i{
+                color: $orange;
+            }
+
+
+            @media (max-width:1199px) {
+                bottom: 0px;
+                width: calc(100% - 30px);
+                bottom: -109px;
+                opacity: 1;
+            }
+
+            @media (max-width:767px) {
+                bottom: 0;
+                width: 100%;
+                height: 136px;
+                padding: 25px 20px 25px 30px;
+                opacity: 1;
+            }
+
+            @media (max-width:576px) {
+                padding: 25px 0px 25px 14px;
+            }
+
+            p {
+                color: $font-color-white;
+                font-size: $fs-20;
+                letter-spacing: 2px;
+                line-height: 1.4;
+                font-weight: bold;
+                text-align: justify;
+                &:hover {
+                    color: $orange;
+                }
+
+                @media (max-width:576px) {
+                    text-align: justify;
+                }
+            }
+
+            .btn {
+
+                display: flex;
+                justify-content: center;
+                align-self: center;
+                margin: 0 0 0 10px;
+                padding: 0 ;
+                @media (max-width:767px) {
+                    margin: 0 0 0 30px;
+                }
+                i {
+                    color: $font-color-white;
+                    font-size: 40px;
+                    
+                }
+            }
+        }
+
+    }
+    
+
+    .info {
+
+        display: flex;
+        margin-top: 90px;
+        margin-bottom: 40px;
+        position: relative;
+
+        @media (max-width:1199px) {
+            margin-top: 180px;
+            margin-bottom: 0px;
+            display: block;
+        }
+
+        @media (max-width:767px) {
+            margin-top: 185px;
+
+        }
+
+        .title {
+            padding: 0 55px 0px 30px;
+            font-size: $font-h1;
+            font-weight: bold;
+
+            @media (max-width:1199px) {
+                width: 100%;
+                text-align: center;
+                padding: 0;
+            }
+        }
+
+        .time {
+
+            display: flex;
+            align-self: center;
+
+            @media (max-width:1199px) {
+                width: 100%;
+                margin-top: 0px;
+                padding: 30px 0 30px 0px;
+                justify-content: center;
+            }
+
+            .exchange {
+
+                font-size: $font-h2;
+                color: $input_placeholder;
+                font-weight: 400;
+                padding: 0 28px;
+                line-height: 1;
+
+                border-right: 1px solid $border_black;
+                cursor: pointer;
+
+                &:first-child {
+                    border-left: 1px solid $border_black;
+                }
+
+                &:hover {
+                    font-weight: bold;
+                    color: $orange;
+                }
+            }
+        }
+
+        .see_more {
+            width: 140px;
+            height: 40px;
+            border-radius: 3px;
+            background: $btn_green;
+            color: $font-color-white;
+            text-align: center;
+            font-size: 19px;
+            line-height: 40px;
+            position: absolute;
+            right: 46px;
+            top: 60%;
+            transform: translate(0, -50%);
+            text-decoration: none;
+
+            &:hover {
+                background: $btn_orange;
+            }
+        }
+    }
+
+    .swiper-Area {
+        position: relative;
+        padding-right: 13px;
+        padding-left: 13px;
+
+
+        @media (min-width:767px) and (max-width:1200px) {
+            margin-right: 0;
+            padding-right: 0px;
+            padding-left: 115px;
+            width: 100% !important;
+            max-width: unset;
+        }
+
+        @media (max-width:767px) {
+            padding-right: 0px;
+            padding-left: 0px;
+            width: unset;
+            max-width: 730px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 350px;
+
+            .swiper-wrapper {
+                position: relative;
+                left: -50;
+
+                .swiper-slide {
+                    width: 255px;
+                    box-shadow: 0px 0px 9px -3px gray;
+
+                    margin: 3px 28px 3px 2px;
+
+                    .infoBox {
+                        padding-top: 10px;
+                        background-color: white;
+
+                        .img {
+                            width: 100%;
+                            height: 145px;
+                            padding: 0 9px;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+                        .test {
+                            padding: 0 9px;
+
+                            .date {
+                                h3 {
+                                    font-size: $fs-14;
+                                    color: $input_placeholder;
+                                    padding: 19px 0 5px 0;
+                                }
+
+                                a {
+                                    display: block;
+                                    font-size: $fs-18;
+                                    font-weight: 900;
+                                    line-height: 1.2;
+                                    min-height: 57px;
+                                    padding-bottom: 15px;
+                                    color: #000000;
+                                    text-decoration: none;
+                                    &:hover {
+                                        color: $orange;
+                                    }
+                                }
+                            }
+
+                            .introduction {
+                                font-size: $fs-14;
+                                border-top: 0.5px solid #c5cbd2;
+                                color: $gray;
+                                padding: 10px 0 15px 0px;
+                                text-align: justify;
+                            }
+                        }
+
+                        .moreBtn {
+                            width: 100%;
+                            height: 40px;
+                            display: flex;
+                            background-color: $pink;
+                            color: $font-color-white;
+                            line-height: 40px;
+                            text-decoration: none;
+                            align-items: center;
+                            justify-content: center;
+
+                            &:hover {
+                                background-color: $orange;
+                            }
+
+                            p {
+                                font-size: 20px;
+                                font-weight: bold;
+                                margin-right: 8px;
+                            }
+
+                            .fa-angle-right {
+                                align-self: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .swiper-button {
+            position: absolute;
+            font-size: $font-h1;
+            color: $icon_green;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 99;
+
+        }
+
+        .swiper-button-prev-custom {
+            left: -20px;
+            cursor: pointer;
+
+            @media (max-width:1120px) {
+                left: 30px;
+                font-size: $font-h1;
+            }
+
+            @media (max-width:767px) {
+                left: 10px;
+                font-size: $font-h1;
+            }
+        }
+
+        .swiper-button-next-custom {
+            right: -20px;
+            cursor: pointer;
+
+            @media (max-width:1199px) {
+                right: 30px;
+            }
+
+            @media (max-width:767px) {
+                right: 10px;
+                font-size: $font-h1;
+            }
+        }
+    }
+
+    .more {
+        width: 140px;
+        height: 40px;
+        border-radius: 3px;
+        background: $btn_green;
+        color: $font-color-white;
+        text-align: center;
+        font-size: 19px;
+        line-height: 40px;
+        cursor: pointer;
+        margin: 50px auto 0 auto;
+
+        &:hover {
+            background: $btn_orange;
+        }
+    }
+}
+
+#swiper-block {
+    &.swiper-container {
+        height: unset !important;
+
+        @media(max-width: 1199px) {
+            padding-left: 115px;
+        }
+
+        @media(max-width: 767px) {
+            padding-left: 0;
+        }
+        .swiper-wrapper {
+            .swiper-slide {
+                margin:0;
+                box-shadow:none ;
+                
+                .infoBox{
+                    box-shadow: 0px 0px 9px -3px grey;
+                }
+            }
+        }
+    }
+}

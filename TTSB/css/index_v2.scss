@@ -1,0 +1,302 @@
+@import "./variable";
+
+main{
+
+  @media (max-width:1201px) {
+    padding-top: 150px;
+  }
+  @media (max-width:769px) {
+    padding-top: 60px;
+  }
+  .wrapper{
+    position: relative;
+    width: 100%;
+    
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+
+        box-shadow: 2px 0px 10px -1px gray;
+        
+      }
+
+      .swiper-wrapper{
+      
+        .swiper-slide {
+            text-align: center;
+
+
+        
+            /* Center slide text vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 100%;
+            }
+          }
+      }
+      
+
+      .swiper-pagination-bullets{
+
+        left: calc(44% + 2px);
+        bottom: 15px;
+
+        span{
+
+          background: $font-color-white;
+          opacity: 1;
+
+          width: 10.5px;
+          height: 10.5px;
+
+        }
+
+        .swiper-pagination-bullet-active{
+
+          background: $orange;
+        }
+      }
+
+
+      .button-next{
+        position: absolute;
+        right: -0.5%;
+        top: 50%;
+        transform: translate(30%,-50%);
+        background-color: $icon_green;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+
+        @media (max-width:1200px) {
+          background-color:unset;
+          transform: translate(-20%,-50%);
+          z-index: 100;
+        }
+
+
+
+
+        .fa-angle-right{
+            font-size: 50px;
+            color: $font-color-white;
+            font-weight: 600;
+
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(-40%,-50%);
+            z-index: 2;
+
+
+
+        }
+      }
+
+      .button-prev{
+        position: absolute;
+        left: -5.5%;
+        top: 50%;
+        transform: translate(30%,-50%);
+        background-color: $icon_green;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+
+        @media (max-width:1200px) {
+          background-color:unset;
+          transform: translate(70%,-50%);
+          z-index: 100;
+        }
+
+        .fa-angle-left{
+            font-size: 50px;
+            color: $font-color-white;
+            font-weight: 600;
+
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(40%,-50%);
+
+          
+
+        }
+      }
+
+      .teleport{
+
+        width: 475px ;
+        height: 110px;
+        background-color: $coffee;
+        opacity: 0.9;
+
+        position: absolute;
+        bottom: 50px;
+        z-index: 100;
+
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width:1200px) {
+          bottom: 0px;
+          width: calc(100% - 30px);
+          bottom: -100px;
+          opacity: 1;
+        }
+
+        p{
+          color: $font-color-white;
+          font-size: $fs-20;
+          letter-spacing: 2px;
+          line-height: 1.4;
+          padding: 30px 0 30px 28px;
+        }
+
+        .btn{
+
+          display: flex;
+          justify-content: center;
+          align-self: center;
+
+          a{
+            text-decoration: none;
+
+            i{
+              color: $font-color-white;
+              font-size: 40px;
+            }
+          }
+        }
+
+      }
+  }
+
+  .info{
+
+  display: flex;
+  margin-top: 100px;
+
+  position: relative;
+
+  @media (max-width:1200px) {
+    margin-top: 140px;
+    display: block;
+  }
+
+  .title{
+    padding: 0 50px 0 28px;
+    font-size: $font-h1;
+    font-weight: bold;
+    @media (max-width:1200px) {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+  }
+
+  .time{
+
+    display: flex;
+    align-items: center;
+    @media (max-width:1200px) {
+      width: 100%;
+      justify-content: center;
+      padding: 15px 0;
+    }
+    .exchange{
+
+      font-size: $font-h2;
+      color: $input_placeholder;
+      font-weight: 400;
+      padding: 0 25px;
+      line-height: 1;
+
+      border-right: 1px solid $border_black;
+      cursor: pointer;
+
+      &:first-child{
+        border-left: 1px solid $border_black;
+      }
+
+      &:hover{
+        font-weight: bold;
+        color: $orange;
+      }
+     }
+    }
+
+    .more{
+      width: 140px;
+      height: 40px;
+      border-radius: 3px;
+      background: $btn_green;
+      color: $font-color-white;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translate(0,-50%);
+    }
+  }
+
+  .swiper-Area{
+    position: relative;
+    .swiper-container{
+      width: 100%;
+
+        .swiper-wrapper{
+            position: relative;
+            left: -50;
+
+            .swiper-slide {
+              width: 255px ;
+              height: 350px ;
+              box-shadow: 0px 0px 10px -7px $border_black;
+      
+              margin:3px 11px ;
+              padding: 10px 10px 0 10px ;
+      
+              .infoBox{
+      
+                img{
+                  width: 100%;
+                }
+                .test{
+                  .introduction{
+
+                    border-top: 1px solid black;
+                  }
+                }
+                
+              }
+          }
+        }
+    }
+
+
+    .swiper-button{
+        position: absolute;
+        font-size: $font-h1;
+        color: $icon_green;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 99;
+
+    }
+    .swiper-button-prev-custom{
+        left: -20px;
+
+    }
+    .swiper-button-next-custom{
+        right: -20px;
+
+    }
+  }
+}

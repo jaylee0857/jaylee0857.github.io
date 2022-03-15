@@ -1,0 +1,22 @@
+@mixin gradient($color1, $color2) {
+    background: linear-gradient(90deg, $color1 0%, $color2 100%);
+    background: -moz-linear-gradient(90deg, $color1 0%, $color2 100%);
+    background: -webkit-linear-gradient(90deg, $color1 0%, $color2 100%);
+    background: -o-linear-gradient(90deg, $color1 0%, $color2 100%);
+}
+
+@mixin green-gradient {
+    background: linear-gradient(90deg, #25AB9E 0%, #009997 100%);
+    background: -moz-linear-gradient(90deg, #25AB9E 0%, #009997 100%);
+    background: -webkit-linear-gradient(90deg, #25AB9E 0%, #009997 100%);
+    background: -o-linear-gradient(90deg, #25AB9E 0%, #009997 100%);
+    color: white;
+}
+
+@mixin orange-gradient {
+    background: linear-gradient(90deg, #f8bb00 0%, #ed7a00 100%);
+    background: -moz-linear-gradient(90deg, #f8bb00 0%, #ed7a00 100%);
+    background: -webkit-linear-gradient(90deg, #f8bb00 0%, #ed7a00 100%);
+    background: -o-linear-gradient(90deg, #f8bb00 0%, #ed7a00 100%);
+    color: white;
+}

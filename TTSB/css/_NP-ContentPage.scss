@@ -1,0 +1,72 @@
+@import "color";
+@import "variable";
+
+
+.page-title_for_map {
+    font-size: $font-h2;
+    line-height: $font-h2;
+    color: $darkgreen2;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.NP-ContentPage {
+    .info-img{
+        margin-top: 27px;
+        
+        img{
+            max-width: 100%;
+        }
+    }
+    .info-text{
+        letter-spacing: 0.5px;
+        line-height: 25px;
+        margin-top: 27px;
+    }
+
+    .page-title {
+        font-size: $font-h2;
+        line-height: $font-h2;
+        color: $darkgreen2;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    .row.content-link-group{
+        margin-top: 17px;
+        a {
+            transition: 0.3s;
+            display: block;
+            text-align: center;
+            margin: 15px;
+            padding: 20px;
+            text-decoration: none;
+            width: calc(25% - 30px);
+            height: 98px;
+            border-radius: 13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: $font-p;
+            @include green-gradient;
+            @media screen and (max-width: 991px) {
+                margin: 12px 5.5px;
+                width: calc(50% - 15px);
+            }
+            p {
+                margin: 0;
+                padding: 0;
+            }
+            &:hover {
+                @include orange-gradient;
+                transform: scale(1.02);
+                font-weight: 700;
+            }
+
+            &:focus {
+                @include orange-gradient;
+                transform: scale(1.02);
+                font-weight: 700;
+            }
+        }
+    }
+}

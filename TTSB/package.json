@@ -1,0 +1,21 @@
+{
+  "name": "epaper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mjml": "./node_modules/.bin/mjml EDM/ttsb.mjml -o EDM/ttsb.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cai30304/epaper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cai30304/epaper/issues"
+  },
+  "homepage": "https://github.com/cai30304/epaper#readme",
+  "dependencies": {}
+}

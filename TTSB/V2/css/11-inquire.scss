@@ -1,0 +1,212 @@
+main{
+    padding-bottom: 155px;
+
+    @media(max-width:576px){
+        padding-bottom: 105px;
+    }
+
+    #CP-title{
+        @media(max-width:767px){
+            margin-bottom: 20px;
+        }
+    }
+
+    
+    #topline{
+        .flex_control{
+            @media(max-width:1200px){
+                justify-content: space-between !important;
+            }
+        }
+        .topline-button{
+            border:none; 
+            width:140px;
+            @media(max-width:1200px){
+                width: 100%;
+            }
+
+            .button{
+                width: 100%; 
+                border:1px solid black;
+                @media(max-width:1200px){
+                    width: 100px;
+                    margin: auto;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+
+
+    #form-area{
+        .container{
+            .remind{
+                width: 100%;
+                max-width: 730px;
+                font-size: 14px;
+                color: #B2B2B2;
+                margin:0 auto 9px auto;
+            }
+            form{
+                width: 100%;
+                max-width: 730px;
+                margin:auto;
+                .from-block{
+                    margin-bottom: 30px;
+
+                    @media(max-width:576px){
+                        margin-bottom: 20px;
+                    }
+
+                    label{
+                        width: 100%;
+                        font-size: 18px;
+                    }
+                    input{
+                        width: 100%;
+                        height: 30px;
+                        border: 1px solid #9F9F9F;
+                        border-radius: 4px;
+                        padding: 0 10px;
+
+                        &::placeholder{
+                            color: #9F9F9F;
+                        }
+
+                        &:focus{
+                            outline:#24AB9F auto 5px;
+                        }
+                    }
+                    select{
+                        width: 100%;
+                        height: 30px;
+                        background-color: white;
+                        background-image: url('../img/arrow.png');
+                        padding-left: 15px;
+                        background-position: 98% 50%;
+                        background-size: 3.5%;
+                        background-repeat: no-repeat;
+                        -webkit-appearance: none; 
+                        visibility: initial!important;
+                    }
+                }
+
+                .certification-block{
+                    label{
+                        min-width:55px;
+                        font-size: 18px;
+                        margin: 0 40px 0 0 ;
+                        align-self: start;
+                        
+                        @media(max-width:768px){
+                            align-self: unset;
+                            margin: 0 55px 10px 0 ;
+                        }
+                        @media(max-width:420px){
+                            margin: 0 0 10px 0 ;
+                        }
+                    }
+                    .certification-img{
+                        width: 255px;
+                        height: 60px;
+                        
+                        img{
+                            height: 100%;
+                        }
+
+                        @media(max-width:768px){
+                            width: calc(100% - 110px);
+                            height: 70px;
+                            margin-bottom: 25px;
+                        }
+
+                        @media(max-width:420px){
+                            width: 100%;
+                        }
+                    }
+                    .support-btn{
+                        padding: 0 30px;
+
+                        @media(max-width:768px){
+                            padding:0;
+                            margin-right: 20px;
+                        }
+
+                        a{
+                            img{
+                                width: 40px;
+                                height: 40px;  
+
+                                @media(max-width:768px){
+                                    width: 35px;
+                                    height: 35px;
+                                } 
+                            }
+
+                            &:first-child{
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+
+                    input{
+                        width: 100%;
+                        height: 30px;
+                        border-radius: 4px;
+                        border: 1px solid #9F9F9F;
+                        padding: 0 10px;
+                        color: #B2B2B2;
+                        &::placeholder{
+                            color: #B2B2B2;
+                        }
+                        @media(max-width:768px){
+                            width: calc(100% - 110px);
+                        }
+                    }
+                }
+
+                .certification-explain{
+                    margin-top: 10px;
+                    font-size: 14px;
+                    color: #B2B3B2;
+                    margin-bottom: 50px;
+                    @media(max-width:768px){
+                        text-align: left;
+                        margin-bottom: 30px;
+                        margin-top: 20px;
+                    }
+                }
+
+                .submit-area{
+                    .submit-btn-group{
+                        margin-bottom: 20px;
+                        button{
+                            width: 100px;
+                            height: 30px;
+                            background-color: transparent;
+                            border: 1px solid #24A89C;
+                            color: #24A89C;
+                            font-size: 18px;
+                            border-radius: 4px;
+
+                            &:hover{
+                                background-color: #24A89C;
+                                color: white;
+                            }
+
+                            &:first-child{
+                                margin-right: 30px;
+                            }
+                        }
+                    }
+
+                    span{
+                        font-size: 12px;
+                        color: #B2B3B2;
+                    }
+                }
+            }
+        }
+    }
+}

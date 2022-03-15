@@ -1,0 +1,166 @@
+
+.caseSearch{
+    .title{
+        font-size: $font-h2;
+        line-height: $font-h2;
+        letter-spacing: 2px;
+        color: $darkgreen2;
+        position: relative;
+        font-weight: 900;
+        margin-bottom: 30px;
+        @media(max-width:991px) {
+            font-weight: 600;
+        }
+    }
+
+    .caseSearchArea {
+        margin-bottom:150px;
+
+        .form-top{
+            margin-top: 30px;
+            .e-title{
+                font-size:$font-p;
+                font-weight:900;
+            }
+            .alert{
+                font-size: 1rem;
+                color: $font-color-red;
+                font-weight:900;
+                margin: 0;
+                padding: 0;
+            }
+            input{
+                padding-left: 5px;
+            }
+            input:focus{
+                outline-color: $darkgreen2;
+            }
+        }
+
+        .form-middle {
+            margin-top: 30px;
+            margin-bottom:60px;
+
+            .e-title{
+                font-size:$font-p;
+                font-weight:900;
+            }
+
+            .code {
+                padding:0 5px;
+                @media (max-width:991px){
+                    width:100%;
+                }
+            }
+            .code:focus{
+                outline-color: $darkgreen2;
+            }
+
+            img{
+                margin-left:15px;
+                @media (max-width:991px){
+                    margin: 15px auto;
+                }
+            }
+
+            .button-group{
+                display: flex;
+                justify-content: flex-end;
+                margin:0 -15px;
+
+                @media (max-width:1200px){
+                    margin:0;
+                    margin-top:20px;
+                    justify-content: center;
+                }
+
+                @media (max-width:991px){
+                    position: unset;
+                    right:unset;
+                    width:100%;
+                    display:flex;
+                    justify-content:center;
+                    margin:0 auto;
+                }
+
+                .gray-btn{
+                    background-color:$lightgray2;
+                    border-color:$lightgray2;
+
+                    &:hover,&:focus{
+                        background-color:$font-color-gray;
+                        border-color:$font-color-gray;
+                    }
+                }
+
+                .reproduce{
+                    margin-left:10px;
+    
+                    &:focus{
+                        color: #fff;
+                        background-color: #6c757d;
+                        border-color: #6c757d;
+                    }
+
+                    @media (max-width:1200px){
+                        margin-left:0;
+                    }
+
+                    @media (max-width:991px){
+                        margin-left:0;
+                    }
+                }
+    
+                button{
+                    width:110px;
+                    height:29px;
+
+                    @media (max-width:1200px){
+                        margin:5px;
+                    }
+                }
+            }
+        }
+
+        .form-bottom {
+            .aqua-btn {
+                width: 110px;
+                height: 29px;
+                float: right;
+                border: none;
+                font-weight:900;
+                margin: 0 5px;
+
+                @include green-gradient;
+
+                @media (max-width:991px){
+                    margin: 0 5px;
+                }
+
+                &:hover,&:focus {
+                    @include orange-gradient;
+                }
+            }
+
+            .btn-right {
+                width: 110px;
+                height: 29px;
+                float: right;
+                font-weight:900;
+                color:$darkgreen2;
+                border-color:$darkgreen2;
+                margin:0 5px;
+
+                @media (max-width:991px){
+                    margin:0;
+                }
+
+                &:hover,&:focus {
+                    color:$font-color-white;
+                    border-color:unset;
+                    @include orange-gradient;   
+                }      
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+main{
+    padding-bottom: 155px;
+
+    @media(max-width:576px){
+        padding-bottom: 105px;
+    }
+
+    #CP-title{
+        @media(max-width:767px){
+            margin-bottom: 20px;
+        }
+    }
+
+    #topline{
+        .flex_control{
+            @media(max-width:1200px){
+                justify-content: space-between !important;
+            }
+        }
+        .topline-button{
+            border:none; 
+            width:140px;
+            @media(max-width:1200px){
+                width: 100%;
+            }
+
+            .button{
+                width: 100%; 
+                border:1px solid black;
+                @media(max-width:1200px){
+                    width: 140px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    #inquire_list{
+        
+        .table-group{
+            width: 100%;
+            font-size: 20px;
+            border: 2px solid #5CC3B1;
+            .table-info{
+                border-bottom: 2px solid #5CC3B1;
+                &:nth-child(odd){
+                    background-color: #E7F2F0;
+                }
+                &:nth-child(even){
+                    background-color: white;
+                }
+                &:first-child{
+                    background-color: #24A296;
+                    color: white;
+                    font-weight: bold;
+                }
+                &:last-child{
+                    border: none;
+                }
+                .table-number{
+                    min-width: 350px;
+                    text-align: center;
+                    border-right: 2px solid #5CC3B1;
+                    height: 45px;
+                    line-height: 45px;
+                }
+                .table-name{
+                    flex-grow: 1;
+                    text-align: center;
+                    letter-spacing: 1px;
+                    height: 45px;
+                    line-height: 45px;
+                }
+            }
+        }
+
+        .table-mb-group{
+            
+            .table-info{
+                text-align: center;
+                font-size: 20px ;
+                margin-bottom: 14px;
+                border: 2px solid #5CC3B1; 
+                
+                &:nth-child(even) .table-number-content{
+                    background-color: #E7F2F0;
+                }
+                &:nth-child(even) .table-name-content{
+                    background-color: #E7F2F0;
+                }
+                .table-number{
+                    background-color: #24A296;
+                    color: white;
+                    font-weight: bold;
+                    border-bottom: 2px solid #5CC3B1;
+                }
+                .table-name{
+                    background-color: #24A296;
+                    color: white;
+                    font-weight: bold;
+                    border-top: 2px solid #5CC3B1;
+                    border-bottom: 2px solid #5CC3B1;
+                }
+                .table-number-content,.table-name-content{
+                    background-color: white;
+
+                }
+                .table-name-content{
+                    text-align: justify;
+                    padding: 10px 12px;
+                }
+
+            }
+        }
+    }
+
+
+
+}

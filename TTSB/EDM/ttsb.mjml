@@ -1,0 +1,94 @@
+<mjml>
+  <mj-head>
+    <mj-preview>國家運輸安全委員會-電子報</mj-preview>
+    <mj-attributes>
+      <mj-body width="600px" />
+      <mj-text padding="0" />
+      <mj-all font-family="Microsoft JhengHei" />
+      <!-- ui -->
+      <!-- background-Color -->
+      <mj-class name="orange" background-color="#f38f1e" />
+      <mj-class name="green" background-color="#24aa9e" />
+      <mj-class name="gray" background-color="#4D4D4D" />
+      <mj-class name="white" background-color="#ffffff" />
+
+      <!-- font-color -->
+      <mj-class name="font-white" color="#ffffff" />
+      <mj-class name="font-yellow" color="#ff0" />
+      <mj-class name="font-black" color="#1A1A1A" />
+      <mj-class name="font-yellow" color="#ff0" font-size="14px" padding="0 10px" text-decoration="#ff0" />
+
+      <!-- header -->
+      <mj-class name="date" align="right" text-align="right" />
+
+      <!-- content -->
+      <mj-class name="title" font-size="35px" font-weight="700" color="#24aa9e" />
+
+      <mj-class name="text" font-size="18px" font-weight="700" align="left" inner-padding="0px" padding="0" text-align="left" />
+
+      <mj-class name="border" border-bottom="1px solid #9F9F9F" padding="20px 0" />
+
+      <mj-class name="floatL" float="left" />
+
+    </mj-attributes>
+    <!-- mjml RWD -->
+    <mj-style>
+      .header {
+        padding: 100px 0 !important;
+        width: 100%;
+      }
+
+      .media {
+        width: 50%;
+      }
+
+      .logo {
+        float: left;
+      }
+
+      .day-media {
+        width: 20%;
+      }
+
+      .title-media {
+        width: 80%;
+      }
+
+
+      .pr-3 {
+        padding-right: 30px;
+      }
+
+      .font-black {
+        color: #1A1A1A;
+      }
+
+      .font-yellow {
+        color: #ff0;
+        font-size: 18px;
+        padding: 0 10px;
+        text-decoration: #ff0;
+      }
+
+      @media (max-width:485px) {
+        .media {
+          width: 50% !important;
+        }
+
+        .day-media {
+          width: 30% !important;
+        }
+
+        .title-media {
+          width: 70% !important;
+        }
+
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-include path="./header.mjml" />
+    <mj-include path="./content.mjml" />
+    <mj-include path="./footer.mjml" />
+  </mj-body>
+</mjml>

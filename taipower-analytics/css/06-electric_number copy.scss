@@ -1,0 +1,206 @@
+
+@import "./variable";
+@import "./functions";
+
+main{
+    padding-top: 130px;
+
+
+}
+#page_form{
+    padding-top: 20px;
+    .container{
+        .encourage{
+            width: 600px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 45px;
+            span{
+                color: $hover-orange;
+                margin-right: 15px;
+            }
+            @media (max-width:$phone) {
+                width: initial;
+
+             }
+        }
+        #form{
+            width: 600px;
+            background-color: #0D67B2;
+            border-radius: 15px;
+            padding: 20px 30px 30px 30px;
+            margin: 0 auto;
+            @media (max-width:$phone) {
+               width: 100%;
+               height: initial;
+               padding: 30px 15px 32px 15px ;
+            }
+            .prompt{
+                width: 255px;
+                display: block;
+                margin: 0 0 0 auto;
+                font-size: 18px;
+                color: $yellow;
+                margin-bottom: 30px;
+                @media (max-width:$phone) {
+                    margin: 0 auto 0 auto;
+                 }
+            }
+            .form_list{
+                display: flex;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+                margin-bottom: 15px;
+                label{
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: $white;
+                    margin-right: 30px;
+                    text-align: right;
+                    padding-top: 8px;
+                    @media (max-width:$phone) {
+                        width: 100%;
+                        text-align: left;
+                        padding-top: 25px;
+                        margin-bottom: 10px;
+                     }
+                }
+                input{
+                    flex-grow: 1;
+                    flex-basis: 0;
+                    max-width: 350px;
+                    border-radius: 5px;
+                    border: 0;
+                    height: 40px;
+                    @media (max-width:$phone) {
+                        width: 100%;
+                        max-width: 100%;
+                     }
+                }
+                .col{
+                    padding-left: 0;
+                    padding-right: 0;
+                    max-width: 400px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    @media (max-width:$phone) {
+                        width: 100%;
+                        max-width: 100%;
+                        display: block;
+                     }
+                    input{
+                        flex-grow: 1;
+                        flex-basis: 0;
+                        height: 40px;
+                        border-radius: 5px;
+                        border: 0;
+
+                    }
+                    a{  
+                        display: block;
+                        text-decoration: none;
+                        font-size: 24px;
+                        color: $white;
+                        width: 160px;
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 19px;
+                        border: 1px solid $white;
+                        border-radius: 5px;
+                        margin-left: 18px;
+                        @media (max-width:$phone) {
+                            margin: 20px auto 35px auto;
+                         }
+                    }
+                    p{
+                        font-size: 14px;
+                        color: $white;
+                        margin-top: 9px;
+                        line-height: 1.5;
+                        text-align: justify;
+                        @media (max-width:$phone) {
+                            display: none;
+                         }
+                    }
+                }
+            }
+            .submit_btn{
+                display: flex;
+                justify-content: center;
+                padding-top: 15px;
+                button{
+                    width: 200px;
+                    height: 40px;
+                    background-color: $hover-orange;
+                    color: $white;
+                    border-radius: 20px;
+                    border: 0;
+                    box-shadow: 0 0 7px -3px black;
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    margin-top: 250px;
+    @media (max-width:$pc) {
+        margin-top: 182px;
+    }
+    @media (max-width:$phone) {
+        margin-top: 139px;
+    }
+}
+.footer_background{
+    position: relative;
+    .background_color{
+        width: 100%;
+        height: 100%;
+        background-color: #CEEDED;
+        position: absolute;
+        z-index: -1;
+    }
+    .background_img{
+        position: absolute;
+        left: 0;
+        bottom: 17.5vw;
+        z-index: -1;
+    }
+}
+#annotation{
+    padding-top: 50px;
+    margin-bottom: 100px;
+    .container{
+        .row{
+            justify-content: center;
+            .border_style{
+                // border-radius: 30px;
+                width: 600px;
+                height: 160px;
+                background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%2375DBCCFF' stroke-width='4' stroke-dasharray='20' stroke-dashoffset='20' stroke-linecap='square'/%3e%3c/svg%3e");
+                border-radius: 30px;
+                padding: 35px 30px;
+                font-size: 24px;
+                font-weight: bold;
+                @media (max-width:$pc){
+                    height: 160px;
+                }
+                @media (max-width:$phone){
+                    height: 200px;
+                    padding: 30px 15px;
+                }
+                p{
+                    margin-bottom: 10px;
+                    &:first-child{
+                        color: $hover_orange;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

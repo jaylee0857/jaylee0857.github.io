@@ -1,0 +1,118 @@
+// 05-sign_in
+@mixin sept_area ($url1,$url1_phone,$url2,$url2_phone,$url3,$url3_phone){
+    #sept_area{
+        padding-top: 40px;
+        @media(max-width:$pc) {
+            padding-top: 55px;
+        }
+        @media(max-width:$phone) {
+            padding-top: 30px;
+        }
+        .container{
+            .row{
+                .col-4{
+                    @media(max-width:$pc) {
+                        padding-right: 3px;
+                        padding-left: 3px;
+                        &:first-child{
+                            padding-left: 15px;
+                        }
+                        &:last-child{
+                            padding-right: 15px;
+                        }
+                    }
+                    @media (max-width:$m-phone) {
+                        padding-right: 0px;
+                        padding-left: 0px;
+                        &:first-child{
+                            padding-left: 15px;
+                        }
+                        &:last-child{
+                            padding-right: 15px;
+                        }
+                     }
+                    .sept1,.sept2,.sept3{
+                        width: 100%;
+                        height: 125px;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        @media (max-width:$pc) {
+                            width: 232px;
+                            height: 83px;
+                        }
+                        @media (max-width:$phone) {
+                            width: 130px;
+                            height: 138px;
+                         }
+                         @media (max-width:$m_phone) {
+                            width: 29.2vw;
+                            height: 31.4vw;
+                         }
+                    }
+                    .sept1{
+                        background-image: $url1;
+                        @media (max-width:$pc) {
+                            margin-left: auto;
+                        }
+                        @media (max-width:$phone) {
+                            background-image: $url1_phone;
+                        }
+                    }
+                    .sept2{
+                        background-image: $url2;
+                        @media (max-width:$pc) {
+                            margin: auto;
+                        }
+                        @media (max-width:$phone) {
+                            background-image: $url2_phone;
+                        }
+                    }
+                    .sept3{
+                        background-image: $url3;
+    
+                        @media (max-width:$phone) {
+                            background-image: $url3_phone;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@mixin marginTopForSingInPage($width1,$width2,$width3,$width4) {
+    footer{
+        margin-top: $width1;
+        @if $width4 != "null" {
+            @media (max-width:1201px) {
+                margin-top: $width4;
+            }
+        }
+        @media (max-width:$pc) {
+            margin-top: $width2;
+        }
+        @media (max-width:$phone) {
+            margin-top: $width3;
+        }
+
+    }
+}
+
+@mixin backgroundForSingInPage() {
+    .footer_background{
+        position: relative;
+
+        .background_img{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 17.8vw;
+            z-index: -1;
+            @media (max-width:$pc) {
+                bottom: 18vw;
+            }
+            @media (max-width:$phone) {
+                bottom: 18vw;
+            }
+        }
+    }
+}

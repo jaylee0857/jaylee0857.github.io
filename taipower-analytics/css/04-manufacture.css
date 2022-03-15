@@ -1,0 +1,545 @@
+main {
+  padding-top: 130px;
+}
+
+@media (max-width: 575px) {
+  main {
+    padding-top: 120px;
+  }
+}
+
+main select::-ms-expand {
+  display: none;
+}
+
+main #paging_button .container .row .photo {
+  padding-top: 51px;
+}
+
+@media (max-width: 1199px) {
+  main #paging_button .container .row .photo {
+    padding-right: 0;
+    padding-left: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  main #paging_button .container .row .photo {
+    padding-top: 28px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+main #paging_button .container .row .photo img {
+  width: 100%;
+}
+
+@media (max-width: 1199px) {
+  main #paging_button .container .row .photo img {
+    width: 104%;
+  }
+}
+
+@media (max-width: 991px) {
+  main #paging_button .container .row .photo img {
+    width: 87%;
+  }
+}
+
+@media (max-width: 767px) {
+  main #paging_button .container .row .photo img {
+    width: 100%;
+  }
+}
+
+main #paging_button .container .row .btn_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-top: 60px;
+}
+
+@media (max-width: 1199px) {
+  main #paging_button .container .row .btn_area {
+    padding-top: 50px;
+    padding-left: 0;
+    width: 210px;
+  }
+}
+
+@media (max-width: 767px) {
+  main #paging_button .container .row .btn_area {
+    padding-top: 35px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+main #paging_button .container .row .btn_area a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #FCE4D8;
+  width: 350px;
+  height: 70px;
+  font-size: 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 60px;
+  padding-right: 20px;
+  padding-top: 7px;
+  position: relative;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  line-height: 1.2;
+}
+
+@media (max-width: 1199px) {
+  main #paging_button .container .row .btn_area a {
+    padding-top: 15px;
+  }
+}
+
+main #paging_button .container .row .btn_area a:last-child {
+  margin-bottom: 0;
+}
+
+main #paging_button .container .row .btn_area a:hover {
+  background-color: #FF8948;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #ffffff;
+}
+
+main #paging_button .container .row .btn_area a:nth-child(1):hover .png {
+  opacity: 0;
+}
+
+main #paging_button .container .row .btn_area a:nth-child(1):hover .animation {
+  opacity: 1;
+  z-index: 10;
+}
+
+main #paging_button .container .row .btn_area a:nth-child(1) .png {
+  width: 104px;
+  height: 90px;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-image: url("../img/04-health_check/2020-05-24-07.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}
+
+@media (max-width: 1199px) {
+  main #paging_button .container .row .btn_area a:nth-child(1) .png {
+    width: 80px;
+    height: 70px;
+    top: 0;
+    left: 15px;
+  }
+}
+
+main #paging_button .container .row .btn_area a:nth-child(1) .animation {
+  width: 104px;
+  height: 90px;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-image: url("../gif/04/GOOD.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0;
+  opacity: 0;
+}
+
+@media (max-width: 1199px) {
+  main #paging_button .container .row .btn_area a:nth-child(1) .animation {
+    width: 80px;
+    height: 70px;
+    top: 0;
+    left: 15px;
+  }
+}
+
+main #paging_button .container .row .btn_area a:nth-child(1) span {
+  font-size: 24px;
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
+  main #paging_button .container .row .btn_area a:nth-child(1) span {
+    font-size: 18px;
+  }
+}
+
+main #paging_button .container .row .btn_area a:nth-child(2):hover .png {
+  opacity: 0;
+}
+
+main #paging_button .container .row .btn_area a:nth-child(2):hover .animation {
+  opacity: 1;
+  z-index: 10;
+}
+
+main #paging_button .container .row .btn_area a:nth-child(2) .png {
+  width: 101px;
+  height: 90px;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-image: url("../img/04-health_check/2020-05-24-08.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}
+
+@media (max-width: 1199px) {
+  main #paging_button .container .row .btn_area a:nth-child(2) .png {
+    width: 83px;
+    height: 70px;
+    top: 0;
+    left: 15px;
+  }
+}
+
+main #paging_button .container .row .btn_area a:nth-child(2) .animation {
+  width: 101px;
+  height: 90px;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-image: url("../gif/04/VIDEO.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0;
+  opacity: 0;
+}
+
+@media (max-width: 1199px) {
+  main #paging_button .container .row .btn_area a:nth-child(2) .animation {
+    width: 83px;
+    height: 70px;
+    top: 0;
+    left: 15px;
+  }
+}
+
+main #paging_button .container .row .btn_area a:nth-child(2) span {
+  font-size: 24px;
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
+  main #paging_button .container .row .btn_area a:nth-child(2) span {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1199px) {
+  main #paging_button .container .row .btn_area a {
+    width: 280px;
+    height: 70px;
+    border-radius: 35px;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  main #paging_button .container .row .btn_area a {
+    margin-bottom: 15px;
+    padding-top: 15px;
+  }
+}
+
+main #paging_button .container .row .btn_area a div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 210px;
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
+  main #paging_button .container .row .btn_area a div {
+    width: 160px;
+    height: 70px;
+    border-radius: 35px;
+    font-size: 18px;
+  }
+}
+
+main #knowledge {
+  padding-top: 50px;
+}
+
+@media (max-width: 767px) {
+  main #knowledge {
+    padding-top: 100px;
+  }
+}
+
+main #knowledge .container {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+@media (max-width: 767px) {
+  main #knowledge .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  main #knowledge .container .row {
+    padding: 0 15px;
+  }
+}
+
+main #knowledge .container .row .knowledge_btn_area {
+  background-image: url("../img/04-health_check/2020-05-24-06.png");
+  height: 402px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 75px;
+}
+
+@media (max-width: 1199px) {
+  main #knowledge .container .row .knowledge_btn_area {
+    height: 250px;
+    padding-top: 160px;
+  }
+}
+
+@media (max-width: 991px) {
+  main #knowledge .container .row .knowledge_btn_area {
+    height: 250px;
+    padding-top: 137px;
+  }
+}
+
+@media (max-width: 767px) {
+  main #knowledge .container .row .knowledge_btn_area {
+    width: 93.75vw;
+    height: 22.87vw;
+    padding: 50px 15px 0 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  main #knowledge .container .row .knowledge_btn_area {
+    height: 31.8vw;
+  }
+}
+
+main #knowledge .container .row .knowledge_btn_area .title {
+  height: 70px;
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
+  main #knowledge .container .row .knowledge_btn_area .title {
+    margin-top: -95px;
+  }
+}
+
+@media (max-width: 767px) {
+  main #knowledge .container .row .knowledge_btn_area .title {
+    margin-top: -95px;
+    color: black;
+  }
+}
+
+main #knowledge .container .row .knowledge_btn_area .nav-pills {
+  padding: 30px 20px;
+}
+
+@media (max-width: 1199px) {
+  main #knowledge .container .row .knowledge_btn_area .nav-pills {
+    display: none;
+  }
+}
+
+main #knowledge .container .row .knowledge_btn_area .nav-pills .nav-item {
+  text-align: center;
+}
+
+main #knowledge .container .row .knowledge_btn_area .nav-pills .nav-item:nth-of-type(6n) .nav-link {
+  margin-right: 0;
+}
+
+main #knowledge .container .row .knowledge_btn_area .nav-pills .nav-item .nav-link {
+  font-size: 24px;
+  width: 163px;
+  height: 63px;
+  line-height: 54px;
+  font-weight: bold;
+  color: #FF8948;
+  background-color: #ffffff;
+  padding: 0;
+  border: 3px solid #FF8948;
+  margin-right: 18px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+main #knowledge .container .row .knowledge_btn_area .nav-pills .nav-item .nav-link:hover {
+  background-color: #FF8948;
+  color: #ffffff;
+  border: 3px solid #FF8948;
+}
+
+main #knowledge .container .row .knowledge_btn_area .nav-pills .nav-link.active, main #knowledge .container .row .knowledge_btn_area .nav-pills .show > .nav-link {
+  background-color: #FF8948;
+  color: #ffffff;
+  border: 3px solid #FF8948;
+}
+
+main #knowledge .container .row .knowledge_btn_area .phone_style_option {
+  display: none;
+  width: 500px;
+  height: 55px;
+  margin: 0 auto;
+  border: 0;
+  font-size: 36px;
+  padding-left: 15px;
+  border-radius: 7.2px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url(../img/04-health_check/arrow.png);
+  background-size: 15px 8px;
+  background-repeat: no-repeat;
+  background-position: 97% 50%;
+}
+
+@media (max-width: 1199px) {
+  main #knowledge .container .row .knowledge_btn_area .phone_style_option {
+    display: block;
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  main #knowledge .container .row .knowledge_btn_area .phone_style_option {
+    margin: 10vw auto 0 auto;
+    width: 260px;
+    height: 40px;
+    font-size: 24px;
+    background-position: 94% 50%;
+  }
+}
+
+@media (max-width: 575px) {
+  main #knowledge .container .row .knowledge_btn_area .phone_style_option {
+    margin-top: 13vw;
+  }
+}
+
+@media (max-width: 450px) {
+  main #knowledge .container .row .knowledge_btn_area .phone_style_option {
+    margin-top: 10vw;
+  }
+}
+
+@media (max-width: 350px) {
+  main #knowledge .container .row .knowledge_btn_area .phone_style_option {
+    margin-top: 8vw;
+  }
+}
+
+main #knowledge .container .row .tab_area {
+  margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+  main #knowledge .container .row .tab_area {
+    padding: 0;
+  }
+}
+
+main #knowledge .container .row .tab_area .tab-content {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 30px 65px 30px 65px;
+  background-color: #CEE5F1;
+  border-radius: 15px;
+}
+
+@media (max-width: 767px) {
+  main #knowledge .container .row .tab_area .tab-content {
+    padding: 25px 13px 30px 13px;
+  }
+}
+
+@media (max-width: 575px) {
+  main #knowledge .container .row .tab_area .tab-content {
+    padding: 25px 13px 30px 13px;
+  }
+}
+
+main #knowledge .container .row .tab_area .tab-content .tab-pane {
+  line-height: 1.4;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media (max-width: 767px) {
+  main #knowledge .container .row .tab_area .tab-content .tab-pane {
+    text-align: justify;
+    letter-spacing: 1px;
+  }
+}
+
+main #knowledge .container .row .tab_area .tab-content .tab-pane p {
+  margin-top: 30px;
+}
+
+main #knowledge .container .row .tab_area .tab-content .tab-pane p span {
+  color: #FF8948;
+}
+
+footer {
+  margin-top: 155px;
+}
+
+@media (max-width: 767px) {
+  footer {
+    margin-top: 140px;
+  }
+}
+
+footer .footer_background {
+  margin-bottom: -3px;
+}
+
+@media (max-width: 767px) {
+  footer .footer_background {
+    margin-bottom: -3px;
+  }
+}
+/*# sourceMappingURL=04-manufacture.css.map */

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>台灣電力公司</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <!-- layout -->
+    <link rel="stylesheet" href="./css/template.css">
+    <!-- page css  -->
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <nav id="nav_bar_area" class="hidden">
+        <div class="container">
+            <div class="mask"></div>
+            <div class="row justify-content-between ">
+                <div class="col-9 col-xl-5 d-flex align-items-center">
+                    <a href="#" class="nav_logo">
+                        <img width="100%" src="./img/template/owl.png" alt="貓頭鷹png">
+                    </a>
+                    <a href="#">
+                        <h1>用電診斷中心</h1>
+                    </a>
+                </div>
+                <div class="col d-xl-flex align-items-center phone_style_absolute">
+                    <ul class="d-block d-xl-flex list_bar">
+                        <li>
+                            <a href="#">家庭及小商店</a>
+                        </li>
+                        <li>
+                            <a href="#">商辦服務業</a>
+                        </li>
+                        <li>
+                            <a href="#">製造業</a>
+                        </li>
+                    </ul>
+                    <!-- 0602調整 開始 -->
+                    <!-- //登入前 -->
+                    <!-- <div class="d-flex btn_bar justify-content-center">
+                        <a href="#">
+                            <div class="btn_area">
+                                <div class="icon"></div>
+                                <span>登入</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="btn_area">
+                                <span>加入會員</span>
+                            </div>
+                        </a>
+                    </div> -->
+                    <!-- //登入前結束 -->
+
+                    <!-- //登入後 -->
+                    <div class="d-flex btn_bar justify-content-center log_out">
+                        <div><span class="user_name">奈歐米・谷哥哥</span><p>您好~</p></div>
+                        <input type="button" value="登出">
+                    </div>
+                    <!-- //登入後結束 -->
+
+                    <!-- 0602調整 結束-->
+                </div>
+                <div class="d-flex phone_style_absolute link">
+                    <a href="#">
+                        <div class="youtube_photo">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="fb_photo">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav_hamburger d-block d-xl-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- page_content start -->
+
+    <main>
+        <section id="index_photo">
+            <div class="phone_background_color"></div>
+            <!-- <img class="background" src="./img/index/background.png" alt=""> -->
+            <!-- <div class="animation background" data-name="00-Home"
+            data-path='./json/00-Home/Home.json'></div> -->
+            <div class="background">
+                <video class="background_mp4" src="./MP4/background.mp4" autoplay muted loop></video>
+            </div>
+            <div class="phone_another_background"></div>
+            <div class="index_items">
+                <a id="youtube_hyperlink" href="#"></a>
+                <a id="fb_hyperlink" href="#"></a>
+                <img class="bear" src="./gif/bear.gif" alt="">
+                <div class="scroll">
+                    <a href="#target">
+                        <img src="./img/index/scroll.png" alt="">
+                        <span>scroll</span>
+                    </a>
+                </div>
+                <div class="test">
+                    <a href="#">
+                        <div class="test_btn gif_btn">
+                            <div class="animation"></div>
+                            <div class="png"></div>
+                            <span>節電態度測驗</span>
+                        </div>
+                        <div class="test_ice_img">
+                            <img src="./img/index/test_ice.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="billing_service">
+                    <a href="#">
+                        <div class="billing_service_btn gif_btn">
+                            <div class="animation"></div>
+                            <div class="png"></div>
+                            <span>用電圖表顯示</span>
+                        </div>
+                        <div class="billing_service_ice_img">
+                            <img src="./img/index/billing_service_ice.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="analysis">
+                    <a href="#">
+                        <div class="analysis_btn gif_btn">
+                            <div class="animation"></div>
+                            <div class="png"></div>
+                            <span>聰明用電分析</span>
+                        </div>
+                        <div class="analysis_ice_img">
+                            <img src="./img/index/analysis_ice.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="electricity_info">
+            <div id="target" class="fake_Anchor"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center ">
+                        <div class="position-relative d-flex">
+                            <div class="wire-left-info"></div>
+                            <h2>業別用電資訊</h2>
+                            <div class="wire-right-info"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 shop">
+                        <a href="#">
+                            <div class="photo_box">
+                                <video class="animation" src="./MP4/03-Industry (MP4)/01.mp4" muted></video>
+                                <img src="./img/index/shop.png" alt="">
+                                <h3>家庭及小商店</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-4 service">
+                        <a href="#">
+                            <div class="photo_box ">
+                                <video class="animation" src="./MP4/03-Industry (MP4)/02.mp4" muted></video>
+                                <img src="./img/index/service.png" alt="">
+                                <h3>商辦服務業</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-4 manufacture">
+                        <a href="#">
+                            <div class="photo_box">
+                                <video class="animation" src="./MP4/03-Industry (MP4)/03.mp4"muted></video>
+                                <img src="./img/index/manufacture.png" alt="">
+                                <h3>製造業</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="treasure_box">
+            <div class="background_mountain">
+                <img src="./img/index/background-mountain.png" alt="">
+            </div>
+            <div class="background_mountain_right"></div>
+            <div class="background_mountain_left"></div>
+            <div class="background_light"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center overflow-hidden ">
+                        <div class="position-relative d-flex ">
+                            <div class="wire-left-treasure_box"></div>
+                            <h2>節電百寶箱</h2>
+                            <div class="wire-right-treasure_box"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <a href="#">
+                            <div class="treasure_btn_area">
+                                <div class="inside_border">
+                                    <!-- <div class="animation" data-name="01-Alarm_clock"
+                                        data-path='./json/04-Treasure_Box/01-Alarm_clock/01-Alarm_clock.json'></div> -->
+                                    <video class="animation" src="./MP4/04-Treasure Box (MP4)/01.mp4" muted></video>
+                                    <img src="./img/index/2020-05-14-19.png" alt="">
+                                    <h3>時間電價插畫</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <a href="#">
+                            <div class="treasure_btn_area">
+                                <div class="inside_border">
+                                    <!-- <div class="animation" data-name="02-Book"
+                                        data-path='./json/04-Treasure_Box/02-Book/02-Book.json'></div> -->
+                                    <video class="animation" src="./MP4/04-Treasure Box (MP4)/02.mp4"muted ></video>
+                                    <img src="./img/index/2020-05-14-20.png" alt="">
+                                    <h3>省電秘笈</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <a href="#">
+                            <div class="treasure_btn_area">
+                                <div class="inside_border">
+                                    <!-- <div class="animation" data-name="message"
+                                        data-path='./json/04-Treasure_Box/03-message/03-message.json'></div> -->
+                                    <video class="animation" src="./MP4/04-Treasure Box (MP4)/03.mp4"muted ></video>
+                                    <img src="./img/index/2020-05-14-21.png" alt="">
+                                    <h3>節電諮詢服務<br>
+                                        預約系統</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <a href="#">
+                            <div class="treasure_btn_area">
+                                <div class="inside_border">
+                                    <!-- <div class="animation" data-name="computer"
+                                        data-path='./json/04-Treasure_Box/04-computer/04-computer.json'></div> -->
+                                    <video class="animation" src="./MP4/04-Treasure Box (MP4)/04.mp4"muted></video>
+                                    <img src="./img/index/2020-05-14-22.png" alt="">
+                                    <h3>住商型簡易時間<br>
+                                        電價試算評估</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <a href="#">
+                            <div class="treasure_btn_area">
+                                <div class="inside_border">
+                                    <!-- <div class="animation" data-name="light_bulb"
+                                        data-path='./json/04-Treasure_Box/05-light_bulb/05-light _bulb.json'></div> -->
+                                    <video class="animation" src="./MP4/04-Treasure Box (MP4)/05.mp4"muted></video>
+                                    <img src="./img/index/2020-05-14-23.png" alt="">
+                                    <h3>減少用電措施</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <a href="#">
+                            <div class="treasure_btn_area">
+                                <div class="inside_border">
+                                    <!-- <div class="animation" data-name="clock"
+                                        data-path='./json/04-Treasure_Box/06-meter/06-meter.json'></div> -->
+                                    <video class="animation" src="./MP4/04-Treasure Box (MP4)/06.mp4"muted></video>
+                                    <img src="./img/index/2020-05-14-24.png" alt="">
+                                    <h3>需量競價措施</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- page_content end -->
+
+    <footer>
+        <!-- background-image footer_background start-->
+        <div class="footer_background">
+            <video class="footer_white_mp4" src="./MP4/footer-white.mp4" autoplay muted loop></video>
+            <!-- <div class="animation" data-name="05-Footer" data-path='./json/05-Footer/05-Footer.json'></div> -->
+            <!-- <img width="100%" src="./img/template/footer_background.png" alt=""> -->
+        </div>
+        <!-- background-image footer_background end-->
+
+        <div class="footer_content">
+            <div class="footer_info container">
+                <div class="row">
+                    <div class="info_area col-9">
+                        <div class="important_info">
+                            <span><a href="#">隱私權政策</a></span>
+                            <span><a href="#">政府網站資料開放宣告</a></span>
+                        </div>
+                        <div class="secondary_info">
+                            <div class="d-flex flex-wrap">
+                                <span>地址：臺北市羅斯福路三段242號</span>
+                                <span>郵遞區號：10016</span>
+                                <span>總機：02-23651234</span>
+                                <span>24小時客服專線：1911 <br class="d-block d-md-none">（免付費，公共電話除外，通話時間限制5分鐘）</span>
+                                <span>政風檢舉電話：02-23667364</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col d-md-flex d-block  flex-wrap btn_area">
+                        <a href="#">
+                            <div class="wordS_btn">台電官網</div>
+                        </a>
+                        <a href="#">
+                            <div class="wordS_btn">意見信箱</div>
+                        </a>
+                        <a href="#">
+                            <div class="add_icon_btn">
+                                <i class="fab fa-facebook-square"></i>
+                                <span>電力粉絲團</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="add_icon_btn">
+                                <i class="fab fa-youtube"></i>
+                                <span>台電影音網</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- background-image iceberg star-->
+            <div class="green_background"></div>
+            <div class="ice_left"></div>
+            <div class="ice_right"></div>
+            <!-- background-image iceberg over-->
+        </div>
+    </footer>
+
+    <!-- goTop start-->
+    <a id="goTop" href="#">
+        <p>TOP</p>
+    </a>
+    <!-- goTop end-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.8/lottie.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/nav.js"></script>
+    <script src="./js/template.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>

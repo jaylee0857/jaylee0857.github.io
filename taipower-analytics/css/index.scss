@@ -1,0 +1,1006 @@
+@import "./variable";
+@import "./functions";
+main{
+    overflow: hidden;
+}
+#index_photo{
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: $pc){
+        width: 100%;
+        height: 698px;
+
+    }
+    @media (max-width: $phone){
+        height: 400px;
+        overflow: visible;
+        background-position: center;
+        background-size: cover;
+        background-image: url('../img/index/background.png');
+    }
+
+    .background{
+        @media (max-width: $pc) and (min-width: $phone){
+            position: absolute;
+            left: 50%; 
+            top: 0;
+            width: 1200px;
+            transform: translate(-50%,0);
+            height: 698px;
+        }
+
+        @media (max-width: $phone){
+            display: none;
+        }
+        video{
+            
+            width: 100%;
+            @media (max-width: $pc){
+                width: 1200px;
+            }
+            @media (max-width: $phone){
+                display: none;
+            }
+
+        }
+    }
+    .phone_another_background{
+        width: 100%;
+        height: 291px;
+        position: absolute;
+        background-image: url('../img/index/phone_another_background.png');
+        background-position: center;
+        background-size: cover;
+        top: 360px;
+        @media (min-width: $phone){
+            display: none;
+        }
+    }
+    .phone_background_color{
+        width: 100%;
+        height: 220px;
+        background-color: #CEEDED;
+        position: absolute;
+        top: 200px;
+        z-index: -1;
+        @media (min-width: $phone){
+            display: none;
+        }
+    }
+    .index_items{
+
+        @media (max-width: $pc) and (min-width: $phone){
+            position: absolute;
+            left: 50%;
+            z-index: 2;
+            transform: translate(-50%, -50%);
+            width: 768px;
+            height: 698 px;
+        }
+        @media (max-width: $phone){
+            height: 100%;
+            width: 320px;
+            position: relative;
+            margin: auto;
+        }
+        #youtube_hyperlink{
+            display: block;
+            position: absolute;
+            z-index: 3;
+            width: 4.2vw;
+            height: 4.2vw;
+            top: 12vw;
+            right: 26.7vw;
+            text-decoration: none;
+            background-image: url(../img/index/yt.png);
+            background-size: cover;
+            &:hover{
+                background-image: url(../img/index/yt_hover.png);
+            }
+            @media (max-width: $pc){
+                top: 145px;
+                right: 105px;
+                width: 47.6px;
+                height: 47.6px;
+            }
+            @media (max-width: $phone){
+                top: 160px;
+                right: 15px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+        #fb_hyperlink{
+            display: block;
+            position: absolute;
+            z-index: 3;
+            width: 4.2vw;
+            height: 4.2vw;
+            top: 15.6vw;
+            right: 23.5vw;
+            text-decoration: none;
+            background-image: url(../img/index/fb.png);
+            background-size: cover;
+            &:hover{
+                background-image: url(../img/index/fb_hover.png);
+            }
+            @media (max-width: $pc){
+                top: 186px;
+                right: 67.4px;
+                width: 47.6px;
+                height: 47.6px;
+            }
+            @media (max-width: $phone){
+                top: 215px;
+                right: 15px;
+                width: 45px;
+                height: 45px;
+            }
+
+        }
+        .test{
+            width: 17.4vw;
+            height: 14vw;
+            position: absolute;
+            top: 14.9vw;
+            left: 52.3vw;
+            @media (max-width: $pc){
+                width: 209px;
+                height: 168px;
+                left: auto;
+                right: 151px;
+                top: 185px;
+            }
+            @media (max-width: $phone){
+                width: 290px;
+                height: 61px;
+                top: 281px;
+                left: 15px;
+                right: auto;
+             }
+            .test_btn{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                z-index: 3;
+                left: 2.5vw;
+                @media (max-width: $pc){    
+                    left: 30px;
+                }
+                @media (max-width: $phone){
+                    top: 0;
+                    left: 0;
+                    flex-direction: row;
+                }
+                &:hover span{
+                    background-color: $blue;
+                    transition: .3s;
+                }
+                &:hover .png{
+                    opacity: 0;
+                }
+                &:hover .animation{
+                    opacity: 1;
+                }
+                .png{
+                    width: 11vw;
+                    margin-bottom: 0.78vw;
+                    height: 8.54vw;
+                    background-image: url('../img/index/test.png');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    @media (max-width: $pc){
+                        width: 132px;
+                        height: 102px;
+                
+                    }
+                    @media (max-width: $phone){
+                        width: 80px;
+                        height: 61.9px;
+                    }
+                }
+                .animation{
+                    position: absolute;
+                    left: 50%;
+                    top: -3px;
+                    z-index: 10;
+                    transform: translate(-50%,0);
+                    width: 10.8vw;
+                    height: 8.54vw;
+                    margin-bottom: 0.78vw;
+                    background-image: url('../gif/index/test.gif');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    opacity: 0;
+                    @media (max-width: $pc){
+                        width: 132px;
+                        height: 102px;
+                    }
+                    @media (max-width: $phone){
+                        width: 80px;
+                        height: 61.9px;
+                        left: 0;
+                        top:-1px;
+                        transform: 0;
+                    }
+                }
+                span{
+                    width: 11.5vw;
+                    height: 2.1vw;
+                    border-radius: 1vw;
+                    background-color: $hover-orange;
+                    position: relative;
+                    color: $white;
+                    font-weight: bold;
+                    font-size: 1.25vw;
+                    text-align: center;
+                    line-height: 2vw;
+                    margin-left: 8px;
+                    @media (max-width: $pc){
+                        width: 137.5px;
+                        height: 25px;
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+                    @media (max-width: $phone){
+                        width: 200px;
+                        height: 40px;
+                        border-radius: 20vw;
+                        font-size: 24px;
+                        line-height: 40px;
+                    }
+                }
+            }
+    
+    
+            .test_ice_img{
+                position: absolute;
+                top: 6.6vw;
+                @media (max-width: $pc){
+                    top: 80px;
+                 }
+                 @media (max-width: $phone){
+                    display: none;
+                 }
+                img{
+                    width: 17.4vw;
+                    @media (max-width: $pc){
+                       width: 210px;
+                       height: 90px;
+                    }
+                }
+    
+            }
+        }
+        .billing_service{
+            width: 17.5vw;
+            height: 14.5vw;
+            position: absolute;
+            top: 24vw;
+            left: 65.5vw;
+            @media (max-width: $pc){
+                width: 210px;
+                height: 175px;
+                top: 300px;
+                left: auto;
+                right: 0;
+            }
+            @media (max-width: $phone){
+                width: 290px;
+                height: 75px;
+                top: 365px;
+                left: 15px;
+                right: auto;
+             }
+            .billing_service_btn{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                z-index: 3;
+                left: 2.8vw;
+                @media (max-width: $pc){
+                    left: 30px;
+                    top: -7px;
+                }
+                @media (max-width: $phone){
+                    top: 0;
+                    left: 0;
+                    flex-direction: row;
+                 }
+                 &:hover span{
+                    background-color: $blue;
+                    transition: .3s;
+                }
+
+                &:hover .png{
+                    opacity: 0;
+                }
+                &:hover .animation{
+                    opacity: 1;
+                }
+                .png{
+                    width: 10vw;
+                    height: 9.2vw;
+                    margin-bottom: 0.78vw;
+                    background-image: url('../img/index/billing_service.png');
+                    background-size: cover;
+                    @media (max-width: $pc){
+                        width: 117px;
+                        height: 110px;
+                    }
+                    @media (max-width: $phone){
+                        width: 80px;
+                        height: 75.2px;
+                    }
+                }
+                .animation{
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%,0);
+                    width: 10vw;
+                    height: 9.2vw;
+                    margin-bottom: 0.78vw;
+                    background-image: url('../gif/index/billing_service.gif');
+                    background-size: cover;
+                    opacity: 0;
+                    @media (max-width: $pc){
+                        width: 117px;
+                        height: 110px;
+                    }
+                    @media (max-width: $phone){
+                        width: 80px;
+                        height: 75.2px;
+                        left: 0;
+                        top: 0;
+                        transform: 0;
+                    }
+                }
+                span{
+                    width: 11.5vw;
+                    height: 2.1vw;
+                    border-radius: 1vw;
+                    background-color: $hover-orange;
+                    position: relative;
+                    color: $white;
+                    font-weight: bold;
+                    font-size: 1.25vw;
+                    text-align: center;
+                    line-height: 2vw;
+                    @media (max-width: $pc){
+                        width: 137.5px;
+                        height: 25px;
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+                    @media (max-width: $phone){
+                        width: 200px;
+                        height: 40px;
+                        border-radius: 20vw;
+                        font-size: 24px;
+                        line-height: 40px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+    
+    
+            .billing_service_ice_img{
+                position: absolute;
+                top: 7.3vw;
+                left: -0.26vw;
+                @media (max-width: $pc){
+                    top: 80px;
+                }
+                @media (max-width: $phone){
+                    display: none;
+                 }
+                img{
+                    width: 17.4vw;
+                    @media (max-width: $pc){
+                        width: 210px;
+                        height: 86px;
+                    }
+                }
+    
+            }
+        }
+        .analysis{
+            width: 17.4vw;
+            height: 15.5vw;
+            position: absolute;
+            top: 34.3vw;
+            left: 50.7vw;
+            @media (max-width: $pc){
+                width: 213px;
+                height: 189px;
+                top: 400px;
+                left: auto;
+                right: 175px;
+            }
+            @media (max-width: $phone){
+                width: 290px;
+                height: 73px;
+                top: 458px;
+                left: 15px;
+                right: auto;
+             }
+            .analysis_btn{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                z-index: 3;
+                left: 2.8vw;
+
+                @media (max-width:$pc){
+                    top: 10px;
+                    left: 30px;
+                }
+                @media (max-width: $phone){
+                    top: 0;
+                    left: 0;
+                    flex-direction: row;
+                 }
+                 &:hover span{
+                    background-color: $blue;
+                    transition: .3s;
+                }
+                &:hover .png{
+                    opacity: 0;
+                }
+                &:hover .animation{
+                    opacity: 1;
+                }
+                .png{
+                    width: 10.5vw;
+                    height: 9.75vw;
+                    margin-bottom: 0.78vw;
+                    background-image: url('../img/index/analysis.png');
+                    background-size: cover;
+                    @media (max-width: $pc){
+                        width: 130px;
+                        height: 119px;
+                    }
+                    @media (max-width: $phone){
+                        width: 80px;
+                        height: 73.1px;
+                    }
+                }
+
+                .animation{
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%,0);
+                    width: 10.5vw;
+                    height: 9.75vw;
+                    background-image: url('../gif/index/analysis.gif');
+                    background-size: cover;
+                    margin-bottom: 0.78vw;
+                    opacity: 0;
+                    @media (max-width: $pc){
+                        width: 130px;
+                        height: 119px;
+                    }
+                    @media (max-width: $phone){
+                        width: 80px;
+                        height: 73.1px;
+                        left: 0;
+                        top: 0;
+                        transform: 0;
+                    }
+                    
+                }
+                span{
+                    width: 11.5vw;
+                    height: 2.1vw;
+                    border-radius: 1vw;
+                    background-color: $hover-orange;
+                    position: relative;
+                    color: $white;
+                    font-weight: bold;
+                    font-size: 1.25vw;
+                    text-align: center;
+                    line-height: 2vw;
+                    margin-left: 5px;
+                    @media (max-width: $pc){
+                        width: 137.5px;
+                        height: 25px;
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+                    @media (max-width: $phone){
+                        width: 200px;
+                        height: 40px;
+                        border-radius: 20vw;
+                        font-size: 24px;
+                        line-height: 40px;
+                    }
+                }
+            }
+    
+    
+            .analysis_ice_img{
+                position: absolute;
+                top: 8.2vw;
+                @media (max-width: $pc){
+                    top: 104px;
+                }
+                @media (max-width: $phone){
+                    display: none;
+                 }
+                img{
+                    width: 17.4vw;
+                    @media (max-width: $pc){
+                        width: 212px;
+                        height: 92px;
+                    }
+                }
+    
+            }
+        }
+        .scroll{
+            position: absolute;
+            top: 47vw;
+            left: 50%;
+            transform: translate(-50%,0);
+            transition: 0;
+            @media (max-width: $pc){
+                top: 600px;
+             }
+             @media (max-width: $phone){
+                top: 539px;
+             }
+            a{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-decoration: none;
+                img{
+                    width: 1.2vw;
+                    margin: auto;
+                    @media (max-width: $pc){
+                        width: 20px;
+                     }
+                }
+                span{
+                    color: $white;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+            }
+        }
+    
+        .bear{
+            width: 37.3vw;
+            height: 24.3vw;
+            position: absolute;
+            top: 16.7vw;
+            left: 17.5vw;
+            // background-image: url('../img/index/bear.png');
+            // background-size: cover;
+            @media (max-width: $pc){
+                width: 446px;
+                height: 291px;
+                top: 201.5px;
+                left: 0;
+            }
+            @media (max-width: $phone){
+                width: 216px;
+                height: 141px;
+                top: 122.5px;
+                left: 15px;
+    
+            }
+        }
+    }
+
+    
+}
+
+#electricity_info{
+    padding-top: 65px;
+    overflow: hidden;
+    padding-bottom: 235px;
+    position: relative;
+
+    .fake_Anchor{
+        position: absolute;
+        top: -100px;
+        left: 0;
+        visibility: hidden;
+    }
+
+
+    @media (max-width: $phone){
+        padding-bottom: 85px;
+        padding-top: 280px;
+
+    }
+    
+    h2{
+        letter-spacing: 3px;
+        font-size: $fs-36;
+        font-weight: bold;
+        padding-bottom: 50px;
+    }
+    .wire-left-info{
+        width: 157px;
+        height: 39px;
+        background-image: url('../img/index/wire-left.png');
+        position: absolute;
+        background-size: cover;
+        position: absolute;
+        left: -175px;
+        right: 0;
+    }
+    .wire-right-info{
+        width: 150px;
+        height: 39px;
+        background-image: url('../img/index/wire-right.png');
+        position: absolute;
+        background-size: cover;
+        position: absolute;
+        right: -170px;
+        top: 4px;
+    }
+    a{
+        text-decoration: none;
+        display: block;
+        &:hover h3{
+            background-color: $hover-orange;
+        }
+        &:hover img{
+            opacity: 0;
+        }
+        &:hover .photo_box .animation{
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+    .shop{
+        display: flex;
+        justify-content: start;
+        @media (max-width: 1201px){
+            justify-content: flex-end;
+        }
+        @media (max-width: $phone){
+            justify-content: center;
+        }
+        .photo_box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            .animation{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,0);
+                width: 100%;
+                opacity: 0;
+                @media (max-width: $pc){
+                    width: 15.6vw;
+                    min-width: 200px;
+                }
+                @media (max-width: $phone){
+                    min-width: 200px;
+                }
+            }
+            img{
+                display: block;
+                margin-bottom: 15px;
+                @media (max-width: $pc){
+                    width: 15.6vw;
+                    min-width: 200px;
+                }
+                @media (max-width: $phone){
+                    min-width: 200px;
+                }
+            }
+    
+        }
+    }
+    .service{
+        display: flex;
+        justify-content: center;
+        @media (max-width: 1201px){
+            justify-content: center;
+        }
+        @media (max-width: $phone){
+            justify-content: center;
+        }
+        .photo_box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            .animation{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,0);
+                width: 100%;
+                opacity: 0;
+                @media (max-width: $pc){
+                    width: 15.6vw;
+                    min-width: 200px;
+                }
+                @media (max-width: $phone){
+                    min-width: 200px;
+                }
+            }
+            img{
+                display: block;
+                margin-bottom: 15px;
+                @media (max-width: $pc){
+                    width: 15.6vw;
+                    min-width: 200px;
+                }
+                @media (max-width: $phone){
+                    min-width: 200px;
+                }
+            }
+    
+        }
+    }
+    .manufacture{
+        display: flex;
+        justify-content: flex-end;
+        @media (max-width: 1201px){
+            justify-content: flex-start;
+        }
+        @media (max-width: $phone){
+            justify-content: center;
+        }
+        .photo_box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            .animation{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,0);
+                width: 100%;
+                opacity: 0;
+                @media (max-width: $pc){
+                    width: 15.6vw;
+                    min-width: 200px;
+                }
+                @media (max-width: $phone){
+                    min-width: 200px;
+                }
+            }
+            img{
+                display: block;
+                margin-bottom: 15px;
+                @media (max-width: $pc){
+                    width: 15.6vw;
+                    min-width: 200px;
+                }
+                @media (max-width: $phone){
+                    min-width: 200px;
+                }
+            }
+    
+        }
+    }
+
+    h3{
+        font-weight: bold;
+        text-align: center;
+        line-height: 40px;
+        font-size: 24px;
+        width: 220px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: $blue;
+        color: $white;
+        transition: .3s;
+        letter-spacing: 3px;
+        @media (max-width: $phone){
+            margin-bottom: 30px;
+
+        }
+
+    }
+
+}
+
+#treasure_box{
+    padding-bottom: 78px;
+    position: relative;
+    @media (max-width: $pc){
+        padding-bottom: 147px;
+
+    }
+    @media (max-width: $phone){
+        padding-bottom: 120px;
+
+    }
+    a{
+        text-decoration: none;
+    }
+    .container{
+        @media (max-width: $pc){
+            padding-left: 0;
+            padding-right: 0;
+    
+        }
+        @media (max-width: $phone){
+            padding-left: 10px;
+            padding-right: 10px;
+    
+        }
+    }
+    h2{
+        font-size: $fs-36;
+        font-weight: bold;
+        padding-bottom: 50px;
+        letter-spacing: 3px;
+    }
+    .wire-left-treasure_box{
+        width: 157px;
+        height: 39px;
+        background-image: url('../img/index/wire-left-treasure_box.png');
+        position: absolute;
+        background-size: cover;
+        position: absolute;
+        left: -175px;
+        right: 0;
+    }
+    .wire-right-treasure_box{
+        width: 150px;
+        height: 39px;
+        background-image: url('../img/index/wire-right-treasure_box.png');
+        position: absolute;
+        background-size: cover;
+        position: absolute;
+        right: -165px;
+        top: 4px;
+    }
+    .background_mountain{
+        width: 100%;
+        height: 31vw;
+        position: absolute;
+        top: -22%;
+        z-index: -1;
+        @media (max-width: $pc){
+            top: -13%;
+
+        }
+
+        @media (max-width: $phone){
+            top: -2.5%;
+
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .background_mountain_right{
+        position: absolute;
+        top: -15%;
+        right: 0px;
+        z-index: -1;
+        width: 21vw;
+        height: 12vw;
+        min-width: 205px;
+        min-height: 180px;
+        background-image: url('../img/index/background-mountain-right.png');
+        background-size: cover;
+        @media (max-width: $pc){
+            top: -13%;
+            min-width: 230px;
+            min-height: 125px;
+        }
+        @media (max-width: $phone){
+            display: none;
+         }
+        
+    }
+    .background_mountain_left{
+        position: absolute;
+        top: 23%;
+        left: 0;
+        z-index: -1;
+        width: 15vw;
+        height: 13vw;
+        min-width: 205px;
+        min-height: 180px;
+        background-image: url('../img/index/background-mountain-left.png');
+        background-size: cover;
+        @media (max-width: 1550px){
+            top: 85%;
+
+        }
+        @media (max-width: $pc){
+            top: 86%;
+
+        }
+        @media (max-width: $phone){
+            display: none;
+         }
+
+    }
+    .background_light{
+        position: absolute;
+        top: 44%;
+        right: 65px;
+        z-index: -1;
+        width: 163px;
+        height: 215px;
+        min-width: 205px;
+        min-height: 180px;
+        background-image: url('../img/index/light.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        @media (max-width: 1650px){
+            display: none;
+        }
+
+    }
+    .treasure_btn_area{
+        width: 100%;
+        height: 350px;
+        border: 5px solid $hover-orange;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 30px;
+        &:hover{
+            background-color: $hover-orange;
+        }
+        &:hover .inside_border h3{
+            color: $white;
+            
+        }
+        &:hover .inside_border img{
+            opacity: 0;
+        }
+
+        &:hover .inside_border .animation{
+            opacity: 1;
+        }
+        @media (max-width: $phone){
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 30px auto;
+        }
+
+        .inside_border{
+            width: 100%;
+            height: 100%;
+            border: 3px solid $white;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 30px;
+            position: relative;
+            @media (max-width: $phone){
+                padding-top: 0;
+            }
+
+            img{
+                display: block;
+                margin: 0 auto;
+            }
+            h3{
+                color: $black;
+                font-weight: bold;
+                font-size: 24px;
+            }
+
+            .animation{
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%,0);
+                width: 200px;
+                opacity: 0;
+            }
+        }
+    }
+}
+

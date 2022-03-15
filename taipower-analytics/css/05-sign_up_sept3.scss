@@ -1,0 +1,85 @@
+@import "./variable";
+@import "./functions";
+
+main{
+    padding-top: 130px;
+    @media(max-width:$m_phone) {
+        padding-top: 120px;
+    }
+}
+@include sept_area (url('../img/05-sign_up/sept1.png'),url('../img/05-sign_up/phone_sept1.png'),url('../img/05-sign_up/sept2.png'),url('../img/05-sign_up/phone_sept2.png'),url('../img/05-sign_up/sept3_color.png'),url('../img/05-sign_up/phone_sept3_color.png'));
+
+#page_form{
+    padding-top: 75px;
+    @media(max-width:$pc) {
+        padding-top: 55px;
+    }
+    @media(max-width:$phone) {
+        padding-top: 30px;
+    }
+    .container{
+        .encourage{
+            width: 600px;
+            margin: 0 auto 20px auto;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: #0D67B2;
+            padding: 50px 0;
+            color: $white;
+            border-radius: 15px;
+            text-align: center;
+            @media (max-width:$phone) {
+                width: auto;
+                padding: 40px 15px 50px 15px;
+             }
+            span{
+                margin-right: 5px;
+                color: $hover-orange;
+                @media (max-width:$phone) {
+                    margin-right: 20px;
+                    text-align: justify;
+
+                }
+            }
+            p{
+                &:first-child{
+                    margin-bottom: 20px;
+                }
+                @media (max-width:$phone) {
+                    line-height: 1.5;
+                text-align: justify;
+
+                 }
+            }
+            a{  
+                margin-top: 50px;
+                display: inline-block;
+                width: 300px;
+                height: 70px;
+                font-size: 36px;
+                background-color: $hover-orange;
+                color: $white;
+                text-decoration: none;
+                border-radius: 35px;
+                line-height: 70px;
+                text-align: center;
+                transition: .3s;
+                &:hover{
+                    color: $hover-orange;
+                    background-color: $white;
+                }
+                @media (max-width:$phone) {
+                    width: 200px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 24px;
+                    margin-top: 40px;
+                 }
+            }
+        }
+
+    }
+}
+@include marginTopForSingInPage(250px,182px,139px,null);
+@include backgroundForSingInPage 
+

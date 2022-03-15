@@ -1,0 +1,393 @@
+@import "./variable";
+@import "./functions";
+
+main{
+    padding-top: 130px;
+    min-height: 1000px;
+    @media(max-width:$m_phone) {
+        padding-top: 120px;
+    }
+
+    #notice{
+        .container{
+            .row{
+                justify-content: center;
+                .result_text{
+                    font-weight: bold;
+                    font-size: 24px;
+                    margin-top: 8px;
+                    margin-bottom: 50px;
+                    @media (max-width:$pc) {
+                        margin-top: 15px;
+                    }
+                    @media (max-width:$phone) {
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                    }
+                    span{
+                        color: $hover_orange;
+                        margin-right: 18px;
+                    }
+                }
+                .nav-pills{
+                    @media (max-width:$pc) {
+                        position: relative;
+                        height: 120px;
+                        display: flex;
+                    }
+                    @media (max-width:$phone) {
+                        height: 170px;
+                    }
+                    li{
+                        &:first-child{
+                            font-size: 36px;
+                            font-weight: bold;
+                            color: #469E95;
+                            @media (max-width:$phone) {
+                              margin: 0 auto;
+                              height: 0;
+                            }
+                        }
+                        
+                    }
+                    .nav-item{
+                        margin-right: 20px;
+                        @media (max-width:$pc) {
+                            display: none;
+                        }
+
+                        a{  
+                            display: block;
+                            width: 180px;
+                            height: 40px;
+                            background-color: $blue;
+                            // line-height: 40px;
+                            border-radius: 20px;
+                            text-align: center;
+                            color: white;
+                            font-weight: bold;
+                            font-size: 24px;
+                            &:hover{
+                                background-color: $hover_orange;
+                            }
+                            &.active{
+                                background-color: $hover_orange;
+                            }
+                        }
+                        
+                    }
+                    .phone_style_option{
+                        flex-grow: 1;
+                        display: none;
+                        @media (max-width:$pc) {
+                            display: block;
+                            select{
+                                width: 100%;
+                                border: 1px solid $hover_orange;
+                                height: 50px;
+                                border-radius: 8px;
+                                appearance:none;
+                                background-image: url(../img/04-health_check/arrow.png);
+                                background-size: 15px 8px;
+                                background-repeat: no-repeat;
+                                background-position: 97% 50%;
+                                padding-left: 8px;
+                                font-size: 24px;
+                                margin-top: -5px;
+
+                            }
+                            select::-ms-expand{
+                                display: none;
+                            }
+                        }
+                        @media (max-width:$phone) {
+                            flex-grow: initial;
+                            width: 100%;
+                        }
+                    }
+                    .add{
+                        margin-left: auto;
+                        width: 220px;
+                        height: 40px;
+                        font-weight: bold;
+                        font-size: 24px;
+                        
+                        line-height: 40px;
+                        text-align: center;
+                        cursor: pointer;
+                        &:hover a{
+                            
+                            font-weight: bold;
+                            color: white;
+                            border: 1px solid transparent;
+                            background-color: $hover_orange;
+
+                        }
+                        @media (max-width:$pc) {
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                        a{
+                            color: $blue;
+                            display: block;
+                            border-radius: 20px;
+                            border: 1px solid $blue;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                .tab-content{
+                    .tab-pane{
+                        table{
+                            width: 100%;
+                            border: 2px solid #2DA097;
+                            @media (max-width:$phone){
+                                border: 0;
+                            }
+                            tr{
+                                background-color: white;
+
+                                border-bottom: 2px solid #2DA097;
+                                width: 100%;
+                                @media (max-width:$phone){
+                                    border: 0;
+                                }
+                                &:nth-child(1){
+                                    background-color: #75DBCC;
+                                    @media (max-width:$phone){
+                                        display: none;
+                                    }
+                                }
+
+                                @media (max-width:$phone){
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    margin-bottom: 30px;
+                                }
+                                td{
+                                    height: 60px;
+                                    font-size: 24px;
+                                    font-weight: bold;
+                                    text-align: center;
+                                    border-right: 2px solid #2DA097;
+                                    &:nth-child(1){
+                                        width: 14.4%;
+                                    }
+                                    &:nth-child(2){
+                                        width: 25.6%;
+                                    }
+                                    &:nth-child(3){
+                                        width: 25.6%;
+                                    }
+                                    &:nth-child(4){
+                                        width: 19.8%;
+                                    }
+                                    &:nth-child(5){
+                                        width: 14.4%;
+                                    }
+                                    div{
+                                        &:nth-child(1){
+                                            display: none;
+                                        }
+                                        a{
+                                            color: $hover-orange !important;
+                                        }
+                                       
+                                    }
+                                    @media (max-width:$phone){
+                                        display: flex;
+                                        flex-direction: column;
+                                        height: auto;
+                                        border-right: 0;
+                                        padding: 0;
+                                        &:nth-child(n){
+                                            width: 100%;
+                                        }
+                                        &:nth-child(5){
+                                            div{
+                                                &:nth-child(2){
+                                                    border-bottom: 2px solid #2DA097;
+                                                }
+                                            }
+                                        }
+                                        div{
+                                            display: block;
+                                            line-height: 1.5;
+                                            
+                                            &:nth-child(1){
+                                                display: block;
+                                                background-color: #75DBCC;
+                                                color: white;
+                                                border: 2px solid #2DA097;
+                                            }
+                                            &:nth-child(2){
+                                                border-right: 2px solid #2DA097;
+                                                border-left: 2px solid #2DA097;
+                                            }
+                                            
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+                .login_or_singIn_box{
+                    background-color: #FFEAB6;
+                    border-radius: 12px;
+                    padding: 20px 15px;
+                    p{
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: 24px;
+                        margin-bottom: 15px;
+                    }
+                    .login_or_singIn{
+                        display: flex;
+                        justify-content: center;
+
+                        @media (max-width:$pc){
+                            justify-content: center;
+                            margin-top: 15px;
+                        }
+                        a{
+                            width: 220px;
+                            height: 40px;
+                            background-color: $blue;
+                            border-radius: 20px ;
+                            display: block;
+                            color: $white;
+                            text-align: center;
+                            line-height: 40px;
+                            font-weight: bold;
+                            font-size: 24px;
+                            text-decoration: none;
+                            &:hover{
+                                background-color: $hover_orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #analysis{
+        padding-top: 100px;
+        padding-bottom: 47px;
+        @media (max-width:$pc) {
+            padding-top: 30px;
+         }
+         @media (max-width:$pc) {
+            padding-bottom: 0px;
+         }
+        .container{
+            .row{
+                .title{
+                    text-align: center;
+                    font-size: 36px;
+                    font-weight: bold;
+                    color: #75DBCC;
+                    margin-bottom: 40px;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 8px 7.5px 0 7.5px;
+                        border-color: #75dbcc transparent transparent transparent;
+                        border-radius: 3px;
+                        position: absolute;
+                        left: 50%;
+                        bottom: -15px;
+                        transform: translateX(-50%);
+                    }
+                    @media (max-width:$phone) {
+                        font-size: 24px;
+                     }
+                }
+                .photo_flex{
+                    display: flex;
+                    justify-content: center;
+                    @media (max-width:$phone) {
+                        position: relative;
+                     }
+                    .photo{
+                        width: 336px;
+                        height: 298px;
+                        background-image: url('../img/03-attitude_test/2020-05-19-15.png');
+                        background-size: cover;
+                        position: relative;
+                        z-index: 2;
+                        cursor: pointer;
+                        &:hover .text{
+                            background-color: $blue;
+
+                        }
+                        @media (max-width:$phone) {
+                            width: 250px;
+                            height: 221px;
+                            bottom: -20px;
+                            z-index: 2;
+                         }
+                        .text{
+                            position: absolute;
+                            bottom: 50px;
+                            left: 50%;
+                            transform: translate(-50%,0);
+                            width: 220px;
+                            height: 40px;
+                            background-color: $hover_orange;
+                            border-radius: 20px;
+                            line-height: 36px;
+                            text-align: center;
+                            font-size: 24px;
+                            font-weight: bold;
+                            color: white;
+                            @media (max-width:$phone) {
+                                bottom: 27px;
+                             }
+                            
+                        }
+                    }
+                    
+                }
+
+            }
+        }
+    }
+}
+
+@include marginTopForSingInPage(10px,0px,21px,null);
+.footer_background{
+    position: relative;
+    .background_color{
+        position: absolute;
+        background-color: #CEEDED;
+        width: 100%;
+        height: 100px;
+        top: -100px;
+        z-index: -1;
+        @media (max-width:$pc) {
+            display: none;
+         }
+    }
+    .background_img{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 17.8vw;
+        z-index: -1;
+
+        @media (max-width:$pc) {
+            bottom: 18vw;
+        }
+        @media (max-width:$phone) {
+            bottom: 17.9vw;
+        }
+    }
+}

@@ -1,0 +1,168 @@
+main {
+  padding-top: 130px;
+}
+
+#over_the_years {
+  padding-top: 40px;
+}
+
+#over_the_years .container .row .col-12 {
+  margin-bottom: 30px;
+}
+
+#over_the_years .container .row .col-12 .box {
+  display: block;
+  -webkit-box-shadow: 0 0 10px -3px black;
+          box-shadow: 0 0 10px -3px black;
+  padding: 15px 15px 0 15px;
+  text-decoration: none;
+  color: black;
+  border-radius: 2px;
+}
+
+#over_the_years .container .row .col-12 .box:hover {
+  background-color: #FF8948;
+}
+
+#over_the_years .container .row .col-12 .box:hover .introduction {
+  background-color: #FF8948;
+  color: white;
+}
+
+#over_the_years .container .row .col-12 .box .photo img {
+  width: 100%;
+}
+
+#over_the_years .container .row .col-12 .box .introduction {
+  width: 100%;
+  height: 47px;
+  background-color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 12px 0 0 0;
+  line-height: 1.4;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#over_the_years .container .row .col-12 .box .introduction p:first-child {
+  margin-bottom: 11px;
+}
+
+@media (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+}
+
+.navigation .pagination {
+  padding: 20px 0 100px 0;
+}
+
+.navigation .pagination .page-item {
+  font-size: 18px;
+  text-align: center;
+  line-height: 27px;
+  border-color: white;
+  margin-right: 3px;
+}
+
+.navigation .pagination .page-item:hover .page-link {
+  background-color: #FF8948;
+  border-radius: 50%;
+  color: white;
+}
+
+.navigation .pagination .page-item.active .page-link {
+  background-color: #FF8948;
+  border-radius: 50%;
+  color: white;
+}
+
+.navigation .pagination .page-item .page-link {
+  color: black;
+  border: 0;
+  padding: 0;
+  width: 27.8px;
+  height: 27.8px;
+  line-height: 30px;
+}
+
+.navigation .pagination .chinese {
+  font-size: 18px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.navigation .pagination .chinese:nth-child(2) {
+  margin-right: 20px;
+}
+
+.navigation .pagination .chinese:nth-child(3) {
+  margin-left: 20px;
+}
+
+.navigation .pagination .chinese:last-child {
+  margin-right: 0;
+}
+
+.navigation .pagination .chinese .page-link {
+  border-radius: 2px;
+  border: 1px solid #0D67B2;
+  color: #0D67B2;
+  width: 80px;
+  height: 30px;
+  line-height: 29px;
+  display: block;
+  padding: 0;
+  font-style: 18px;
+}
+
+.navigation .pagination .chinese .page-link:hover {
+  border: 1px solid transparent;
+  background-color: #0D67B2;
+  color: white;
+}
+
+.navigation .pagination li:nth-last-of-type(2) {
+  margin-left: 20px;
+}
+
+.mobile_navigation {
+  padding: 20px 0 100px 0;
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile_navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.mobile_navigation a {
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.mobile_navigation .dropdown .btn-drop {
+  width: 290px;
+  border: 1px solid #0D67B2;
+  color: #000000;
+  border-radius: 0;
+  position: relative;
+}
+
+.mobile_navigation .dropdown .btn-drop::after {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+}
+
+.mobile_navigation .dropdown-menu {
+  width: 290px;
+}
+/*# sourceMappingURL=08-energy_saving_over_the_years.css.map */

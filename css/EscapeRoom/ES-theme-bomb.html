@@ -1,0 +1,962 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>ES-theme-bomb</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Noto Sans TC", sans-serif;
+        }
+
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #200B0B;
+            scroll-behavior: smooth;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav {
+            width: 100%;
+            height: 80px;
+            background-color: #A74141;
+            padding: 0 250px;
+        }
+
+        a,
+        a:hover {
+            color: white;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            margin-bottom: unset;
+        }
+
+        ul li {
+            list-style: none;
+            text-align: center;
+            font-size: 24px;
+            margin-left: 30px;
+            line-height: 80px;
+            font-weight: bold;
+        }
+
+        .nav-btn-group ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-btn-group ul li {
+            display: inline-block;
+        }
+
+        .logoName {
+            font-size: 28.6px;
+            padding: 0 10px;
+        }
+
+        .gameName {
+            font-size: 10.73px;
+            margin: 0;
+        }
+
+        .ham {
+            display: none;
+        }
+
+        .banner {
+            width: 100%;
+            height: 981px;
+            background-image: url(../EscapeRoom/test/img/theme-banner2.jpg);
+            background-size: cover;
+            background-position: 40% center;
+            padding-top: 17%;
+        }
+
+        .title {
+            font-size: 120px;
+            color: white;
+            line-height: 170px;
+        }
+
+        .bombgame {
+            width: 100%;
+            height: 1288px;
+            background-image: url(../EscapeRoom/test/img/bomb-game-bg.png);
+            background-repeat: no-repeat;
+            margin-top: -154px;
+            padding-top: 15%;
+        }
+
+        .bombgame.active {
+            animation-name: vibration;
+            animation-duration: 1s;
+            animation-iteration-count: 5;
+        }
+
+        @keyframes vibration {
+            0% {
+                transform: translate(2px, 1px) rotate(0deg);
+            }
+
+            10% {
+                transform: translate(-1px, -2px) rotate(-2deg);
+            }
+
+            20% {
+                transform: translate(-3px, 0px) rotate(3deg);
+            }
+
+            30% {
+                transform: translate(0px, 2px) rotate(0deg);
+            }
+
+            40% {
+                transform: translate(1px, -1px) rotate(1deg);
+            }
+
+            50% {
+                transform: translate(-1px, 2px) rotate(-1deg);
+            }
+
+            60% {
+                transform: translate(-3px, 1px) rotate(0deg);
+            }
+
+            70% {
+                transform: translate(2px, 1px) rotate(-2deg);
+            }
+
+            80% {
+                transform: translate(-1px, -1px) rotate(4deg);
+            }
+
+            90% {
+                transform: translate(2px, 2px) rotate(0deg);
+            }
+        }
+
+        .bomb {
+            position: relative;
+        }
+
+        .time {
+            position: absolute;
+            left: 350px;
+            top: 150px;
+            font-size: 100px;
+            letter-spacing: 10px;
+            color: red;
+        }
+
+        .time.active {
+            animation-name: success;
+            animation-duration: 1s;
+            animation-iteration-count: 2;
+            color: transparent;
+        }
+
+        @keyframes success {
+            from {
+                color: red;
+            }
+
+            to {
+                color: black;
+            }
+        }
+
+        .yellow {
+            position: absolute;
+            left: 310px;
+            top: 304px;
+        }
+
+        .green {
+            position: absolute;
+            left: 440px;
+            top: 304px;
+        }
+
+        .blue {
+            position: absolute;
+            left: 560px;
+            top: 304px;
+        }
+
+        .u-line {
+            position: relative;
+            cursor: url(../EscapeRoom/test/img/bomb-game-11.png), auto;
+        }
+
+        .u-line:active {
+            cursor: url(../EscapeRoom/test/img/bomb-game-12.png), auto;
+        }
+
+        .c-line {
+            display: none;
+        }
+
+        .c-line.active {
+            display: block;
+        }
+
+        .linemask {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: url(../EscapeRoom/test/img/bomb-game-11.png), auto;
+            display: none;
+        }
+
+        .linemask:active {
+            cursor: url(../EscapeRoom/test/img/bomb-game-12.png), auto;
+        }
+
+        .linemask.active {
+            display: block;
+            z-index: 99;
+            opacity: 0;
+        }
+
+        .ray {
+            width: 100%;
+            height: 70%;
+            background: rgba(0, 0, 0, 0);
+            position: absolute;
+            top: 76px;
+            left: 0;
+            z-index: -9;
+            transform: skewY(-4.5deg);
+        }
+
+        .ray.active1 {
+            z-index: 9;
+        }
+
+        .ray.active2 {
+            animation-name: final;
+            animation-duration: .625s;
+            animation-iteration-count: 8;
+            z-index: 9;
+        }
+
+        @keyframes final {
+            from {
+                background: rgba(255, 0, 0, .5);
+            }
+
+            to {
+                background: rgba(0, 0, 0, 0);
+            }
+        }
+
+        .mask {
+            width: 100%;
+            height: 70%;
+            background: rgba(0, 0, 0, 0);
+            position: absolute;
+            top: 76px;
+            left: 0;
+            z-index: 9;
+            transform: skewY(-4.5deg);
+        }
+
+        .mask.unblock{
+            z-index:-9;
+        }
+
+        .mask.active {
+            animation-name: light;
+            animation-duration: .5s;
+            z-index: 9;
+        }
+
+        @keyframes light {
+            from {
+                background: rgba(255, 255, 0, .5);
+            }
+
+            to {
+                background: rgba(0, 0, 0, 0);
+            }
+        }
+
+        .warning {
+            width: 100%;
+            position: absolute;
+            left: -3.5%;
+            top: 57%;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .warning.active {
+            display: none;
+        }
+
+        .difficulty2 {
+            background: linear-gradient(0deg, #200B0B 0%, #A74141 100%);
+            transform: skewY(-4.5deg);
+            margin-top: -154px;
+            display: none;
+        }
+
+        .game-rules {
+            width: 100%;
+            height: 900px;
+            background-image: url(../EscapeRoom/test/img/bomb-banner2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 280px 0;
+
+        }
+
+        .themeBtn {
+            width: 200px;
+            text-align: center;
+            color: white;
+            margin-top: 75px;
+            border: 1px solid white;
+            font-size: 36px;
+            transition: .5s;
+        }
+
+        .themeBtn:hover {
+            background: rgba(255, 255, 255, 0.85);
+            color: black;
+        }
+
+        .themeBtn:hover.themeBtn a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .themeBtn a {
+            color: white;
+        }
+
+        .information {
+            width: 100%;
+            height: 180px;
+            color: white;
+            background-color: #A74141;
+        }
+
+        .copyright {
+            width: 100%;
+            height: 80px;
+            background-color: #200B0B;
+            color: #A74141;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .gotop {
+            position: fixed;
+            right: 61px;
+            bottom: 61px;
+            z-index: 999;
+        }
+
+        .titleName {
+                color: #E55A5A;
+                font-size: 36px;
+            }
+
+        .speakerBoss {
+            color: white;
+            font-size: 16px;
+            line-height: 2;
+        }
+
+        @media(max-width:1420px) {
+            .nav {
+                padding: 0 150px;
+            }
+
+        }
+
+        @media(max-width:1205px) {
+            .nav {
+                padding: 0 50px;
+            }
+
+        }
+
+        @media (max-width:576px) {
+            .pc {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .nav {
+                padding: 0 30px;
+                height: 60px;
+            }
+
+            .logoName {
+                font-size: 28.6px;
+            }
+
+            .gameName {
+                font-size: 10.73px;
+            }
+
+            .ham {
+                display: block;
+                width: 40px;
+                height: 40px;
+                position: relative;
+                background-image: url(../EscapeRoom/test/img/menu_b.png);
+                background-size: cover;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 20;
+            }
+
+            .ham ul {
+                position: absolute;
+                top: 44px;
+                left: -2000px;
+                width: 100vw;
+                transition: 500ms;
+                background: #A74141;
+                z-index: 20;
+            }
+
+            .ham ul li {
+                margin: 0;
+            }
+
+            .ham:hover ul {
+                left: 70px;
+                top: 44px;
+                transform: translateX(-100%);
+            }
+
+            .banner {
+                background-image: url(../EscapeRoom/test/img/theme-banner-phone.png);
+                width:100%;
+                height:733px;
+            }
+
+            .title {
+                color: #ffffff;
+                font-size: 60px;
+                line-height: 60px;
+                text-shadow: 8px 5px 7px #5E5E5D;
+                position: absolute;
+                left: 10%;
+                top: 34%;
+            }
+
+            .difficulty1,
+            .bombgame,
+            .bomb4,
+            .fire,
+            .soldierpc,
+            .logo {
+                display: none !important;
+            }
+
+            .difficulty2,
+            .soldiermobile {
+                display: block !important;
+            }
+
+            main {
+                margin-top: -140px !important;
+            }
+
+            .text {
+                padding-top: 50px;
+                padding-bottom: 0 !important;
+                font-size: 16px !important;
+                line-height: 50px !important;
+            }
+
+            .text-s-16 {
+                font-size: 16px !important;
+                line-height: 50px !important;
+            }
+
+            .p-75 {
+                padding: 75px 0 !important;
+            }
+
+            .p-0 {
+                padding: 0 !important;
+            }
+
+            .titletext {
+                margin-bottom: 30px !important;
+            }
+
+            .game-rules {
+                padding: 75px 0;
+                height: 1035px;
+            }
+
+            .themeBtn {
+                margin-top: 50px;
+            }
+
+            .gotop {
+                right: 30px;
+                bottom: 30px;
+            }
+
+            .speakerBoss {
+                line-height: 3;
+            }
+            .fix1{
+                margin: 40px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar" class="nav d-flex justify-content-between">
+            <div class="navLogo lg-4 d-flex align-items-center justify-content-center">
+                <img src="../EscapeRoom/test/img/logo-white.png" alt="">
+                <p class="logoName"><a href="/EscapeRoom/index.html">許多門</a></p>
+                <a class="gameName" href="/EscapeRoom/index.html">
+                    <p style="letter-spacing:1.3px;">ESCAPE</p>
+                    <p>STUDIOS</p>
+                </a>
+            </div>
+            <div class="nav-btn-group pc">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+            <div class="ham mobile">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <header>
+        <div class="banner container-fluid" style="position:relative;">
+            <div class="container">
+                <div class="row d-flex justify-content-between align-items-center">
+                    <div class="col-lg-6 col-12 title">
+                        <p>爆彈</p>
+                        <p>拆除班</p>
+                    </div>
+                    <div class="col-lg-4 d-flex difficulty1"
+                        style="font-size: 24px; color: white; text-align:left; line-height: 65px; flex-direction: column; padding-left:12%;">
+                        <p>過關率：15％</p>
+                        <p>團隊：★★★</p>
+                        <p>操作：★★★★★★</p>
+                        <p>解謎：★★★</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bombgame" style="position: relative;">
+        <div class="d-flex justify-content-center">
+            <div class="bomb">
+                <div class="time"></div>
+                <img src="../EscapeRoom/test/img/bomb-game-02.png" alt="">
+                <div class="yellow">
+                    <img class="u-line" src="../EscapeRoom/test/img/bomb-game-13.png" alt="">
+                    <img class="c-line" src="../EscapeRoom/test/img/bomb-game-16.png" alt="">
+                    <div class="linemask"></div>
+                </div>
+                <div class="green">
+                    <img class="u-line" src="../EscapeRoom/test/img/bomb-game-14.png" alt="">
+                    <img class="c-line" src="../EscapeRoom/test/img/bomb-game-17.png" alt="">
+                    <div class="linemask"></div>
+                </div>
+                <div class="blue">
+                    <img class="u-line" src="../EscapeRoom/test/img/bomb-game-15.png" alt="">
+                    <img class="c-line" src="../EscapeRoom/test/img/bomb-game-18.png" alt="">
+                    <div class="linemask"></div>
+                </div>
+            </div>
+            <div class="ray"></div>
+            <div class="mask"></div>
+            <p class="warning">警告：剪去兩條正確的線路，才能停止炸彈</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="difficulty2">
+            <div
+                style="font-size: 20px; color: white; text-align:center; line-height: 50px; transform: skewY(4.5deg); padding-top:50px; ">
+                <p>過關率：15％</p>
+                <p>團隊：★★★</p>
+                <p>操作：★★★★★★</p>
+                <p>解謎：★★★</p>
+            </div>
+        </div>
+    </section>
+
+    <main style="position:relative; margin-top:-236px;">
+        <section class="container" style="padding-top:200px;">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-lg-8">
+                    <img style="width:100%;" src="../EscapeRoom/test/img/bomb2.png" alt="">
+                </div>
+                <div class="text col-lg-4"
+                    style="color:white; font-size:16px; line-height: 36px; text-align:center; padding-bottom:45px;">
+                    <p>面對急遽升高的國際關係，</p>
+                    <p>首當其衝的便是這些世界強國，</p>
+                    <p>將在2020年舉辦東京奧運的日本，</p>
+                    <p class="text-s-16" style="color:white; font-size:24px; line-height:48px; font-weight:bold;">
+                        嚴正戒備著<span style="color:#A74141">恐怖分子</span>的干擾。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid">
+            <div class="soldierpc" style="padding-top:200px;">
+                <div class="row d-flex justify-content-center align-items-center" style="position:relative;">
+                    <img class="col-lg-4" style="width: 100%; height: 100%; padding:0;" data-aos="fade-up-right"
+                        src="../EscapeRoom/test/img/soldiers.png" alt="">
+                    <div class="col-lg-3 d-flex"
+                        style="color: white; font-size:16px; line-height: 36px; text-align: center; flex-direction: column; padding-bottom: 160px; padding-right:25px">
+                        <p style="font-size:24px; color:#A74141; line-height:48px; font-weight:bold;">『反恐特搜-爆彈拆除班』，</p>
+                        <p>就是因應緊急狀況成立的特別部隊，</p>
+                        <p>靠著精良高科技的設備與特別徵召的優秀隊員，</p>
+                        <p>爆彈拆除班解決了許多緊急的攻擊事件！</p>
+                    </div>
+                    <img class="col-lg-5" style="width: 100%; height: 100%; padding:0" data-aos="fade-left"
+                        src="../EscapeRoom/test/img/soldiers2.png" alt="">
+                </div>
+            </div>
+            <div class="soldiermobile p-75" style="display:none">
+                <img class="col-12" data-aos="fade-left" src="../EscapeRoom/test/img/soldiers3.png" alt="">
+                <div class="text col-12 d-flex"
+                    style="color: white; font-size:16px; line-height: 36px; text-align: center; flex-direction: column;">
+                    <p class="text-s-16" style="color:#A74141;">『反恐特搜-爆彈拆除班』，</p>
+                    <p>就是因應緊急狀況成立的特別部隊，</p>
+                    <p>靠著高科技的設備與特別徵召的隊員，</p>
+                    <p>爆彈拆除班解決了許多緊急的攻擊事件！</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-0" style="padding-top:200px; position:relative">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-12"><img width="100%" src="../EscapeRoom/test/img/bomb3.png" alt=""></div>
+                   
+                </div>
+            </div>
+            <div class="container-fluid" style="position:absolute; top:100px; right:0">
+                <div class="row" style="justify-content:flex-end; padding:0;">
+                    <img class="col-lg bomb4" style="padding:0;" src="../EscapeRoom/test/img/bomb4.png" alt="">
+                </div>
+            </div>
+            <div class="p-0 row justify-content-center" style="padding-top:75px;">
+                <div class="text col-lg-6" style="color: white;font-size: 16px; line-height: 36px; text-align:center">
+                    <p>但是這次......情況有點不一樣，</p>
+                    <p>爆彈拆除班要面對看起來『束手無策』的困境！</p>
+                    <p>剩下60分鐘，你們可以順利解除所有的危機嗎？！</p>
+                    <p>要成為爆彈拆除班的一員，</p>
+                    <p class="text-s-16" style="color: #A74141; font-size: 24px; line-height:48px; font-weight:bold;">
+                        你必須要不成功便成仁的決心！</p>
+                </div>
+            </div>
+            <div class="fire" style="margin-top:75px; position:relative">
+                <div class="container-fluid" style=" text-align: center;">
+                    <div class="row">
+                        <img src="../EscapeRoom/test/img/fire-back.png" alt="" width="100%">
+                        <img style="z-index:99; position: absolute; top:0;" src="../EscapeRoom/test/img/fire-front.png"
+                            alt="" width="100%">
+                    </div>
+                </div>
+                <div class="container"
+                    style=" text-align: center; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%)">
+                    <div class="row justify-content-center">
+                        <img class="col-lg-10" style="z-index:9;" src="../EscapeRoom/test/img/firefighters.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-75 container" style="padding:200px 0;">
+            <div class="row" style="flex-direction: column; align-items:center;">
+                <img src="../EscapeRoom/img/key_b.png" alt="">
+                <p class="titletext" style="color: #E55A5A;font-size: 36px;">特別提醒</p>
+                <p style="color: white; font-size: 16px; line-height: 36px;">眼明手快、動作穩定、頭腦清楚才有成功機會，</p>
+                <p style="color: white; font-size: 16px; line-height: 36px;">沒有準備好之前請勿輕易嘗試！</p>
+            </div>
+        </section>
+    </main>
+
+    <section>
+        <div class="container-fluid game-rules">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-4 ">
+                        <div class="row justify-content-center">
+                            <img class="" src="../EscapeRoom/img/people_b.png" alt="">
+                            <p class="titleName text-center col-12">挑戰人數</p>
+                            <p class="speakerBoss text-center col-12">4-8人</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row justify-content-center fix1">
+                            <img class="" src="../EscapeRoom/img/time_b.png" alt="">
+                            <p class="titleName text-center col-12">挑戰時間</p>
+                            <p class="speakerBoss text-center col-12">60分鐘</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 ">
+                        <div class="row justify-content-center">
+                            <img class="" src="../EscapeRoom/img/key_b.png" alt="">
+                            <p class="titleName text-center col-12">場次時間</p>
+                            <p class="speakerBoss text-center col-12">11:00 / 12:20 / 13:50 / <br> 15:20 / 16:50 / 18:10
+                                /
+                                19:30</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center ">
+                    <div class="col-lg-2 themeBtn"> <a href="/EscapeRoom/ES-theme-doctor.html">NEXT</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="information d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="logo col-lg-4 d-flex align-items-center justify-content-center">
+                            <img src="../EscapeRoom/test/img/logo-white.png" alt="">
+                            <p style="font-size: 24px; margin:0 16px;">許多門</p>
+                            <div class="d-flex" style="flex-direction: column;font-size: 6px;">
+                                <p style="letter-spacing: 1.3px;">ESCAPE</p>
+                                <p>STUDIOS</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-9 d-flex align-items-left justify-content-center"
+                            style="font-size: 16px; line-height:36px; flex-direction: column;">
+                            <p>TEL 04-23020080 / 0971283166</p>
+                            <p>台中市西區公益路155巷9號2樓（公益路勤美誠品斜對面）</p>
+                        </div>
+                        <div class="col-lg-1 col-3 d-flex align-items-center justify-content-center">
+                            <a href="https://www.facebook.com/TCDOORSSS"><img src="../EscapeRoom/test/img/fb_b.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">Copyright &copy; 許多門 Inc. All rights reserved</div>
+            <a class="gotop" href="#"><img src="../EscapeRoom/test/img/gotop.png" alt=""></a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+
+        var stop1
+        var bomb_start = false
+        $(function () {
+            $(window).on("scroll", function () {
+                var windowScrollTop = $(window).scrollTop()
+                var windowHeight = $(window).height()
+                var bombtrigger = $(".bomb").offset().top
+                if (bombtrigger - windowHeight / 6 < windowScrollTop && bombtrigger > windowScrollTop && !bomb_start) {
+                    if ($(window).width() >= 576) {
+                        alert("拆彈囉！！！")
+                    }
+                    unblock()
+                    showtime()
+                    stop1 = setInterval(countdown, 1000)
+                    bomb_start = true
+                }
+            })
+        })
+
+        var bombgame = document.querySelector(".bombgame")
+        var time = document.querySelector(".time")
+        var u_line = document.querySelectorAll(".u-line")
+        var c_line = document.querySelectorAll(".c-line")
+        var ray = document.querySelector(".ray")
+        var mask = document.querySelector(".mask")
+        var linemask = document.querySelectorAll(".linemask")
+        var warning = document.querySelector(".warning")
+
+        var x = u_line.length
+        function getRandom1(x) {
+            return Math.floor(Math.random() * x)
+        }
+        var y = getRandom1(x)
+
+        function getRandom2(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        var timer = getRandom2(15, 30)
+
+        function unblock(){
+            mask.classList.add("unblock")
+        }
+
+        function showtime() {
+            var miunte = (timer - (timer % 60)) / 60
+            var second = timer % 60
+            if (timer % 60 >= 10) {
+                time.innerHTML = "0" + miunte + ":" + second
+            } else if (timer % 60 < 10 && timer % 60 >= 0) {
+                time.innerHTML = "0" + miunte + ":0" + second
+            }
+        }
+
+        function countdown() {
+            timer--
+            var miunte = (timer - (timer % 60)) / 60
+            var second = timer % 60
+
+            if (timer <= 5) {
+                ray.classList.add("active2")
+                for (let i = 0; i < linemask.length; i++) {
+                    linemask[i].classList.add("active")
+                }
+            }
+
+            if (timer % 60 >= 10) {
+                time.innerHTML = "0" + miunte + ":" + second
+            } else if (timer > 0 && timer % 60 < 10 && timer % 60 >= 0) {
+                time.innerHTML = "0" + miunte + ":0" + second
+            } else if (timer == 0) {
+                time.innerHTML = "0" + miunte + ":0" + second
+                clearInterval(stop1)
+                explosion()
+            }
+        }
+
+        for (let i = 0; i < u_line.length; i++) {
+            u_line[i].onclick = function () {
+                if (i == y) {
+                    c_line[i].classList.add("active")
+                    u_line[i].style.display = "none"
+                    clearInterval(stop1)
+                    fastcountdown()
+                } else {
+                    c_line[i].classList.add("active")
+                    u_line[i].style.display = "none"
+                    times()
+                }
+            }
+        }
+
+        for (let i = 0; i < linemask.length; i++) {
+            linemask[i].onclick = function () {
+                if (i == y) {
+                    c_line[i].classList.add("active")
+                    u_line[i].style.display = "none"
+                    clearInterval(stop1)
+                    fastcountdown()
+                } else {
+                    c_line[i].classList.add("active")
+                    u_line[i].style.display = "none"
+                    times()
+                }
+            }
+        }
+
+        var counts = 0
+        function times() {
+            counts++
+            if (counts == x - 1) {
+                clearInterval(stop1)
+                defusion()
+            }
+        }
+
+        function defusion() {
+            time.classList.add("active")
+            ray.classList.add("active1")
+            ray.classList.remove("active2")
+            for (let i = 0; i < linemask.length; i++) {
+                linemask[i].classList.remove("active")
+            }
+            warning.classList.add("active")
+        }
+
+        function fastcountdown() {
+            warning.innerHTML = "完了，要爆了！！！"
+            ray.classList.add("active1")
+            ray.classList.remove("active2")
+            timer--
+            var miunte = (timer - (timer % 60)) / 60
+            var second = timer % 60
+            var stop2 = setTimeout(fastcountdown, 100)
+
+            if (timer % 60 >= 10) {
+                time.innerHTML = "0" + miunte + ":" + second
+                stop2
+            } else if (timer > 0 && timer % 60 < 10 && timer % 60 >= 0) {
+                time.innerHTML = "0" + miunte + ":0" + second
+                stop2
+            } else if (timer == 0) {
+                time.innerHTML = "0" + miunte + ":0" + second
+                clearInterval(stop2)
+                explosion()
+            }
+        }
+
+        function explosion() {
+            warning.innerHTML = "爆炸了！！！"
+            bombgame.classList.add("active")
+            mask.classList.add("active")
+            ray.classList.remove("active2")
+            for (let i = 0; i < linemask.length; i++) {
+                linemask[i].classList.remove("active")
+            }
+        }
+    </script>
+</body>
+
+</html>

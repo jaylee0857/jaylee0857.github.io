@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Noto Sans TC", sans-serif;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        a,
+        a:hover {
+            color: white;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            margin-bottom: unset;
+        }
+
+
+        ul li {
+            list-style: none;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 30px;
+            line-height: 80px;
+        }
+
+        .nav {
+            width: 100%;
+            height: 80px;
+            background-color: #549FB6;
+            padding: 0 250px;
+        }
+
+        .Border {
+            width: 70%;
+            height:70vh;
+            padding: 250px 0;
+            border: 2px solid transparent;
+            border-width: 16px;
+            border-image: linear-gradient(to right, #3E7794 0%, #0A0F20 100%);
+            border-image-slice: 1;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .slides-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .slides {
+            width: 400%;
+            height: 200%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .slide-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+        }
+
+        .slide-2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            transform: translate(0, 100%);
+        }
+
+        .slide-3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            transform: translate(100%, 100%);
+        }
+
+        .slide-4 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            transform: translate(100%, 0);
+        }
+
+        .slide-5 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            transform: translate(200%, 0);
+        }
+
+        .slide-6 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            transform: translate(200%, 100%);
+        }
+
+        .slide-7 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            transform: translate(300%, 100%);
+        }
+
+        .slide-8 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            transform: translate(300%, 0);
+        }
+
+        .Banner {
+            width: 100%;
+            height: 1005px;
+            background-image: url(img/theme-banner3.jpg);
+            background-size: cover;
+            padding-top: 15%;
+        }
+
+        .bg {
+            width: 100%;
+            background-image: url(img/moon_bg.png);
+            background-size: cover;
+        }
+
+        .game-rules {
+            width: 100%;
+            height: 970px;
+            background-image: url(img/bot_bg.jpg);
+        }
+
+        .information {
+            width: 100%;
+            height: 180px;
+            color: white;
+            background-color: #3E7794;
+        }
+
+        .copyright {
+            width: 100%;
+            height: 80px;
+            background-color: #0A0F20;
+            color: #3E7794;
+            text-align: center;
+            line-height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar" class="nav d-flex justify-content-between" style="position: fixed; top:0; left:0; z-index:9">
+        <div class="navLogo col-lg-4 d-flex align-items-center justify-content-center">
+            <img width="45px" height="45px" src="img/logo-white.png" alt="">
+            <a href="/EscapeRoom/index.html">
+                <p style="font-size: 24px; margin:0 16px;">許多門</p>
+            </a>
+            <div class="d-flex" style="flex-direction: column;font-size: 6px;">
+                <a href="/EscapeRoom/index.html">
+                    <p style="letter-spacing:1.2px;">ESCAPE</p>
+                    <p>STUDIOS</p>
+                </a>
+            </div>
+        </div>
+        <div class="nav-btn-group pc">
+            <ul class="d-flex">
+                <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="slides-container">
+        <div class="slides" data-0="transform:translate(0%, 0%)" data-50p=" " data-150p="transform:translate(0%, -50%)"
+            data-200p=" " data-300p="transform:translate(-25%, -50%)" data-350p=" "
+            data-450p="transform:translate(-25%, 0%)" data-500p=" " data-600p="transform:translate(-50%, -0%)"
+            data-650p=" " data-750p="transform:translate(-50%, -50%)" data-800p=" "
+            data-900p="transform:translate(-75%, -50%)" data-950p=" " data-1050p="transform:translate(-75%, 0%)">
+
+            <div class="slide-1">
+                <header class="Banner">
+                    <div class="container">
+                        <div class="row justify-content-end">
+                            <div class="col-lg-4">
+                                <img style="margin-right:50px;" src="img/title_01.png" alt="">
+                                <img src="img/title_02.png" alt="">
+                            </div>
+                        </div>
+                        <div class="row justify-content-between">
+                            <div class="col-lg-3"
+                                style="font-size: 24px; color: white; text-align:left; line-height: 65px; flex-direction: column;">
+                                <p>過關率：40％</p>
+                                <p>團隊：★★★★</p>
+                                <p>操作：★★★★★</p>
+                                <p>解謎：★★★</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+            <div class="slide-2">
+                <main>
+                    <section class="container-fluid bg" style="padding:150px 0;">
+                        <div class="container">
+                            <div class="row" style="position: relative;">
+                                <img class="col-lg" src="img/comic_01_1.png" style="width:100%" alt="">
+                            </div>
+                            <div class="row justify-content-center" style="text-align: center; margin-top: 30px;">
+                                <div class="col-lg-5">
+                                    <p style="color:#3E7794; font-size:24px;">『御醫』總是掌握了當時最高的醫術，
+                                    </p>
+                                    <p style="color:white; font-size:16px; line-height: 36px;">並且受到皇帝極度的信任才能成為獨當一面的御醫。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            </div>
+
+            <div class="slide-3">
+                <section class="container-fluid bg" style="padding-top:100px; padding-bottom: 100px;">
+                    <div class="container" style="padding:50px;">
+                        <div class="row">
+                            <img class="col-lg" src="img/comic_02_01.png" alt="">
+                        </div>
+                        <div class="row">
+                            <img class="col-lg-7" height="300px" src="img/comic_02_02.png" alt="">
+                            <div class="col-lg-5" style="margin-top: -25px; position:relative;">
+                                <img width="100%" src="img/comic_02_03.png" alt="">
+                                <div
+                                    style="text-align:center; position:absolute; bottom:130px; right:80px; line-height: 36px; color:white; font-size:16px;">
+                                    <p>而上官大夫也不例外，</p>
+                                    <p style="color:#3E7794; font-size:24px;">因著他高明且神奇的醫術，</p>
+                                    <p>受到皇上完全的信任。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="slide-4">
+                <section class="container-fluid bg" style="padding-top:110px; padding-bottom: 80px;">
+                    <div class="container" style="padding:50px;">
+                        <div class="row" style=" position:relative;">
+                            <img class="col-lg" src="img/comic_03_01.png" alt="">
+                            <div
+                                style="text-align:center; position:absolute; top:145px; left:135px; line-height: 36px; color:white; font-size:16px;">
+                                <p>但是......</p>
+                                <p style="color:#3E7794; font-size:24px;">從來沒有人知道上官大夫的來歷，</p>
+                                <p>也不知道他有如華陀在世般的醫術是從何處習得。</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <img class="col-lg-5" height="300px" src="img/comic_03_02.png" alt="">
+                            <img class="col-lg-7" style="margin-top:-40px; height:335px" src="img/comic_03_03.png" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="slide-5">
+                <section class="container-fluid bg" style="padding:300px 0;">
+                    <div class="container">
+                        <div class="row" style="position:relative;">
+                            <img class="col-lg" src="img/comic_04.png" style="width:100%;" alt="">
+                            <img style="transform:scaleX(-1); position:absolute; top:20px; right:150px;"
+                                src="img/skull ver2.gif" alt="">
+                        </div>
+                        <div class="row justify-content-center" style="margin-top:100px;">
+                            <p class="col-lg-5" style="color:white; font-size:16px; text-align:center;">
+                                反而傳言他與最近宮內許多失蹤的太監、宮女有關......
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="slide-6">
+                <section class="container-fluid bg" style="padding:200px 0; padding-bottom: 250px;">
+                    <div class="container" style="position:relative;">
+                        <div class="row">
+                            <img class="col-lg" src="img/comic_05.png" style="width:100%;" alt="">
+                        </div>
+                        <div style="line-height:36px; position:absolute; bottom:10px; right:30px;">
+                            <p style="color:white; font-size:16px;">身為首屈一指的大內高手，你臨危受命要潛入調查上官大夫的秘密。</p>
+                            <p style="color:#3E7794; font-size:24px; text-align: right;">希望這不是一趟有去無回的任務……</p>
+                        </div>
+                    </div>
+                </section>
+                </main>
+            </div>
+
+            <div class="slide-7">
+                <section class="d-flex"
+                    style="padding-top:150px; padding-bottom: 155px; background-color: #0A0F20; justify-content:center; position: relative;">
+                    <div class="Border d-flex justify-content-center align-items-center" style="text-align: center; transform:translateY(35px)">
+                        <div class="col-lg-3">
+                            <img src="img/key.png" alt="">
+                            <div style="color: white; font-size: 16px; line-height: 36px;">
+                                <p style="color: #549FB6;font-size: 24px; font-weight:bold; line-height:48px;">
+                                    特別提醒</p>
+                                <p>要揭穿御醫的詭計，必須了解各種藥理針灸醫術，記憶與理解的情報很多，也可能有陰森血腥的場景。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="slide-8">
+                <section class="game-rules d-flex justify-content-center align-items-center">
+                    <div class="container" style="padding-bottom: 10%;">
+                        <div class="row d-flex justify-content-around" style="margin-bottom:75px;">
+                            <div class="col-lg-4">
+                                <div style=" text-align: center;">
+                                    <img src="img/people_d.png" alt="">
+                                    <div
+                                        style="color: #549FB6; font-size: 24px; font-weight:bold; margin-bottom: 20px;">
+                                        挑戰人數</div>
+                                    <p style="color: white;font-size: 16px;">4~8人</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div style=" text-align: center;">
+                                    <img src="img/time_d.png" alt="">
+                                    <div style="color: #549FB6;font-size: 24px; font-weight:bold; margin-bottom: 20px;">
+                                        挑戰時間
+                                    </div>
+                                    <p style="color: white;font-size: 16px;">60分鐘</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div style=" text-align: center;">
+                                    <img src="img/key_d.png" alt="">
+                                    <div style="color: #549FB6;font-size: 24px; font-weight:bold; line-height:48px;">
+                                        場次時間
+                                    </div>
+                                    <p style="color: white;font-size: 16px; line-height: 36px;">11:20 / 12:40 / 14:10 /
+                                        15:40 /</p>
+                                    <p style="color: white;font-size: 16px; line-height: 36px;">17:10 / 18:30 / 19:50
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#"><div
+                        style="width:200px; height:60px; color:white; border:1px solid white; font-size: 24px; text-align:center; font-weight:bold; padding:10px 0; margin:auto">
+                        BACK</div></a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid" style="padding:0; position:relative; z-index:9;">
+        <div class="information d-flex align-items-center justify-content-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 d-flex align-items-center justify-content-center">
+                        <img src="img/logo-white.png" alt="">
+                        <p style="font-size: 24px; margin:0 16px;">許多門</p>
+                        <div class="d-flex" style="flex-direction: column;font-size: 6px;">
+                            <p style="letter-spacing:1.2px;">ESCAPE</p>
+                            <p>STUDIOS</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <p style="font-size: 16px; line-height:36px;">台中市西區公益路155巷9號2樓（公益路勤美誠品斜對面）</p>
+                        <p style="font-size: 16px;">TEL 04-23020080 / 0971283166</p>
+                    </div>
+                    <div class="col-lg-1">
+                        <a href="https://www.facebook.com/TCDOORSSS"><img src="img/fb_d.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">Copyright &copy; 許多門 Inc. All rights reserved</div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init()
+    </script>
+</body>
+
+</html>

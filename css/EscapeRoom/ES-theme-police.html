@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES-theme-police</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="css/evenZoom.css" rel="stylesheet" type="text/css">
+    <style>
+        * {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        body {
+
+            background-color: #23220C;
+        }
+
+        .banner {
+            width: 100%;
+            height: 900px;
+            background-image: url(img/theme-banner-TT.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .gradient {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(#B0B63F 0%, #21210C 100%);
+            opacity: 0.7;
+            transform: translateY(-50%);
+            position: absolute;
+            z-index: -1;
+
+        }
+
+        .blockade {
+            width: 100%;
+            height: 340px;
+            background-image: url(img/blockade.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .game-rules {
+            width: 100%;
+            height: 900px;
+            background-image: url(img/door.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 280px 0;
+
+        }
+
+        .turn {
+            display: inline-block;
+            transform: rotateY(180deg);
+            animation-name: turn;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+
+        }
+
+        .textinfo {
+            color: #ffffff;
+            font-size: 16px;
+            text-align: center;
+            line-height: 3;
+        }
+
+        .bannerName {
+            font-size: 110px;
+            color: #CECAB8;
+        }
+
+        .bannerText {
+            font-size: 24px;
+            color: #CECAB8;
+            line-height: 70px;
+            text-align: left;
+        }
+
+        .speaker {
+            color: #B1B73F;
+            font-size: 24px;
+            line-height: 2;
+        }
+
+        .speakerBoss {
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 2;
+        }
+
+        .parallax1 {
+            transform: translateY(-50%);
+        }
+
+        .boxShadolTop {
+            width: 640px;
+            height: 485px;
+            border: 1px solid transparent;
+            border-width: 6px;
+            border-image: linear-gradient(to right, rgba(173, 178, 65, 1) 0%, rgba(173, 178, 65, 2) 100%);
+            border-image-slice: 1;
+            position: absolute;
+            transform: translateX(-5%) rotate(-4deg);
+            transform: skewY(-4deg);
+            left: -30px;
+        }
+
+        .boxShadolBot {
+            width: 640px;
+            height: 504px;
+            border: 1px solid transparent;
+            border-width: 6px;
+            border-image: linear-gradient(to right, rgba(173, 178, 65, 1) 0%, rgba(173, 178, 65, 2) 100%);
+            border-image-slice: 1;
+            position: absolute;
+            transform: translateX(-5%) rotate(-4deg);
+            transform: skewY(-4deg);
+            right: -22px;
+            top: 695px;
+        }
+
+        .themeBtn {
+            width: 200px;
+            text-align: center;
+            color: white;
+            margin-top: 75px;
+            border: 1px solid white;
+            font-size: 36px;
+            transition: 500ms;
+        }
+        .themeBtn:hover{
+            background: rgba(255, 255, 255, 0.85);
+            color: black;
+        }
+        .themeBtn:hover.themeBtn a{
+            color: black;
+        }
+        .themeBtn a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+
+        @keyframes turn {
+            0% {
+                transform: rotateY(180deg);
+            }
+
+            100% {
+                transform: rotateY(540deg);
+            }
+        }
+
+        @media(max-width:1420px) {
+            .nav {
+                padding: 0 150px;
+            }
+
+        }
+
+        @media(max-width:1205px) {
+            .nav {
+                padding: 0 50px;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+            .pc {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .nav {
+                padding: 0 30px;
+                height: 60px;
+            }
+
+            .ham {
+                width: 40px;
+                height: 40px;
+                position: relative;
+                background-image: url(img/navHam.png);
+                background-size: cover;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 20;
+            }
+
+            .ham ul {
+                position: absolute;
+                top: 44px;
+                left: -2000px;
+                width: 100vw;
+                transition: 500ms;
+                background: #B0B63F;
+                z-index: 20;
+            }
+
+            .ham ul li {
+                margin: 0;
+            }
+
+            .ham:hover ul {
+                left: 70px;
+                top: 44px;
+                transform: translateX(-100%);
+            }
+
+            .info {
+                font-size: 14px;
+            }
+
+            .banner {
+                height: 578px;
+            }
+
+            .bannerName {
+                font-size: 60px;
+            }
+
+            .bannerText {
+                text-align: center;
+                font-size: 20px;
+                line-height: 50px;
+            }
+
+            .blockade {
+                position: absolute;
+                top: -20px;
+            }
+
+            .relative {
+                position: relative;
+            }
+
+            .phoneChange {
+                order: -1;
+                margin-bottom: 50px;
+            }
+
+            .parallax1 {
+                transform: unset;
+            }
+
+            .mtb-200 {
+                margin: 50px 0 75px 0;
+            }
+
+            #example {
+                display: none;
+            }
+
+            #example2 {
+                display: none;
+            }
+
+            .game-rules {
+                padding: 75px 0;
+                height: 1035px;
+            }
+
+            .speaker {
+                font-size: 16px;
+                line-height: 3;
+            }
+
+            .speakerBoss {
+                line-height: 3;
+            }
+
+            .mb-50 {
+                margin-bottom: 50px;
+            }
+
+            .mt-75-phone {
+                margin-top: 75px;
+            }
+
+            .gotop {
+                right: 30px;
+                bottom: 30px;
+            }
+            .boxShadolTop{
+                display: none;
+            }
+            .boxShadolBot{
+                display: none;
+            }
+            .themeBtn{
+                margin-top: 50px;
+            }
+            .fix1{
+                margin: 40px 0;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar" class="nav d-flex justify-content-between">
+            <div class="navLogo lg-4 d-flex align-items-center justify-content-center">
+                <img src="img/logo.png" alt="">
+                <b class="logoName"><a href="/EscapeRoom/index.html">許多門</a></b>
+                <p class="gameName"><a href="/EscapeRoom/index.html">ESCAPE <br>STUDIOS </a></p>
+            </div>
+            <div class="nav-btn-group pc">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+            <div class="ham mobile">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <section>
+        <div class="container-fluid banner d-flex align-items-center">
+            <!-- <div id="scene" class="scene">
+                <div class="a" data-depth="0.20"><img src="img/lock01.png" alt=""></div>
+                <div class="a" data-depth="0.30"><img src="img/lock02.png" alt=""></div>
+                <div class="a" data-depth="0.40"><img src="img/key1.png" alt=""></div>
+                <div class="a" data-depth="0.50"><img src="img/key2.png" alt=""></div>
+                <div class="a" data-depth="0.60"><img src="img/cone.png" alt=""></div>
+                <div class="a" data-depth="0.70"><img src="img/triangle01.png" alt=""></div>
+                <div class="a" data-depth="0.80"><img src="img/letter.png" alt=""></div> -->
+            <div class="container">
+                <div class="row d-flax justify-content-between align-items-center">
+                    <div class="col-12 col-lg-4">
+                        <p class="bannerName">逆<span class="turn">轉</span><br>偵訊室</p>
+                    </div>
+                    <div class="pc col-lg-3">
+                        <p class="bannerText">過關率：25％<br>
+                            團隊：★★★★★<br>
+                            操作：★★★<br>
+                            解謎：★★★★</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+        <div class="gradient"></div>
+        <p class="mobile bannerText mtb-200">過關率：25％<br>
+            團隊：★★★★★<br>
+            操作：★★★<br>
+            解謎：★★★★</p>
+    </section>
+
+    <section class="mtb-200">
+        <div class="container">
+            <div class="row d-flax justify-content-between align-items-center">
+                <div class="col-12 col-lg-5 text-center">
+                    <p class="speakerBoss">『總覺得那裡還怪怪的..』</p>
+                    <p class="speaker">「 老大，怎麼了？！」</p>
+                    <p class="speakerBoss">『明明已經掌握很多證據，</p>
+                    <p class="speakerBoss">怎麼嫌犯看起來還是胸有成竹的樣子？</p>
+                    <p class="speaker">是不是我們還漏掉什麼了？』</p>
+                    <p class="speakerBoss">「不會吧....人證、物證不是都有了嗎？」</p>
+                </div>
+                <div class="col-12 col-lg-7 phoneChange"><img width="100%" src="img/policeman.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative mb-50">
+        <div class="container-fluid blockade"></div>
+        <div class="container parallax1">
+            <div class="boxShadolTop"></div>
+            <div class="boxShadolBot"></div>
+            <div class="row d-flax justify-content-between align-items-center">
+                <div class="col-12 col-lg-7 ">
+                    <div id="example" data-zoomed="img/knife-after.png">
+                        <img width="100%" height="100%" src="img/knife.png" alt="Example" /></div>
+                    <img class="mobile mb-50" width="100%" height="100%" src="img/knife.png" alt="Example" />
+                </div>
+                <div class="col-lg-5 text-center">
+                    <p class="speakerBoss">『可是.....找不到合理的犯案動機啊......』</p>
+                    <p class="speaker">「不是爭風吃醋引起的殺機嗎？」</p>
+                    <p class="speakerBoss">『不！沒這麼單純！</p>
+                    <p class="speakerBoss">這樣下去，嫌犯一定會被釋放！</p>
+
+                    <p class="speakerBoss">都已經抓到人了，不能這麼簡單就鬆手！』</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="mb-50">
+        <div class="container">
+            <div class="row d-flex justify-content-between ">
+                <div class="pc col-lg-4"><img src="img/survey.png" alt=""></div>
+                <div class="col-12 col-lg-7">
+                    <div id="example2" data-zoomed="img/clue-big.png">
+                        <img width="100%" height="100%" src="img/clue.png" alt="Example">
+                    </div>
+                    <img class="mobile" width="100%" height="100%" src="img/clue.png" alt="Example">
+                </div>
+            </div>
+            <div class="row mt-75">
+                <div class="col-lg-12 text-center">
+                    <p class="speaker">「要從頭搜查嗎？！只剩下一小時而已...... 」</p class="speakerBoss">
+                    <p class="speakerBoss">『只能這樣了！找到關鍵證據，</p>
+                    <p class="speakerBoss">讓嫌犯在偵訊中認罪！』</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mtb-200">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-12 d-flex justify-content-center"><img src="img/key.png" alt=""></div>
+                <p class="titleName">特別提醒</p>
+            </div>
+        </div>
+        <div class="col-12">
+            <p class="textinfo">刑事偵訊中，你要有清楚的頭腦與整理大量線索的能力</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container-fluid game-rules">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-4 ">
+                        <div class="row justify-content-center">
+                            <img class="" src="img/white-man.png" alt="">
+                            <p class="titleName text-center col-12">挑戰人數</p>
+                            <p class="speakerBoss text-center col-12">4-8人</p class="speakerBoss">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row justify-content-center fix1">
+                            <img class="" src="img/clock.png" alt="">
+                            <p class="titleName text-center col-12">挑戰時間</p>
+                            <p class="speakerBoss text-center col-12">60分鐘</p class="speakerBoss">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 ">
+                        <div class="row justify-content-center">
+                            <img class="" src="img/key.png" alt="">
+                            <p class="titleName text-center col-12">場次時間</p>
+                            <p class="speakerBoss text-center col-12">11:00 / 12:20 / 13:50 / <br> 15:20 / 16:50 / 18:10
+                                /
+                                19:30</p class="speakerBoss">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center ">
+                    <div class="col-lg-2 themeBtn"> <a href="/EscapeRoom/ES-theme-bomb.html">NEXT</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="information d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 d-sm-flex align-items-center justify-content-center d-none">
+                            <img src="img/logo.png" alt="">
+                            <b class="logoName">許多門</b>
+                            <p class="gameName">ESCAPE <br>STUDIOS </p>
+                        </div>
+                        <div class="col-lg-7 col-9">
+                            <b class="info">TEL 04-23020080/0971283166<br>
+                                台中市西區公益路155巷9號2樓（公益路勤美誠品斜對面） </b>
+                        </div>
+                        <div class="col-lg-1 col-3 d-flex align-items-center justify-content-center">
+                            <a href="https://www.facebook.com/TCDOORSSS"><img src="img/fb-logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">Copyright &copy; 許多門 Inc. All rights reserved</div>
+            <div class="gotop"><a href="#navbar"><img src="img/gotop.png" alt=""></a></div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/evenZoom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+    <script>
+        // the onReady function is called as soon as Parallax knows what input method to use. This might take up to 1000ms (supportDelay * 2) after initialisation
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene);
+
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            $("#example").evenZoom();
+        });
+        $(function () {
+
+            $("#example2").evenZoom();
+        });
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</body>
+
+</html>

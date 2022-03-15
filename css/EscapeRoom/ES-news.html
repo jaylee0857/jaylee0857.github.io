@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES-news</title>
+    <!-- 文字字型CDN -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        * {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        body {
+
+            background-color: #23220C;
+        }
+
+        .card_box {
+            width: 330px;
+            height: 433px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: 1s;
+            background-color: #23220C;
+            margin-bottom: 150px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .card {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background-color: #23220C;
+            border: unset;
+            cursor: pointer;
+        }
+
+        .front1 {
+            background-image: url(img/front1.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .front2 {
+            background-image: url(img/front2.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .front3 {
+            background-image: url(img/front3.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .front4 {
+            background-image: url(img/front4.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .front5 {
+            background-image: url(img/front5.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .front6 {
+            background-image: url(img/front6.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .front7 {
+            background-image: url(img/front7.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .front8 {
+            background-image: url(img/front8.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .front9 {
+            background-image: url(img/front9.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .back1 {
+            -ms-transform: rotateY(180deg);
+            -o-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+            background-image: url('img/back1.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .back2 {
+            -ms-transform: rotateY(180deg);
+            -o-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+            background-image: url('img/back2.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .back3 {
+            -ms-transform: rotateY(180deg);
+            -o-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+            background-image: url('img/back3.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* .card_box:hover{
+            -ms-transform: rotateY(180deg);
+            -o-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        } */
+
+
+        .flipped {
+            -ms-transform: rotateY(180deg);
+            -o-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        }
+        .logo-white-width{
+            width: 100%;
+        }
+
+        @media(max-width:1420px) {
+            .nav {
+                padding: 0 150px;
+            }
+
+        }
+
+        @media(max-width:1205px) {
+            .nav {
+                padding: 0 50px;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+            .pc {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .nav {
+                padding: 0 30px;
+                height: 60px;
+            }
+
+            .ham {
+                width: 40px;
+                height: 40px;
+                position: relative;
+                background-image: url(img/navHam.png);
+                background-size: cover;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 20;
+            }
+
+            .ham ul {
+                position: absolute;
+                top: 44px;
+                left: -2000px;
+                width: 100vw;
+                transition: 500ms;
+                background: #B0B63F;
+                z-index: 20;
+            }
+
+            .ham ul li {
+                margin: 0;
+            }
+
+            .ham:hover ul {
+                left: 70px;
+                top: 44px;
+                transform: translateX(-100%);
+            }
+
+            .info {
+                font-size: 14px;
+            }
+
+            .title {
+                font-size: 48px;
+                text-align: center;
+            }
+
+            .logo-white-width {
+                width: 50px;
+                height: 52px;
+            }
+
+            .toll-mb {
+                margin: auto;
+            }
+
+            .mtb-200 {
+                margin: 75px 0;
+            }
+
+            .mt-200 {
+                margin-top: 75px;
+            }
+
+            .mb-200 {
+                margin-bottom: 75px;
+            }
+
+            .flipped {
+                -ms-transform: unset;
+                -o-transform: unset;
+                -moz-transform: unset;
+                -webkit-transform: unset;
+                transform: unset;
+            }
+
+            .flippedPhone {
+                -ms-transform: rotateY(180deg);
+                -o-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+                -webkit-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+            }
+
+            .gotop {
+                right: 30px;
+                bottom: 30px;
+            }
+            .card_box{
+                margin-bottom: unset;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar" class="nav d-flex justify-content-between">
+            <div class="navLogo lg-4 d-flex align-items-center justify-content-center">
+                <img src="img/logo.png" alt="">
+                <b class="logoName"><a href="/EscapeRoom/index.html">許多門</a></b>
+                <p class="gameName"><a href="/EscapeRoom/index.html">ESCAPE <br>STUDIOS </a></p>
+            </div>
+            <div class="nav-btn-group pc">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+            <div class="ham mobile">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="mtb-200">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-2 col-lg-1"><img class="logo-white-width" src="img/logo-white.png" alt=""></div>
+                <div class="col-8 col-lg-5">
+                    <p class="title">最新消息</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-12 d-flex justify-content-center">
+                    <div class="card_box">
+                        <div class="card front1"></div>
+                        <div class="card back3"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12 d-flex justify-content-center">
+                    <div class="card_box">
+                        <div class="card front2"></div>
+                        <div class="card back2"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12 d-flex justify-content-center">
+                    <div class="card_box">
+                        <div class="card front3"></div>
+                        <div class="card back1"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12 d-flex justify-content-center">
+                    <div class="card_box">
+                        <div class="card front4"></div>
+                        <div class="card back3"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12 d-flex justify-content-center">
+                    <div class="card_box">
+                        <div class="card front5"></div>
+                        <div class="card back2"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12 d-flex justify-content-center">
+                    <div class="card_box">
+                        <div class="card front6"></div>
+                        <div class="card back1"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12 d-flex justify-content-center">
+                    <div class="card_box">
+                        <div class="card front7"></div>
+                        <div class="card back3"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12 d-flex justify-content-center">
+                    <div class="card_box">
+                        <div class="card front8"></div>
+                        <div class="card back2"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12 d-flex justify-content-center">
+                    <div class="card_box">
+                        <div class="card front9"></div>
+                        <div class="card back1"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="information d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 d-sm-flex align-items-center justify-content-center d-none">
+                            <img src="img/logo.png" alt="">
+                            <b class="logoName">許多門</b>
+                            <p class="gameName">ESCAPE <br>STUDIOS </p>
+                        </div>
+                        <div class="col-lg-7 col-9">
+                            <b class="info">TEL 04-23020080/0971283166<br>
+                                台中市西區公益路155巷9號2樓（公益路勤美誠品斜對面） </b>
+                        </div>
+                        <div class="col-lg-1 col-3 d-flex align-items-center justify-content-center">
+                            <a href="https://www.facebook.com/TCDOORSSS"><img src="img/fb-logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">Copyright &copy; 許多門 Inc. All rights reserved</div>
+            <div class="gotop"><a href="#navbar"><img src="img/gotop.png" alt=""></a></div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(".card_box").hover(function (event) {
+            $(this).toggleClass("flipped");
+        });
+
+        $(".card_box").click(function (event) {
+            $(this).toggleClass("flippedPhone")
+        })
+    </script>
+</body>
+
+</html>

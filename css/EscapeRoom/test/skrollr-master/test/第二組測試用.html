@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #slides-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #slides {
+            width: 200%;
+            height: 200%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+        }
+
+        #slide-1 {
+            background: url('img/cat1.jpg') no-repeat center center;
+            background-size: cover;
+
+        }
+
+        #slide-2 {
+            background: url('img/cat2.jpg') no-repeat center center;
+            background-size: cover;
+            transform: translate(0, 100%);
+        }
+
+        #slide-3 {
+            background: url('img/cat3.jpg') no-repeat center center;
+            background-size: cover;
+            transform: translate(100%, 100%);
+        }
+
+        #slide-4 {
+            background: url('img/cat4.jpg') no-repeat center center;
+            background-size: cover;
+            transform: translate(100%, 0);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            text-align: right;
+            color: white;
+            font-family: '微軟正黑體';
+        }
+
+        p,
+        h1 {
+            margin: 0;
+        }
+
+        #heloer {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 400%;
+            width: 20px;
+
+        }
+
+        .maker {
+            height: 25%;
+            width: 100%;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slides-container">
+        <div id="slides" 
+            data-0="transform: translate(0%,0%)"
+            data-100p="transform: translate(0%,-50%)"
+            data-200p="transform: translate(-50%,-50%)" 
+            data-300p="transform: translate(-50%,0%)">
+            <div id="slide-1" class="slide">
+                <div class="caption">
+                    <h1>喵喵喵</h1>
+                    <p>我是一隻喵</p>
+                </div>
+            </div>
+            <div id="slide-2" class="slide">
+                <div class="caption">
+                    <h1>喵喵喵</h1>
+                    <p>我是一隻喵</p>
+                </div>
+            </div>
+            <div id="slide-3" class="slide">
+                <div class="caption">
+                    <h1>喵喵喵</h1>
+                    <p>我是一隻喵</p>
+                </div>
+            </div>
+            <div id="slide-4" class="slide">
+            </div>
+        </div>
+    </div>
+
+    <div id="helper">
+        <div class="maker red"></div>
+        <div class="maker green"></div>
+        <div class="maker blue"></div>
+        <div class="maker yellow"></div>
+    </div>
+
+    <!-- <img src="img/cat1.jpg" alt=""> -->
+
+    <script src="../src/skrollr.js" type="text/javascript"></script>
+
+    <script>
+        var s = skrollr.init();
+    </script>
+
+</body>
+
+</html>

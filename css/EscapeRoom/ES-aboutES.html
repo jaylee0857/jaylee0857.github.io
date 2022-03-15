@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES-aboutES</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        body {
+
+            background-color: #23220C;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .box {
+            height: 792px;
+        }
+
+        .bannerSize {
+            margin: unset;
+            width: 100%;
+            height: 517px;
+            object-fit: cover;
+        }
+
+        h2 {
+            line-height: 60px;
+            color: #ADB241;
+            font-size: 26px;
+            margin-bottom: unset;
+        }
+
+        .title {
+            color: #CDC9B7;
+            font-size: 80px;
+        }
+
+        .titleName {
+            color: #B0B63F;
+            font-size: 36px;
+        }
+
+        .LH-48 {
+            line-height: 48px;
+            color: #FFFFFF;
+            margin-bottom: unset;
+        }
+
+        .narrative {
+            margin-top: 150px;
+            padding: 100px 0;
+            position: relative;
+            /* border: 2px solid transparent;
+            border-width: 2px 0 2px 0;
+            border-image: linear-gradient(to right, #B0B63F 0%, #21210C 100%);
+            border-image-slice: 1; */
+        }
+        .logo-white-width{
+            width: 100%;
+        }
+
+        .borderA:before {
+            content: '';
+            position: absolute;
+            height: 37%;
+            width: 5px;
+            background: linear-gradient(#21210C 0%, #B0B63F 100%);
+            bottom: 0%;
+            right: 0%;
+        }
+
+        .borderA::after {
+            content: '';
+            position: absolute;
+            height: 52%;
+            width: 5px;
+            background: linear-gradient(#B0B63F 0%, #21210C 100%);
+            transform: rotate(90deg);
+            bottom: -26%;
+            right: 18.4%
+        }
+
+
+        .bl:before {
+            content: '';
+            position: absolute;
+            height: 32%;
+            width: 5px;
+            left: 0.5%;
+            top: 1%;
+            background: linear-gradient(#B0B63F 0%, #21210C 100%);
+        }
+
+        .bl::after {
+            content: '';
+            position: absolute;
+            height: 52%;
+            width: 5px;
+            left: 19%;
+            top: -25%;
+            background: linear-gradient(#21210C 0%, #B0B63F 100%);
+            transform: rotate(90deg);
+        }
+
+
+        /* .bl:after {
+            content: '';
+            position: absolute;
+            bottom: auto;
+            right: auto;
+            height: 52%;
+            width: 5px;
+            background: linear-gradient(#21210C 0%, #B0B63F 100%);
+            transform: rotate(90deg);
+        } */
+
+
+
+        .aboutES-open {
+            background-image: url(img/aboutES-open.jpg);
+            height: 900px;
+            background-position: center;
+            background-size: cover;
+            padding: 200px 0;
+        }
+
+        .aboutES-open p {
+            margin-bottom: 30px;
+        }
+
+        .mtb-75 {
+            margin: 75px 0;
+
+        }
+
+        .mt-200 {
+            margin-top: 200px;
+        }
+
+        .mtb-200 {
+            margin: 200px 0;
+        }
+
+        @media(max-width:1420px) {
+            .nav {
+                padding: 0 150px;
+            }
+
+        }
+
+        @media(max-width:1205px) {
+            .nav {
+                padding: 0 50px;
+            }
+
+        }
+
+        @media (max-width: 577px) {
+
+            .container {
+                overflow: hidden;
+            }
+
+            .pc {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .nav {
+                padding: 0 30px;
+                height: 60px;
+            }
+
+            .ham {
+                width: 40px;
+                height: 40px;
+                position: relative;
+                background-image: url(img/navHam.png);
+                background-size: cover;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 20;
+            }
+
+            .ham ul {
+                position: absolute;
+                top: 44px;
+                left: -2000px;
+                width: 100vw;
+                transition: 500ms;
+                background: #B0B63F;
+                z-index: 20;
+            }
+
+            .ham ul li {
+                margin: 0;
+            }
+
+            .ham:hover ul {
+                left: 70px;
+                top: 44px;
+                transform: translateX(-100%);
+            }
+
+            .info {
+                font-size: 14px;
+            }
+
+            .title {
+                font-size: 48px;
+            }
+
+            .logo-white-width {
+                width: 50px;
+            }
+
+            .bannerSize {
+                height: unset;
+            }
+
+            h2 {
+                font-size: 24px;
+                line-height: 35px;
+            }
+
+            .LH-48 {
+                line-height: 35px;
+            }
+
+            .narrative {
+                padding: 50px;
+                margin: unset;
+            }
+
+            .aboutES-open {
+                height: unset;
+                padding: 0 0 40px 0;
+            }
+
+            .mtb-200 {
+                margin: 75px 0;
+            }
+
+            .mt-200 {
+                margin-top: 75px;
+            }
+
+            .gotop {
+                right: 30px;
+                bottom: 30px;
+            }
+
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav id="navbar" class="nav d-flex justify-content-between">
+            <div class="navLogo lg-4 d-flex align-items-center justify-content-center">
+                <img src="img/logo.png" alt="">
+                <b class="logoName"><a href="/EscapeRoom/index.html">許多門</a></b>
+                <p class="gameName"><a href="/EscapeRoom/index.html">ESCAPE <br>STUDIOS </a></p>
+            </div>
+            <div class="nav-btn-group pc">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+            <div class="ham mobile">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="mtb-200">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-2 col-lg-1"><img class="logo-white-width" src="img/logo-white.png" alt=""></div>
+                <div class="col-9 col-lg-5">
+                    <p class="title">關於許多門</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <p class="text-lg-center titleName">實境解謎團體工作坊</p>
+            <div class="swiper-container mtb-75">
+                <div class="swiper-wrapper ">
+                    <div class="swiper-slide"><img class="bannerSize" src="img/ES-1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img class="bannerSize" src="img/ES-2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img class="bannerSize" src="img/ES-3.jpg" alt=""></div>
+                    <div class="swiper-slide"><img class="bannerSize" src="img/ES-4.jpg" alt=""></div>
+                    <div class="swiper-slide"><img class="bannerSize" src="img/ES-5.jpg" alt=""></div>
+                    <div class="swiper-slide"><img class="bannerSize" src="img/ES-6.jpg" alt=""></div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container narrative borderA">
+            <div class="row d-flex justify-content-center bl">
+                <div class="col-lg-7 text-lg-center">
+                    <h2>結合『實境解謎』+『團體動力』</h2>
+                    <p class="LH-48">『許多門』從2013年11月開始,已經設計過十多個完全不同風格的 <br> 挑戰主題,
+                        提供超過12萬人次以上的挑戰經驗! </p>
+                    <div class="mtb-75">
+                        <h2>打造各種原創的情境和謎題</h2>
+                        <p class="LH-48">『許多門』從2013年11月開始,已經設計過十多個完全不同風格的
+                            挑戰主題, 提供超過12萬人次以上的挑戰經驗!</p>
+                    </div>
+                    <h2>藉著團團隊合作、推理解謎、冒險實做等方式</h2>
+                    <p class="LH-48">
+                        挑戰者會通過許多困難關卡，解開寶箱啟動機關，就像親自扮演電影主角一樣在各種不同情境中冒險前進，在一個小時的緊張挑戰後，
+                        不管是成功失敗，都會留下難忘的經驗與回憶！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-200">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-12 d-flex justify-content-center"><img src="img/key.png" alt=""></div>
+                <p class="titleName">交通</p>
+            </div>
+            <div class="row d-flex justify-content-center mtb-75">
+                <div class="col-12 col-lg-7 pc justify-content-center "><a href="https://g.page/Tkydoorsss?share"><img
+                            src="img/traffic.png" alt=""></a></div>
+                <div class="col-lg-12 d-sm-none d-flex justify-content-center"><img src="img/traffic1.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-200 aboutES-open ">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-12 d-flex justify-content-center"><img src="img/key.png" alt=""></div>
+                <p class="titleName">營業時間</p>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-12 pc d-md-flex justify-content-center"><img src="img/open.png" alt=""></div>
+                <div class="col-lg-12 d-sm-none d-flex justify-content-center"><img src="img/open-mb.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="information d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 d-sm-flex align-items-center justify-content-center d-none">
+                            <img src="img/logo.png" alt="">
+                            <b class="logoName">許多門</b>
+                            <p class="gameName">ESCAPE <br>STUDIOS </p>
+                        </div>
+                        <div class="col-lg-7 col-9">
+                            <b class="info">TEL 04-23020080/0971283166<br>
+                                台中市西區公益路155巷9號2樓（公益路勤美誠品斜對面） </b>
+                        </div>
+                        <div class="col-lg-1 col-3 d-flex align-items-center justify-content-center">
+                            <a href="https://www.facebook.com/TCDOORSSS"><img src="img/fb-logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">Copyright &copy; 許多門 Inc. All rights reserved</div>
+            <div class="gotop"><a href="#navbar"><img src="img/gotop.png" alt=""></a></div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

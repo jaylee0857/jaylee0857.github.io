@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+        .box {
+            margin: 50px auto;
+            width: 239px;
+            height: 334px;
+            position: relative;
+            transform-style: preserve-3d; 
+            transition: 1s;
+        }
+
+        .card {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; 
+            border-radius: 20px;
+        }
+
+        .front {
+            background-image: url(img/top2.jpg);
+            background-size: contain;
+            /* background-position: -24px -23px; */
+        }
+
+        .back {
+            transform: rotateY(180deg);
+            background-image: url(img/top3.jpg);
+            background-size: contain;
+            /* background-position: -287px -23px; */
+        }
+
+        .flipped {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="card front"></div>
+        <div class="card back"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+        $(".box").hover(function (event) {
+            $(this).toggleClass("flipped");
+        })
+    </script>
+</body>
+
+</html>

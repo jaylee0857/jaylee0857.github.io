@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="dist/evenZoom.css" rel="stylesheet">
+
+    <style>
+    .box-container {
+    position: relative;
+    width: 90%;
+    color: #777;
+}
+
+.border-top {
+    background: #b4bcbf;
+    padding: 15px;
+}
+
+    .border-top:before {
+        content: '';
+        position: absolute;
+        left: 42%;
+        top: 0;
+        bottom: auto;
+        right: auto;
+        height: 7px;
+        width: 50%;
+        background-color: #8796a9;
+    }
+
+.border-left {
+    background: #dfdad6;
+    padding: 15px;
+}
+
+    .border-left:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 6%;
+        bottom: auto;
+        right: auto;
+        height: 52%;
+        width: 5px;
+        background-color: #a89d9e;
+    }
+
+.border-right {
+    background: #eee9c4;
+    padding: 15px;
+}
+
+    .border-right:after {
+        content: '';
+        position: absolute;
+        left: auto;
+        top: auto;
+        bottom: 5px;
+        right: 0;
+        height: 52%;
+        width: 5px;
+        background-color: #f39c81;
+    }
+
+.border-bottom {
+    background: #bcdc9d;
+    padding: 15px;
+}
+
+    .border-bottom:after {
+        content: '';
+        position: absolute;
+        left: 18px;
+        top: auto;
+        bottom: 0;
+        right: auto;
+        height: 6px;
+        width: 105px;
+        background-color: #32b66b;
+    }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="content-block">
+        <div class="box-container">
+            <div class="border-top">border top</div>
+        </div>
+        <div class="box-container">
+            <div class="border-left">border left</div>
+        </div>
+        <div class="box-container">
+            <div class="border-right">border right</div>
+        </div>
+        <div class="box-container">
+            <div class="border-bottom">border bottom</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

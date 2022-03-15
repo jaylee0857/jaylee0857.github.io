@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            list-style-type: none;
+
+        }
+        a,
+        img {
+
+            border: 0;
+
+            text-decoration: none;
+
+        }
+
+        body {
+
+            font: 12px/180% Arial, Helvetica, sans-serif, "新宋體";
+
+            background: #DCDCDC;
+
+        }
+
+        .box {
+
+            position: fixed;
+
+            top: 0;
+
+            right: 0;
+
+            z-index: 9999;
+
+            width: 140px;
+
+            cursor: pointer;
+
+            margin: 100px 0 0 0;
+
+        }
+
+        body {
+
+            background-image: url(about:blank);
+
+            background-attachment: fixed;
+
+        }
+
+        .box {
+
+            position: absolute;
+
+          
+        }
+
+        .box a {
+
+            display: block;
+
+            position: relative;
+
+            height: 30px;
+
+            line-height: 30px;
+
+            margin-bottom: 2px;
+
+            background: #fff;
+
+            padding-right: 10px;
+
+            width: 130px;
+
+            overflow: hidden;
+
+            color: #333;
+
+            cursor: pointer;
+
+            right: -110px;
+
+        }
+
+        .box a:hover {
+
+            text-decoration: none;
+
+            color: #1974A1;
+
+        }
+
+        .box a:hover span {
+
+            background: #5FA429
+        }
+
+        .box a span {
+
+            display: block;
+
+            float: left;
+
+            width: 30px;
+
+            background: #636871;
+
+            color: #fff;
+
+            font-size: 16px;
+
+            text-align: center;
+
+            margin-right: 10px;
+
+            font-style: normal;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+        <a href='#'><span>0</span>index</a>
+
+        <a href='#'><span>1</span>何謂密室逃脫</a>
+
+        <a href='#'><span>2</span>最新消息</a>
+
+        <a href='#'><span>3</span>關於許多門</a>
+
+        <a href='#'><span>4</span>主題介紹</a>
+
+        <a href='#'><span>5</span>收費方式</a>
+
+
+
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+
+            var timer = null;
+
+            $(".box").mouseenter(function () {
+
+                clearTimeout(timer);
+
+                var that = $(this);
+
+                timer = setTimeout(function () {
+
+                    that.find("a").each(function (index, ele) {
+
+                        setTimeout(function () {
+
+                            $(ele).stop().animate({ right: 0 }, 200);
+
+                        }, 50 * index);
+
+                    })
+
+                }, 200)
+
+            }).mouseleave(function () {
+
+                if (timer) {
+
+                    clearTimeout(timer);
+
+                }
+
+                $(this).find("a").each(function (index, ele) {
+
+                    setTimeout(function () {
+
+                        $(ele).stop().animate({ right: -110 }, 200);
+
+                    }, 50 * index);
+
+                })
+
+            })
+
+        })
+
+    </script>
+
+    <script type="text/javascript">
+
+        function stops() {
+            return false;
+        }
+
+        document.oncontextmenu = stops;
+
+    </script>
+
+
+</body>
+
+</html>

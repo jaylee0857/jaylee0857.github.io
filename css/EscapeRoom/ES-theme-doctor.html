@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <title>ES-theme-doctor</title>
+    <style>
+        html,
+        body {
+            scroll-behavior: smooth;
+        }
+
+        /* 電腦 */
+        .nav {
+            width: 100%;
+            height: 80px;
+            background-color: #549FB6;
+            padding: 0 250px;
+        }
+
+        .Border {
+            width: 70%;
+            height: 70vh;
+            padding: 250px 0;
+            border: 2px solid transparent;
+            border-width: 16px;
+            border-image: linear-gradient(to right, #3E7794 0%, #0A0F20 100%);
+            border-image-slice: 1;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .slides-container {
+            width: 100%;
+            height: 100%;
+            /* overflow: hidden; */
+        }
+
+        .slides {
+            width: 400%;
+            height: 200%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .slide-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            z-index: -1;
+        }
+
+        .slide-2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            transform: translate(0, 100%);
+            z-index: -1;
+        }
+
+        .slide-3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            transform: translate(100%, 100%);
+            z-index: -1;
+        }
+
+        .slide-4 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            transform: translate(100%, 0);
+            z-index: -1;
+        }
+
+        .slide-5 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            transform: translate(200%, 0);
+            z-index: -1;
+        }
+
+        .slide-6 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            transform: translate(200%, 100%);
+            z-index: -1;
+        }
+
+        .slide-7 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            transform: translate(300%, 100%);
+            z-index: -1;
+        }
+
+        .slide-8 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 50%;
+            transform: translate(300%, 0);
+            z-index: -1;
+        }
+
+        .Banner {
+            width: 100%;
+            height: 1005px;
+            background-image: url(img/theme-banner3.jpg);
+            background-size: cover;
+            padding-top: 15%;
+        }
+
+        .bg {
+            width: 100%;
+            background-image: url(img/moon_bg.png);
+            background-size: cover;
+        }
+
+        .game-rules {
+            width: 100%;
+            height: 970px;
+            background-image: url(img/bot_bg.jpg);
+        }
+
+        .themeBtn {
+            width: 200px;
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            border: 1px solid white;
+            font-size: 36px;
+            transition: .5s;
+        }
+
+        .themeBtn:hover {
+            background: rgba(255, 255, 255, 0.85);
+            color: black;
+        }
+
+        .themeBtn:hover.themeBtn a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .themeBtn a {
+            color: white;
+        }
+
+        .information {
+            width: 100%;
+            height: 180px;
+            color: white;
+            background-color: #3E7794;
+        }
+
+        .copyright {
+            width: 100%;
+            height: 80px;
+            background-color: #0A0F20;
+            color: #3E7794;
+            text-align: center;
+            line-height: 80px;
+        }
+        @media(max-width:1420px) {
+            .nav {
+                padding: 0 150px;
+            }
+
+        }
+
+        @media(max-width:1205px) {
+            .nav {
+                padding: 0 50px;
+            }
+
+        }
+
+        /* 手機 */
+        * {
+            box-sizing: border-box;
+            font-family: "Noto Sans TC", sans-serif;
+        }
+
+
+        body {
+            background: #0C0F21;
+            height: 100%;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav {
+            width: 100%;
+            height: 80px;
+            background-color: #3E7794;
+            padding: 0 250px;
+
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            margin-bottom: unset;
+        }
+
+        ul li {
+            list-style: none;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 30px;
+            line-height: 80px;
+            color: white;
+
+        }
+
+        .nav-btn-group ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-btn-group ul li {
+            display: inline-block;
+        }
+
+        .nav a {
+            color: white;
+        }
+
+
+        .information {
+            width: 100%;
+            height: 180px;
+            background-color: #549FB6;
+        }
+
+        .logoName {
+            font-size: 28.6px;
+            padding: 0 10px;
+            color: white;
+        }
+
+        .gameName {
+            font-size: 10.73px;
+            margin: 0;
+        }
+
+        .ham {
+            display: none;
+        }
+
+        .info {
+            font-size: 18px;
+            line-height: 2;
+            color: white;
+        }
+
+        .copyright {
+            width: 100%;
+            height: 80px;
+            background-color: #0A0F20;
+            color: #549FB6;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .gotop {
+            position: fixed;
+            right: 61px;
+            bottom: 61px;
+        }
+
+        .phone {
+            display: none;
+
+        }
+
+
+        @media(max-width:576px) {
+            html {
+                overflow: scroll !important;
+                overflow-y:hidden;
+            }
+
+            .logoName{
+                font-size:20.04px;
+            }
+
+            .gameName{
+                font-size:7.51px;
+            }
+
+            .pc {
+                display: none;
+                height: 100%;
+            }
+
+            .phone {
+                display: block;
+            }
+
+            .box {
+                width: 100%;
+                height: 578px;
+                background-image: url(./img/theme-banner-doc.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 65% 0;
+                overflow: hidden;
+                padding: 280px 0 0 60px;
+            }
+
+            .gradient {
+                width: 100%;
+                height: 450px;
+                background: linear-gradient(#3E7794 0%, #0A0F20 100%);
+                opacity: 0.7;
+                transform: translateY(-40%);
+                position: absolute;
+                z-index: -11;
+            }
+
+            .margin-auto {
+                margin: auto;
+            }
+
+            .rule {
+                color: white;
+                font-size: 20px;
+                line-height: 50px;
+            }
+
+            .speakerBoss {
+                font-size: 16px;
+                line-height: 3;
+                color: white;
+            }
+
+            .speakerloser {
+                font-size: 16px;
+                line-height: 3;
+                color: #549FB6;
+            }
+
+            .titleName {
+                color: #3E7794;
+                font-size: 36px;
+            }
+
+            .game-rules {
+                width: 100%;
+                height: 1035px;
+                background-image: url(./doctorImg/bot_bg_p.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                padding: 75px 0;
+
+            }
+
+            .nav {
+                padding: 0 30px;
+                height: 60px;
+            }
+
+            .ham {
+                display:block;
+                width: 40px;
+                height: 40px;
+                position: relative;
+                background-image: url(./doctorImg/menu_d.png);
+                background-size: cover;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 20;
+                color: white;
+            }
+
+            .ham ul {
+                position: absolute;
+                top: 44px;
+                left: -2000px;
+                width: 100vw;
+                transition: 500ms;
+                background: #3E7794;
+                z-index: 20;
+                color: white;
+            }
+
+            .ham ul li {
+                margin: 0;
+                color: white;
+            }
+
+            .ham:hover ul {
+                left: 70px;
+                top: 44px;
+                transform: translateX(-100%);
+            }
+
+            .info {
+                font-size: 14px;
+            }
+
+            .gotop {
+                right: 30px;
+                bottom: 30px;
+            }
+
+            .margin-top50 {
+                margin-top: 50px;
+            }
+
+            .margin-top75 {
+                margin-top: 75px;
+            }
+            .fix1{
+                margin: 40px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 電腦 -->
+    <div style="height: 100%;" class="pc">
+        <nav id="navbar" class="nav d-flex justify-content-between" style="position: fixed; top:0; left:0; z-index:9">
+            <div class="navLogo lg-4 d-flex align-items-center justify-content-center">
+                <img src="../EscapeRoom/test/img/logo-white.png" alt="">
+                <p class="logoName"><a href="/EscapeRoom/index.html">許多門</a></p>
+                <a class="gameName" href="/EscapeRoom/index.html">
+                    <p style="letter-spacing:1.3px;">ESCAPE</p>
+                    <p>STUDIOS</p>
+                </a>
+            </div>
+            <div class="nav-btn-group pc">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+            <div class="ham mobile">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="slides-container">
+            <div class="slides" data-0="transform:translate(0%, 0%)" data-50p=" "
+                data-150p="transform:translate(0%, -50%)" data-200p=" " data-300p="transform:translate(-25%, -50%)"
+                data-350p=" " data-450p="transform:translate(-25%, 0%)" data-500p=" "
+                data-600p="transform:translate(-50%, -0%)" data-650p=" " data-750p="transform:translate(-50%, -50%)"
+                data-800p=" " data-900p="transform:translate(-75%, -50%)" data-950p=" "
+                data-1050p="transform:translate(-75%, 0%)">
+
+                <div class="slide-1">
+                    <header class="Banner">
+                        <div class="container">
+                            <div class="row justify-content-end">
+                                <div class="col-lg-4">
+                                    <img style="margin-right:50px;" src="../EscapeRoom/test/img/title_01.png" alt="">
+                                    <img src="../EscapeRoom/test/img/title_02.png" alt="">
+                                </div>
+                            </div>
+                            <div class="row justify-content-between">
+                                <div class="col-lg-3"
+                                    style="font-size: 24px; color: white; text-align:left; line-height: 65px; flex-direction: column;">
+                                    <p>過關率：40％</p>
+                                    <p>團隊：★★★★</p>
+                                    <p>操作：★★★★★</p>
+                                    <p>解謎：★★★</p>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+
+                <div class="slide-2">
+                    <main>
+                        <section class="container-fluid bg" style="padding:150px 0;">
+                            <div class="container">
+                                <div class="row" style="position: relative;">
+                                    <img class="col-lg" src="../EscapeRoom/test/img/comic_01_1.png" style="width:100%"
+                                        alt="">
+                                </div>
+                                <div class="row justify-content-center" style="text-align: center; margin-top: 30px;">
+                                    <div class="col-lg-5">
+                                        <p style="color:#3E7794; font-size:24px;">『御醫』總是掌握了當時最高的醫術，
+                                        </p>
+                                        <p style="color:white; font-size:16px; line-height: 36px;">
+                                            並且受到皇帝的信任才能成為獨當一面的御醫。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                </div>
+
+                <div class="slide-3">
+                    <section class="container-fluid bg" style="padding-top:100px; padding-bottom: 100px;">
+                        <div class="container" style="padding:50px;">
+                            <div class="row">
+                                <img class="col-lg" src="../EscapeRoom/test/img/comic_02_01.png" alt="">
+                            </div>
+                            <div class="row">
+                                <img class="col-lg-7" height="300px" src="../EscapeRoom/test/img/comic_02_02.png"
+                                    alt="">
+                                <div class="col-lg-5" style="margin-top: -25px; position:relative;">
+                                    <img width="100%" src="../EscapeRoom/test/img/comic_02_03.png" alt="">
+                                    <div
+                                        style="text-align:center; position:absolute; bottom:130px; right:80px; line-height: 36px; color:white; font-size:16px;">
+                                        <p>而上官大夫也不例外，</p>
+                                        <p style="color:#3E7794; font-size:24px;">因著他高明且神奇的醫術，</p>
+                                        <p>受到皇上完全的信任。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="slide-4">
+                    <section class="container-fluid bg" style="padding-top:110px; padding-bottom: 80px;">
+                        <div class="container" style="padding:50px;">
+                            <div class="row" style=" position:relative;">
+                                <img class="col-lg" src="../EscapeRoom/test/img/comic_03_01.png" alt="">
+                                <div
+                                    style="text-align:center; position:absolute; top:145px; left:135px; line-height: 36px; color:white; font-size:16px;">
+                                    <p>但是......</p>
+                                    <p style="color:#3E7794; font-size:24px;">從來沒有人知道上官大夫的來歷，</p>
+                                    <p>也不知道他有如華陀在世般的醫術是從何處習得。</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <img class="col-lg-5" height="300px" src="../EscapeRoom/test/img/comic_03_02.png"
+                                    alt="">
+                                <img class="col-lg-7" style="margin-top:-40px; height:335px"
+                                    src="../EscapeRoom/test/img/comic_03_03.png" alt="">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="slide-5">
+                    <section class="container-fluid bg" style="padding:300px 0;">
+                        <div class="container">
+                            <div class="row" style="position:relative;">
+                                <img class="col-lg" src="../EscapeRoom/test/img/comic_04.png" style="width:100%;"
+                                    alt="">
+                                <!-- <img style="transform:scaleX(-1); position:absolute; top:20px; right:150px;"
+                                    src="../EscapeRoom/test/img/skull ver2.gif" alt=""> -->
+                            </div>
+                            <div class="row justify-content-center" style="margin-top:100px;">
+                                <p class="col-lg-5" style="color:white; font-size:16px; text-align:center;">
+                                    反而傳言他與最近宮內許多失蹤的太監、宮女有關......
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="slide-6">
+                    <section class="container-fluid bg" style="padding:200px 0; padding-bottom: 250px;">
+                        <div class="container" style="position:relative;">
+                            <div class="row">
+                                <img class="col-lg" src="../EscapeRoom/test/img/comic_05.png" style="width:100%;"
+                                    alt="">
+                            </div>
+                            <div style="line-height:36px; position:absolute; bottom:10px; right:30px;">
+                                <p style="color:white; font-size:16px;">身為首屈一指的大內高手，你臨危受命要潛入調查上官大夫的秘密。</p>
+                                <p style="color:#3E7794; font-size:24px; text-align: right;">希望這不是一趟有去無回的任務……</p>
+                            </div>
+                        </div>
+                    </section>
+                    </main>
+                </div>
+
+                <div class="slide-7">
+                    <section class="d-flex"
+                        style="padding-top:150px; padding-bottom: 155px; background-color: #0A0F20; justify-content:center; position: relative;">
+                        <div class="Border d-flex justify-content-center align-items-center"
+                            style="text-align: center; transform:translateY(35px)">
+                            <div class="col-lg-3">
+                                <img src="../EscapeRoom/test/img/key_d.png" alt="">
+                                <div style="color: white; font-size: 16px; line-height: 36px;">
+                                    <p style="color: #549FB6;font-size: 36px; line-height:48px;">
+                                        特別提醒</p>
+                                    <p>要揭穿御醫的詭計，必須了解各種藥理針灸醫術，記憶與理解的情報很多，也可能有陰森血腥的場景。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="slide-8">
+                    <section class="game-rules d-flex justify-content-center align-items-center">
+                        <div class="container" style="padding-bottom: 10%;">
+                            <div class="row d-flex justify-content-around">
+                                <div class="col-lg-4">
+                                    <div style=" text-align: center;">
+                                        <img src="../EscapeRoom/test/img/people_d.png" alt="">
+                                        <div
+                                            style="color: #549FB6; font-size: 36px;">
+                                            挑戰人數</div>
+                                        <p style="color: white; font-size: 16px; line-height: 2;">4~8人</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div style=" text-align: center;">
+                                        <img src="../EscapeRoom/test/img/time_d.png" alt="">
+                                        <div
+                                            style="color: #549FB6;font-size: 36px;">
+                                            挑戰時間
+                                        </div>
+                                        <p style="color: white;font-size: 16px; line-height: 2;">60分鐘</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div style=" text-align: center;">
+                                        <img src="../EscapeRoom/test/img/key_d.png" alt="">
+                                        <div
+                                            style="color: #549FB6;font-size: 36px;">
+                                            場次時間
+                                        </div>
+                                        <p style="color: white;font-size: 16px; line-height: 2;">11:20 / 12:40 /
+                                            14:10 /</p>
+                                        <p style="color: white;font-size: 16px; line-height: 2;">15:40 / 17:10 / 18:30 /
+                                            19:50
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center align-items-center">
+                                <div class="col-lg-2 themeBtn"> <a href="/EscapeRoom/ES-theme.html">BACK</a></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <footer class="container-fluid" style="position:relative; z-index:9">
+            <div class="row">
+                <div class="information d-flex align-items-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="logo col-lg-4 d-flex align-items-center justify-content-center">
+                                <img src="../EscapeRoom/test/img/logo-white.png" alt="">
+                                <p style="font-size: 24px; margin:0 16px;">許多門</p>
+                                <div class="d-flex" style="flex-direction: column;font-size: 6px;">
+                                    <p style="letter-spacing: 1.3px;">ESCAPE</p>
+                                    <p>STUDIOS</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-9 d-flex align-items-left justify-content-center"
+                                style="font-size: 16px; line-height:36px; flex-direction: column;">
+                                <p>TEL 04-23020080 / 0971283166</p>
+                                <p>台中市西區公益路155巷9號2樓（公益路勤美誠品斜對面）</p>
+                            </div>
+                            <div class="col-lg-1 col-3 d-flex align-items-center justify-content-center">
+                                <a href="https://www.facebook.com/TCDOORSSS"><img src="../EscapeRoom/test/img/fb_d.png"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">Copyright &copy; 許多門 Inc. All rights reserved</div>
+            </div>
+            <a class="gotop" href="#"><img src="img/gotop.png" alt=""></a>
+        </footer>
+    </div>
+
+    <!-- 手機 -->
+    <header class="phone">
+        <nav id="navbar" class="nav d-flex justify-content-between">
+            <div class="navLogo lg-4 d-flex align-items-center justify-content-center">
+                <img src="img/logo.png" alt="">
+                <b class="logoName"><a href="/EscapeRoom/index.html">許多門</a></b>
+                <p class="gameName"></p><a href="/EscapeRoom/index.html">ESCAPE <br>STUDIOS </a></p>
+            </div>
+            <div class="nav-btn-group pc">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+            <div class="ham mobile">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main style="margin-top: 60px;" class="phone">
+        <div class="box">
+            <img src="./doctorImg/title_p.png" alt="">
+        </div>
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="gradient col-12 d-flex justify-content-center"></div>
+                <p class="rule">過關率：40％ <br>
+                    團隊：★★★★<br>
+                    操作：★★★★★<br>
+                    解謎：★★★</p>
+                <div class="col-12 margin-top75"><img width="100%" height="228px" src="./doctorImg/comic_01_p.png"
+                        alt=""></div>
+                <div class="col-12 margin-top50">
+                    <p> <span class="speakerloser">『御醫』總是掌握了當時的最高醫術，</span> <br>
+                        <span class="speakerBoss"> 並受到皇帝信任才能成為獨當一面的御醫。</span></p>
+                </div>
+                <div class="col-12 margin-top75"><img width="100%" height="228px" src="./doctorImg/comic_02_p.png"
+                        alt=""></div>
+                <div class="col-12 margin-top50">
+                    <p> <span class="speakerBoss">而上官大夫也不例外，</span> <br>
+                        <span class="speakerloser">因著他高明且神奇的醫術，</span> <br>
+                        <span class="speakerBoss">受到皇上完全的信任。</span> </p>
+                </div>
+                <div class="col-12 margin-top75"><img width="100%" height="228px" src="./doctorImg/comic_03_p.png"
+                        alt=""></div>
+                <div class="col-12 margin-top50">
+                    <p> <span class="speakerBoss">但是......</span><br>
+                        <span class="speakerloser">從來沒有人知道上官大夫的來歷，</span><br>
+                        <span class="speakerBoss">也不知道他有如華佗再世一般的</span><br>
+                        <span class="speakerBoss">神奇醫術是從何處習得。</span>/p>
+                </div>
+                <div class="col-12 margin-top75"><img width="100%" src="./doctorImg/comic_04_p.png" alt=""></div>
+                <div class="col-12 margin-top50">
+                    <p> <span class="speakerBoss">反而傳言他與最近宮內</span><br>
+                        <span class="speakerBoss">許多失蹤的太監、宮女有關......</span></p>
+
+                </div>
+                <div class="col-6 margin-top75"><img width="133px" height="188px" src="./doctorImg/comic_05_p.png"
+                        alt=""></div>
+                <div class="col-12 margin-top50">
+                    <p> <span class="speakerBoss">身為首屈一指的大內高手，</span><br>
+                        <span class="speakerBoss">你臨危受命要潛入調查上官大夫的祕密。</span> <br>
+                        <span class="speakerloser">希望這不會是一趟有去無回的任務......</span></p>
+                </div>
+                <div class="col-12 margin-top75"><img src="./doctorImg/key_d_p.png" alt=""> </div>
+                <p class="titleName margin-top50">特別提醒</p>
+                <p class="speakerBoss"> 要揭穿御醫的詭計，必須了解各種藥理針灸醫術， 記憶與理解的情報很多，也有陰森血腥的場景。</p>
+            </div>
+        </div>
+        <section>
+            <div class="container-fluid game-rules">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-lg-4 ">
+                            <div class="row justify-content-center">
+                                <img class="" src="./doctorImg/people_d_p.png" alt="">
+                                <p class="titleName text-center col-12">挑戰人數</p>
+                                <p class="speakerBoss text-center col-12">4-8人</p class="speakerBoss">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row justify-content-center fix1">
+                                <img class="" src="./doctorImg/time_d_p.png" alt="">
+                                <p class="titleName text-center col-12">挑戰時間</p>
+                                <p class="speakerBoss text-center col-12">60分鐘</p class="speakerBoss">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <div class="row justify-content-center">
+                                <img class="" src="./doctorImg/key_d_p.png" alt="">
+                                <p class="titleName text-center col-12">場次時間</p>
+                                <p class="speakerBoss text-center col-12">11:20 / 12:40 / 14:10 / 15:40 / <br> 17:10 /
+                                    18:30 / 19:50</p class="speakerBoss">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center ">
+                        <div class="col-lg-2 themeBtn"> <a href="/EscapeRoom/ES-theme.html">BACK</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-fluid phone">
+        <div class="row">
+            <div class="information d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 d-sm-flex align-items-center justify-content-center d-none">
+                            <img src="img/logo.png" alt="">
+                            <b class="logoName">許多門</b>
+                            <p class="gameName">ESCAPE <br>STUDIOS</p>
+                        </div>
+                        <div class="col-lg-7 col-9">
+                            <b class="info">TEL 04-23020080/0971283166<br>
+                                台中市西區公益路155巷9號2樓（公益路勤美誠品斜對面） </b>
+                        </div>
+                        <div class="col-lg-1 col-3 d-flex align-items-center justify-content-center">
+                            <a href="https://www.facebook.com/TCDOORSSS"><img src="./doctorImg/fb_d_p.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">Copyright &copy; 許多門 Inc. All rights reserved</div>
+            <a class="gotop" href="#"><img src="img/gotop.png" alt=""></a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init()
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES-theme</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        .banner {
+            width: 100%;
+            height: calc(39vh - 80px);
+            font-size: 120px;
+            text-align: center;
+            line-height: calc(33vh - 80px);
+            transition: 1s;
+            color: #ffffff;
+
+        }
+
+        .banner a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .police {
+            background-image: url(img/theme-banner.jpg);
+            background-repeat: no-repeat;
+            background-position: 0% 75%;
+            background-size: cover;
+            text-shadow: 0.2em 0.2em 0.2em #23220C;
+
+        }
+
+        .bomb {
+            background-image: url(img/theme-banner2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-shadow: 0.2em 0.2em 0.1em black;
+        }
+
+        .doctor {
+            background-image: url(img/theme-banner3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-shadow: 0.2em 0.2em 0.03em black;
+            letter-spacing: 30px;
+        }
+
+        .banner:hover {
+            height: calc(80vh - 80px);
+            line-height: calc(80vh - 80px);
+        }
+
+        .phoneStyle {
+            display: none;
+        }
+
+        .turn {
+            display: inline-block;
+            transform: rotateY(180deg);
+            animation-name: turn;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+
+        }
+
+        @keyframes turn {
+            0% {
+                transform: rotateY(180deg);
+            }
+
+            100% {
+                transform: rotateY(540deg);
+            }
+        }
+
+        @media(max-width:1420px) {
+            .nav {
+                padding: 0 150px;
+            }
+
+        }
+
+        @media(max-width:1205px) {
+            .nav {
+                padding: 0 50px;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+            .pc {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .nav {
+                padding: 0 30px;
+                height: 60px;
+            }
+
+            .ham {
+                width: 40px;
+                height: 40px;
+                position: relative;
+                background-image: url(img/navHam.png);
+                background-size: cover;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 20;
+            }
+
+            .ham ul {
+                position: absolute;
+                top: 44px;
+                left: -2000px;
+                width: 100vw;
+                transition: 500ms;
+                background: #B0B63F;
+                z-index: 20;
+            }
+
+            .ham ul li {
+                margin: 0;
+            }
+
+            .ham:hover ul {
+                left: 70px;
+                top: 44px;
+                transform: translateX(-100%);
+            }
+
+            .info {
+                font-size: 14px;
+            }
+
+            .phoneStyle {
+                display: block;
+            }
+
+            .phoneBanner {
+                width: 100%;
+                height: 578px;
+                text-align: center;
+                font-size: 60px;
+                padding: 230px 0;
+            }
+
+            .phoneBanner a {
+                color: #ffffff;
+                text-decoration: none;
+
+            }
+            .bomb{
+                background-position: 30% 0%;
+            }
+            .doctor{
+                background-position: center;
+            }
+            
+
+            .gotop {
+                right: 30px;
+                bottom: 30px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar" class="nav d-flex justify-content-between">
+            <div class="navLogo lg-4 d-flex align-items-center justify-content-center">
+                <img src="img/logo.png" alt="">
+                <b class="logoName"><a href="/EscapeRoom/index.html">許多門</a></b>
+                <p class="gameName"><a href="/EscapeRoom/index.html">ESCAPE <br>STUDIOS </a></p>
+            </div>
+            <div class="nav-btn-group pc">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+            <div class="ham mobile">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="pc">
+        <div style="padding: 0;" class="container-fluid">
+            <div class="banner police">
+                <p><a href="https://doorsss.github.io/EscapeRoom/ES-theme-police.html">逆<span
+                            class="turn">轉</span>偵訊室</a> </p>
+            </div>
+            <div class="banner bomb">
+                <p><a href="/EscapeRoom/ES-theme-bomb.html">爆彈拆除班</a></p>
+            </div>
+            <div class="banner doctor">
+                <p><a href="/EscapeRoom/ES-theme-doctor.html">御醫</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="swiper-container phoneStyle">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide">
+                    <div class="col-12 phoneBanner police">
+                        <p><a href="https://doorsss.github.io/EscapeRoom/ES-theme-police.html">逆<span
+                                    class="turn">轉</span><br>偵訊室</a> </p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="col-12 phoneBanner bomb">
+                        <p><a href="/EscapeRoom/ES-theme-bomb.html">爆彈<br>拆除班</a></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="col-12 phoneBanner doctor">
+                        <p><a href="/EscapeRoom/ES-theme-doctor.html">御醫</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="information d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 d-sm-flex align-items-center justify-content-center d-none">
+                            <img src="img/logo.png" alt="">
+                            <b class="logoName">許多門</b>
+                            <p class="gameName">ESCAPE <br>STUDIOS </p>
+                        </div>
+                        <div class="col-lg-7 col-9">
+                            <b class="info">TEL 04-23020080/0971283166<br>
+                                台中市西區公益路155巷9號2樓（公益路勤美誠品斜對面） </b>
+                        </div>
+                        <div class="col-lg-1 col-3 d-flex align-items-center justify-content-center">
+                            <a href="https://www.facebook.com/TCDOORSSS"><img src="img/fb-logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">Copyright &copy; 許多門 Inc. All rights reserved</div>
+            <div class="gotop"><a href="#navbar"><img src="img/gotop.png" alt=""></a></div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

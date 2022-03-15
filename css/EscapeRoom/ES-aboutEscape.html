@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES-aboutEscape</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        /* 文字字型 */
+        * {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        body {
+
+            background-color: #23220C;
+        }
+
+        h2 {
+            color: #CDC9B7;
+            margin: 38px 0 0 0;
+        }
+
+        .banner {
+            width: 100%;
+            height: 900px;
+            background-image: url(img/aboutE-banner-C.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .hermetic_space {
+            position: relative;
+            color: #ffffff;
+            font-size: 36px;
+        }
+
+        .hermetic_space::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 16px;
+            border-color: transparent transparent transparent #ffffff;
+            position: absolute;
+            top: 15px;
+            left: 220px;
+        }
+
+        .escape_room {
+            position: relative;
+            left: 90px;
+            color: #ffffff;
+            font-size: 36px;
+        }
+
+        .escape_room::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 16px;
+            border-color: transparent transparent transparent #ffffff;
+            position: absolute;
+            top: 15px;
+            left: -30px;
+
+        }
+
+        .textinfo span {
+            color: #B0B63F;
+        }
+
+
+        .team {
+            width: 100%;
+            height: 900px;
+            background-image: url(img/aboutE-people.jpg);
+
+        }
+        .hide{
+            overflow: hidden;
+        }
+        .shadowtest{
+            text-shadow: 0.1em 0.1em 0.1em #23220C;
+        }
+        
+
+        @media(max-width:1420px) {
+            .nav {
+                padding: 0 150px;
+            }
+
+        }
+
+        @media(max-width:1205px) {
+            .nav {
+                padding: 0 50px;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+            .pc {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .nav {
+                padding: 0 30px;
+                height: 60px;
+            }
+
+            .ham {
+                width: 40px;
+                height: 40px;
+                position: relative;
+                background-image: url(img/navHam.png);
+                background-size: cover;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 20;
+            }
+            .title{
+                font-size: 48px;
+            }
+
+            .ham ul {
+                position: absolute;
+                top: 44px;
+                left: -2000px;
+                width: 100vw;
+                transition: 500ms;
+                background: #B0B63F;
+                z-index: 20;
+            }
+
+            .ham ul li {
+                margin: 0;
+            }
+
+            .ham:hover ul {
+                left: 70px;
+                top: 44px;
+                transform: translateX(-100%);
+            }
+
+            .info {
+                font-size: 14px;
+            }
+
+            .banner {
+                height: 578px;
+
+            }
+
+            .hermetic_space {
+                text-align: center;
+            }
+
+            .hermetic_space::after {
+                transform: rotate(90deg);
+                top: 70px;
+                left: 48%;
+            }
+
+            .escape_room {
+                text-align: center;
+                left: unset;
+            }
+
+            .escape_room::before {
+                transform: rotate(90deg);
+                top: -50px;
+                left: 48%;
+            }
+
+            .titleName {
+                font-size: 24px;
+            }
+
+            .circle {
+                margin: 50px 0;
+            }
+
+            .textinfo {
+                text-align: left;
+                line-height: 2;
+                margin-bottom: 50px;
+            }
+
+            .team {
+                background-image: unset;
+                height: unset;
+            }
+
+            .mt-75 {
+                margin-top: 50px;
+            }
+
+            .mb-150 {
+                margin-bottom: unset;
+            }
+
+            .mtb-200 {
+                margin: 75px 0;
+            }
+
+            .mt-200 {
+                margin-top: 75px;
+            }
+
+            .mb-200 {
+                margin-bottom: 75px;
+            }
+
+            .phone {
+                display: none;
+            }
+
+            .what {
+                margin-bottom: 50px;
+            }
+
+            .gotop {
+                right: 30px;
+                bottom: 30px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar" class="nav d-flex justify-content-between">
+            <div class="navLogo lg-4 d-flex align-items-center justify-content-center">
+                <img src="img/logo.png" alt="">
+                <b class="logoName"><a href="/EscapeRoom/index.html">許多門</a></b>
+                <p class="gameName"><a href="/EscapeRoom/index.html">ESCAPE <br>STUDIOS </a></p>
+            </div>
+            <div class="nav-btn-group pc">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+            <div class="ham mobile">
+                <ul>
+                    <li><a href="/EscapeRoom/ES-aboutEscape.html">關於密室逃脫</a></li>
+                    <li><a href="/EscapeRoom/ES-news.html">最新消息</a></li>
+                    <li><a href="/EscapeRoom/ES-aboutES.html">關於許多門</a></li>
+                    <li><a href="/EscapeRoom/ES-theme.html">主題介紹</a></li>
+                    <li><a href="/EscapeRoom/ES-fee.html">收費方式</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container-fluid banner d-flex align-items-center">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-12">
+                    <p class="title">何謂</p>
+                </div>
+                <div class="col-lg-12">
+                    <p class="title">密室逃脫</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mtb-200">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-12 col-lg-3 hermetic_space">密閉空間</div>
+                <div class="col-10 col-lg-6"><img class="circle" width="100%" src="img/circle.png" alt=""></div>
+                <div class="col-12 col-lg-3 escape_room">逃出房間</div>
+            </div>
+            <p class="textinfo mt-75">
+                密室逃脫一般泛指一種特定的遊戲類型，玩家的視角通常以第一視角為主（或以採用笑第三視角扮演主人公的模式），並且往往被限定在一個近乎完全封閉或者對自身存在威脅的環境內，需要發現和利用身邊的物品（工具），完成指定任務（通常是解開特定謎題的方式），最終達到逃離該區域的目的。
+            </p>
+        </div>
+    </section>
+
+    <section class="">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-12 d-flex justify-content-center"><img src="img/key.png" alt=""></div>
+                <p class="titleName mb-150 what">玩密室逃脫的優點？</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="">
+        <div class="container hide">
+            <div class="row">
+                <div class="col-lg-4 ">
+                    <div class="row justify-content-center phone">
+                        <img class="" src="img/eye.png" alt="">
+                        <h2 class="col-12 text-center">觀察力</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row justify-content-center">
+                        <img class="" src="img/brain.png" alt="">
+                        <h2 class="col-12 text-center">邏輯思考</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="row justify-content-center phone">
+                        <img class="" src="img/think.png" alt="">
+                        <h2 class="col-12 text-center">直覺聯想</h2>
+                    </div>
+                </div>
+            </div>
+            <p class="textinfo mt-75">
+                透過遊戲過程訓練邏輯思考、團隊合作以及找到自我定位，脫逃遊戲，是一個需要運用邏輯思考及團隊合作的一種實境益智遊戲，其中不只具備娛樂性，更能訓練邏輯思考與合作互助，在輕鬆的遊戲過程中提升自身能力、凝聚團隊向心力。透過遊戲，大家更容易展現真實的反應，可以讓玩家認識到自己的優點與缺點，幫助玩家在遊戲過程中找到自己在團隊中的定位、增加團隊情感與向心力。
+            </p>
+        </div>
+
+
+    </section>
+    <section class="mt-200 mb-150">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-12 d-flex justify-content-center"><img src="img/key.png" alt=""></div>
+                <p class="titleName">企業培訓</p>
+                <img style="margin: 50px 0;" class="mobile" width="100%" height="100%" src="img/aboutE-people.jpg"
+                    alt="">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid team d-flex justify-content-center ">
+            <div class="container d-flex justify-content-center align-items-center">
+                <p class="textinfo shadowtest">
+                    <span class="">在職進修與同樂會等場合中，用活潑的學習體驗構成深刻的印象，與平日的工作形成強力的連結</span><br>
+                    → 於限定時間內與其他成員一起往共同目標邁進，體驗團隊合作的意義。<br>
+                    → 與團隊成員間共享資訊，互通有無。<br>
+                    → 扮演好各自的角色，相互彌補不足的地方，充分養成團隊合作的精神。<br>
+                    → 藉由溝通的方式，了解團隊成員的大小事。<br>
+                    → 可以體會到達成目標是一件非常不容易的事。<br>
+                    → 與傳統八股的在職進修或同樂會不同，用獨特有趣的方式建立起團隊合作。</p><br>
+            </div>
+        </div>
+    </section>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="information d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 d-sm-flex align-items-center justify-content-center d-none">
+                            <img src="img/logo.png" alt="">
+                            <b class="logoName">許多門</b>
+                            <p class="gameName">ESCAPE <br>STUDIOS </p>
+                        </div>
+                        <div class="col-lg-7 col-9">
+                            <b class="info">TEL 04-23020080/0971283166<br>
+                                台中市西區公益路155巷9號2樓（公益路勤美誠品斜對面） </b>
+                        </div>
+                        <div class="col-lg-1 col-3 d-flex align-items-center justify-content-center">
+                            <a href="https://www.facebook.com/TCDOORSSS"><img src="img/fb-logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">Copyright &copy; 許多門 Inc. All rights reserved</div>
+            <div class="gotop"><a href="#navbar"><img src="img/gotop.png" alt=""></a></div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial';
+  color: white;
+}
+
+.page {
+  min-height: 90vh;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.circle-carousel {
+  position: relative;
+  padding-top: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.circle-carousel .slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.circle-carousel .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0;
+  background: rgba(255, 0, 0, 0.3);
+}
+.circle-carousel .slide.active {
+  z-index: 1;
+  opacity: 1;
+}
+.circle-carousel .pagination {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  pointer-events: none;
+  user-select: none;
+}
+.circle-carousel .pagination .dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  pointer-events: auto;
+  transition: .3s;
+  background: black;
+}
+.circle-carousel .pagination .dot:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  cursor: pointer;
+  background: white;
+  color: black;
+}
+.circle-carousel .pagination .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.circle-carousel .pagination .item.active .dot {
+  background: white;
+  color: black;
+}
+.circle-carousel .next,
+.circle-carousel .prev {
+  position: absolute;
+  bottom: 6%;
+  z-index: 1;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  transition: .3s;
+  user-select: none;
+}
+.circle-carousel .next:before,
+.circle-carousel .prev:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-color: transparent black;
+  transition: .3s;
+}
+.circle-carousel .next:hover,
+.circle-carousel .prev:hover {
+  cursor: pointer;
+  color: black;
+}
+.circle-carousel .next:hover:before,
+.circle-carousel .prev:hover:before {
+  border-color: transparent white;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+.circle-carousel .next {
+  right: 5%;
+}
+.circle-carousel .next:before {
+  left: 65%;
+  border-width: 30px 0 30px 70px;
+}
+.circle-carousel .prev {
+  left: 5%;
+}
+.circle-carousel .prev:before {
+  left: 35%;
+  border-width: 30px 70px 30px 0;
+}
+
+</style>
+<body>
+    
+<main class="page">
+    <div class="container">
+      <div class="circle-carousel" data-speed="2000" data-autoplay="2500">
+        <div class="slides">
+          <div class="slide">
+            <h2>Slide 1</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 2</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 3</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 4</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 5</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 6</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 7</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 8</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 9</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 10</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 11</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 12</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 13</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 14</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 15</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 16</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 17</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 18</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 19</h2>
+          </div>
+          <div class="slide">
+            <h2>Slide 20</h2>
+          </div>
+        </div>
+        <div class="pagination">
+          <div class="item">
+            <div class="dot"><span>1</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>2</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>3</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>4</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>5</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>6</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>7</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>8</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>9</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>10</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>11</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>12</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>13</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>14</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>15</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>16</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>17</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>18</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>19</span></div>
+          </div>
+          <div class="item">
+            <div class="dot"><span>20</span></div>
+          </div>
+        </div>
+        <div class="next">Next</div>
+        <div class="prev">Prev</div>
+      </div>
+    </div>
+  </main>
+    <script src="./js/Test.js"></script>
+</body>
+</html>

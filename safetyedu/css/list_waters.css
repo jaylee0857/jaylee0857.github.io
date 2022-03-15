@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/*css命名
+ 顯示屬性>盒模型>背景>行高>文本屬性>其他
+(1)頁面結構
+
+- 容器: container
+- 頁頭：header
+- 內容：content/container
+- 頁面主體：main
+- 頁尾：footer
+- 導航：nav
+- 側欄：sidebar
+- 欄目：column
+- 頁面外圍控制整體布局寬度：wrapper
+
+(2)導航
+
+- 導航：nav
+- 主導航：mainNav
+- 子導航：subNav
+- 頂導航：topNav
+- 邊導航：sidebar
+- 左導航：leftSidebar
+- 右導航：rightSidebar
+- 菜單：menu
+- 子菜單：subMenu
+- 標題: title
+- 摘要: summary
+
+(3)功能
+
+- 標誌：logo
+- 廣告：banner
+- 登陸：login
+- 登錄條：loginBar
+- 註冊：registered
+- 搜索：search
+- 功能區：shop
+- 標題：title
+- 加入：joinUs
+- 狀態：status
+- 按鈕：btn
+- 滾動：scroll
+- 標簽頁：tab
+- 文章列表：list
+- 提示信息：msg
+- 當前的: current
+- 小技巧：tips
+- 圖標: icon
+- 註釋：note
+- 指南：guild
+- 服務：service
+- 熱點：hot
+- 新聞：news
+- 下載：download
+- 投票：vote
+- 合作夥伴：partner
+- 友情鏈接：link
+- 版權：copyright
+
+ BUGFIX: xxxx by name 2012-04-13 18:32 用於標註修改、待辦等信息*/
+main .content .container .headerbox .backbox a .backimg {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/list/backimg-B.png);
+  background-size: contain;
+}
+
+main .content .container .headerbox .headertext {
+  border: 2px solid #17A7FF;
+}
+
+main .content .container .trainbox .swiper-wrapper .swiper-slide button .circle .circleimg {
+  border: 11px solid #17A7FF;
+}
+
+@media (max-width: 1366px) {
+  main .content .container .trainbox .swiper-wrapper .swiper-slide button .circle .circleimg {
+    border: 7px solid #17A7FF;
+  }
+}

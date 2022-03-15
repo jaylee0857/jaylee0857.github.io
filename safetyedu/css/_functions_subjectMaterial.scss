@@ -1,0 +1,6 @@
+// 面積 @include area();
+
+@mixin area ($width,$height){
+    width: $width;
+    height: $height;
+}

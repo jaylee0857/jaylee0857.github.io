@@ -1,0 +1,258 @@
+@import "./variable";
+@import "./functions";
+@import "./functions_subjectMaterial";
+
+#paginationNav {
+    ul {
+        li:nth-of-type(1) {
+            box-shadow: 0 0 0;
+            z-index: 0;
+        }
+
+        li:nth-of-type(2) {
+            box-shadow: 1px -2px 2px 0px rgba(0, 0, 0, 0.3);
+            ;
+            z-index: 3;
+        }
+    }
+
+    .decoration {
+        background-color: #17A7FF;
+    }
+
+    .phoneStyle {
+        .btn {
+            background-color: #17A7FF;
+
+            span {
+                &::before {
+                    position: absolute;
+                    left: -30px;
+                    top: 6px;
+                    content: '';
+                    background-image: url(../img/subjectMaterial/Lifebuoy.png);
+                    width: 24px;
+                    height: 24px;
+                    background-size: cover;
+
+                    @media (max-width:$pc) {
+                        top: 4px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    #collapseExample {
+        .card {
+            a {
+                &:nth-of-type(1) {
+                    background-color: #4AB879;
+
+                    span {
+                        &::before {
+                            position: absolute;
+                            left: -43px;
+                            top: 6px;
+                            content: '';
+                            background-image: url(../img/subjectMaterial/bicycle.png);
+                            width: 38px;
+                            height: 25px;
+                            background-size: cover;
+
+                            @media (max-width:$pc) {
+                                width: 25px;
+                                height: 16px;
+                                left: -35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#filterNav {
+    .container {
+        .row {
+            .sortlabelbox {
+                .sortlabel{
+                    background-color:#17A7FF;
+                }
+            }
+            .filterWrapper {
+              
+                .sortMenu-box {
+                    @media (max-width:$pc) {
+                        border: 1px solid #17A7FF;
+                    }
+
+                    .d-webkit-box {
+                        .border-R {
+                            border-right: 1px solid #17A7FF;
+                        }
+                    }
+
+                }
+
+                ul {
+                    li.active {
+                        border: 1px solid #17A7FF;
+                        outline: 0;
+                        background-color: #17A7FF;
+                    }
+
+                    .mostBtn {
+                        border: 1px solid #17A7FF;
+                    }
+
+                    .sortMenu {
+                        border: 1px solid #17A7FF;
+                    }
+
+                    .sortMenu.show {
+                        border-color: #17A7FF;
+                    }
+                }
+
+                .phoneStyle {
+                    .btn {
+                        border: 1px solid #17A7FF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#filterContent {
+    .container {
+        .row {
+            .filter-container {
+                .filter-wrapper {
+                    .filter-slide {
+                        .btn {
+                            border: 2px solid #17A7FF;
+
+                            .btnIconArea {
+                                .note {
+                                    background-color: #17A7FF;
+                                }
+                            }
+
+                            .btnMsgArea {
+                                background-color: #17A7FF;
+                            }
+
+                            .mask {
+                                background-color: #17A7FF;
+                                border: 2px solid #17A7FF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .filterArrow {
+            .filter-button-prev {
+                &::after {
+                    content: "";
+                    border-color: transparent #17A7FF transparent transparent;
+                }
+            }
+
+            .filter-button-next {
+                &::after {
+                    content: "";
+                    border-color: transparent transparent transparent #17A7FF;
+                }
+            }
+        }
+    }
+}
+
+#filterModal {
+    .modal {
+        .modal-dialog {
+            .modal-content {
+                .headerControl {
+                    background-color: #17A7FF;
+                }
+
+                .footerControl {
+                    .download {
+                        .downloadBtnGroup {
+                            li {
+                                button {
+                                    background-color: #17A7FF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#downloadModal {
+    .modal {
+        .modal-dialog {
+            .modal-content {
+                .headerControl {
+                    background-color: #17A7FF;
+                }
+
+                .bodyControl {
+                    ul {
+                        li {
+                            .rightText {
+                                a {
+                                    border: 1px solid #17A7FF;
+
+                                    &::before {
+                                        background-image: url(../img/subjectMaterial/download_B.png);
+                                    }
+
+                                    &:hover {
+                                        background-color: #17A7FF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .Linkbody {
+                    ul {
+                        li {
+                            .rightText {
+                                a {
+                                    &::before {
+                                        background-image: url(../img/subjectMaterial/Link_B.png);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .footerControl {
+                    .downloadAll:nth-of-type(1) {
+                        border: 1px solid #17A7FF;
+                        color: #17A7FF;
+
+                        &:hover {
+                            background-color: #17A7FF;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}

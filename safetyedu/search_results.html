@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>安全教育課程教材網</title>
+    <!-- 全站用 start -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <!-- font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <!-- 全站用 end -->
+
+    <!-- 部分分頁選用  start-->
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- 部分分頁選用  end-->
+
+    <!-- layout -->
+    <link rel="stylesheet" href="./css/template.min.css">
+    <!-- page css  -->
+    <link rel="stylesheet" href="./css/index.min.css">
+    <link rel="stylesheet" href="./css/search_results.min.css">
+
+</head>
+
+
+<body class="loading">
+
+
+    <nav id="nav" style="filter: blur(10px);">
+        <div class="container">
+            <div class="row">
+                <div class="col-1 col-xl-5 d-flex">
+                    <div class="navIcon">
+                        <a href="./index.html">
+                            <img src="./img/index/logo-cir.svg" alt="圓形的logo">
+                        </a>
+                    </div>
+                    <div class="navText">
+                        <a href="./index.html">
+                            <img width="100%" src="./img/index/logo-text.svg" alt="文字logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-10 navTextPhoneStyle">
+                    <!-- 變動 增加a標籤 起點 -->
+                    <a href="/">
+                        <img src="./img/index/logo-text-phone.svg" alt="手機板的text圖">
+                    </a>
+                    <!-- 變動 增加a標籤 終點 -->
+                </div>
+                <div class="col-1 col-xl-7 menu">
+                    <div id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- <div class="maskPhoneWhite"></div> -->
+                    <div class="maskPhoneBlack"></div>
+                    <ul>
+                        <li class="subNav">
+                            <a href="./index.html">首頁</a>
+                        </li>
+                        <li class="subNav">
+                            <a href="./subjectMaterial_traffic.html">主題教材</a>
+                        </li>
+                        <li class="subNav">
+                            <a href="./children.html">幼兒專區</a>
+                        </li>
+                        <li class="subNav">
+                            <a href="./news.html">最新消息</a>
+                        </li>
+                        <li class="subNav">
+                            <a href="./QA.html">Q&A</a>
+                        </li>
+                        <li class="searchStyle">
+                            <form class="search">
+                                <input type="checkbox" id="toggleSearch" class="search__toggle" hidden>
+                                <div class="search__field">
+                                    <label for="toggleSearch" class="search__label">
+                                        <span class="search__close"></span>
+                                    </label>
+                                    <input type="text" class="search__input" placeholder="搜尋" />
+                                    <label for="toggleSearch" class="search__label">
+                                        <div class="search__button search__button--wrap">
+                                            <div class=" search__button--toggle">
+                                                <i class="fas fa-search"></i>
+                                            </div>
+                                        </div>
+                                        <button class="search__button search__button--submit">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </label>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 內頁起點 -->
+
+
+    <main style="filter: blur(10px);">
+
+        <div class="center">
+            <section id="themeHyperlink">
+                <div class="container">
+                    <ul>
+                        <li>
+                            <a href="./subjectMaterial_traffic.html" class="traffic">
+                                <img src="./img/index/green.gif" alt="">
+                                <p>交通安全</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./subjectMaterial_waters.html" class="waters">
+                                <img src="./img/index/blue.svg" alt="blue">
+                                <p>水域安全</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./subjectMaterial_comeDown.html" class="down">
+                                <img src="./img/index/pink.svg" alt="pink">
+                                <p>防墜安全</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./subjectMaterial_fire.html" class="disaster">
+                                <img src="./img/index/yellow.gif" alt="yellow">
+                                <p>防災安全</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./subjectMaterial_medicine.html" class="medicine">
+                                <img src="./img/index/orange.svg" alt="orange">
+                                <p>食藥安全</p>
+                            </a>
+                        </li>
+                        <li class="chidren_horse">
+                            <a href="#" class="rainbowPony">
+
+                                <img src="./img/index/rainbowPony.gif" alt="rainbowPony">
+
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </section>
+            <section id="parallaxArea">
+                <div class="container">
+                    <ul id="scene" data-friction-x="0.03" data-friction-y="0.05">
+                        <li class="layer" id="layer-1">
+                            <div class="img" id="img-1"></div>
+                        </li>
+                        <li class="layer" id="layer-2">
+                            <div class="img" id="img-2"></div>
+                        </li>
+                        <li class="layer" id="layer-3">
+                            <div class="img" id="img-3"></div>
+                        </li>
+                        <li class="layer" id="layer-4">
+                            <div class="img" id="img-4"></div>
+                        </li>
+                        <li class="layer" id="layer-5">
+                            <div class="img" id="img-5"></div>
+                        </li>
+                        <li class="layer" id="layer-6" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="img" id="img-6"></div>
+                        </li>
+                        <li class="layer" id="layer-7" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="img" id="img-7">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+
+    <!-- 內頁結束 -->
+    <!-- goTop start-->
+    <a id="goTop" href="#top">
+        <div class="triangle"></div>
+    </a>
+    <!-- goTop end-->
+
+
+    <footer style="filter: blur(10px);">
+        <div class="container">
+            <div class="row rowbox">
+                <div class="icon col-1 col-md-1 col-xl-1">
+
+                    <img src="./img/index/logo-cir.svg" alt="">
+
+                </div>
+                <div class="infoContainer col-12 col-md-7 col-xl-6">
+                    <div class="infoWrapper">
+                        <div class="e-mail">
+                            <span>聯絡我們</span>
+                            <div class="mailInfoWrapper">
+                                <div class="mailIcon">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                                <span class="phoneStyleNone">
+                                    <i class="far fa-envelope"></i>
+                                </span>
+                                <span> safetyedu@gm.ntcu.edu.tw</span>
+                            </div>
+                        </div>
+                        <div class="modalBottom">
+                            <!--bootstrap Button trigger modal-->
+                            <!--每新增一組modal, button對應的為 data-target="modal的ID" -->
+
+
+                            <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#aboutUs">
+                                關於我們
+                            </button> -->
+
+
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#declare">
+                                網站資料開放宣告
+                            </button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#policy">
+                                隱私與資訊安全政策
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="status col-12 col-md-4 col-xl-5">
+                    <div class="status_box">
+                        <div class="upDate">
+                            <span>更新日期：</span>
+                            <span>2019/10/10</span>
+                        </div>
+                        <div class="announcement">
+                            <span>瀏覽人次：</span>
+                            <span id="value">456,789</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            安全教育課程教材網©2020 copyrights.<br class="d-block d-sm-none">All Rights Reserved
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <div class="cover"></div>
+
+
+
+    <section id="search_results">
+        <div class="modal fade" id="search">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="headerControl modal-header">
+                        <div class="headerWrapper">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">站內搜尋</h5>
+                            <img class="headerIcon" src="./img/index/modal-icon.png" alt="">
+                        </div>
+                        <a class="close" href="javascript:history.back(-1)">
+                            <span>&times;</span>
+                        </a>
+                    </div>
+                    <div class="bodyControl modal-body">
+                        <div class="part-body">
+                            <div class="searchbox">
+                                <div>
+                                    <form>
+                                        <input class="inputbox" type="search" aria-label="Search through site content">
+                                        <button>
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </form>
+                                    <span class="smtitle">共50項結果，目前僅顯示1-10筆搜尋結果。</span>
+                                    <div class="results">
+                                        <div class="timeandbrendcrumbs">
+                                            <span>2020-08-08</span>
+                                            <div aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                                    <li class="breadcrumb-item"><a href="#">主題教材</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page"><a
+                                                            href="#">交通安全</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <a href="">
+                                            <div class="resultstitle">我是搜尋標題一號我是搜尋標題一號</div>
+                                            <div class="resultstext">
+                                                我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字
+                                                形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="results">
+                                        <div class="timeandbrendcrumbs">
+                                            <span>2020-08-08</span>
+                                            <div aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                                    <li class="breadcrumb-item"><a href="#">主題教材</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page"><a
+                                                            href="#">交通安全</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <a href="">
+                                            <div class="resultstitle">我是搜尋標題一號我是搜尋標題一號</div>
+                                            <div class="resultstext">
+                                                我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="results">
+                                        <div class="timeandbrendcrumbs">
+                                            <span>2020-08-08</span>
+                                            <div aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                                    <li class="breadcrumb-item"><a href="#">主題教材</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page"><a
+                                                            href="#">交通安全</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <a href="">
+                                            <div class="resultstitle">我是搜尋標題一號我是搜尋標題一號</div>
+                                            <div class="resultstext">
+                                                我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="results">
+                                        <div class="timeandbrendcrumbs">
+                                            <span>2020-08-08</span>
+                                            <div aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                                    <li class="breadcrumb-item"><a href="#">主題教材</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page"><a
+                                                            href="#">交通安全</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <a href="">
+                                            <div class="resultstitle">我是搜尋標題一號我是搜尋標題一號</div>
+                                            <div class="resultstext">
+                                                我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="results">
+                                        <div class="timeandbrendcrumbs">
+                                            <span>2020-08-08</span>
+                                            <div aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                                    <li class="breadcrumb-item"><a href="#">主題教材</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page"><a
+                                                            href="#">交通安全</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <a href="">
+                                            <div class="resultstitle">我是搜尋標題一號我是搜尋標題一號</div>
+                                            <div class="resultstext">
+                                                我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="results">
+                                        <div class="timeandbrendcrumbs">
+                                            <span>2020-08-08</span>
+                                            <div aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                                    <li class="breadcrumb-item"><a href="#">主題教材</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page"><a
+                                                            href="#">交通安全</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <a href="">
+                                            <div class="resultstitle">我是搜尋標題一號我是搜尋標題一號</div>
+                                            <div class="resultstext">
+                                                我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="results">
+                                        <div class="timeandbrendcrumbs">
+                                            <span>2020-08-08</span>
+                                            <div aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                                    <li class="breadcrumb-item"><a href="#">主題教材</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page"><a
+                                                            href="#">交通安全</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <a href="">
+                                            <div class="resultstitle">我是搜尋標題一號我是搜尋標題一號</div>
+                                            <div class="resultstext">
+                                                我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="results">
+                                        <div class="timeandbrendcrumbs">
+                                            <span>2020-08-08</span>
+                                            <div aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                                    <li class="breadcrumb-item"><a href="#">主題教材</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page"><a
+                                                            href="#">交通安全</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <a href="">
+                                            <div class="resultstitle">我是搜尋標題一號我是搜尋標題一號</div>
+                                            <div class="resultstext">
+                                                我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="results">
+                                        <div class="timeandbrendcrumbs">
+                                            <span>2020-08-08</span>
+                                            <div aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                                    <li class="breadcrumb-item"><a href="#">主題教材</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page"><a
+                                                            href="#">交通安全</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <a href="">
+                                            <div class="resultstitle">我是搜尋標題一號我是搜尋標題一號</div>
+                                            <div class="resultstext">
+                                                我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="results">
+                                        <div class="timeandbrendcrumbs">
+                                            <span>2020-08-08</span>
+                                            <div aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                                    <li class="breadcrumb-item"><a href="#">主題教材</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page"><a
+                                                            href="#">交通安全</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <a href="">
+                                            <div class="resultstitle">我是搜尋標題一號我是搜尋標題一號</div>
+                                            <div class="resultstext">
+                                                我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字，我是詳細內容僅顯示80個全形字
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="filterBelt">
+                                    <div class="prev">
+                                        <div class="triangle"></div>
+                                    </div>
+                                    <!-- Add Pagination -->
+                                    <div class="filter-pagination">
+                                        <a href="" class="filter-pagination-bullet ">1</a>
+                                        <a href="" class="filter-pagination-bullet">2</a>
+                                        <a href="" class="filter-pagination-bullet">3</a>
+                                        <a href="" class="filter-pagination-bullet active">4</a>
+                                        <a href="" class="filter-pagination-bullet">5</a>
+                                        <a href="" class="filter-pagination-bullet">6</a>
+                                        <a href="" class="filter-pagination-bullet">7</a>
+                                        <a href="" class="filter-pagination-bullet">8</a>
+                                        <a href="" class="filter-pagination-bullet">9</a>
+                                        <a href="" class="filter-pagination-bullet">10</a>
+                                        <a href="" class="filter-pagination-bullet">11</a>
+
+                                    </div>
+                                    <div class="next">
+                                        <div class="triangle"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- bootstrap Button Modal -->
+    <section id="templateModal">
+        <!-- <div class="modal fade" id="aboutUs" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="headerControl modal-header">
+                        <div class="headerWrapper">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">關於我們</h5>
+                            <img class="headerIcon" src="./img/index/modal-icon.png" alt="">
+                        </div>
+                        <button class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="bodyControl modal-body">
+                        <div class="part-body">
+
+                            <div class="text_bg"></div>
+                            <p class="part">
+                                國教署(國民及學前教育署)<br>
+                                <span class="specialSize">成立日期民國102年1月1日</span>
+
+                                <br>
+                                <br>
+                                教育部為配合中央政府組織改造，特整併中教司、技職司、國教司、訓委會、特教小組、環保教育小組及中部辦公室等單位之相關業務，設置三級機關「教育部國民及學前教育署」分設四組四室，專責掌理高級中等以下學校教育政策、制度之規劃、執行及督導，並協調及協助地方政府辦理國民及學前教育共同性事項。
+                                <br>
+                                <br>
+                                業務職掌
+                                <br>
+                                ◆ 高級中等以下學校與學前教育政策、制度之規劃、執行與督導，及相關法規之研修。<br>
+                                ◆ 高級中學與職業學校一般教育事項之規劃、執行及督導。<br>
+                                ◆ 國民中學與國民小學一般教育事項之規劃、執行及督導。<br>
+                                ◆ 學前教育一般教育事項之規劃、執行及督導。<br>
+                                ◆ 高級中等以下學校與學前教育階段特殊教育事項之規劃、執行及督導<br>
+                                <br>
+                                教育部為配合中央政府組織改造，特整併中教司、技職司、國教司、訓委會、特教小組、環保教育小組及中部辦公室等單位之相關業務，設置三級機關「教育部國民及學前教育署」分設四組四室，專責掌理高級中等以下學校教育政策、制度之規劃、執行及督導，並協調及協助地方政府辦理國民及學前教育共同性事項。
+                                <br>
+                                教育部為配合中央政府組織改造，特整併中教司、技職司、國教司、訓委會、特教小組、環保教育小組及中部辦公室等單位之相關業務，設置三級機關「教育部國民及學前教育署」分設四組四室，專責掌理高級中等以下學校教育政策、制度之規劃、執行及督導，並協調及協助地方政府辦理國民及學前教育共同性事項。
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="modal fade" id="declare" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="headerControl modal-header">
+                        <div class="headerWrapper">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">網站資料開放宣告</h5>
+                            <img class="headerIcon" src="./img/index/modal-icon.png" alt="">
+                        </div>
+                        <button class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="bodyControl modal-body">
+                        <div class="part-body">
+                            <div class="text_bg"></div>
+                            <p class="part">
+                                <!-- 若部分為字需要粗體字 , class為 boldText -->
+                                <!-- 若有需分段文字  class為 part -->
+                                <span class="boldText">
+                                    政府網站資料開放宣告<br>
+                                    非常歡迎您光臨「教育部國民及學前教育署」(以下簡稱本網站)，為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：
+                                    <br>
+                                </span>
+                                <br>
+                                一、授權方式及範圍
+                                為利各界廣為利用網站資料，教育部國民及學前教育署上刊載之所有資料與素材，其得受著作權保護之範圍，以無償、非專屬，得再授權之方式提供公眾使用，使用者得不限時間及地域，重製、改作、編輯、公開傳輸或為其他方式之利用，開發各種產品或服務（簡稱加值衍生物），此一授權行為不會嗣後撤回，使用者亦無須取得本機關之書面或其他方式授權；然使用時，應註明出處。
+                                <br>
+                                <br>
+                                二、相關事項說明
+                                本授權範圍僅及於著作權保護之範圍，不及於其他智慧財產權利，包括但不限於專利、商標、及機關標誌之提供。
+                                當事人自行公開或依法令公開之個人資料是否得被蒐集、處理及利用，使用者須自行依照個人資料保護法之相關規定，規劃並執行法律要求之相應措施。
+                                部分的影音、圖像、樂譜、專人專案撰文或其他著作，經機關特別聲明須經同意方可使用者。
+                                <br>
+
+                                <br>
+                                三、應注意不得侵害第三人之著作人格權(包括姓名表示權及禁止不當變更權)。
+                                <br>
+
+                                <br>
+                                四、使用本授權提供之資料與素材，不得惡意變更其相關資訊，若利用後所展示之資訊與原資料與素材不符，使用者須自負民事、刑事上之法律責任。
+
+                                <br>
+                                五、本網站之授權，並不授予使用者代表本機關建議、認可或贊同其加值衍生物之地位。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="policy" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="headerControl modal-header">
+                        <div class="headerWrapper">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">隱私與資訊安全政策</h5>
+                            <img class="headerIcon" src="./img/index/modal-icon.png" alt="">
+                        </div>
+                        <button class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="bodyControl modal-body">
+                        <div class="part-body">
+                            <div class="text_bg"></div>
+                            <!-- 若部分為字需要粗體字 , class為 boldText -->
+                            <!-- 若有需分段文字  class為 part -->
+                            <p class="part">
+                                隱私權宣告<br>
+                                非常歡迎您光臨「教育部國民及學前教育署」(以下簡稱本網站)，為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：<br>
+                                <br>
+                                <span class="boldText part">
+                                    一、隱私權保護政策的適用範圍
+                                    隱私權保護政策內容，包括本網站如何處理在您使用網站服務時收集到的個人識別資料。隱私權保護政策不適用於本網站以外的相關連結網站，也不適用於非本網站所委託或參與管理的人員。
+                                    <br><br>
+                                    二、資料的蒐集與使用方式
+                                    為了在本網站上提供您最佳的互動性服務，可能會請您提供相關個人的資料，其範圍如下：
+                                    <br><br>
+                                    本網站在您使用服務信箱、問卷調查等互動性功能時，會保留您所提供的姓名、電子郵件地址、聯絡方式及使用時間等 。
+                                    於一般瀏覽時，伺服器會自行記錄相關行徑，包括您使用連線設備的IP位址、使用時間、使用的瀏覽器、瀏覽及點選資料記錄等，做為我們增進網站服務的參考依據，此記錄為內部應用，決不對外公布。
+                                    為提供精確的服務，我們會將收集的問卷調查內容進行統計與分析，分析結果之統計數據或說明文字呈現，除供內部研究外，我們會視需要公佈統計數據及說明文字，但不涉及特定個人之資料。
+                                    除非取得您的同意或其他法令之特別規定，本網站絕不會將您的個人資料揭露予第三人或使用於蒐集目的以外之其他用途。
+                                    <br><br>
+                                    三、資料之保護
+                                    本網站主機均設有防火牆、防毒系統等相關的各項資訊安全設備及必要的安全防護措施，加以保護網站及您的個人資料採用嚴格的保護措施，只由經過授權的人員才能接觸您的個人資料，相關處理人員皆簽有保密合約，如有違反保密義務者，將會受到相關的法律處分。
+                                    如因業務需要有必要委託本網站相關單位提供服務時，本網站亦會嚴格要求其遵守保密義務，並且採取必要檢查程序以確定其將確實遵守。
+                                    <br><br>
+                                    四、網站對外的相關連結
+                                    本網站的網頁提供其他網站的網路連結，您也可經由本網站所提供的連結，點選進入其他網站。但該連結網站不適用本網站的隱私權保護政策，您必須參考該連結網站中的隱私權保護政策。
+                                    <br><br>
+                                    五、Cookie之使用
+                                    為了提供您最佳的服務，本網站會在您的電腦中放置並取用我們的Cookie，若您不願接受Cookie的寫入，您可在您使用的瀏覽器功能項中設定隱私權等級為高，即可拒絕Cookie的寫入，但可能會導至網站某些功能無法正常執行。
+                                    <br><br>
+                                    六、隱私權保護政策之修正
+                                    本網站隱私權保護政策將因應需求隨時進行修正，修正後的條款將刊登於網站上。
+                                    <br>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 全站用 start -->
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!-- 全站用 end -->
+
+    <!-- 部分分頁選用 start-->
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- parallax -->
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/parallax/2.1.3/jquery.parallax.min.js"></script>
+    <!-- 部分分頁選用 end-->
+
+    <!-- //layout -->
+    <script src="./js/template.js"></script>
+    <!-- page -->
+    <script src="./js/index.js"></script>
+    <script src="./js/search_results.js"></script>
+</body>
+
+</html>

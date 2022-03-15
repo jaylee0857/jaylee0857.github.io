@@ -1,0 +1,152 @@
+@import "./variable";
+@import "./functions";
+@import "./functions_index";
+
+.cover {
+  background-color: rgba($color: #000000, $alpha: 0.85);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.blur {
+
+  filter: blur(10px);
+
+}
+
+#templateModal {
+  *{transition: 0.8s;}
+
+  #search {
+    opacity: 1;
+    display: block;
+
+
+    .modal-dialog {
+      .modal-content {
+        .bodyControl {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 324px;
+          overflow: hidden;
+          .part-body {
+            width: 100%;
+            .title {
+              width: 100%;
+              max-width: 790px;
+              display: flex;
+              justify-content: center;
+              margin: 0 auto;
+
+
+              .titleimg {
+                position: relative;
+                max-width: 490px;
+                width: 100%;
+                margin: 0 25px;
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  left: 0;
+                  transform: translateX(-100%);
+                  top: -25px;
+                  width: 79px;
+                  height: 55px;
+                  display: block;
+                  background-image: url(../img/children/dragon.gif);
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  filter: drop-shadow(0 0 2px rgba(#000000, 0.15));
+                }
+
+                &::after {
+                  content: '';
+                  position: absolute;
+                  right: -10px;
+                  transform: translateX(100%);
+                  bottom: -25px;
+                  width: 90px;
+                  height: 73px;
+                  display: block;
+                  background-image: url(../img/children/unicorn.gif);
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  filter: drop-shadow(0 0 2px rgba(#000000, 0.15));
+                }
+
+              }
+            }
+
+            .searchbox {
+              position: relative;
+              margin-top: 40px;
+
+              input.placeholder {
+                text-align: center;
+              }
+
+              ::-webkit-input-placeholder {
+                text-align: center;
+              }
+
+              :-moz-placeholder {
+                /* Firefox 18- */
+                text-align: center;
+              }
+
+              ::-moz-placeholder {
+                /* Firefox 19+ */
+                text-align: center;
+              }
+
+              :-ms-input-placeholder {
+                text-align: center;
+              }
+
+              .inputbox {
+                width: 100%;
+                height: 40px;
+                border-radius: 40px;
+                border: none;
+                box-shadow: 0 0 3px 0 rgba(#424141, 0.3);
+                text-align: left;
+                padding: 0 20px;
+                font-size: 16px;
+                font-family: '微軟正黑體';
+                letter-spacing: 0.05em;
+
+                &:focus {
+                  outline: none;
+                }
+              }
+
+              button {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 30px;
+                background-color: white;
+                border: none;
+
+                i {
+                  color: #4D4D4D;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+
+  }
+}

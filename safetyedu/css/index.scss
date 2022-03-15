@@ -1,0 +1,933 @@
+@import "./variable";
+@import "./functions";
+@import "./functions_index";
+
+#nav {
+  .menu {
+    li {
+      &:nth-of-type(1) {
+        a {
+          border-bottom: 4px solid #FFCD00;
+
+          @media (max-width:$pc) {
+            border: 0;
+            color: #0588E8;
+            position: relative;
+
+            &::before {
+              position: absolute;
+              top: 50%;
+              left: -15px;
+              content: '';
+              transform: translateY(-50%);
+              border-style: solid;
+              border-width: 5px 0 5px 5px;
+              border-color: transparent transparent transparent #0589e8;
+            }
+          }
+
+
+          @media (max-width:$phone) {
+            &::before {
+              left: -18px;
+              border-width: 10px 0 10px 10px;
+            }
+          }
+
+          @media (max-width:$phone-sm) {
+            padding-left: 30px;
+
+            &::before {
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  position: relative;
+  z-index: 0;
+  background-color: #A9ECFC;
+  overflow: hidden;
+  padding-top: 0;
+
+  // @media (max-width:$pc){
+  //   display: block;
+  // }
+
+  .center {
+    height: 100%;
+    width: 100%;
+    @media (max-width:$pc) and (min-width:$phone) {
+      position: relative;
+    }
+    @media (max-width:$phone_sm) {
+      padding: 30px 0px;
+    }
+  }
+
+  #themeHyperlink {
+    position: relative;
+    z-index: 9999999999;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @media (max-width:$pc) {
+      align-items: flex-start;
+      padding-top: 38px;
+    }
+
+    @media (max-width:$phone-sm) {
+      padding-top: 36px;
+    }
+
+    .container {
+      @media (max-width:$pc) {
+        max-width: 342px;
+        padding: 0;
+      }
+
+      // @media (max-width:$phone) {
+      //   max-width: 342px;
+      //   padding: 0;
+      // }
+
+      @media (max-width:$phone_sm) {
+        max-width: 268px;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        position: relative;
+
+        @media (max-width:$pc) {
+          max-height: 600px;
+          align-content: space-between;
+          flex-direction: column;
+
+        }
+
+        @media (max-width:$phone-sm) {
+          margin-bottom: 18px;
+        }
+
+        li {
+          width: 240px;
+          height: 240px;
+          position: relative;
+          border-radius: 50%;
+          box-shadow: 2px 2px 5px rgba($color: #183368, $alpha: 0.5);
+          overflow: hidden;
+
+          @media (max-width:$pc_big) {
+            width: 150px;
+            height: 150px;
+          }
+
+          @media (max-width:$pc) {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 50px;
+          }
+
+          // @media (max-width:$phone) {
+          //   width: 150px;
+          //   height: 150px;
+          //   margin-bottom: 50px;
+          // }
+
+          @media (max-width:$phone-sm) {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 43px;
+          }
+
+          a {
+            width: 100%;
+            height: 100%;
+            display: block;
+
+            img {
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+
+            p {
+              position: absolute;
+              bottom: 46px;
+              width: 100%;
+              font-size: 30px;
+              font-weight: bold;
+              color: #fff;
+              text-align: center;
+              letter-spacing: 0.1em;
+              filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+
+              @media (max-width:$pc_big) {
+                font-size: 19px;
+                bottom: 28px;
+              }
+
+              @media (max-width:$pc) {
+                font-size: 18px;
+                bottom: 28px;
+              }
+
+              // @media (max-width:$phone) {
+              //   font-size: 18px;
+              //   bottom: 28px;
+              // }
+
+              @media (max-width:$phone-sm) {
+                font-size: 15px;
+                bottom: 23px;
+              }
+            }
+          }
+
+          &:nth-of-type(1) {
+            background-color: #4AB879;
+            margin-left: 197px;
+
+            @media (max-width:$pc_big) {
+              margin-left: 300px;
+              margin-bottom: 6vh;
+            }
+
+            @media (max-width:$pc) {
+              margin-left: 0px;
+              margin-bottom: 50px;
+              order: 1;
+            }
+
+
+            // @media (max-width:$phone) {
+            //   margin-left: 0px;
+            //   margin-bottom: 50px;
+            //   order: 1;
+            // }
+
+            @media (max-width:$phone-sm) {
+              margin-bottom: 40px;
+            }
+
+            img {
+              top: 42px;
+              width: 115px;
+
+              @media (max-width:$pc_big) {
+                width: 67px;
+                top: 32px;
+              }
+
+              @media (max-width:$pc) {
+                width: 67px;
+                top: 32px;
+              }
+
+              // @media (max-width:$phone) {
+              //   width: 67px;
+              //   top: 32px;
+              // }
+
+              @media (max-width:$phone-sm) {
+                width: 54px;
+                top: 23px;
+              }
+            }
+          }
+
+          &:nth-of-type(2) {
+            background-color: #0A6ECA;
+            margin-left: 130px;
+            margin-right: 238px;
+
+            @media (max-width:$pc_big) {
+              margin-left: 100px;
+              margin-right: 432px;
+            }
+
+            @media (max-width:$pc) {
+              margin-left: 0px;
+              margin-right: 0px;
+              order: 4;
+              margin-top: 105px;
+            }
+
+            // @media (max-width:$phone) {
+            //   margin-left: 0px;
+            //   margin-right: 0px;
+            //   order: 4;
+            //   margin-top: 105px;
+            // }
+
+            @media (max-width:$phone-sm) {
+              margin-top: 90px;
+            }
+
+            img {
+              top: 36px;
+              width: 122px;
+
+              @media (max-width:$pc_big) {
+                width: 71px;
+                top: 28px;
+              }
+
+              @media (max-width:$pc) {
+                width: 71px;
+                top: 28px;
+              }
+
+              // @media (max-width:$phone) {
+              //   width: 71px;
+              //   top: 28px;
+              // }
+
+              @media (max-width:$phone-sm) {
+                width: 58px;
+                top: 18px;
+              }
+            }
+          }
+
+          &:nth-of-type(3) {
+            background-color: #FFA8AD;
+            margin-left: 13px;
+
+            @media (max-width:$pc_big) {
+              margin-left: 176px;
+            }
+
+            @media (max-width:$pc) {
+              margin-left: 0px;
+              margin-right: 0px;
+              order: 5;
+            }
+
+            // @media (max-width:$phone) {
+            //   margin-left: 0px;
+            //   margin-right: 0px;
+            //   order: 5;
+            // }
+
+
+            img {
+              top: 52px;
+              width: 113px;
+
+              @media (max-width:$pc_big) {
+                width: 71px;
+                top: 30px;
+              }
+
+              @media (max-width:$pc) {
+                width: 71px;
+                top: 30px;
+              }
+
+              // @media (max-width:$phone) {
+              //   width: 71px;
+              //   top: 30px;
+              // }
+
+              @media (max-width:$phone-sm) {
+                width: 55px;
+                top: 25px;
+              }
+            }
+          }
+
+          &:nth-of-type(4) {
+            background-color: #F8C110;
+            margin-left: 130px;
+
+            @media (max-width:$pc_big) {
+              margin-left: 100px;
+            }
+
+            @media (max-width:$pc) {
+              margin-left: 0px;
+              margin-right: 0px;
+              order: 3;
+            }
+
+            // @media (max-width:$phone) {
+            //   margin-left: 0px;
+            //   margin-right: 0px;
+            //   order: 3;
+            // }
+
+            img {
+              top: 15px;
+              width: 140px;
+
+              @media (max-width:$pc_big) {
+                width: 81px;
+                top: 18px;
+              }
+
+              @media (max-width:$pc) {
+                width: 81px;
+                top: 18px;
+              }
+
+              // @media (max-width:$phone) {
+              //   width: 81px;
+              //   top: 18px;
+              // }
+
+              @media (max-width:$phone-sm) {
+                width: 67px;
+                top: 10px;
+              }
+            }
+          }
+
+          &:nth-of-type(5) {
+            background-color: #F69632;
+            margin-left: 130px;
+
+            @media (max-width:$pc_big) {
+              margin-left: 100px;
+            }
+
+            @media (max-width:$pc) {
+              margin-left: 0px;
+              margin-right: 0px;
+              order: 2;
+            }
+
+            // @media (max-width:$phone) {
+            //   margin-left: 0px;
+            //   margin-right: 0px;
+            //   order: 2;
+            // }
+
+            img {
+              top: 18px;
+              width: 125px;
+
+              @media (max-width:$pc_big) {
+                width: 81px;
+                top: 10px;
+              }
+
+              @media (max-width:$pc) {
+                width: 81px;
+                top: 10px;
+              }
+
+              // @media (max-width:$phone) {
+              //   width: 81px;
+              //   top: 10px;
+              // }
+
+              @media (max-width:$phone-sm) {
+                width: 57px;
+                top: 13px;
+              }
+            }
+          }
+        }
+      }
+
+      .chidren_horse {
+        border-radius: 0;
+        width: 340px;
+        position: absolute;
+        top: 0px;
+        right: -70px;
+        box-shadow: 0px 0px 0px;
+        transition: $sec;
+
+        @media (max-width:1300px) {
+          right: 0px;
+        }
+
+        @media (max-width:$pc_big) {
+          width: 224px;
+          right: 162px;
+
+        }
+
+        @media (max-width:$pc) {
+          width: 203px;
+          right: -15px;
+          top: auto;
+          bottom: -38px;
+        }
+
+        // @media (max-width:$phone) {
+        //   width: 158px;
+        //   right: -15px;
+        //   top: auto;
+        //   bottom: -38px;
+        // }
+
+        @media (max-width:$phone-sm) {
+          width: 170px;
+          right: -10px;
+          top: auto;
+          bottom: -69px;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+
+          @media (max-width:$pc-big) {
+            align-items: flex-start;
+          }
+
+          @media (max-width:$pc) {
+            align-items: flex-end;
+          }
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  #parallaxArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @media (max-width:$pc_big) {
+      display: flex;
+      align-items: center;
+    }
+
+    // @media (max-width:$pc) {
+    //   align-items: flex-start;
+    //   padding-top: 120px;
+    // }
+
+    // @media (max-width:$phone-sm) {
+    //   align-items: flex-start;
+    //   padding-top: 70px;
+    // }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 705px;
+
+      @media (max-width:$pc_big) {
+        max-width: 790px;
+        height: 470px;
+      }
+
+      @media (max-width:$pc) {
+        max-width: 900px;
+        max-height: 652px;
+        height: 652px;
+      }
+
+      // @media (max-width:$phone) {
+      //   max-width: 100%;
+      //   max-height: 652px;
+      //   height: 652px;
+      // }
+
+      @media (max-width:$phone-sm) {
+        max-width: 480px;
+        height: 580px;
+      }
+
+      ul {
+        width: 100%;
+        height: 100%;
+
+        li {
+          width: 100%;
+          height: 100%;
+          list-style-type: none;
+
+          &:nth-child(6) {
+            .img {
+              filter: drop-shadow(3px 3px 5px rgba(6, 44, 119, 0.5))
+            }
+          }
+
+          &:nth-child(7) {
+            .img {
+              filter: drop-shadow(3px 3px 5px rgba(6, 44, 119, 0.5))
+            }
+          }
+        }
+      }
+    }
+
+    #scene {
+      .img {
+        opacity: 1;
+        position: absolute;
+        animation-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+        animation-name: ANIMATIONS;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      #img-1,
+      #img-2,
+      #img-3,
+      #img-4,
+      #img-5 {
+        background-repeat: no-repeat;
+        background-size: contain;
+
+      }
+
+      #img-1 {
+        top: 163px;
+        left: -296px;
+        width: 110px;
+        height: 62px;
+        background: url('../img/index/cloudLeft1.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation-duration: 8s;
+
+        @media (max-width:$pc_big) {
+          width: 80px;
+          height: 45px;
+          top: 211px;
+          left: -193px;
+        }
+
+        @media (max-width:$pc) {
+          width: 80px;
+          height: 45px;
+          top: auto;
+          bottom: 38px;
+          left: 25px;
+        }
+
+        // @media (max-width:$phone) {
+        //   width: 80px;
+        //   height: 45px;
+        //   top: auto;
+        //   bottom: 38px;
+        //   left: 25px;
+        // }
+
+        @media (max-width:$phone_sm) {
+          width: 47px;
+          height: 26px;
+          bottom: 28px;
+          left: 5px;
+        }
+      }
+
+      #img-2 {
+        width: 165px;
+        height: 95px;
+        top: 562px;
+        left: -217px;
+        background: url('../img/index/cloudLeft2.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation-duration: 4s;
+
+        @media (max-width:$pc_big) {
+          width: 109px;
+          height: 63px;
+          top: 375px;
+          left: -95px;
+        }
+
+        @media (max-width:$pc) {
+          width: 109px;
+          height: 63px;
+          left: auto;
+          top: 219px;
+          right: 77px;
+        }
+
+        // @media (max-width:$phone) {
+        //   width: 109px;
+        //   height: 63px;
+        //   left: auto;
+        //   top: 219px;
+        //   right: 77px;
+        // }
+
+        @media (max-width:$phone_sm) {
+          width: 64px;
+          height: 37px;
+          top: 245px;
+          right: 5px;
+        }
+      }
+
+      #img-3 {
+        width: 134px;
+        height: 71px;
+        top: 26px;
+        left: 95px;
+        background: url('../img/index/cloudLeft3.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation-duration: 4s;
+
+        @media (max-width:$pc_big) {
+          width: 50px;
+          height: 26px;
+          top: 31px;
+          left: 98px;
+        }
+
+        @media (max-width:$pc) {
+          top: 23px;
+          left: 165px;
+          width: 50px;
+          height: 26px;
+        }
+
+        // @media (max-width:$phone) {
+        //   top: 23px;
+        //   left: 165px;
+        //   width: 50px;
+        //   height: 26px;
+        // }
+
+        @media (max-width:$phone_sm) {
+          width: 30px;
+          height: 15px;
+          top: 24px;
+          left: 113px;
+        }
+      }
+
+      #img-4 {
+        width: 90px;
+        height: 47px;
+        top: 626px;
+        right: 283px;
+        background: url('../img/index/cloudLeft4.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation-duration: 4s;
+
+        @media (max-width:$pc_big) {
+          width: 89px;
+          height: 47px;
+          top: 390px;
+          right: 49px;
+        }
+
+        @media (max-width:$pc) {
+          width: 89px;
+          height: 47px;
+          top: auto;
+          right: 15px;
+          bottom: 65px;
+        }
+
+        // @media (max-width:$phone) {
+        //   width: 89px;
+        //   height: 47px;
+        //   top: auto;
+        //   right: 15px;
+        //   bottom: 65px;
+        // }
+
+        @media (max-width:$phone_sm) {
+          width: 52px;
+          height: 28px;
+          bottom: 124px;
+          right: -4px;
+        }
+      }
+
+      #img-5 {
+        width: 132px;
+        height: 74px;
+        top: 206px;
+        right: -321px;
+        background: url('../img/index/cloudLeft5.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation-duration: 8s;
+
+        @media (max-width:$pc_big) {
+          width: 74px;
+          height: 41px;
+          top: 84px;
+          right: -181px;
+        }
+
+        @media (max-width:$pc) {
+          width: 74px;
+          height: 41px;
+          top: 283px;
+          right: auto;
+          left: 102px;
+        }
+
+        // @media (max-width:$phone) {
+        //   width: 74px;
+        //   height: 41px;
+        //   top: 283px;
+        //   right: auto;
+        //   left: 102px;
+        // }
+
+        @media (max-width:$phone_sm) {
+          width: 43px;
+          height: 24px;
+          top: 170px;
+          left: 24px;
+        }
+      }
+
+      #layer-6 {
+        @media (max-width:$pc) {
+          left: auto;
+          right: 0;
+        }
+
+        #img-6 {
+          top: 132px;
+          left: -115px;
+          width: 180px;
+          height: 246px;
+          background: url('../img/index/girl6.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          animation-duration: 6s;
+          transition: $sec;
+
+          @media (max-width:1300px) {
+            left: 50px;
+            width: 120px;
+            height: 164px;
+          }
+
+          @media (max-width:$pc_big) {
+            top: 58px;
+            left: -94px;
+            width: 110px;
+            height: 150px;
+          }
+
+          @media (max-width:$pc) {
+            width: 87px;
+            height: 119px;
+            top: auto;
+            bottom: 159px;
+            left: 60px;
+          }
+
+          // @media (max-width:1000px) {
+          //   left: -30px;
+          //   width: 110px;
+          //   height: 150px;
+          // }
+
+          // @media (max-width:$phone) {
+          //   width: 79px;
+          //   height: 108px;
+          //   top: auto;
+          //   bottom: 159px;
+          //   left: 60px;
+          // }
+
+          @media (max-width:$phone_sm) {
+            bottom: 151px;
+            left: -7px;
+          }
+        }
+      }
+
+      #img-7 {
+        width: 270px;
+        height: 335px;
+        top: 345px;
+        right: -177px;
+        background: url('../img/index/boy7.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation-duration: 6s;
+        transition: $sec;
+
+        @media (max-width:1300px) {
+          right: -50px;
+          top: 400px;
+          width: 176px;
+          height: 218px;
+        }
+
+        @media (max-width:$pc_big) {
+          top: 205px;
+          right: -192px;
+          width: 165px;
+          height: 204px;
+        }
+
+        @media (max-width:$pc) {
+          width: 111px;
+          height: 137px;
+          top: 62px;
+          right: 73px;
+        }
+
+
+        // @media (max-width:1000px) {
+        //   right: -80px;
+        //   width: 165px;
+        //   height: 204px;
+        // }
+
+        // @media (max-width:$phone) {
+        //   width: 100px;
+        //   height: 125px;
+        //   top: 62px;
+        //   right: 73px;
+        // }
+
+        @media (max-width:$phone_sm) {
+          top: 31px;
+          right: 7px;
+        }
+      }
+
+      /*ANIMATIONS*/
+
+
+
+
+    }
+  }
+}
+
+@keyframes ANIMATIONS {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+    transform: translate(-30px, 0px);
+
+    @media (max-width:$phone_sm) {
+      transform: translate(8px, 2px);
+    }
+  }
+}

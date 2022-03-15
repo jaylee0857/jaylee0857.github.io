@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/*css命名
+ 顯示屬性>盒模型>背景>行高>文本屬性>其他
+(1)頁面結構
+
+- 容器: container
+- 頁頭：header
+- 內容：content/container
+- 頁面主體：main
+- 頁尾：footer
+- 導航：nav
+- 側欄：sidebar
+- 欄目：column
+- 頁面外圍控制整體布局寬度：wrapper
+
+(2)導航
+
+- 導航：nav
+- 主導航：mainNav
+- 子導航：subNav
+- 頂導航：topNav
+- 邊導航：sidebar
+- 左導航：leftSidebar
+- 右導航：rightSidebar
+- 菜單：menu
+- 子菜單：subMenu
+- 標題: title
+- 摘要: summary
+
+(3)功能
+
+- 標誌：logo
+- 廣告：banner
+- 登陸：login
+- 登錄條：loginBar
+- 註冊：registered
+- 搜索：search
+- 功能區：shop
+- 標題：title
+- 加入：joinUs
+- 狀態：status
+- 按鈕：btn
+- 滾動：scroll
+- 標簽頁：tab
+- 文章列表：list
+- 提示信息：msg
+- 當前的: current
+- 小技巧：tips
+- 圖標: icon
+- 註釋：note
+- 指南：guild
+- 服務：service
+- 熱點：hot
+- 新聞：news
+- 下載：download
+- 投票：vote
+- 合作夥伴：partner
+- 友情鏈接：link
+- 版權：copyright
+
+ BUGFIX: xxxx by name 2012-04-13 18:32 用於標註修改、待辦等信息*/
+.cover {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.blur {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+#templateModal * {
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+#templateModal #search {
+  opacity: 1;
+  display: block;
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 324px;
+  overflow: hidden;
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body {
+  width: 100%;
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body .title {
+  width: 100%;
+  max-width: 790px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body .title .titleimg {
+  position: relative;
+  max-width: 490px;
+  width: 100%;
+  margin: 0 25px;
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body .title .titleimg::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  top: -25px;
+  width: 79px;
+  height: 55px;
+  display: block;
+  background-image: url(../img/children/dragon.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.15));
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body .title .titleimg::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  bottom: -25px;
+  width: 90px;
+  height: 73px;
+  display: block;
+  background-image: url(../img/children/unicorn.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.15));
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body .searchbox {
+  position: relative;
+  margin-top: 40px;
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body .searchbox input.placeholder {
+  text-align: center;
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body .searchbox ::-webkit-input-placeholder {
+  text-align: center;
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body .searchbox :-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body .searchbox ::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body .searchbox :-ms-input-placeholder {
+  text-align: center;
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body .searchbox .inputbox {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  -webkit-box-shadow: 0 0 3px 0 rgba(66, 65, 65, 0.3);
+          box-shadow: 0 0 3px 0 rgba(66, 65, 65, 0.3);
+  text-align: left;
+  padding: 0 20px;
+  font-size: 16px;
+  font-family: '微軟正黑體';
+  letter-spacing: 0.05em;
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body .searchbox .inputbox:focus {
+  outline: none;
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body .searchbox button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: none;
+}
+
+#templateModal #search .modal-dialog .modal-content .bodyControl .part-body .searchbox button i {
+  color: #4D4D4D;
+}

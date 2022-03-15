@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .allbox {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .aaa {
+        position: absolute;
+        display: none;
+    }
+
+    .aaa.show {
+        animation: aaa 50s infinite;
+        animation-timing-function:linear;
+        display: block;
+    }
+
+    @keyframes aaa {
+        0% {
+            bottom: 0
+        }
+
+        100% {
+            bottom: 100%
+        }
+    }
+</style>
+
+<body>
+    <div class="allbox">
+        <div class="aaa">
+            <img src="./img/subjectMaterial/交通/小孩.png" alt="">
+        </div>
+        <div class="aaa">
+            <img src="./img/subjectMaterial/交通/小孩.png" alt="">
+        </div>
+        <div class="aaa">
+            <img src="./img/subjectMaterial/交通/小孩.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        var boxI = document.querySelectorAll('.aaa')
+        var allBoxI = document.querySelector('.allbox')
+
+
+        var leftN = Math.floor(Math.random() * 100);
+        var boxN = Math.floor(Math.random() * 3);
+        boxI[boxN].classList.add('show')
+        boxI[boxN].style['left'] = `${leftN}%`;
+        setTimeout(function () {
+            boxI[boxN].classList.remove('show')
+        }, 50000)
+
+
+        function gogo() {
+            var leftN = Math.floor(Math.random() * 100);
+            var boxN = Math.floor(Math.random() * 3);
+            if (boxI[boxN].classList.contains('show') == true) {
+
+            } else {
+                boxI[boxN].classList.add('show')
+                boxI[boxN].style['left'] = `${leftN}%`;
+                setTimeout(function () {
+                    boxI[boxN].classList.remove('show')
+                }, 50000)
+            }
+
+        }
+
+    
+        setInterval("gogo()", "3000")
+    </script>
+</body>
+
+</html>

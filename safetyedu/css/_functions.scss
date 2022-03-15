@@ -1,0 +1,43 @@
+// 文字 @include textRules();
+@mixin textRules ($size,$color,$align,$letter-spacing,$line-height,$font-weight){
+    font-size: $size;
+    color: $color;
+    text-align: $align;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    text-decoration: none;
+}
+// 超連結 @include hyperlinkPhotoStyle();
+@mixin hyperlinkPhotoStyle ($width,$height,$background-colo,$hover_background-color){
+    width: $width;
+    height: $height;
+    background-color: $background-colo;
+    &:hover{
+        background-color: $hover_background-color;
+    }
+    text-decoration: none;
+}
+
+// 背景區塊  @include backgroundBlock ();
+@mixin backgroundBlock ($width,$height,$background-color,$border-radius){
+    width: $width;
+    height: $height;
+    background-color: $background-color;
+    border-radius: $border-radius;
+}
+
+//flex 置中 @extend %flexCenter;
+%flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+//   outline 歸零
+%outlineNone{
+    &:focus{
+        outline: none;
+    }
+}
+

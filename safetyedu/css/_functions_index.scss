@@ -1,0 +1,8 @@
+// 雲的位置,尺吋 @include cloud()
+
+@mixin cloud ($top,$left,$width,$height){
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+}

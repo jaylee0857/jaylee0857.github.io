@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>安全教育課程教材網</title>
+
+    <!-- 全站用 start -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <!-- font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <!-- 全站用 end -->
+
+    <!-- 部分分頁選用  start-->
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./css/swiper.css">
+    <!-- layout -->
+    <link rel="stylesheet" href="./css/template.min.css">
+    <!-- page css  -->
+    <link rel="stylesheet" href="./css/newsv2.css">
+
+</head>
+
+<body class="loading">
+
+    <nav id="nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-1 col-xl-5 d-flex">
+                    <div class="navIcon">
+                        <a href="./index.html">
+                            <img src="./img/index/logo-cir.svg" alt="圓形的logo">
+                        </a>
+                    </div>
+                    <div class="navText">
+                        <a href="./index.html">
+                            <img width="100%" src="./img/index/logo-text.svg" alt="文字logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-10 navTextPhoneStyle">
+                    <!-- 變動 增加a標籤 起點 -->
+                    <a href="/">
+                        <img src="./img/index/logo-text-phone.svg" alt="手機板的text圖">
+                    </a>
+                    <!-- 變動 增加a標籤 終點 -->
+                </div>
+                <div class="col-1 col-xl-7 menu">
+                    <div id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- <div class="maskPhoneWhite"></div> -->
+                    <div class="maskPhoneBlack"></div>
+                    <ul>
+                        <li class="subNav">
+                            <a href="./index.html">首頁</a>
+                        </li>
+                        <li class="subNav">
+                            <a href="./subjectMaterial_traffic.html">主題教材</a>
+                        </li>
+                        <li class="subNav">
+                            <a href="./children.html">幼兒專區</a>
+                        </li>
+                        <li class="subNav">
+                            <a href="./news.html">最新消息</a>
+                        </li>
+                        <li class="subNav">
+                            <a href="./QA.html">Q&A</a>
+                        </li>
+                        <li class="searchStyle">
+                            <form class="search">
+                                <input type="checkbox" id="toggleSearch" class="search__toggle" hidden>
+                                <div class="search__field">
+                                    <label for="toggleSearch" class="search__label">
+                                        <span class="search__close"></span>
+                                    </label>
+                                    <input type="text" class="search__input" placeholder="搜尋" />
+                                    <label for="toggleSearch" class="search__label">
+                                        <div class="search__button search__button--wrap">
+                                            <div class=" search__button--toggle">
+                                                <i class="fas fa-search"></i>
+                                            </div>
+                                        </div>
+                                        <button class="search__button search__button--submit">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </label>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 內頁起點 -->
+    <main>
+        <section id="backgroundIcon">
+            <div class="leftIcon">
+                <div class="boxI">
+                    <img src="./img/news/bg/balcony.png" alt="balcony">
+                </div>
+                <div class="boxI">
+                    <img src="./img/news/bg/hamburg.png" alt="hamburg">
+                </div>
+                <div class="boxI">
+                    <img src="./img/news/bg/jump.png" alt="jump">
+                </div>
+                <div class="boxI">
+                    <img src="./img/news/bg/medicineBottle.png" alt="medicineBottle">
+                </div>
+                <div class="boxI">
+                    <img src="./img/news/bg/rain.png" alt="rain">
+                </div>
+                <div class="boxI">
+                    <img src="./img/news/bg/tornado.png" alt="tornado">
+                </div>
+            </div>
+            <div class="rightIcon">
+                < <div class="boxI">
+                    <img src="./img/news/bg/balcony.png" alt="balcony">
+            </div>
+            <div class="boxI">
+                <img src="./img/news/bg/hamburg.png" alt="hamburg">
+            </div>
+            <div class="boxI">
+                <img src="./img/news/bg/jump.png" alt="jump">
+            </div>
+            <div class="boxI">
+                <img src="./img/news/bg/medicineBottle.png" alt="medicineBottle">
+            </div>
+            <div class="boxI">
+                <img src="./img/news/bg/rain.png" alt="rain">
+            </div>
+            <div class="boxI">
+                <img src="./img/news/bg/tornado.png" alt="tornado">
+            </div>
+            </div>
+        </section>
+        <!-- 6區塊內容 起點-->
+        <div class="pagecontent">
+            <div class="center">
+                <section id="breadcrumbArea">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">最新消息</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="pageTitle">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 problem">
+                                <p>最新消息</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="banner-swiper-container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide swiper-slide-active">
+                                            <div class="btn btn-primary" data-toggle="modal"
+                                                data-target="#filterModalData">
+                                                <span>(1/5)</span>
+                                                <span>2020-04-28</span>
+                                                <span>高級中等以下學校住宿防疫指引</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-next" style="width: 1140px;">
+                                            <div class="btn btn-primary" data-toggle="modal"
+                                                data-target="#filterModalData">
+                                                <span>(1/5)</span>
+                                                <span>2020-04-28</span>
+                                                <span>高級中等以下學校住宿防疫指引</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" style="width: 1140px;">
+                                            <div class="btn btn-primary" data-toggle="modal"
+                                                data-target="#filterModalData">
+                                                <span>(1/5)</span>
+                                                <span>2020-04-28</span>
+                                                <span>高級中等以下學校住宿防疫指引</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" style="width: 1140px;">
+                                            <div class="btn btn-primary" data-toggle="modal"
+                                                data-target="#filterModalData">
+                                                <span>(1/5)</span>
+                                                <span>2020-04-28</span>
+                                                <span>高級中等以下學校住宿防疫指引</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" style="width: 1140px;">
+                                            <div class="btn btn-primary" data-toggle="modal"
+                                                data-target="#filterModalData">
+                                                <span>(1/5)</span>
+                                                <span>2020-04-28</span>
+                                                <span>高級中等以下學校住宿防疫指引</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-12 banner_belt">
+                                <div class="banner_prev swiper-button-disabled" tabindex="0" role="button"
+                                    aria-label="Previous slide" aria-disabled="true">
+                                    <div class="triangle"></div>
+                                </div>
+                                <div class="banner_next" tabindex="0" role="button" aria-label="Next slide"
+                                    aria-disabled="false">
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="filterContent">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="filter-container">
+                                    <div class="filter-wrapper">
+                                        <!-- 每個頁面最多放6個button -->
+
+
+
+                                        <div class="filter-slide">
+                                            <!--bootstrap Button trigger modal Siper內的按鈕-->
+                                            <!--每新增一組modal, button對應的為 data-target="modal的ID" -->
+                                            <div class="btn btn-primary" data-toggle="modal"
+                                                data-target="#filterModalData">
+                                                <div class="btnIconArea">
+                                                    <div class="showOff-bg"
+                                                        style="background-image: url('./img/news/預設圖.jpg');">
+                                                    </div>
+                                                    <div class="showOff"
+                                                        style="background-image: url('./img/news/預設圖.jpg');">
+                                                    </div>
+                                                </div>
+                                                <div class="btnMsgArea">
+                                                    <span>2020.04.28</span><br>
+                                                    <span>高級中等以下學校住宿防疫指引高級中等以下學校</span>
+                                                </div>
+                                            </div>
+                                            <div class="btn btn-primary" data-toggle="modal"
+                                                data-target="#filterModalData">
+                                                <div class="btnIconArea">
+                                                    <div class="showOff-bg"
+                                                        style="background-image: url('./img/news/預設圖.jpg');">
+                                                    </div>
+                                                    <div class="showOff"
+                                                        style="background-image: url('./img/news/預設圖.jpg');">
+                                                    </div>
+                                                </div>
+                                                <div class="btnMsgArea">
+                                                    <span>2020.04.28</span><br>
+                                                    <span>高級中等以下學校住宿防疫指引</span>
+                                                </div>
+                                            </div>
+                                            <div class="btn btn-primary" data-toggle="modal"
+                                                data-target="#filterModalData">
+                                                <div class="btnIconArea">
+                                                    <div class="showOff-bg"
+                                                        style="background-image: url('./img/news/預設圖.jpg');">
+                                                    </div>
+                                                    <div class="showOff"
+                                                        style="background-image: url('./img/news/預設圖.jpg');">
+                                                    </div>
+                                                </div>
+                                                <div class="btnMsgArea">
+                                                    <span>2020.04.28</span><br>
+                                                    <span>高級中等以下學校住宿防疫指引</span>
+                                                </div>
+                                            </div>
+                                            <div class="btn btn-primary" data-toggle="modal"
+                                                data-target="#filterModalData">
+                                                <div class="btnIconArea">
+                                                    <div class="showOff-bg"
+                                                        style="background-image: url('./img/news/預設圖.jpg');">
+                                                    </div>
+                                                    <div class="showOff"
+                                                        style="background-image: url('./img/news/預設圖.jpg');">
+                                                    </div>
+                                                </div>
+                                                <div class="btnMsgArea">
+                                                    <span>2020.04.28</span><br>
+                                                    <span>高級中等以下學校住宿防疫指引</span>
+                                                </div>
+                                            </div>
+                                            <div class="btn btn-primary" data-toggle="modal"
+                                                data-target="#filterModalData">
+                                                <div class="btnIconArea">
+                                                    <div class="showOff-bg"
+                                                        style="background-image: url('./img/news/預設圖.jpg');">
+                                                    </div>
+                                                    <div class="showOff"
+                                                        style="background-image: url('./img/news/預設圖.jpg');">
+                                                    </div>
+                                                </div>
+                                                <div class="btnMsgArea">
+                                                    <span>2020.04.28</span><br>
+                                                    <span>高級中等以下學校住宿防疫指引</span>
+                                                </div>
+                                            </div>
+                                            <div class="btn btn-primary" data-toggle="modal"
+                                                data-target="#filterModalData">
+                                                <div class="btnIconArea">
+                                                    <div class="showOff-bg"
+                                                        style="background-image: url('./img/news/預設圖.jpg');">
+                                                    </div>
+                                                    <div class="showOff"
+                                                        style="background-image: url('./img/news/預設圖.jpg');">
+                                                    </div>
+                                                </div>
+                                                <div class="btnMsgArea">
+                                                    <span>2020.04.28</span><br>
+                                                    <span>高級中等以下學校住宿防疫指引</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 filterBelt">
+                                <div class="prev">
+                                    <div class="triangle"></div>
+                                </div>
+                                <!-- Add Pagination -->
+                                <div class="filter-pagination">
+                                    <a href="" class="filter-pagination-bullet active">1</a>
+                                    <a href="" class="filter-pagination-bullet">2</a>
+                                    <a href="" class="filter-pagination-bullet">3</a>
+                                    <a href="" class="filter-pagination-bullet">4</a>
+                                    <a href="" class="filter-pagination-bullet">5</a>
+                                    <a href="" class="filter-pagination-bullet">6</a>
+                                    <a href="" class="filter-pagination-bullet">7</a>
+                                </div>
+                                <div class="next">
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        <!-- 6區塊內容 終點-->
+    </main>
+    <!-- 內頁結束 -->
+    <!-- goTop start-->
+    <a id="goTop" href="#top">
+        <div class="triangle"></div>
+    </a>
+    <!-- goTop end-->
+    <footer>
+        <div class="container">
+            <div class="row rowbox">
+                <div class="icon col-1 col-md-1 col-xl-1">
+
+                    <img src="./img/index/logo-cir.svg" alt="">
+
+                </div>
+                <div class="infoContainer col-12 col-md-7 col-xl-6">
+                    <div class="infoWrapper">
+                        <div class="e-mail">
+                            <span>聯絡我們</span>
+                            <div class="mailInfoWrapper">
+                                <div class="mailIcon">
+                                    <i class="far fa-envelope"></i>
+                                </div>
+                                <span class="phoneStyleNone">
+                                    <i class="far fa-envelope"></i>
+                                </span>
+                                <span> safetyedu@gm.ntcu.edu.tw</span>
+                            </div>
+                        </div>
+                        <div class="modalBottom">
+                            <!--bootstrap Button trigger modal-->
+                            <!--每新增一組modal, button對應的為 data-target="modal的ID" -->
+
+
+                            <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#aboutUs">
+                                關於我們
+                            </button> -->
+
+
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#declare">
+                                網站資料開放宣告
+                            </button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#policy">
+                                隱私與資訊安全政策
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="status col-12 col-md-4 col-xl-5">
+                    <div class="status_box">
+                        <div class="upDate">
+                            <span>更新日期：</span>
+                            <span>2019/10/10</span>
+                        </div>
+                        <div class="announcement">
+                            <span>瀏覽人次：</span>
+                            <span id="value">456,789</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            安全教育課程教材網©2020 copyrights.<br class="d-block d-sm-none">All Rights Reserved
+        </div>
+    </footer>
+    <!-- bootstrap Button Modal -->
+    <section id="templateModal">
+
+
+
+        <!-- <div class="modal fade" id="aboutUs" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="headerControl modal-header">
+                        <div class="headerWrapper">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">關於我們</h5>
+                            <img class="headerIcon" src="./img/index/modal-icon.png" alt="">
+                        </div>
+                        <button class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="bodyControl modal-body">
+                        <div class="part-body">
+
+                            <div class="text_bg"></div>
+                            <p class="part">
+                                國教署(國民及學前教育署)<br>
+                                <span class="specialSize">成立日期民國102年1月1日</span>
+
+                                <br>
+                                <br>
+                                教育部為配合中央政府組織改造，特整併中教司、技職司、國教司、訓委會、特教小組、環保教育小組及中部辦公室等單位之相關業務，設置三級機關「教育部國民及學前教育署」分設四組四室，專責掌理高級中等以下學校教育政策、制度之規劃、執行及督導，並協調及協助地方政府辦理國民及學前教育共同性事項。
+                                <br>
+                                <br>
+                                業務職掌
+                                <br>
+                                ◆ 高級中等以下學校與學前教育政策、制度之規劃、執行與督導，及相關法規之研修。<br>
+                                ◆ 高級中學與職業學校一般教育事項之規劃、執行及督導。<br>
+                                ◆ 國民中學與國民小學一般教育事項之規劃、執行及督導。<br>
+                                ◆ 學前教育一般教育事項之規劃、執行及督導。<br>
+                                ◆ 高級中等以下學校與學前教育階段特殊教育事項之規劃、執行及督導<br>
+                                <br>
+                                教育部為配合中央政府組織改造，特整併中教司、技職司、國教司、訓委會、特教小組、環保教育小組及中部辦公室等單位之相關業務，設置三級機關「教育部國民及學前教育署」分設四組四室，專責掌理高級中等以下學校教育政策、制度之規劃、執行及督導，並協調及協助地方政府辦理國民及學前教育共同性事項。
+                                <br>
+                                教育部為配合中央政府組織改造，特整併中教司、技職司、國教司、訓委會、特教小組、環保教育小組及中部辦公室等單位之相關業務，設置三級機關「教育部國民及學前教育署」分設四組四室，專責掌理高級中等以下學校教育政策、制度之規劃、執行及督導，並協調及協助地方政府辦理國民及學前教育共同性事項。
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <div class="modal fade" id="declare" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="headerControl modal-header">
+                        <div class="headerWrapper">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">網站資料開放宣告</h5>
+                            <img class="headerIcon" src="./img/index/modal-icon.png" alt="">
+                        </div>
+                        <button class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="bodyControl modal-body">
+                        <div class="part-body">
+                            <div class="text_bg"></div>
+                            <p class="part">
+                                <!-- 若部分為字需要粗體字 , class為 boldText -->
+                                <!-- 若有需分段文字  class為 part -->
+                                <span class="boldText">
+                                    政府網站資料開放宣告<br>
+                                    非常歡迎您光臨「教育部國民及學前教育署」(以下簡稱本網站)，為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：
+                                    <br>
+                                </span>
+                                <br>
+                                一、授權方式及範圍
+                                為利各界廣為利用網站資料，教育部國民及學前教育署上刊載之所有資料與素材，其得受著作權保護之範圍，以無償、非專屬，得再授權之方式提供公眾使用，使用者得不限時間及地域，重製、改作、編輯、公開傳輸或為其他方式之利用，開發各種產品或服務（簡稱加值衍生物），此一授權行為不會嗣後撤回，使用者亦無須取得本機關之書面或其他方式授權；然使用時，應註明出處。
+                                <br>
+                                <br>
+                                二、相關事項說明
+                                本授權範圍僅及於著作權保護之範圍，不及於其他智慧財產權利，包括但不限於專利、商標、及機關標誌之提供。
+                                當事人自行公開或依法令公開之個人資料是否得被蒐集、處理及利用，使用者須自行依照個人資料保護法之相關規定，規劃並執行法律要求之相應措施。
+                                部分的影音、圖像、樂譜、專人專案撰文或其他著作，經機關特別聲明須經同意方可使用者。
+                                <br>
+
+                                <br>
+                                三、應注意不得侵害第三人之著作人格權(包括姓名表示權及禁止不當變更權)。
+                                <br>
+
+                                <br>
+                                四、使用本授權提供之資料與素材，不得惡意變更其相關資訊，若利用後所展示之資訊與原資料與素材不符，使用者須自負民事、刑事上之法律責任。
+
+                                <br>
+                                五、本網站之授權，並不授予使用者代表本機關建議、認可或贊同其加值衍生物之地位。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="policy" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="headerControl modal-header">
+                        <div class="headerWrapper">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">隱私與資訊安全政策</h5>
+                            <img class="headerIcon" src="./img/index/modal-icon.png" alt="">
+                        </div>
+                        <button class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="bodyControl modal-body">
+                        <div class="part-body">
+                            <div class="text_bg"></div>
+                            <!-- 若部分為字需要粗體字 , class為 boldText -->
+                            <!-- 若有需分段文字  class為 part -->
+                            <p class="part">
+                                隱私權宣告<br>
+                                非常歡迎您光臨「教育部國民及學前教育署」(以下簡稱本網站)，為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：<br>
+                                <br>
+                                <span class="boldText part">
+                                    一、隱私權保護政策的適用範圍
+                                    隱私權保護政策內容，包括本網站如何處理在您使用網站服務時收集到的個人識別資料。隱私權保護政策不適用於本網站以外的相關連結網站，也不適用於非本網站所委託或參與管理的人員。
+                                    <br><br>
+                                    二、資料的蒐集與使用方式
+                                    為了在本網站上提供您最佳的互動性服務，可能會請您提供相關個人的資料，其範圍如下：
+                                    <br><br>
+                                    本網站在您使用服務信箱、問卷調查等互動性功能時，會保留您所提供的姓名、電子郵件地址、聯絡方式及使用時間等 。
+                                    於一般瀏覽時，伺服器會自行記錄相關行徑，包括您使用連線設備的IP位址、使用時間、使用的瀏覽器、瀏覽及點選資料記錄等，做為我們增進網站服務的參考依據，此記錄為內部應用，決不對外公布。
+                                    為提供精確的服務，我們會將收集的問卷調查內容進行統計與分析，分析結果之統計數據或說明文字呈現，除供內部研究外，我們會視需要公佈統計數據及說明文字，但不涉及特定個人之資料。
+                                    除非取得您的同意或其他法令之特別規定，本網站絕不會將您的個人資料揭露予第三人或使用於蒐集目的以外之其他用途。
+                                    <br><br>
+                                    三、資料之保護
+                                    本網站主機均設有防火牆、防毒系統等相關的各項資訊安全設備及必要的安全防護措施，加以保護網站及您的個人資料採用嚴格的保護措施，只由經過授權的人員才能接觸您的個人資料，相關處理人員皆簽有保密合約，如有違反保密義務者，將會受到相關的法律處分。
+                                    如因業務需要有必要委託本網站相關單位提供服務時，本網站亦會嚴格要求其遵守保密義務，並且採取必要檢查程序以確定其將確實遵守。
+                                    <br><br>
+                                    四、網站對外的相關連結
+                                    本網站的網頁提供其他網站的網路連結，您也可經由本網站所提供的連結，點選進入其他網站。但該連結網站不適用本網站的隱私權保護政策，您必須參考該連結網站中的隱私權保護政策。
+                                    <br><br>
+                                    五、Cookie之使用
+                                    為了提供您最佳的服務，本網站會在您的電腦中放置並取用我們的Cookie，若您不願接受Cookie的寫入，您可在您使用的瀏覽器功能項中設定隱私權等級為高，即可拒絕Cookie的寫入，但可能會導至網站某些功能無法正常執行。
+                                    <br><br>
+                                    六、隱私權保護政策之修正
+                                    本網站隱私權保護政策將因應需求隨時進行修正，修正後的條款將刊登於網站上。
+                                    <br>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =============================================================== -->
+
+    <!-- filter的按鈕的modal -->
+    <section id="filterModal">
+        <div class="modal fade" id="filterModalData" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="headerControl modal-header">
+                        <div class="headerWrapper">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">腳踏車如何禮讓行人-3</h5>
+                            <img class="headerIcon" src="./img/index/modal-icon.png" alt="">
+                        </div>
+                        <button class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="bodyControl modal-body">
+                        <img src="./img/subjectMaterial/預覽圖.png" alt="">
+                        <div class="Informationbox">
+                            <span>發布日期：2020-04-27</span>
+                            <span class="mb-3">瀏覽次數：42</span>
+                        </div>
+
+
+                        <span class="TextControl">
+                            &emsp;&emsp;行車「禮讓行人」雖然是最基本的駕駛觀念，但經分析路口交通事故發生原因，多數車輛因不禮讓行人而導致事故發生，因行人在道路上是屬於相對弱勢一方，其通行安全應予較高的保障與維護，因此行人在行人穿越道上法規有保障優先路權。
+                            汽車禮讓行人依道路交通安全規則第103條，相關規定如下：<br>
+                            一、汽車行近未設行車管制號誌之行人穿越道前，應減速慢行。<br>
+                            二、汽車行經行人穿越道，遇有行人穿越時，無論有無交通指揮人員指揮或號誌指示，均應暫停讓行人先</span>
+                    </div>
+                    <div class="footerControl modal-footer">
+                        <div class="download">
+                            <div class="guild">
+                                <span>下載:</span>
+                            </div>
+                            <ul class="downloadBtnGroup">
+                                <!-- filter的按鈕內的modal的按鈕-->
+
+                                <li>
+                                    <button class="btn btn-primary" data-toggle="modal"
+                                        data-target="#downloadModalContent">
+                                        <img src="./img/subjectMaterial/download/textBook.svg" alt="">
+                                        <span>附件</span>
+                                    </button>
+                                    <span>附件</span>
+                                </li>
+
+
+                                <li>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#LinkModalContent">
+                                        <img src="./img/subjectMaterial/download/link.svg" alt="">
+                                        <span>連結</span>
+                                    </button>
+                                    <span>連結</span>
+                                </li>
+                                <li>
+                                    <button class="btn btn-primary" data-toggle="modal"
+                                        data-target="#shareModalContent">
+                                        <img src="./img/subjectMaterial/download/share.svg" alt="">
+                                        <span>分享</span>
+                                    </button>
+                                    <span>分享</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footerhr"></div>
+
+                        <div class="share">
+                            <div class="guild">
+                                <span>分享:</span>
+                            </div>
+                            <ul class="shareBtnGroup">
+                                <li>
+                                    <a href="#">
+                                        <img src="./img/subjectMaterial/share/LINE.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./img/subjectMaterial/share/FB.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./img/subjectMaterial/share/MAIL.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./img/subjectMaterial/share/IG.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- filter內的按鈕的彈出modal內按鈕的modal download-->
+
+    <section id="downloadModal">
+        <div class="modal fade" id="downloadModalContent" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="headerControl modal-header">
+                        <div class="headerWrapper">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">腳踏車如何禮讓行人-3</h5>
+                            <img class="headerIcon" src="./img/index/modal-icon.png" alt="">
+                        </div>
+                        <button class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="bodyControl modal-body">
+                        <ul>
+                            <li>
+                                <a class="leftText" href="">
+                                    <p><span>1.</span>我是教材一號!!快來下載我!!</p>
+                                </a>
+                                <p class="rightText">
+                                    <span>下載次數：9,999</span>
+                                    <a href="" download="">
+                                    </a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footerControl modal-footer">
+                        <div class="phoneStyleTextContent">
+                            <span>點擊右側按鈕</span>
+                            <span>即可全部下載</span>
+                        </div>
+                        <a class="downloadAll" href="/images/myw3schoolimage.jpg" download="w3logo">全部下載</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="LinkModalContent" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="headerControl modal-header">
+                        <div class="headerWrapper">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">「利他用路觀」-不妨礙他人安全與方便的交通行為</h5>
+                            <img class="headerIcon" src="./img/index/modal-icon.png" alt="">
+                        </div>
+                        <button class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="bodyControl modal-body Linkbody">
+                        <ul>
+                            <li>
+
+                                <a class="leftText" href="" target="_blank">
+
+                                    <p><span>1.</span> 腳踏車如何禮讓行人-3：連結腳踏車如何禮讓行人-3：連結1腳踏車如何禮讓行人-3：連結1腳踏車如何禮讓行人-3：連結1腳踏車如何禮讓行人-3：連結1腳踏車如何禮讓行人-3：連結1腳踏車如何禮讓行人-3：連結1腳踏車如何禮讓行人-3：連結1腳踏車如何禮讓行人-3：連結11</p>
+                                </a>
+                                <p class="rightText">
+                                    <span>點閱次數：9,999</span>
+
+                                    <a href="" target="_blank">
+                                    </a>
+
+                                </p>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- filter內的按鈕的彈出modal內按鈕的modal link-->
+
+    <!-- <section id="linkModal">
+        <div class="modal fade" id="linkModalContent" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="headerControl modal-header">
+                        <div class="headerWrapper">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">1腳踏車如何禮讓行人-3</h5>
+                            <img class="headerIcon" src="./img/index/modal-icon.png" alt="">
+                        </div>
+                        <button class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="bodyControl modal-body">
+                        <ul>
+                            <li>
+                                <p>1.我是教材一號!!快來下載我!!</p>
+                                <p>
+                                    <span>下載次數：9,999</span>
+                                    <a href="" download="">
+                                    </a>
+                                </p>
+                            </li>
+                            <li>
+                                <p>2.我是教材一號!!快來下載我!!</p>
+                                <p>
+                                    <span>下載次數：9,999</span>
+                                    <a href="" download="">
+                                    </a>
+                                </p>
+                            </li>
+                            <li>
+                                <p>3.我是教材一號!!快來下載我!!</p>
+                                <p>
+                                    <span>下載次數：9,999</span>
+                                    <a href="" download="">
+                                    </a>
+                                </p>
+                            </li>
+                            <li>
+                                <p>4.我是教材一號!!快來下載我!!</p>
+                                <p>
+                                    <span>下載次數：9,999</span>
+                                    <a href="" download="">
+                                    </a>
+                                </p>
+                            </li>
+                            <li>
+                                <p>5.我是教材一號!!快來下載我!!</p>
+                                <p>
+                                    <span>下載次數：9,999</span>
+                                    <a href="" download="">
+                                    </a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footerControl modal-footer">
+                        <div class="phoneStyleTextContent">
+                            <span>點擊右側按鈕</span>
+                            <span>即可全部下載</span>
+                        </div>
+                        <a class="downloadAll" href="/images/myw3schoolimage.jpg" download="w3logo">全部下載</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- 768px以下 share 按鈕的modal -->
+    <section id="shareModal">
+        <div class="modal fade" id="shareModalContent" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="bodyControl modal-body">
+                        <ul>
+                            <li>
+                                <img src="./img/subjectMaterial/share/LINE.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./img/subjectMaterial/share/FB.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./img/subjectMaterial/share/MAIL.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./img/subjectMaterial/share/IG.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- bootstrap Button Modal end-->
+
+    <!-- 全站用 start -->
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!-- 全站用 end -->
+
+    <!-- 部分分頁選用 start-->
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 部分分頁選用 end-->
+    <!-- swiper -->
+    <script src="./js/swiper.js"></script>
+    <!-- //layout -->
+    <script src="./js/template.js"></script>
+    <!-- page -->
+    <script src="./js/newsv2.js"></script>
+</body>
+
+</html>

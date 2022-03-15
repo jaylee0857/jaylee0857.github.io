@@ -1,0 +1,323 @@
+@import "./variable";
+@import "./functions";
+@import "./functions_subjectMaterial" ;
+
+#paginationNav {
+    ul {
+        li:nth-of-type(1) {
+            box-shadow: 0 0 0;
+            z-index: 0;
+        }
+
+        li:nth-of-type(5) {
+            box-shadow: 1px -2px 2px 0px rgba(0, 0, 0, 0.3);
+            ;
+            z-index: 3;
+        }
+    }
+
+    .decoration {
+        background-color: #F69632;
+    }
+
+    .phoneStyle {
+        .btn {
+            background-color: #F69632;
+
+            span {
+                &::before {
+                    position: absolute;
+                    left: -33px;
+                    top: 6px;
+                    content: '';
+                    background-image: url(../img/subjectMaterial/medicine.png);
+                    width: 27px;
+                    height: 24px;
+                    background-size: cover;
+                    @media (max-width:$pc) {
+                        left: -30px;
+                        width: 20px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    #collapseExample {
+        .card {
+            a {
+                &:nth-of-type(1) {
+                    background-color: #4AB879;
+
+                    span {
+                        &::before {
+                            position: absolute;
+                            left: -43px;
+                            top: 6px;
+                            content: '';
+                            background-image: url(../img/subjectMaterial/bicycle.png);
+                            width: 38px;
+                            height: 25px;
+                            background-size: cover;
+
+                            @media (max-width:$pc) {
+                                width: 25px;
+                                height: 16px;
+                                left: -35px;
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(2) {
+                    background-color: #3FA7F3;
+
+                    span {
+                        &::before {
+                            position: absolute;
+                            left: -30px;
+                            top: 6px;
+                            content: '';
+                            background-image: url(../img/subjectMaterial/Lifebuoy.png);
+                            width: 24px;
+                            height: 24px;
+                            background-size: cover;
+
+                            @media (max-width:$pc) {
+                                top: 4px;
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(3) {
+                    background-color: #FFA8AD;
+
+                    span {
+                        &::before {
+                            position: absolute;
+                            left: -35px;
+                            top: 0px;
+                            content: '';
+                            background-image: url(../img/subjectMaterial/stairs.png);
+                            width: 30px;
+                            height: 31px;
+                            background-size: cover;
+
+                            @media (max-width:$pc) {
+                                top: 5px;
+                                left: -28px;
+                                width: 20px;
+                                height: 21px;
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(4) {
+                    background-color: #F8C110;
+
+                    span {
+                        &::before {
+                            position: absolute;
+                            left: -45px;
+                            top: 0px;
+                            content: '';
+                            background-image: url(../img/subjectMaterial/Fire.png);
+                            width: 38px;
+                            height: 30px;
+                            background-size: cover;
+
+                            @media (max-width:$pc) {
+                                top: 5px;
+                                left: -35px;
+                                width: 25px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#filterNav {
+    .container {
+        .row {
+            .sortlabelbox {
+                .sortlabel{
+                    background-color:#F69632;
+                }
+            }
+            .filterWrapper {
+                .sortMenu-box {
+                    @media (max-width:$pc) {
+                        border: 1px solid #F69632;
+                    }
+
+                    .d-webkit-box {
+                        .border-R {
+                            border-right: 1px solid #F69632;
+                        }
+                    }
+                }
+
+                ul {
+                    li.active {
+                        border: 1px solid #F69632;
+                        outline: 0;
+                        background-color: #F69632;
+                    }
+
+                    .mostBtn {
+                        border: 1px solid #F69632;
+                    }
+
+                    .sortMenu {
+                        border: 1px solid #F69632;
+                    }
+
+                    .sortMenu.show {
+                        border-color: #F69632;
+                    }
+                }
+
+                .phoneStyle {
+                    .btn {
+                        border: 1px solid #F69632;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#filterContent {
+    .container {
+        .row {
+            .filter-container {
+                .filter-wrapper {
+                    .filter-slide {
+                        .btn {
+                            border: 2px solid #F69632;
+
+                            .btnIconArea {
+                                .note {
+                                    background-color: #F69632;
+                                }
+                            }
+
+                            .btnMsgArea {
+                                background-color: #F69632;
+                            }
+
+                            .mask {
+                                background-color: #F69632;
+                                border: 2px solid #F69632;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .filterArrow {
+            .filter-button-prev {
+                &::after {
+                    content: "";
+                    border-color: transparent #F69632 transparent transparent;
+                }
+            }
+
+            .filter-button-next {
+                &::after {
+                    content: "";
+                    border-color: transparent transparent transparent #F69632;
+                }
+            }
+        }
+    }
+}
+
+#filterModal {
+    .modal {
+        .modal-dialog {
+            .modal-content {
+                .headerControl {
+                    background-color: #F69632;
+                }
+
+                .footerControl {
+                    .download {
+                        .downloadBtnGroup {
+                            li {
+                                button {
+                                    background-color: #F69632;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#downloadModal {
+    .modal {
+        .modal-dialog {
+            .modal-content {
+                .headerControl {
+                    background-color: #F69632;
+                }
+
+                .bodyControl {
+                    ul {
+                        li {
+                            .rightText {
+                                a {
+                                    border: 1px solid #F69632;
+
+                                    &::before {
+                                        background-image: url(../img/subjectMaterial/download_O.png);
+                                    }
+
+                                    &:hover {
+                                        background-color: #F69632;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .Linkbody {
+                    ul {
+                        li {
+                            .rightText {
+                                a {
+                                    &::before {
+                                        background-image: url(../img/subjectMaterial/Link_O.png);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .footerControl {
+                    .downloadAll:nth-of-type(1) {
+                        border: 1px solid #F69632;
+                        color: #F69632;
+
+                        &:hover {
+                            background-color: #F69632;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}

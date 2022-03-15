@@ -1,0 +1,147 @@
+@import "_style.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: source-han-sans-traditional, sans-serif;
+  cursor: url(./mouse.png),crosshair;
+}
+
+html {
+  cursor: url(./mouse.png),crosshair;
+}
+
+#logo {
+  position: absolute;
+  top: 35px;
+  left: 60px;
+
+  width: 70px;
+  height: 70px;
+
+  img {
+    width: 100%;
+  }
+}
+
+#nav {
+  position: fixed;
+  bottom: 50px;
+  margin: 0;
+  width: 100%;
+  @media (max-width: 576px) {
+    position: absolute;
+    top: 30px;
+    bottom: unset;
+    right: 30px;
+    z-index: 2;
+    display: flex;
+    margin: 0;
+    width: 50%;
+    height: unset;
+    background-color: rgba($white, .9);                                                  ;
+    border-radius: 5px;
+  }
+
+  .fa-bars {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: $light_grey;
+    transition: 0.4s;
+    font-size: 50px;
+    @media (max-width: 576px) {
+      display: block;
+    }
+
+    &:hover {
+      color: $grey;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    margin-right: 50px;
+    @media (max-width: 768px) {
+      justify-content: center;
+      margin-right: 0px;
+    }
+    @media (max-width: 576px) {
+      display: none;
+      width: 100%;
+      margin-top: 10px;
+      padding-bottom: 30px;
+      padding-left: 0;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    li {
+      position: relative;
+      margin-top: 30px;
+      margin-right: 20px;
+      list-style: none;
+      font-weight: 500;
+
+      @media (max-width: 768px) {
+        margin-right: 5px;
+      }
+      @media (max-width: 576px) {
+        color: $white;
+        position: relative;
+        text-align: center;
+
+        &:hover {
+          color: $black;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: $grey;
+        font-size: 16px;
+        font-weight: 700;
+
+        @media (max-width: 860px) {
+          font-size: 16px;
+        }
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
+        @media (max-width: 576px) {
+          font-size: 18px;
+        }
+
+        &:hover {
+          color: $dark_blue;
+        }
+        .bubble {
+          position: absolute;
+          top: -50px;
+          right: -25px;
+          z-index: 3;
+          display: none;
+          width: 50px;
+          height: 50px;
+          @media (max-width: 576px) {
+            top: -45px;
+            left: 150px;
+          }
+        }
+
+        &:hover .bubble {
+          display: block;
+        }
+      }
+    }
+  }
+}

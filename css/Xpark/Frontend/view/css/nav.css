@@ -1,0 +1,171 @@
+#nav {
+  position: fixed;
+  bottom: 10px;
+  margin: 0;
+  width: 100%;
+  height: 8vh;
+}
+
+@media (max-width: 1140px) {
+  #nav {
+    bottom: unset;
+    height: 15vh;
+  }
+}
+
+@media (max-width: 576px) {
+  #nav {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    width: 80%;
+    height: unset;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+  }
+}
+
+#nav .fa-bars {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #666666;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  font-size: 50px;
+}
+
+@media (max-width: 576px) {
+  #nav .fa-bars {
+    display: block;
+  }
+}
+
+#nav .fa-bars:hover {
+  color: #4d4d4d;
+}
+
+#nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0;
+  margin-right: 50px;
+}
+
+@media (max-width: 768px) {
+  #nav ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 576px) {
+  #nav ul {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding-left: 0;
+  }
+  #nav ul.active {
+    display: block;
+  }
+}
+
+#nav ul li {
+  position: relative;
+  margin-top: 30px;
+  margin-right: 20px;
+  list-style: none;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  #nav ul li {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  #nav ul li {
+    color: white;
+    position: relative;
+    text-align: center;
+  }
+  #nav ul li:hover {
+    color: black;
+  }
+}
+
+#nav ul li a {
+  text-decoration: none;
+  color: #4d4d4d;
+  font-size: 16px;
+}
+
+@media (max-width: 860px) {
+  #nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  #nav ul li a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  #nav ul li a {
+    font-size: 22px;
+  }
+}
+
+#nav ul li a:hover {
+  color: #036eb8;
+}
+
+#nav ul li a .bubble {
+  position: absolute;
+  top: -60px;
+  z-index: 3;
+  display: none;
+}
+
+@media (max-width: 576px) {
+  #nav ul li a .bubble {
+    width: 80px;
+    height: 80px;
+    top: -60px;
+    left: 192px;
+  }
+}
+
+#nav ul li a:hover .bubble {
+  display: block;
+}
+
+#logo {
+  position: absolute;
+  top: 35px;
+  left: 60px;
+  width: 70px;
+  height: 70px;
+}
+
+#logo a img {
+  width: 100%;
+}
+/*# sourceMappingURL=nav.css.map */

@@ -1,0 +1,90 @@
+[v-cloak] {
+    display: none !important;
+}
+
+body {
+    margin-top: 1em;
+    padding-bottom: 1em;
+}
+li{
+    list-style: none;
+}
+.page-header {
+    margin-top: 20px;
+}
+
+.item {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+    border-bottom: 1px dashed #ccc;
+}
+
+.item:last-of-type {
+    border: none;
+}
+
+.item-img {
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin-right: 2em;
+}
+
+.item-price {
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.cart {
+    font-size: 15px;
+}
+
+.cart h4 {
+    margin-bottom: 1em;
+    font-size: 22px;
+}
+
+.itemsInCart li {
+    margin-bottom: 1.5em;
+}
+
+.cart-title {
+    font-weight: 900;
+    margin-bottom: 3px;
+}
+
+.handler {
+    float: right;
+    margin-right: 2em;
+    font-size: 16px;
+}
+
+.cart-btn {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    color: #333;
+    background-color: pink;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 5px;
+}
+
+.cart-btn:hover {
+    text-decoration: none;
+}
+
+/* 購物車 */
+.well_1 {
+    width: 180px;
+    padding: px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    position: fixed;
+    right: 10px;
+    bottom: 0px;
+}
+

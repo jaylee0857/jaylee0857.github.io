@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EACA,MAAM,EAAC,CAAC;EACR,OAAO,EAAC,CAAC;CACZ",
+    "sources": [
+        "../2. Frontend/1.頁首/ch/css/all.scss"
+    ],
+    "names": [],
+    "file": "all.css"
+}

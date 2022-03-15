@@ -1,0 +1,431 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #bfdedc;
+}
+
+.container {
+  width: 1140px;
+  height: 100%;
+  margin: auto;
+}
+
+.content {
+  width: 50%;
+}
+
+.pfmitem {
+  width: 50%;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mt_mb {
+  margin: 50px 0 50px 0;
+}
+
+.padding-left {
+  padding-left: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0 100px 0;
+}
+
+.pfmitem {
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+}
+
+.content_text {
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#logo {
+  position: absolute;
+  top: 35px;
+  left: 60px;
+  width: 70px;
+  height: 70px;
+}
+
+#logo img {
+  width: 100%;
+}
+
+/* #nav {
+  margin: 0;
+  width: 100%;
+  height: 15vh;
+  background-color: #bfdedc;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+} */
+
+#nav {
+    position: fixed;
+    bottom: 30px;
+    margin: 0;
+    width: 100%;
+  }
+
+
+@media (max-width: 576px) {
+  #nav {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    width: 80%;
+    height: unset;
+    background-color: #01a0e9;
+    border-radius: 5px;
+  }
+}
+
+#nav .fa-bars {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  font-size: 50px;
+}
+
+@media (max-width: 576px) {
+  #nav .fa-bars {
+    display: block;
+  }
+}
+
+#nav .fa-bars:hover {
+  color: #4d4d4d;
+}
+
+#nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0;
+  margin-right: 50px;
+}
+
+@media (max-width: 768px) {
+  #nav ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 576px) {
+  #nav ul {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+  #nav ul.active {
+    display: block;
+  }
+}
+
+#nav ul li {
+  position: relative;
+  margin-top: 30px;
+  margin-right: 20px;
+  list-style: none;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  #nav ul li {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  #nav ul li {
+    color: white;
+    position: relative;
+    text-align: center;
+  }
+  #nav ul li:hover {
+    color: black;
+  }
+}
+
+#nav ul li a {
+  text-decoration: none;
+  color: #4d4d4d;
+  font-size: 16px;
+}
+
+@media (max-width: 860px) {
+  #nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  #nav ul li a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  #nav ul li a {
+    font-size: 22px;
+  }
+}
+
+#nav ul li a:hover {
+  color: #036eb8;
+}
+
+#nav ul li a .bubble {
+  position: absolute;
+  top: -60px;
+  z-index: 3;
+  display: none;
+}
+
+@media (max-width: 576px) {
+  #nav ul li a .bubble {
+    width: 80px;
+    height: 80px;
+    top: -60px;
+    left: 192px;
+  }
+}
+
+#nav ul li a:hover .bubble {
+  display: block;
+}
+
+.tab {
+  padding: 20px;
+}
+
+.cart_btn {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  color: #26bec9;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 5px;
+  border: 1px solid #26bec9;
+  border-radius: 50%;
+}
+
+.ticket {
+  width: 100%;
+  height: 100%;
+}
+
+.ticket span {
+  font-weight: 500;
+}
+
+.men {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.child {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.oldmen {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.student {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pfmcontainer {
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+.tabpanel {
+  padding-left: 10px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.credit {
+  position: absolute;
+  -webkit-transform: translate(30%, -75%);
+          transform: translate(30%, -75%);
+}
+
+.ccn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pay {
+  width: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.pay_img {
+  padding: 5px;
+}
+
+.pay_img img {
+  width: 150px;
+  height: 150px;
+}
+
+.pay_title {
+  font-size: 18px;
+  font-weight: 900;
+  padding: 5px 0 5px 0;
+}
+
+.pay_icon {
+  font-weight: normal;
+}
+
+.count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.total {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.allTotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.pay_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.payMoney {
+  background-color: #26bec9;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.age {
+  font-size: 16px;
+  color: #aaaaaa;
+}
+
+@media (max-width: 568px) {
+  .container {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .inp {
+    width: 50px;
+    height: 25px;
+    text-align: center;
+  }
+  #nav {
+    position: static;
+  }
+}
+/*# sourceMappingURL=booking.css.map */

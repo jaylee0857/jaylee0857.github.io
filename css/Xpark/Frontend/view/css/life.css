@@ -1,0 +1,343 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 26px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 5%;
+}
+
+.title_wave {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%) scale(-1);
+          transform: translateX(-50%) scale(-1);
+  margin-top: 7%;
+  width: 120px;
+}
+
+.child {
+  min-height: 80px;
+  margin-top: 2%;
+  margin-left: 0;
+  overflow: hidden;
+}
+
+.fishes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+}
+
+.fishes .fish_1 {
+  position: absolute;
+  width: 170px;
+  top: 18%;
+  left: 20%;
+}
+
+.fishes .fish_2 {
+  position: absolute;
+  width: 70px;
+  top: 16%;
+  left: 75%;
+}
+
+.fishes .fish_3 {
+  position: absolute;
+  width: 50px;
+  top: 20%;
+  left: 80%;
+}
+
+.fishes .fish_4 {
+  position: absolute;
+  width: 120px;
+  top: 45%;
+  left: 20%;
+}
+
+.fishes .fish_5 {
+  position: absolute;
+  width: 90px;
+  top: 20%;
+  left: 10%;
+}
+
+.fishes .fish_6 {
+  position: absolute;
+  width: 120px;
+  top: 40%;
+  left: 15%;
+}
+
+.fishes .fish_7 {
+  position: absolute;
+  width: 100px;
+  top: 33%;
+  left: 40%;
+}
+
+.fishes .fish_8 {
+  position: absolute;
+  width: 80px;
+  top: 34%;
+  left: 90%;
+}
+
+.fishes .fish_9 {
+  position: absolute;
+  width: 140px;
+  top: 40%;
+  left: 70%;
+}
+
+.fishes .fish_10 {
+  position: absolute;
+  width: 100px;
+  top: 27%;
+  left: 53%;
+}
+
+.fishes .fish_11 {
+  position: absolute;
+  width: 100px;
+  top: 36%;
+  left: 5%;
+}
+
+.fishes .fish_12 {
+  position: absolute;
+  width: 50px;
+  top: 20%;
+  left: 60%;
+}
+
+.fishes .fish_13 {
+  position: absolute;
+  width: 100px;
+  top: 23%;
+  left: 89%;
+}
+
+.fishes .fish_14 {
+  position: absolute;
+  width: 100px;
+  top: 22%;
+  left: 55%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+#scene {
+  top: -45px;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#scene .wave_bg {
+  width: 140%;
+}
+
+#scene .wave_bg:nth-child(1) {
+  top: 1% !important;
+  mation: waves 1s infinite delay alternate linear;
+  -webkit-animation: waves 3s linear -0.5s infinite alternate;
+          animation: waves 3s linear -0.5s infinite alternate;
+}
+
+@media screen and (max-width: 576px) {
+  #scene .wave_bg:nth-child(1) {
+    top: 0% !important;
+  }
+}
+
+#scene .wave_bg:nth-child(2) {
+  top: 15% !important;
+  -webkit-animation: waves 3s linear -1.3s infinite alternate;
+          animation: waves 3s linear -1.3s infinite alternate;
+}
+
+@media screen and (max-width: 576px) {
+  #scene .wave_bg:nth-child(2) {
+    top: 10% !important;
+  }
+}
+
+#scene .wave_bg:nth-child(3) {
+  top: 50% !important;
+  -webkit-animation: waves 2s linear -1.1s infinite alternate;
+          animation: waves 2s linear -1.1s infinite alternate;
+}
+
+@media screen and (max-width: 1250px) {
+  #scene .wave_bg:nth-child(3) {
+    top: 30% !important;
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #scene .wave_bg:nth-child(3) {
+    top: 20% !important;
+  }
+}
+
+#scene .wave_bg:nth-child(4) {
+  display: none !important;
+  top: 50% !important;
+  -webkit-animation: waves 2s linear -1.1s infinite alternate;
+          animation: waves 2s linear -1.1s infinite alternate;
+}
+
+@media screen and (max-width: 1250px) {
+  #scene .wave_bg:nth-child(4) {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #scene .wave_bg:nth-child(4) {
+    top: 30% !important;
+  }
+}
+
+#scene .wave_bg:nth-child(5) {
+  display: none !important;
+  top: 60% !important;
+  -webkit-animation: waves 2s linear -1.1s infinite alternate;
+          animation: waves 2s linear -1.1s infinite alternate;
+}
+
+@media screen and (max-width: 1250px) {
+  #scene .wave_bg:nth-child(5) {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #scene .wave_bg:nth-child(5) {
+    top: 47% !important;
+  }
+}
+
+#scene .wave_bg:nth-child(6) {
+  display: none !important;
+  top: 70% !important;
+  -webkit-animation: waves 2s linear -1.1s infinite alternate;
+          animation: waves 2s linear -1.1s infinite alternate;
+}
+
+@media screen and (max-width: 1250px) {
+  #scene .wave_bg:nth-child(6) {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #scene .wave_bg:nth-child(6) {
+    top: 65% !important;
+  }
+}
+
+#scene .wave_bg:nth-child(7) {
+  display: none !important;
+  top: 80% !important;
+  -webkit-animation: waves 2s linear -1.1s infinite alternate;
+          animation: waves 2s linear -1.1s infinite alternate;
+}
+
+@media screen and (max-width: 1250px) {
+  #scene .wave_bg:nth-child(7) {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #scene .wave_bg:nth-child(7) {
+    top: 80% !important;
+  }
+}
+
+#scene .sand {
+  top: unset !important;
+  left: -5% !important;
+  bottom: 10% !important;
+  z-index: 3;
+  width: 110% !important;
+}
+
+.card {
+  position: absolute;
+  width: 800px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
+  background-color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.card.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 100;
+}
+
+.card .pic {
+  width: 40%;
+  height: 80%;
+  margin-right: 20px;
+}
+
+.card .text_area {
+  padding: 20px;
+}
+
+.card .cross {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10%;
+  left: 20px;
+}
+
+@-webkit-keyframes waves {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+@keyframes waves {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: -50px;
+  }
+}
+/*# sourceMappingURL=life.css.map */

@@ -1,0 +1,16 @@
+// color
+$light_blue: #bfdedc;
+$dark_blue: #036eb8;
+$blue: #01a0e9;
+$black: black;
+$grey: #4d4d4d;
+$light_grey: #666666;
+$white: white;
+@mixin shadow() {
+  -webkit-box-shadow: 6px 7px 28px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 7px 28px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 7px 28px -5px rgba(0, 0, 0, 0.75);
+}
+
+// font_size
+$title: 30px;

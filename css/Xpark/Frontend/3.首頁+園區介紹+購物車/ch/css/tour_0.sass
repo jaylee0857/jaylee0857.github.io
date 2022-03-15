@@ -1,0 +1,243 @@
+*
+    font-family: source-han-sans-traditional, sans-serif
+    // border: solid 1px grey
+    box-sizing: border-box
+
+@mixin location($l,$t)
+    position: absolute
+    left: $l
+    top: $t
+
+html,body
+    margin: 0
+    background-color: #A6D8D0
+    overflow: hidden
+
+.title
+    font-size: 30px
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    padding-top: 80px
+
+.title_wave
+    position: absolute
+    left: 50%
+    transform: translateX(-50%) scale(-1)
+    top: 120px
+    width: 120px
+
+.left
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 6%
+    .pic
+        width: 800px
+        border-radius: 10px
+        box-shadow: 5px 5px 5px rgba(black,0.5)
+
+    .floors
+        display: inline-block
+        position: absolute
+        bottom: 0px
+        left: 105%
+        width: 80px
+        cursor: pointer
+        .f_2,.f_3
+            margin-bottom: -15px
+
+.right
+    // border: solid 1px black
+    height: 100vh
+    width: 50%
+    position: absolute
+    right: 0px
+    pointer-events: none
+
+    .fish_area_1
+        +location(3%,25%)
+        .fish1
+            width: 200px
+        .area
+            transform: translate(70%, -150px)
+
+    .fish_area_2
+        +location(45%,39%)
+        .fish2
+            transform: scaleX(-1)
+            width: 100px
+        p
+            +location(-30px,-50px)
+            opacity: 0
+
+    .fish_area_3
+        +location(40%,46%)
+        .fish3
+            width: 70px
+        p
+            +location(-22px,-33px)
+            opacity: 0
+
+    .fish_area_4
+        +location(70%, 70%)
+        .fish4
+            width: 40px
+        p
+            +location(20px,-40px)
+            transform: rotate(30deg)
+            opacity: 0
+
+    .fish_area_5
+        +location(63%,55%)
+        .fish5
+            width: 150px
+
+    .wave1
+        +location(70%,10%)
+        width: 150px
+
+    .wave2
+        +location(20%,70%)
+        width: 90px
+
+    .wave3
+        +location(25%,76%)
+        width: 120px
+
+.fish1   //燈籠
+    animation: shack 2s infinite
+.fish2   //條紋
+    animation: breath2 3s ease-out
+.fish3   //花邊
+    animation: breath3 3s linear
+.fish4   //球球
+    animation: breath4 2s linear
+.fish5   //秋刀魚
+    animation: breath5 2s infinite
+
+@keyframes shack
+    0%
+        transform: rotate(3deg)
+    50%
+        transform: rotate(-2deg)
+    100%
+        transform: rotate(3deg)
+
+@keyframes breath4
+    0%
+        transform: translateX(300px) rotate(360deg)
+    100%
+        transform: translateX(0px) rotate(0deg)
+
+@keyframes breath2
+    0%
+        transform: translateX(300px) scaleY(1) scaleX(-1)
+    50%
+        transform: translateX(0px) scaleY(1.3) scaleX(-1)
+    100%
+        transform: scaleY(1) scaleX(-1)
+
+@keyframes breath3
+    0%
+        transform: translateX(300px) scaleY(1)
+    50%
+        transform: translateX(0px) scaleY(1.3)
+    100%
+        transform: scaleY(1)
+
+@keyframes breath5
+    0%
+        transform: scaleY(1) scaleX(-1)
+    50%
+        transform: scaleY(1.3) scaleX(-1)
+    100%
+        transform: scaleY(1) scaleX(-1)
+
+@media screen and (max-width: 576px)
+    .title
+        font-size: 20px
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        top: 2%
+
+    .title_wave
+        position: absolute
+        left: 50%
+        transform: translateX(-50%) scale(-1)
+        top: 7%
+        width: 90px   
+
+    .left
+        position: absolute
+        top: 28%
+        left: 0%
+        display: flex
+        flex-direction: column
+        .pic
+            width: 90%
+            margin-left: auto
+            margin-right: auto
+        .floors
+            display: flex
+            bottom: -80px
+            left: 10%
+            cursor: pointer
+            .f_2,.f_3
+                margin-bottom: 0px
+            [class^=f_]
+                width: 80px
+
+    .right
+        // border: solid 1px black
+        width: 100%
+        height: 400px
+        position: absolute
+        right: 0px
+        top: 55%
+
+        .fish_area_1
+            +location(3%,25%)
+            .fish1
+                width: 170px
+            .area
+                transform: translate(75%, -130px)
+
+        .fish_area_2
+            +location(35%,39%)
+            .fish2
+                width: 80px
+            p
+                +location(-10px,-40px)
+
+        .fish_area_3
+            +location(50%,50%)
+            .fish3
+                width: 50px
+            p
+                +location(-10px,-30px)
+
+        .fish_area_4
+            +location(70%, 70%)
+            .fish4
+                width: 30px
+            p
+                +location(17px,-35px)
+
+        .fish_area_5
+            +location(70%,30%)
+            .fish5
+                width: 120px
+
+        .wave1
+            +location(70%,10%)
+            width: 120px
+
+        .wave2
+            +location(20%,70%)
+            width: 70px
+
+        .wave3
+            +location(25%,76%)
+            width: 70px

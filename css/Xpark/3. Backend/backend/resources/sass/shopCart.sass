@@ -1,0 +1,141 @@
+*
+    font-family: source-han-sans-traditional, sans-serif
+    box-sizing: border-box
+    // border: solid 1px black
+
+
+.title
+    font-size: 30px
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    padding-top: 80px
+
+
+#tabGroup
+    display: flex
+    cursor: pointer
+    padding: 10px
+    position: absolute
+    top: 23%
+    left: 15%
+    font-weight: 600
+    .gift, .essential
+        position: relative
+        font-size: 20px
+        margin-right: 30px
+        &::before
+            content: ''
+            position: absolute
+            bottom: -5px
+            left: 0
+            width: 0%
+            height: 2px
+            background-color: black
+            transition: 0.3s
+        &.active
+            &::before
+                width: 100%
+
+.page
+    max-width: 1500px
+    padding-top: 50px
+    margin: 0 auto
+
+.swiper-container
+    width: 100%
+    margin: 0 auto
+    top: 250px
+
+    .swiper-wrapper
+        .swiper-slide
+            text-align: center
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            
+            *
+                // border: solid 1px black
+            .pic
+                width: 100%
+            .item
+                display: flex
+                padding-top: 10px
+                margin: 0
+            .price
+                display: flex
+                padding: 5px 0 0 0
+                letter-spacing: 1px
+                margin: 0
+            p
+                padding: 5px 10px
+                margin: 0
+            .more
+                padding: 5px 10px
+                margin-top: 10px
+
+.arrowBox
+    display: flex
+    justify-content: flex-end
+    font-size: 30px
+    color: #666666
+    margin-top: 20%
+    .fa-chevron-circle-right
+        margin-left: 30px
+
+#page2
+    display: none
+
+.fish_area_1
+    position: absolute
+    bottom: 10%
+    left: 30%
+    z-index: 10
+    .fish1
+        width: 150px
+    p
+        font-weight: 600
+        transform: translate(80%, 0%)
+
+.fish_area_2
+    position: absolute
+    bottom: 10%
+    left: 50%
+    z-index: 10
+    .fish2
+        width: 150px
+    p
+        font-weight: 600
+        opacity: 0
+        font-size: 26px
+
+
+@media screen and (max-width: 576px)
+    body
+        padding-top: 20px
+    .page
+        padding-top: 10px
+    .swiper-slide
+        padding: 0 10px
+
+    .fish_area_1
+        bottom: 5%
+        left: 15%
+        .fish1
+            width: 120px
+        p
+            transform: translate(40%, -40%)
+
+    .fish_area_2
+        bottom: 4%
+        left: 60%
+        .fish2
+            width: 120px
+
+    .arrowBox
+        padding-top: 10px
+        font-size: 30px
+        margin-right: 20px
+        .fa-chevron-circle-right
+            margin-left: 10px

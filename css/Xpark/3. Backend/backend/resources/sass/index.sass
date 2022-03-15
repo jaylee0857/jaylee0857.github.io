@@ -1,0 +1,99 @@
+*
+    // border: solid 1px black
+
+body
+    margin: 0
+    background-color: #222
+
+.bgc
+    position: absolute
+    z-index: -500
+    top: 0
+    filter: grayscale(0%)
+    width: 100%
+    height: 100vh
+    overflow: hidden
+
+#playVideo
+    position: absolute
+    width: 70%
+    height: 80vh
+    top: 10%
+    left: 8%
+    overflow: hidden
+    z-index: -15
+
+    .videoMask
+        position: absolute
+        width: 100%
+        height: 100%
+        background: radial-gradient(#000000 10%,rgba(0,0,0,0) 20%) 0 0,radial-gradient(#000000 10%,rgba(0,0,0,0) 20%) 3px 3px
+        background-size: 3px 3px
+        background-color: rgba(0,0,0,0.2)
+.logo
+    width: 250px
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+
+
+
+.title
+    width: 450px
+    position: absolute
+    top: 73%
+    left: 5%
+
+.nav_bar
+    position: absolute
+    right: 10%
+    top: 15%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+
+    [class^=btn]
+        width: 80px
+        margin-bottom: 40px
+        cursor: pointer
+        &:hover
+            background-color: #333
+
+    [class^=group]
+        width: 80px
+        display: flex
+
+    .btn_1,.btn_2,.btn_9,.btn_10
+        width: 25px
+        margin-right: 15px
+
+.painting
+    margin-left: 85%
+    margin-top: 35%
+    .life_6
+        width: 100px
+
+    .life_7
+        width: 80px
+
+
+/*# sourceMappingURL=index.css.map
+
+
+@media screen and (max-width: 576px)
+    .title
+        width: 400px
+        top: 75%
+        left: 50%
+        transform: translateX(-50%)
+    .painting
+        display: none
+
+    .nav_bar
+        right: 3%
+        top: 15%
+        [class^=btn]
+

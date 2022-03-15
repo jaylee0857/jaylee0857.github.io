@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.panel-heading .accordion-toggle:before {
+    content: "－";
+}
+
+.panel-heading .accordion-toggle.collapsed:before {
+    content: "＋";
+}
+
+.accordion-toggle{
+    display:block;
+}
+

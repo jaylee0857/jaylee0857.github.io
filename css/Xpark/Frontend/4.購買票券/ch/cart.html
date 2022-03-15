@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/shopping.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"></link>
+    <title>shopping</title>
+</head>
+
+<body>
+    <div id="cart-app" class="container">
+        <div class="col-12 ">
+
+            <div class="well ">
+                <h4>商品搜尋</h4>
+                <div class="input-group ">
+                    <input type="text" class="form-control mb-3" v-model="search">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+                <!-- /.input-group -->
+            </div>
+            <div class="row">
+                <div class="col-12">
+
+                    <!--商品列表-->
+                    <div class="item " v-for='opt in filteredProduct'>
+                        <h2>{{opt.name}}</h2>
+                        <img class="item-img img-responsive" :src="opt.img" alt="opt.imgName">
+                        <p>{{opt.details}}</p>
+                        <p class="item-price ">{{'$' + opt.price}}</p>
+                        <a class="btn btn-primary " @click='addToCart(opt)'>加入購物車<span
+                                class="glyphicon glyphicon-chevron-right "></span></a>
+
+                    </div>
+
+                    <!--Pager -->
+
+
+                </div>
+
+                <!-- Blog Sidebar Widgets Column -->
+
+
+                <hr>
+
+                <div class="well_1 cart">
+                    <h4>購物車</h4>
+
+                    <ul class="itemsInCart ">
+                        <li v-for='cartItem in incart'>
+                            <div class="cart-item">
+                                <div class="cart-title">{{cartItem.name}}</div> <span
+                                    class="price">{{'$' + cartItem.price}}元</span>
+                                <br>
+                                <span class="count">{{cartItem.quantity}}件</span>
+                                <br>
+
+                                <div class="handler">
+                                    <a href="#" class="cart-btn plus" @click='addOne(cartItem)'>+</a>
+                                    <a href="#" class="cart-btn minus" @click='removeOne(cartItem)'>-</a></div>
+                                <a href="#" class="cart-btn " @click='removeOne(cartItem)'>x</a>
+                                <!-- <div class="btn btn-danger btn-xs" @click='removeElement(cartItem)'>x</div> -->
+                            </div>
+                        </li>
+
+                    </ul>
+                    <hr>
+                    <p>金額： <span>{{'$' + countTotal}}</span></p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Launch demo modal
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- 燈箱 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
+
+    <script>
+        // 功能規劃
+        // 1.商品列表轉換為vue控制
+        // 2.按加入購物車後，將商品移到購物車
+        // 3.購物車對商品按+or-，商品數量可增加減少
+        // 4.計算購物車總額
+        // 5.搜尋商品列表
+        // 6.
+        // 購物車內容
+        // var incart=[];
+        new Vue({
+            el: "#cart-app",
+            data: {
+                // 商品列表
+                product: [{
+                    name: '鱷魚皮鞋',
+                    img: 'https://s.yimg.com/ut/api/res/1.2/23VInXlCKI9WmX1kU7TBAQ--~B/dz02MDA7aD02MDA7cT04MTtmaT1maXQ7YXBwaWQ9eXR3bWFsbA--/https://s.yimg.com/fy/71c9/item/p0857146646035-item-8783xf4x0750x0750-m.jpg',
+                    imgName: 'Samsung Galaxy S8',
+                    details: '由兇猛鱷魚真皮製作，手工鱷魚皮鞋',
+                    price: 49999
+                }, {
+                    name: '鱷魚皮包',
+                    img: 'https://img.ruten.com.tw/s1/9/bc/45/21535514050629_513.jpg',
+                    imgName: '《HOYACASA》3D立體緹花雙人蠶絲冬被(6x7尺)',
+                    details: '由兇猛鱷魚真皮製作，手工鱷魚皮包 ',
+                    price: 49988
+                }, {
+                    name: '鱷魚娃娃',
+                    img: 'https://img.ruten.com.tw/s4/5be/f6d/sweetxsexy/e/5e/9c/21937777181340_660.jpg',
+                    imgName: 'Apple iPhone X (256G) -太空灰',
+                    details: '仿真尼羅鱷',
+                    price: 2500
+                }, {
+                    name: 'Xpark海洋公園(成人門票)',
+                    img: 'http://via.placeholder.com/400x400',
+                    imgName: '123',
+                    details: '沒錢買飼料，快來人餵鱷魚~',
+                    price: 599
+                }, {
+                    name: 'Xpark海洋公園(兒童門票)',
+                    img: 'http://via.placeholder.com/400x400',
+                    imgName: 'MacBook Pro 15-inch Touch Bar',
+                    details: '帶著小孩參加鱷魚餵食秀',
+                    price: 350
+                }],
+                // 購物車
+                incart: [],
+                // 搜尋
+                search: ""
+            },
+
+            methods: {
+                // 加入購物車
+                addToCart: function (opt) {
+                    // 新增購物車物件
+                    var newCartItem = {};
+
+                    // 抓商品名
+                    newCartItem.name = opt.name;
+                    // 抓商品價格
+                    newCartItem.price = opt.price;
+
+                    // 設定購物車商品初始數量
+                    var newQua = 1;
+
+                    // 判斷購物車有沒有相同商品
+                    /*找整個購物車*/
+                    for (var i in this.incart) {
+                        /*如果找到商品名稱相同*/
+                        if (this.incart[i].name === opt.name) {
+                            /*數量就要加一*/
+                            newQua = this.incart[i].quantity + 1;
+                            /*找到重複的這個商品物件在陣列中的位置*/
+                            var theDoubleOneIndex = this.incart.indexOf(this.incart[i]);
+                            /*把這個陣列從這個位置開始刪掉一個*/
+                            this.incart.splice(theDoubleOneIndex, 1);
+                        }
+                    }
+
+                    newCartItem.quantity = newQua;
+
+                    // 商品無重複就直接塞入購物車
+                    this.incart.push(newCartItem);
+                },
+
+
+                // 增加數量
+                addOne: function (cartItem) {
+                    cartItem.quantity++;
+                },
+
+                // 減少數量
+                removeOne: function (cartItem) {
+                    cartItem.quantity--;
+                    // 數量小於0刪除此列
+                    if (cartItem.quantity <= 0) {
+                        /*用編號找會比較麻煩，直接用物件找*/
+                        this.incart.splice(cartItem, 1);
+                    }
+                },
+
+                // 刪除商品
+                removeElement: function (cartItem) {
+                    /*跟上面的splice效果相同*/
+                    this.incart.splice(cartItem);
+                }
+            },
+            // 計算區
+            computed: {
+                countTotal: function () {
+                    //設定初始金額
+                    var countTotal = 0;
+                    // 找購物車裡面全部商品
+                    for (var i in this.incart) {
+                        // 把每個商品的數量乘上單價
+                        countTotal += this.incart[i].quantity * this.incart[i].price;
+                    }
+                    // 回傳到總金額
+                    return countTotal;
+                },
+                filteredProduct: function () {
+                    var product_array = this.product,
+                        searchString = this.search;
+
+                    // 搜尋框無內容回傳商品列表
+                    if (searchString === '') {
+                        return product_array;
+                    }
+
+                    // 搜索框文字去空白轉小寫 方便比對
+                    searchString = searchString.trim().toLowerCase();
+
+                    product_array = product_array.filter(function (opt) {
+                        if (opt.name.toLowerCase().indexOf(searchString) !== -1) {
+                            return opt;
+                        }
+                    })
+
+                    // Return an array with the filtered data.
+                    return product_array;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

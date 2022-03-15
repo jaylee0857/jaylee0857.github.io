@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  background-color: #222;
+}
+
+.bgc {
+  position: absolute;
+  z-index: -500;
+  top: 0;
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#playVideo {
+  position: absolute;
+  width: 70%;
+  height: 80vh;
+  top: 10%;
+  left: 8%;
+  overflow: hidden;
+  z-index: -15;
+}
+
+#playVideo .videoMask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#000000 10%, rgba(0, 0, 0, 0) 20%) 0 0, radial-gradient(#000000 10%, rgba(0, 0, 0, 0) 20%) 3px 3px;
+  background-size: 3px 3px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.title {
+  width: 450px;
+  position: absolute;
+  top: 73%;
+  left: 5%;
+}
+
+.nav_bar {
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav_bar [class^=btn] {
+  width: 80px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.nav_bar [class^=btn]:hover {
+  background-color: #333;
+}
+
+.nav_bar [class^=group] {
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav_bar .btn_1, .nav_bar .btn_2, .nav_bar .btn_9, .nav_bar .btn_10 {
+  width: 25px;
+  margin-right: 15px;
+}
+
+.painting {
+  margin-left: 85%;
+  margin-top: 35%;
+}
+
+.painting .life_6 {
+  width: 100px;
+}
+
+.painting .life_7 {
+  width: 80px;
+}
+@media screen and (max-width: 576px) {
+  .title {
+    width: 400px;
+    top: 75%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .painting {
+    display: none;
+  }
+  .nav_bar {
+    right: 3%;
+    top: 15%;
+  }
+}
+/*# sourceMappingURL=index.css.map */

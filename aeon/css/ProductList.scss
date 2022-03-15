@@ -1,0 +1,393 @@
+@import "./_variables.scss";
+@import "./_functions.scss";
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: $purewhite;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+main {
+    .banner {
+        @media (max-width: 1199px) {
+            height: 200px;
+            padding: 8px 0;
+        }
+        .container {
+            @media (max-width: 1199px) {
+                margin: unset !important;
+                padding-left: 25px;
+            }
+
+            .page-title {
+                @media (max-width: 1199px) {
+                    margin-left: 0px;
+                }
+                h1 {
+                    @media (max-width: 1199px) {
+                        font-size: $fs-40;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content {
+    padding: 0;
+    .container {
+        max-width: 1460px;
+        .PL-content {
+            padding: 100px 0;
+
+            @media (max-width: 1199px) {
+                padding: 50px 0;
+            }
+            .product-card {
+                width: 100%;
+                border: 0.5px solid rgba(0, 0, 0, 0.2);
+                margin-bottom: 30px;
+                transition: 0.3s;
+
+                &.active {
+                    border: 2px solid $red;
+                }
+
+                .card-head {
+                    position: relative;
+                    padding-top: 30px;
+                    width: 100%;
+                    height: 90%;
+
+                    &:hover .mask {
+                        background: linear-gradient(to left, rgba(67, 67, 67, 0.85), rgba(0, 0, 0, 0.8));
+                        opacity: 1;
+                    }
+
+                    .mask {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: linear-gradient(to left, rgba(67, 67, 67, 0.85), rgba(0, 0, 0, 0.8));
+                        opacity: 0;
+                        transition: 0.3s;
+                        z-index: 99;
+                        font-size: $fs-30;
+                        color: $purewhite;
+
+                        div {
+                            border-bottom: 1.3px solid $red;
+                        }
+                    }
+
+                    .product-img {
+                        padding-bottom: 15px;
+                        width: 96%;
+                        margin: auto;
+                        border-bottom: 1px solid $red;
+
+                        img {
+                            width: 75% !important;
+                        }
+                    }
+
+                    .product-type {
+                        margin-top: 8px;
+                        color: $product_name_gray;
+                        font-size: $fs-20;
+                        letter-spacing: 1.2px;
+                    }
+
+                    .product-name {
+                        color: $black;
+                        font-size: $fs-40;
+                        font-weight: 700;
+                    }
+                }
+                .card-btn-group {
+                    width: 100%;
+                    background-color: purple;
+
+                    .card-btn {
+                        background-color: $btn-gray;
+                        padding: 10px 0;
+                        width: 50%;
+                        height: 100%;
+                        color: $purewhite;
+                        font-size: $fs-20;
+                        transition: 0.3s;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $hover-red;
+                        }
+
+                        @media (max-width: 1199px) {
+                            width: 30%;
+
+                            &:nth-child(1) {
+                                width: 70%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.slider-container {
+    // height: 110px;
+    width: 75%;
+    // width: 1431.6048px;
+    margin: 0 auto;
+    // background-color: antiquewhite;
+    margin-top: 150px;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    //電腦版的上方
+    @media (max-width: 1360px) {
+        width: 90%;
+    }
+    .slider-title-container {
+        // display: none;
+        display: flex;
+        // width: 1065px;
+        width: 75%;
+        justify-content: space-between;
+        margin-bottom: 23px;
+        @media (max-width: 1360px) {
+            display: none;
+        }
+        & > div {
+            font-size: 20px;
+            color: #808080;
+            cursor: pointer;
+            @media (max-width: 1800px) {
+                font-size: 16px;
+            }
+        }
+        .focus {
+            color: #be1518;
+            border-bottom: 1px solid #ba1518;
+        }
+    }
+    //手機版的上方
+    .phone-slider-title-container {
+        display: none;
+        // display: flex;
+        // width: 1065px;
+        width: 75%;
+        // justify-content: space-between;
+        margin-bottom: 23px;
+        // position: initial !important;
+        position: relative;
+
+        @media (max-width: 1360px) {
+            margin-bottom: 11px;
+            display: flex;
+        }
+        .swiper-wrapper {
+            position: static !important;
+        }
+        // position:relative;
+        .swiper-slide {
+            font-size: 20px;
+            color: #808080;
+            cursor: pointer;
+
+            @media (max-width: 1360px) {
+                font-size: 14px;
+            }
+            @media (max-width: 760px) {
+                font-size: 10px;
+            }
+        }
+        .focus {
+            color: #be1518;
+            & > span {
+                border-bottom: 1px solid #ba1518;
+            }
+        }
+        .swiper-button-prev {
+            content: url("../img/Product/swiper-left.png");
+            left: -8%;
+            @media (max-width: 700px) {
+                left: -12%;
+            }
+        }
+        .swiper-button-next {
+            content: url("../img/Product/swiper-right.png");
+            right: -8%;
+            @media (max-width: 700px) {
+                right: -12%;
+            }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 40px;
+            height: 40px;
+            @media (max-width: 1360px) {
+                width: 24px;
+                height: 24px;
+                top: 100%;
+            }
+            @media (max-width: 760px) {
+                width: 14px;
+                height: 14px;
+                top: 140%;
+            }
+        }
+    }
+    .slider-line-container {
+        width: 100%;
+        position: relative;
+        .triangle {
+            position: absolute;
+            bottom: 0;
+            // left: 180px;
+            left: 12.7%;
+            transition: 0.8s;
+            transition-timing-function: ease-in-out;
+            @media (max-width: 1360px) {
+                width: 10px;
+            }
+            @media (max-width: 760px) {
+                width: 6px;
+            }
+        }
+        .red-line {
+            width: 100%;
+            height: 2px;
+            background-color: #be1518;
+            @media (max-width: 760px) {
+                height: 1px;
+            }
+        }
+    }
+    //Swiper的下方
+    .slider-detail-container {
+        // width: 1431.6048px;
+        width: 75%;
+        height: 50px;
+        margin-top: 18px;
+        position: relative;
+        @media (max-width: 1800px) {
+            width: 80%;
+        }
+        @media (max-width: 1360px) {
+            margin-top: 4px;
+            height: 40px;
+        }
+        @media (max-width: 700px) {
+            width: 100%;
+        }
+        a {
+            text-decoration: none;
+            color: #808080;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+            // width: 1072px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (max-width: 1800px) {
+                font-size: 15px;
+            }
+            @media (max-width: 1360px) {
+                font-size: 12px;
+            }
+            @media (max-width: 760px) {
+                font-size: 8px;
+            }
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-button-prev {
+            content: url("../img/Product/swiper-left.png");
+            left: -8%;
+            // left: 177.625px;
+            @media (max-width: 1800px) {
+                left: -12%;
+            }
+            @media (max-width: 700px) {
+                left: -3%;
+            }
+        }
+        .swiper-button-next {
+            content: url("../img/Product/swiper-right.png");
+            right: -8%;
+            // right: 177.625px;
+            @media (max-width: 1800px) {
+                right: -12%;
+            }
+            @media (max-width: 700px) {
+                right: -3%;
+            }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 40px;
+            height: 40px;
+            @media (max-width: 1800px) {
+                width: 30px;
+                height: 30px;
+                top: 60%;
+            }
+            @media (max-width: 1360px) {
+                width: 24px;
+                height: 24px;
+                top: 65%;
+            }
+            @media (max-width: 760px) {
+                width: 14px;
+                height: 14px;
+                top: 85%;
+            }
+            @media (max-width: 700px) {
+                top: 80%;
+            }
+        }
+    }
+    .slider-swiper2,
+    .slider-swiper3,
+    .slider-swiper4,
+    .slider-swiper5 {
+        display: none;
+    }
+    // .slider-swiper1{
+    //     .swiper-button-prev,.swiper-button-next{
+    //     }
+    // }
+
+    .mySwiper4-prev,
+    .mySwiper5-prev,
+    .mySwiper4-next,
+    .mySwiper5-next {
+        display: none;
+        @media (max-width:760px) {
+            display: block;
+        }
+    }
+}

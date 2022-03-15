@@ -1,0 +1,495 @@
+@import "./_variables.scss";
+@import "./_functions.scss";
+
+
+.banner {
+    position: relative;
+
+    @media (max-width:1199px){
+        height: 200px;
+        padding: 8px 0;
+    }
+
+
+    .container {
+        @media (max-width: 1199px) {
+            margin:unset !important;
+            padding-left: 25px;
+        }
+        .page-title {
+            h1 {
+                @media (max-width: 1199px) {
+                    font-size: $fs-40;
+                }
+            }
+        }
+    }
+}
+
+.mask{
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(00,00,00,0.8);
+
+    position: fixed;
+    top: 0;
+    z-index: 29;
+
+    display: none;
+}
+
+.mask.active{
+    display: block;
+}
+
+
+
+.downloadForm{
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 300;
+
+    display: none ;
+
+    @media (max-width:1199px) {
+
+        top: 57%;
+    }
+
+    
+
+    .form{
+        max-width: 540px ;
+        min-width: 290px;
+
+
+        background-color: white;
+
+        font-size: $fs-20; 
+
+        padding: 0 78px 30px 78px;
+
+        position: relative;
+
+        @media (max-width:1199px) {
+
+            font-size: $fs-16; 
+
+            padding: 0 15px 30px 15px;
+        }
+
+
+
+        
+
+        &::before{
+            content:'';
+            border: 2.5px solid $red;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+
+        }
+
+        .mail{
+            h2{
+                font-size: $fs-20;
+                color: $red;
+    
+                margin: 40px auto;
+
+                @media (max-width:1199px) {
+                    font-size: $fs-16; 
+                    margin: 20px auto;
+                }
+                
+            }
+    
+            h3{
+                font-size: $fs-20; 
+    
+                margin: 0;
+                
+                span{
+                    color: $red;
+                }
+                @media (max-width:1199px) {
+                    font-size: $fs-16; 
+                }
+    
+            }
+    
+            input{
+                width: 100%;
+
+                margin-bottom: 40px;
+
+                padding: 1px 15px;
+
+                @media (max-width:1199px) {
+
+                    margin-bottom: 20px;
+                }
+                &:focus{
+                    outline: 2px solid $red;
+                }
+    
+                
+            }
+
+        }
+        
+        .checkBoxGroup{
+
+            .group{
+                width: 50%;
+
+                margin-top: 10px;
+
+                display: flex;
+
+                @media (max-width:1199px) {
+                    width: 100%;
+
+                    margin-top: 5px;
+                }
+
+                .checkBoxArea{
+                    width: 20px ;
+                    height: 20px ;
+    
+                    margin-right: 15px;
+    
+                    align-self: center;
+
+                    @media (max-width:1199px) {
+
+                        margin-right: 10px;
+                    }
+                }
+
+                p{
+                    margin: 0;
+                    
+                }
+                .inputText{
+
+                    padding: 1px 15px;
+                    margin-left: 5px;
+
+                    @media (max-width:1199px) {
+                        width: 100%;
+                    }
+
+                    &:focus{
+                        outline: 2px solid $red;
+                    }
+                }
+                
+            }
+        }
+
+        .btnGroup{
+            .btnBox{
+                width: 150px ;
+                height: 50px;
+
+                line-height: 50px;
+                text-align: center;
+
+                margin: 50px 15px 0 15px ;
+
+                @media (max-width:1199px) {
+
+
+                    margin: 30px 0 0 0 ;
+
+                    &:nth-child(2){
+                        margin-left: 15px;
+                    }
+                }
+            }
+            .back{
+                border: 1px solid $red;
+                color: $darkgray;
+
+                @media (max-width:1199px) {
+                    width: 50%;
+                }
+
+                &:hover {
+                    color: $purewhite;
+                    cursor: pointer;
+                    background-color: $hover-red;
+                  }
+            }
+            .submit{
+                background-color: $red;
+                color: $purewhite;
+
+                @media (max-width:1199px) {
+                    width: 50%;
+                }
+
+                &:hover {
+                    background-color: $lightgray;
+                    color: $red;
+                    cursor: pointer;
+                    border: unset;
+                  }
+            }
+        }
+    }
+}
+
+.downloadForm.active{
+
+    display: block  ;
+}
+
+.thanksCard{
+
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 30;
+
+    display: none;
+
+    @media (max-width:1199px) {
+        height: 100vh;
+
+    }
+    
+    .form{
+        max-width: 540px ;
+        min-width: 290px;
+
+        background-color: white;
+
+        font-size: $fs-20; 
+
+        padding: 35px 70px;
+
+        position: relative;
+
+        @media (max-width:1199px) {
+
+            padding: 30px 37px;
+        }
+        &::before{
+            content:'';
+            border: 2.5px solid $red;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+
+        }
+
+        .photoBox{
+            margin-right: 50px;
+
+            @media (max-width:1199px) {
+
+                display: none;
+            }
+        }
+
+        .textBox{
+
+            margin-top: 55px;
+
+            @media (max-width:1199px) {
+
+                margin-top: 0;
+            }
+
+            h2{
+                font-size: $fs-20;
+                color: $red;
+
+                margin: 0;
+            }
+            p{  
+                font-size: $fs-16;
+                color: $gray;
+
+                margin-top: 20px;
+                margin-bottom: 0;
+
+                
+            }
+        }
+    }
+    
+}
+
+.thanksCard.active{
+    display: flex!important;
+}
+
+.content {
+    padding:100px 0 0 0;
+
+    @media (max-width: 1199px) {
+        padding:60px 0;
+    }
+
+    .row{
+        .profile_cards {
+            padding:0 0 15px 0;
+
+            a {
+                text-decoration: none;
+    
+                .preview {
+                    width:100%;
+                    height:300px;
+                    background-color: lightblue;
+                    color: $purewhite;
+
+                    .download_mask {
+                        opacity: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(00,00,00,0.8);
+
+                        font-size: $fs-20;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        transition: 1s;
+
+                        &:hover {
+                            
+
+                            opacity: 1;
+
+                        }
+
+                        .icon{
+                            width:100px;
+                            height:60px;
+                            text-align: center;
+
+                            i{
+                                font-size: 55px;
+                            }
+                        }
+
+                        span {
+                            border-bottom: 1px solid $red;
+                        }
+                    }
+                }
+
+                .profile_name {
+                    color: $black;
+                    font-weight: 900;
+                    padding:15px 0;
+                }
+
+            }
+        }
+    }
+
+    .navigation {
+        .pagination {
+            .page-item {
+    
+                &+.active {
+    
+                    .page-link {
+                        color: $purewhite;
+                        background: $red;
+                        border-radius: 50%;
+                    }
+                    
+                }
+    
+    
+                .page-link {
+                    border: unset;
+                    color: $black;
+                    
+                    padding: 6px;
+    
+                    margin: 0 15px;
+    
+                    &:hover {
+                        color: $purewhite;
+                        background-color: $red;
+                        border-radius: 50%;
+                    }
+    
+                    &:focus {
+                        box-shadow: unset;
+                    }
+    
+    
+                }
+            }
+            .arrow {
+                &:nth-child(2){
+                    margin-left: -5px;
+                }
+
+                &:nth-child(6){
+                    margin-left: -5px;
+                }
+
+                .page-link {
+                    color: $gray;
+                    border: 1px solid $gray;
+                    border-radius: 50%;
+                    padding: 4px 8px;
+    
+                    i {
+                        transform: translateY(1px);
+                    }
+    
+                    &:hover {
+                        border: unset;
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile_navigation {
+        .dropdown {
+            .btn-drop {
+                width:290px;
+                border: 1px solid $red;
+                color: $black;
+
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            width: 290px;
+        }
+    }
+
+
+}

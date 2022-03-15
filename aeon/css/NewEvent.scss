@@ -1,0 +1,241 @@
+@import "./_variables.scss";
+@import "./_functions.scss";
+
+
+.banner {
+    @media (max-width:1199px){
+        height: 200px;
+        padding: 8px 0;
+    }
+    .container {
+        @media (max-width: 1199px) {
+            margin:unset !important;
+            padding-left: 25px;
+        }
+        .page-title {
+            h1 {
+                @media (max-width: 1199px) {
+                    font-size: $fs-40;
+                }
+            }
+        }
+    }
+}
+
+.content{
+    padding: 100px 0 0 0;
+    
+    @media (max-width: 1199px) {
+        padding: 50px 0 100px 0;
+        min-height: calc(100vh - 270px);
+
+    }
+
+    @media (min-width: 1200px) {
+        min-height: calc(100vh - 500px);
+    }
+    
+
+    .plate{
+        max-width: 1140px;
+
+        @media (max-width: 1140px) {
+            max-width: 768px;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 320px;
+        }
+
+        .event_list {
+            min-height: 367px;
+            padding: 0 0 50px 0;
+
+            .cards-board{
+                gap: 45px;
+            }
+        
+            .news-card{
+                opacity: 0;
+                border-top-right-radius: 60px;
+                border-bottom-left-radius: 60px;
+                box-shadow: 0 .5rem 1rem rgba(0,0,0,.35);
+                padding: 48.5px 25px 48.5px 25px;
+                width: 350px;
+                
+
+                @media (max-width: 1200px) {
+                    width: 320px;
+                }
+
+                img{
+                    width: 350px;
+                    height: 210px;
+                    transform: translateX(-50px);   
+
+                    @media (max-width: 1200px) {
+                        width: 320px;
+                    }
+                }
+
+                .date{
+                    color: #979797;
+                    position: relative;
+                    
+                    &::after{
+                        content: '';
+                        width: 58px;
+                        height: 3px;
+                        background-color: $red;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+                
+                .title{
+                    color: $red;
+                    margin: 24px 0;
+                }
+                
+                .text{
+                    color: #979797;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 7;   /*省略第n行後的文字*/
+                    -webkit-box-orient: vertical;  /*設定元素是垂直布局*/                      
+                }
+            }
+
+            .hide-card{
+                display: none;
+            }
+            
+            .show{
+                opacity: 1;
+            }
+
+            .null-card{
+                width: 350px;
+            }
+
+            .show-more{
+                width: 110px;
+                margin-top: 45px;
+                user-select: none;
+                &:hover .more-cards{
+                    background-color: $red;
+                }
+
+                &:hover .more-text{
+                    color: $red;
+                }
+
+                .more-cards{
+                    width: 63px;
+                    height: 63px;
+                    background-color: #CACACA;
+                }
+    
+                .more-text{
+                    margin-top: 15px;
+                    color: #CACACA;
+                }
+            }
+        }
+
+        .navigation {
+            .pagination {
+                .page-item {
+                    &.active {
+                        .page-link {
+                            color: $purewhite;
+                            background: $red;
+                            border-radius: 50%;
+                        }
+                        
+                    }
+        
+                    .page-link {
+                        color: $gray;
+                        border: unset;
+                        padding: 6px;
+                        margin: 0 15px;
+        
+                        &:hover {
+                            color: $purewhite;
+                            background-color: $red;
+                            border-radius: 50%;
+                        }
+        
+                        &:focus {
+                            box-shadow: unset;
+                        }
+                    } 
+                }
+                .arrow {
+                    &:nth-child(2){
+                        margin-left: -5px;
+                    }
+                    &:nth-child(6){
+                        margin-right: -5px;
+                    }
+
+                    &.disabled {
+                        .page-link {
+                            color: $gray;
+                            border: 1px solid $gray;
+                            border-radius: 50%;
+                            padding: 4px 8px;
+            
+                            i {
+                                transform: translateY(1px);
+                            }
+            
+                            &:hover {
+                                border: unset;
+                            }
+                        }
+                    }
+                    .page-link {
+                        color: $btn-gray;
+                        border: 1px solid $btn-gray;
+                        border-radius: 50%;
+                        padding: 4px 8px;
+        
+                        i {
+                            transform: translateY(1px);
+                        }
+        
+                        &:hover {
+                            border: unset;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .mobile_navigation {
+            .dropdown {
+                .btn-drop {
+                    width:290px;
+                    border: 1px solid $red;
+                    color: $black;
+                    border-radius: 0 ;
+                    position: relative;
+        
+                    &::after {
+                        position: absolute;
+                        right: 15px;
+                        top: 50%;
+                    }
+                }
+            }
+        
+            .dropdown-menu {
+                width: 290px;
+            }
+        }
+        
+    }
+}

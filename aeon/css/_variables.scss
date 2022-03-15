@@ -1,0 +1,36 @@
+
+//字型 (Noto Sans TC)
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+// 顏色(color,background-color)
+$red: #BE1518;
+$hover-red:#C21518;
+$black: #000;
+$darkgray: #999;
+$gray: #D1D1D1;
+$btn-gray:#848484;
+$product-name-gray:#9E9E9E;
+$lightgray: #E6E6E6;
+$snowwhite: #F5F5F5;
+$purewhite: #fff;
+
+//漸層黑
+$linear-black: linear-gradient(to right,#000 -50%, #333 50%);
+
+//漸層紅(hover用)
+$linear-red: linear-gradient(to right,$red 0%, $snowwhite 150%);
+
+// 文字大小(font-size)
+$fs-100: 100px;
+$fs-70: 70px;
+$fs-50: 50px;
+$fs-40: 40px;
+$fs-30: 30px;
+$fs-20: 20px;
+$fs-16: 16px;
+$fs-12: 12px;
+$fs-6: 6px;
+
+
+//ABOUT頁面專用(問政憲這是三小)
+$about: 70px

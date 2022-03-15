@@ -1,0 +1,38 @@
+
+// 製作漸層色按鈕
+@mixin linear-gradient( $left, $right ) {
+    background: linear-gradient( to left, $left, $right );
+}
+
+//3種按鈕款式, 在include時放入mixin的$btn_size位置
+//
+
+$large: 25px 80px; //大按鈕
+$regular: 15px 55px; //中按鈕
+$small: 15px 30px; //小按鈕
+$Inquirycart_btn_size:15px 0px;
+
+
+//定義按鈕長相 背景顏色, 文字顏色, 按鈕大小(參數請參照上方)
+@mixin btn( $bg_color, $font_color, $btn_size ){
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: .15rem;
+    background: $bg_color;
+    color: $font_color;
+    font-size: $fs-20;
+    padding: $btn_size;
+}
+@mixin Inquirycart_btn( $bg_color, $font_color, $Inquirycart_btn_size ){
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: .15rem;
+    background: $bg_color;
+    color: $font_color;
+    font-size: $fs-20;
+    width: 100%;
+    height: 100%;
+    padding: $Inquirycart_btn_size;
+}

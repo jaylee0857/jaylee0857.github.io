@@ -1,0 +1,179 @@
+@import "./_variables.scss";
+@import "./_functions.scss";
+
+
+.banner {
+    @media (max-width:1199px){
+        height: 200px;
+        padding: 8px 0;
+    }
+    .container {
+        @media (max-width: 1199px) {
+            margin:unset !important;
+            padding-left: 25px;
+        }
+        .page-title {
+            h1 {
+                @media (max-width: 1199px) {
+                    font-size: $fs-40;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    padding:100px 0;
+
+    @media (max-width: 1199px) {
+        padding:60px 0;
+    }
+
+    .row{
+        .profile_cards {
+            padding:0 0 15px 0;
+
+            a {
+                text-decoration: none;
+    
+                .preview {
+                    width:100%;
+                    height:300px;
+                    background-color: lightblue;
+                    color: $purewhite;
+
+                    .download_mask {
+                        opacity: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(00,00,00,0.8);
+
+                        font-size: $fs-20;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        transition: 1s;
+
+                        &:hover {
+                            
+
+                            opacity: 1;
+
+                        }
+
+                        .icon{
+                            width:100px;
+                            height:60px;
+                            text-align: center;
+
+                            i{
+                                font-size: 55px;
+                            }
+                        }
+
+                        span {
+                            border-bottom: 1px solid $red;
+                        }
+                    }
+                }
+
+                .profile_name {
+                    color: $black;
+                    font-weight: 900;
+                    padding:15px 0;
+                }
+
+            }
+        }
+    }
+
+    .navigation {
+        .pagination {
+            .page-item {
+    
+                &+.active {
+    
+                    .page-link {
+                        color: $purewhite;
+                        background: $red;
+                        border-radius: 50%;
+                    }
+                    
+                }
+    
+    
+                .page-link {
+                    border: unset;
+                    color: $black;
+                    
+                    padding: 6px;
+    
+                    margin: 0 15px;
+    
+                    &:hover {
+                        color: $purewhite;
+                        background-color: $red;
+                        border-radius: 50%;
+                    }
+    
+                    &:focus {
+                        box-shadow: unset;
+                    }
+    
+    
+                }
+            }
+            .arrow {
+                &:nth-child(2){
+                    margin-left: -5px;
+                }
+
+                &:nth-child(6){
+                    margin-left: -5px;
+                }
+
+                .page-link {
+                    color: $gray;
+                    border: 1px solid $gray;
+                    border-radius: 50%;
+                    padding: 4px 8px;
+    
+                    i {
+                        transform: translateY(1px);
+                    }
+    
+                    &:hover {
+                        border: unset;
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile_navigation {
+        .dropdown {
+            .btn-drop {
+                width:290px;
+                border: 1px solid $red;
+                color: $black;
+
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            width: 290px;
+        }
+    }
+
+
+}

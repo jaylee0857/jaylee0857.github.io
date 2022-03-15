@@ -1,0 +1,87 @@
+//字大小字高
+$foneSizeH1:70px;
+$lineHeightH1:84px;
+$foneSizeH2:50px;
+$lineHeightH2:60px;
+$foneSizeH3:40px;
+$lineHeightH3:48px;
+$foneSizeH4:30px;
+$lineHeightH4:36px;
+$foneSizeH5:20px;
+$lineHeightH5:24px;
+$foneSizeH6:16px;
+$lineHeightH6:19.2px;
+
+%mt-30{
+    margin-top: 30px;
+}
+%level1{
+    font-size: $foneSizeH1;
+    line-height: $lineHeightH1;
+}
+%level2{
+    font-size: $foneSizeH2;
+    line-height: $lineHeightH2;
+}
+%level3{
+    font-size: $foneSizeH3;
+    line-height: $lineHeightH3;
+}
+%level4{
+    font-size: $foneSizeH4;
+    line-height: $lineHeightH4;
+}
+%level5{
+    font-size: $foneSizeH5;
+    line-height: $lineHeightH5;
+}
+%level6{
+    font-size: $foneSizeH6;
+    line-height: $lineHeightH6;
+}
+$colorRed: #BE1518;
+$colorBlack:#000000;
+$colorGrayscaleRank1:#999999;
+$colorGrayscaleRank2:#D1D1D1;
+$colorGrayscaleRank3:#E6E6E6;
+$colorGrayscaleRank4:#F5F5F5;
+*{
+    font-family: "微軟正黑體";
+}
+
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+p{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.blackBackground{
+    height: 40px;
+    background-color: $colorBlack;
+
+}
+.redBackground{
+    height: 100px;
+    background-color: $colorRed;
+    ul li {
+        display: inline-block;
+    }
+}
+
+.footerBackground{
+    padding: 25px 0;
+    background-color: $colorRed;
+    color: $colorGrayscaleRank4;
+    @extend %level5;
+}

@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+.banner {
+  position: relative;
+}
+
+@media (max-width: 1199px) {
+  .banner {
+    height: 200px;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .banner .container {
+    margin: unset !important;
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .banner .container .page-title h1 {
+    font-size: 40px;
+  }
+}
+
+.mask {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  z-index: 29;
+  display: none;
+}
+
+.mask.active {
+  display: block;
+}
+
+.downloadForm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 300;
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .downloadForm {
+    top: 57%;
+  }
+}
+
+.downloadForm .form {
+  max-width: 540px;
+  min-width: 290px;
+  background-color: white;
+  font-size: 20px;
+  padding: 0 78px 30px 78px;
+  position: relative;
+}
+
+@media (max-width: 1199px) {
+  .downloadForm .form {
+    font-size: 16px;
+    padding: 0 15px 30px 15px;
+  }
+}
+
+.downloadForm .form::before {
+  content: '';
+  border: 2.5px solid #BE1518;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.downloadForm .form .mail h2 {
+  font-size: 20px;
+  color: #BE1518;
+  margin: 40px auto;
+}
+
+@media (max-width: 1199px) {
+  .downloadForm .form .mail h2 {
+    font-size: 16px;
+    margin: 20px auto;
+  }
+}
+
+.downloadForm .form .mail h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.downloadForm .form .mail h3 span {
+  color: #BE1518;
+}
+
+@media (max-width: 1199px) {
+  .downloadForm .form .mail h3 {
+    font-size: 16px;
+  }
+}
+
+.downloadForm .form .mail input {
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 1px 15px;
+}
+
+@media (max-width: 1199px) {
+  .downloadForm .form .mail input {
+    margin-bottom: 20px;
+  }
+}
+
+.downloadForm .form .mail input:focus {
+  outline: 2px solid #BE1518;
+}
+
+.downloadForm .form .checkBoxGroup .group {
+  width: 50%;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1199px) {
+  .downloadForm .form .checkBoxGroup .group {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+.downloadForm .form .checkBoxGroup .group .checkBoxArea {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (max-width: 1199px) {
+  .downloadForm .form .checkBoxGroup .group .checkBoxArea {
+    margin-right: 10px;
+  }
+}
+
+.downloadForm .form .checkBoxGroup .group p {
+  margin: 0;
+}
+
+.downloadForm .form .checkBoxGroup .group .inputText {
+  padding: 1px 15px;
+  margin-left: 5px;
+}
+
+@media (max-width: 1199px) {
+  .downloadForm .form .checkBoxGroup .group .inputText {
+    width: 100%;
+  }
+}
+
+.downloadForm .form .checkBoxGroup .group .inputText:focus {
+  outline: 2px solid #BE1518;
+}
+
+.downloadForm .form .btnGroup .btnBox {
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 50px 15px 0 15px;
+}
+
+@media (max-width: 1199px) {
+  .downloadForm .form .btnGroup .btnBox {
+    margin: 30px 0 0 0;
+  }
+  .downloadForm .form .btnGroup .btnBox:nth-child(2) {
+    margin-left: 15px;
+  }
+}
+
+.downloadForm .form .btnGroup .back {
+  border: 1px solid #BE1518;
+  color: #999;
+}
+
+@media (max-width: 1199px) {
+  .downloadForm .form .btnGroup .back {
+    width: 50%;
+  }
+}
+
+.downloadForm .form .btnGroup .back:hover {
+  color: #fff;
+  cursor: pointer;
+  background-color: #C21518;
+}
+
+.downloadForm .form .btnGroup .submit {
+  background-color: #BE1518;
+  color: #fff;
+}
+
+@media (max-width: 1199px) {
+  .downloadForm .form .btnGroup .submit {
+    width: 50%;
+  }
+}
+
+.downloadForm .form .btnGroup .submit:hover {
+  background-color: #E6E6E6;
+  color: #BE1518;
+  cursor: pointer;
+  border: unset;
+}
+
+.downloadForm.active {
+  display: block;
+}
+
+.thanksCard {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 30;
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .thanksCard {
+    height: 100vh;
+  }
+}
+
+.thanksCard .form {
+  max-width: 540px;
+  min-width: 290px;
+  background-color: white;
+  font-size: 20px;
+  padding: 35px 70px;
+  position: relative;
+}
+
+@media (max-width: 1199px) {
+  .thanksCard .form {
+    padding: 30px 37px;
+  }
+}
+
+.thanksCard .form::before {
+  content: '';
+  border: 2.5px solid #BE1518;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.thanksCard .form .photoBox {
+  margin-right: 50px;
+}
+
+@media (max-width: 1199px) {
+  .thanksCard .form .photoBox {
+    display: none;
+  }
+}
+
+.thanksCard .form .textBox {
+  margin-top: 55px;
+}
+
+@media (max-width: 1199px) {
+  .thanksCard .form .textBox {
+    margin-top: 0;
+  }
+}
+
+.thanksCard .form .textBox h2 {
+  font-size: 20px;
+  color: #BE1518;
+  margin: 0;
+}
+
+.thanksCard .form .textBox p {
+  font-size: 16px;
+  color: #D1D1D1;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.thanksCard.active {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.content {
+  padding: 100px 0 0 0;
+}
+
+@media (max-width: 1199px) {
+  .content {
+    padding: 60px 0;
+  }
+}
+
+.content .row .profile_cards {
+  padding: 0 0 15px 0;
+}
+
+.content .row .profile_cards a {
+  text-decoration: none;
+}
+
+.content .row .profile_cards a .preview {
+  width: 100%;
+  height: 300px;
+  background-color: lightblue;
+  color: #fff;
+}
+
+.content .row .profile_cards a .preview .download_mask {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.content .row .profile_cards a .preview .download_mask:hover {
+  opacity: 1;
+}
+
+.content .row .profile_cards a .preview .download_mask .icon {
+  width: 100px;
+  height: 60px;
+  text-align: center;
+}
+
+.content .row .profile_cards a .preview .download_mask .icon i {
+  font-size: 55px;
+}
+
+.content .row .profile_cards a .preview .download_mask span {
+  border-bottom: 1px solid #BE1518;
+}
+
+.content .row .profile_cards a .profile_name {
+  color: #000;
+  font-weight: 900;
+  padding: 15px 0;
+}
+
+.content .navigation .pagination .page-item + .active .page-link {
+  color: #fff;
+  background: #BE1518;
+  border-radius: 50%;
+}
+
+.content .navigation .pagination .page-item .page-link {
+  border: unset;
+  color: #000;
+  padding: 6px;
+  margin: 0 15px;
+}
+
+.content .navigation .pagination .page-item .page-link:hover {
+  color: #fff;
+  background-color: #BE1518;
+  border-radius: 50%;
+}
+
+.content .navigation .pagination .page-item .page-link:focus {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.content .navigation .pagination .arrow:nth-child(2) {
+  margin-left: -5px;
+}
+
+.content .navigation .pagination .arrow:nth-child(6) {
+  margin-left: -5px;
+}
+
+.content .navigation .pagination .arrow .page-link {
+  color: #D1D1D1;
+  border: 1px solid #D1D1D1;
+  border-radius: 50%;
+  padding: 4px 8px;
+}
+
+.content .navigation .pagination .arrow .page-link i {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+.content .navigation .pagination .arrow .page-link:hover {
+  border: unset;
+}
+
+.content .mobile_navigation .dropdown .btn-drop {
+  width: 290px;
+  border: 1px solid #BE1518;
+  color: #000;
+  position: relative;
+}
+
+.content .mobile_navigation .dropdown .btn-drop::after {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+}
+
+.content .mobile_navigation .dropdown-menu {
+  width: 290px;
+}
+/*# sourceMappingURL=DownloadV2.css.map */

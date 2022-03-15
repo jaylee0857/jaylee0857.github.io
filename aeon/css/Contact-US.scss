@@ -1,0 +1,374 @@
+@import "./_variables.scss";
+@import "./_functions.scss";
+
+body {
+  background: $purewhite;
+}
+
+
+
+input:focus {
+  outline: 2px solid $red;
+}
+
+.form-control:focus {
+  outline: 2px solid $red;
+
+  box-shadow: none;
+}
+
+.content {
+  padding: 0;
+  position: relative;
+}
+.background {
+  width: 100%;
+  height: 150vh;
+
+  background-image: url("../img/Contact-US/background.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  z-index: -1;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  padding: 0;
+  margin: 0;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.banner {
+  @media (max-width:1199px){
+    height: 200px;
+    padding: 8px 0;
+}
+  .container {
+    @media (max-width: 1199px) {
+      margin:unset !important;
+      padding-left: 25px;
+    }
+    .page-title {
+      h1 {
+        @media (max-width: 1199px) {
+          font-size: $fs-40;
+        }
+      }
+    }
+  }
+}
+
+
+.full_content {
+
+
+  .help {
+    p {
+      margin-top: 100px;
+
+      font-size: $fs-30;
+      color: $black;
+      letter-spacing: 1px;
+      font-weight: 900;
+
+      @media (max-width: 1199px) {
+        font-size: $fs-20;
+        margin-top: 50px;
+      }
+    }
+
+    hr {
+      border-top: 2px solid $red;
+      margin: 13px 0 20px 0;
+    }
+  }
+
+  .Forms_card {
+    padding: 0 15px;
+    margin-bottom: 30px;
+
+    &:nth-last-of-type(3){
+      margin-bottom: 50px;
+    }
+
+    .redBackground {
+      font-size: $fs-30;
+
+      background-color: $red;
+      color: $purewhite;
+
+      padding: 5px 0 5px 30px;
+
+      font-weight: bold;
+      letter-spacing: 2px;
+
+      @media (max-width: 1199px) {
+        font-size: $fs-20;
+        padding: 10px 10px;
+      }
+    }
+    .textRule {
+      font-size: $fs-20;
+      text-align: right;
+
+      @media (max-width: 1199px) {
+        text-align: left;
+      }
+
+      div {
+        margin-top: 30px;
+        padding-left: unset;
+        padding-right: unset;
+
+        @media (max-width: 1199px) {
+          padding: 0 15px;
+        }
+
+        .red {
+          color: $red;
+        }
+      }
+
+      span {
+        @media (max-width: 1199px) {
+          letter-spacing: -1px;
+        }
+      }
+
+      .mt-10 {
+        @media (max-width: 1199px) {
+          margin-top: 10px;
+        }
+      }
+
+      .mb30 {
+        margin-bottom: 30px;
+        @media (max-width: 1199px) {
+          margin-bottom: 10px;
+        }
+      }
+
+      .checkBox {
+        display: inline-block;
+        padding-left: unset;
+        padding-right: unset;
+
+        @media (max-width: 1199px) {
+          padding: 0 15px;
+        }
+      }
+
+      .mt20 {
+        margin-top: 10px;
+      }
+
+      .checkBoxArea {
+        min-width: 20px;
+        height: 20px;
+        margin: 0px 10px;
+
+        background: white;
+
+        position: relative;
+
+        // &::before{
+        //   content: '';
+        //   width: 17px;
+        //   height: 17px;
+        //   background-color: $purewhite;
+        //   position: absolute;
+        //   top: 1px;
+        //   left: 1px;
+        // }
+
+        &:focus {
+          outline: unset;
+        }
+      }
+
+      .mb-30 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .agree {
+    font-size: $fs-20;
+
+    &:focus {
+      outline: unset;
+    }
+
+    .line-height-1 {
+      line-height: 1.1;
+    }
+
+    .PrivacyPolicy {
+      min-width: 20px;
+      height: 20px;
+
+      margin-right: 10px;
+
+      &:focus {
+        outline: unset;
+      }
+    }
+  }
+
+  .btnGroup {
+    margin-top: 50px;
+    @media (max-width: 1199px) {
+      div {
+        &:nth-child(1) {
+          padding: 0px 10px 0px 15px;
+        }
+        &:nth-child(2) {
+          padding: 0px 15px 0px 10px;
+        }
+      }
+    }
+
+    .col-6 {
+      @media (max-width: 1199px) {
+        order: 2;
+      }
+
+      .Back {
+        @include Inquirycart_btn($purewhite, $gray, $Inquirycart_btn_size);
+
+        height: 50px;
+
+        border: 1px solid $red;
+
+        line-height: 50px;
+        color: #999999;
+
+        text-decoration: none;
+
+        padding: 0;
+
+        &:hover {
+          color: $purewhite;
+          cursor: pointer;
+          background-color: $hover-red;
+        }
+
+        @media (max-width: 1199px) {
+          width: 100%;
+        }
+      }
+    }
+
+    .mLF {
+      @media (max-width: 1199px) {
+        margin: 0px 0px 20px;
+      }
+      .Submit {
+        @include Inquirycart_btn($purewhite, $gray, $Inquirycart_btn_size);
+        color: $purewhite;
+        background-color: $red;
+
+        height: 50px;
+
+        line-height: 50px;
+
+        padding: 0;
+
+
+
+        &:hover {
+          background-color: $lightgray;
+          color: $red;
+          border: unset;
+        }
+      }
+    }
+  }
+}
+
+.Headquarter {
+  background-color: $lightgray;
+
+  padding: 60px 50px;
+  margin: 150px auto;
+
+  @media (max-width: 1199px) {
+
+    padding: 20px 15px;
+
+    background-image: url(../img/Contact-US/photo.png);
+    background-color:$snowwhite;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    margin: 100px auto;
+
+  }
+
+  b {
+    font-family: "Noto Serif SC", serif;
+  }
+
+  .title {
+    color: $black;
+    font-size: $fs-50;
+    position: relative;
+
+    &::before {
+      content: "";
+
+      border: 1px solid $red;
+      width: 90%;
+
+      position: absolute;
+      bottom: -10px;
+      left: 15px;
+      // transform: translateX(-50%);
+    }
+
+    @media (max-width: 1199px) {
+      font-size: $fs-30;
+    }
+  }
+  .mt-35 {
+    margin-top: 35px;
+  }
+  .mt-10 {
+    margin-top: 10px;
+  }
+  .rule {
+    color: $black;
+    font-size: $fs-20;
+  }
+  span {
+    margin-left: 14px;
+    font-size: $fs-20;
+  }
+  .iconBackground {
+    min-width: 30px;
+    height: 30px;
+
+    background-color: $red;
+    border-radius: 50%;
+
+    .fas {
+      color: $purewhite;
+    }
+  }
+  img {
+    @media (max-width: 1199px) {
+      display: none;
+    }
+  }
+}

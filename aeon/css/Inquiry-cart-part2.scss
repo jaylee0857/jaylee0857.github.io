@@ -1,0 +1,96 @@
+@import "./_variables.scss";
+@import "./_functions.scss";
+
+ 
+.banner {
+  @media (max-width:1199px){
+    height: 200px;
+    padding: 8px 0;
+}
+  .container {
+    @media (max-width: 1199px) {
+      margin:unset !important;
+      padding-left: 25px;
+    }
+    .page-title {
+      h1 {
+        @media (max-width: 1199px) {
+          font-size: $fs-40;
+        }
+      }
+    }
+  }
+}
+
+.content{
+    .row{
+        .photo{
+
+
+            padding: 100px 0    ;
+
+            @media (max-width:1199px) {
+                text-align: center;
+                padding: 30px 0;
+                
+            }
+
+            img{
+                width: 100%;
+
+                @media (max-width:1199px) {
+                    width: 50%;
+                    
+                }
+            }
+
+        }
+        .test{
+
+
+
+                h1{
+                    color: $red;
+                    font-size: $fs-50;
+                    font-weight: bold;
+                    font-family: 'Sorts Mill Goudy', serif;
+                    letter-spacing: 1px;
+
+                    margin-bottom: 40px;
+                    @media (max-width:1199px) {
+
+                        font-size: $fs-30;
+                         
+                     }
+                }
+
+                p{
+                    color: $gray;
+                    font-size: $fs-30;
+
+                    position: relative;
+
+                    &::before{
+                        content: '';
+                        width: 100px;
+
+                        border: 1px solid $red;
+
+                        position: absolute;
+                        bottom: -10px;
+
+                    }
+
+                    @media (max-width:1199px) {
+                       font-size: unset;
+
+                       margin-bottom: 70px;
+                        
+                    }
+                }
+
+        }
+    }
+
+}
+

@@ -1,0 +1,46 @@
+@charset "UTF-8";
+.footerBackground {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+* {
+  font-family: "微軟正黑體";
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.blackBackground {
+  height: 40px;
+  background-color: #000000;
+}
+
+.redBackground {
+  height: 100px;
+  background-color: #BE1518;
+}
+
+.redBackground ul li {
+  display: inline-block;
+}
+
+.footerBackground {
+  padding: 25px 0;
+  background-color: #BE1518;
+  color: #F5F5F5;
+}
+/*# sourceMappingURL=model.css.map */

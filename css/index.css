@@ -1,0 +1,218 @@
+.skills-description {
+  color: black;
+  font-size: 20px;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  background: #f1c40f;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  min-width: 500px;
+}
+
+a {
+  color: black;
+}
+
+.flex-hor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* font-size: 100px; */
+  position: absolute;
+  /* width:100%; */
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  /* height: 30%; */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4rem;
+}
+
+.item {
+  margin: 10px;
+  width: 100px;
+  min-width: 100px;
+  /* background: #e74c3c; */
+}
+
+.item-resume {
+  z-index: 9;
+}
+
+.item-portfolio {
+  cursor: pointer;
+}
+
+.about {
+  fill: #E64C3C;
+}
+
+.portfolio0 {
+  fill: #E64C3C;
+}
+
+.portfolio1 {
+  fill: none;
+  stroke: #E64C3C;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+
+.resume {
+  fill: #E64C3C;
+}
+
+.skills {
+  fill: #E64C3C;
+}
+
+.text {
+  position: fixed;
+  font-size: 1.5rem;
+  fill: #E64C3C;
+}
+
+.text-skills {
+  position: fixed;
+  font-size: 1.5rem;
+  fill: #f1c40f;
+}
+
+.item-flex-vert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* background: red; */
+}
+
+.resume-doc {
+  width: 50%;
+  left: 25%;
+  top: 25%;
+  bottom: 25%;
+  text-align: center;
+  position: absolute;
+  z-index: 11;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  /*  transition-delay: 1.5s 1s;;
+*/
+  -webkit-transition: .6s;
+  transition: .6s;
+  /*  overflow:visible;
+*/
+  opacity: 100;
+  /*  background:red;
+*/
+}
+
+.resume-doc-click {
+  cursor: pointer;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  -webkit-transition: 1s 1s;
+  transition: 1s 1s;
+}
+
+.wand-container {
+  position: fixed;
+  bottom: 120%;
+  left: 70%;
+  /* background:red; */
+  z-index: 11;
+}
+
+.wand {
+  bottom: 100%;
+}
+
+svg {
+  overflow: visible;
+}
+
+.skill-1, .skill-2, .skill-3, .skill-4 {
+  -webkit-box-shadow: 1px 1px 2px rgba(15, 15, 15, 0.3);
+          box-shadow: 1px 1px 2px rgba(15, 15, 15, 0.3);
+  padding: 10px;
+  margin: 2px;
+  line-height: 30px;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+.skill-3 {
+  background: #9b59b6;
+}
+
+.skill-2 {
+  background: #3498db;
+}
+
+.skill-1 {
+  background: #2ecc71;
+}
+
+.skill-4 {
+  background: #e74c3c;
+}
+
+.skill-1:hover, .skill-2:hover, .skill-3:hover, .skill-4:hover {
+  background: black;
+}
+
+.about-container {
+  top: 20%;
+  left: 100%;
+  position: absolute;
+  width: 60%;
+}
+
+.skills-container {
+  margin: 10px;
+  font-size: 30px;
+  color: white;
+  cursor: default;
+  left: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 300px;
+  background: rgba(46, 204, 113, 0.2);
+  height: 0;
+  width: 90%;
+}
+
+.back {
+  color: #2D3E51;
+  position: fixed;
+  left: -50px;
+  top: 45%;
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.back:hover {
+  color: #fff;
+}
+/*# sourceMappingURL=index.css.map */

@@ -221,10 +221,10 @@ itemResume.on('click', function() {
   ;
 })
 $('.resume-doc').on('click',function(){
-   window.open('DavidBakerResume.pdf','_blank');
+  //  window.open('DavidBakerResume.pdf','_blank');
 })
 itemPortfolio.on('click',function(){
-  window.open('../portfolio','_blank');
+  window.open('../portfolio/safetyedu/','_blank');
 })
 
 

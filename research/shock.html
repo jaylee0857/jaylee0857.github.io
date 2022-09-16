@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .shock {
+            font-size: 15px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shock">
+        按我來測試震動
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script>
+        //Vibration接口用于在浏览器中发出命令，使得设备振动。
+        function vibration() {
+            navigator.vibrate = navigator.vibrate
+                || navigator.webkitVibrate
+                || navigator.mozVibrate
+                || navigator.msVibrate;
+
+            if (navigator.vibrate) {
+                // 支持
+                console.log("支持设备震动！");
+            }
+
+        }
+        vibration();
+        $(".shock").click(function () {
+            alert("有震動的感覺嗎？");
+            navigator.vibrate([500, 300, 400, 300]);
+        }); 
+    </script>
+</body>
+
+</html>

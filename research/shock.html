@@ -8,6 +8,7 @@
     <title>Document</title>
     <style>
         .shock {
+            margin-bottom: 50px;
             font-size: 15px;
             font-weight: bold;
             color: red;
@@ -19,9 +20,15 @@
     <div class="shock">
         按我來測試震動
     </div>
+    <button onclick="playAudio();">按下去會播放震動</button>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
         integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script>
+        function playAudio() {
+            const audio = document.createElement("audio");
+            audio.src = "appleShock.mp3";
+            audio.play();
+        }
         //Vibration接口用于在浏览器中发出命令，使得设备振动。
         function vibration() {
             navigator.vibrate = navigator.vibrate

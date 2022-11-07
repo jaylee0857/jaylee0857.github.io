@@ -518,7 +518,7 @@ export default {
 #fb {
   display: flex;
   flex-direction: column;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #1b3771;
   span {
     margin-bottom: 1.5rem;
@@ -839,6 +839,8 @@ export default {
         font-size: 1.125rem;
         color: #1d1d1d;
         border: 1px solid #db0000;
+        outline: none;
+
         @media (max-width: 768px) {
           width: 100%;
           font-size: 2rem;
@@ -846,6 +848,7 @@ export default {
       }
       input:focus {
         outline: none;
+        border: 2px solid #db0000;
       }
     }
 

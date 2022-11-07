@@ -32,7 +32,7 @@ html {
     background-color: unset;
   }
 }
-@media (max-width: 768yarpx) {
+@media (max-width: 667px) {
   html {
     font-size: 8px;
   }

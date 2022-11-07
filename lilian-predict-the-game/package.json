@@ -14,7 +14,7 @@
     "@vitejs/plugin-vue": "2.2.4",
     "@vue/compiler-sfc": "3.2.31",
     "@vuelidate/core": "2.0.0-alpha.24",
-    "@vuelidate/validators": "2.0.0-alpha.21",
+    "@vuelidate/validators": "2.0.0-alpha.22",
     "autoprefixer": "^9",
     "axios": "0.20.0",
     "core-js": "3.6.5",

@@ -1,0 +1,133 @@
+#header {
+  @media (max-width: 991px) {
+    border-bottom: 2px solid #FFA800;
+  }
+  .title_logo {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #FFA800;
+    padding-bottom: 30px;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  .container {
+    @media (min-width: 992px) {
+      max-width: 100%;
+    }
+  }
+  .logo {
+    display: none;
+    @media (max-width: 991px) {
+      display: block;
+    }
+  }
+  #navbar {
+    max-width: 1280px;
+    width: 100%;
+    @media (min-width: 992px) {
+      margin: 0 auto;
+    }
+    @media (max-width: 992px) {
+      width: unset;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      @media (max-width: 992px) {
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 90px;
+        display: none;
+        width: unset;
+        &.active {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          background-color: white;
+          li {
+            width: 150px;
+            flex-direction: row;
+            justify-content: start;
+            img {
+              margin-right: 30px;
+            }
+          }
+        }
+      }
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+
+        &.active {
+          color: #FFA800;
+        }
+        img {
+          width: 56px;
+        }
+      }
+    }
+  }
+}
+
+#main {
+  margin-top: 230px;
+  @media (max-width: 991px) {
+    margin-top: 60px;
+  }
+}
+
+#footer {
+  p {
+    color: #FFA800;
+    @media (max-width: 576px) {
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      margin-right: 15px;
+      list-style: none;
+      @media (max-width: 576px) {
+        margin-right: 8px;
+      }
+      img {
+        width: 40px;
+        @media (max-width: 576px) {
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
+.logo_img {
+  width: 330px;
+  margin: 0 auto;
+}
+// 跑馬燈
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: marquee 10s linear infinite;
+  -webkit-animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}

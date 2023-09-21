@@ -1,0 +1,17 @@
+export default {
+  title: "註冊帳號",
+  username: "帳號",
+  password: "密碼",
+  confirmPassword: "確認密碼",
+  phone: "手機號碼",
+  captcha: "驗證碼",
+  "captcha.send": "發送驗證碼",
+  submit: "註冊",
+  success: "註冊成功",
+  failed: "註冊失敗",
+  "placeholder.username": "需包含數字及小寫字母且不可任意標點符號",
+  "placeholder.password": "內容長度為6-12個字元",
+  "placeholder.captcha": "請輸入手機驗證碼",
+  "placeholder.phone": "請輸入手機驗證碼",
+  captchaError: "請輸入正確的驗證碼",
+};

@@ -1,0 +1,202 @@
+.home__action {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+}
+
+.home__user__action {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 0.2rem 0.35rem;
+    z-index: 2;
+    background: #fff;
+    // 在退回無背景時delay 0.5s
+    // transition-delay: 0.5s;
+    .user__data {
+        width: 32%;
+        .user__account {
+            position: absolute;
+            top: -0.15rem;
+            display: flex;
+            align-items: center;
+            font-size: 0.25rem;
+            .account {
+                margin-right: 0.05rem;
+                // color: #9ca3bf;
+                font-size: 0.3rem;
+                color: #000;
+                font-weight: normal;
+            }
+        }
+        .user__credit {
+            position: relative;
+            right: 0.1rem;
+            display: flex;
+            align-items: center;
+            font-size: 0.4rem;
+            color: #f56200;
+            font-size: 0.35rem;
+        }
+    }
+    .user__action {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 68%;
+        // &.ph {
+        //     align-items: flex-start;
+        //     .item {
+        //         div:nth-child(2) {
+        //             white-space: pre;
+        //             text-align: center;
+        //             scale: 0.9;
+        //         }
+        //     }
+        // }
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25%;
+            font-size: 0.2rem;
+            // color: #c3c3c3;
+            color: #000;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+    }
+
+    // icon
+    .user__icon {
+        position: relative;
+        width: 0.6rem;
+        height: 0.62rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        -webkit-transform: translate3d(0,0,0);
+        transform: scale(1) perspective(1px) translateZ(0);
+        backface-visibility: hidden;
+    }
+    .user__icon.withdraw //提款
+    {
+        background-image: url("@/assets/images/home/icon_giveback_member.png");
+    }
+    .user__icon.promotion //豪華盛宴
+    {
+        background-image: url("@/assets/images/home/icon_gift_member.png");
+    }
+    .user__icon.commission //領取佣金
+    {
+        background-image: url("@/assets/images/home/icon_receive_member.png");
+    }
+    .user__icon.chart //排行榜
+    {
+        background-image: url("@/assets/images/home/icon_ranking_member.png");
+    }
+    .user__icon.money //金塊
+    {
+        margin-right: 0.05rem;
+        // width: 0.5rem;
+        // height: 0.52rem;
+        width: 0.28rem;
+        height: 0.33rem;
+        background-image: url("@/assets/images/home/icon_money.png");
+    }
+
+    // vip background
+    .vip__bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 0.7rem;
+        color: #fff;
+        border-radius: 4px;
+        background-size: cover;
+    }
+    .vip__bg.v0 {
+        background-image: url("@/assets/images/home/vip_0s.png");
+    }
+    .vip__bg.v1 {
+        background-image: url("@/assets/images/home/vip_1s.png");
+    }
+    .vip__bg.v2 {
+        background-image: url("@/assets/images/home/vip_2s.png");
+    }
+    .vip__bg.v3 {
+        background-image: url("@/assets/images/home/vip_3s.png");
+    }
+}
+
+// 下雪特效
+.home__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("@/assets/images/home/home_bg4.png");
+    background-repeat: no-repeat;
+    background-size: 300px;
+    // animation: fail 10s infinite linear;
+    animation: fail 15s infinite linear;
+    z-index: -1;
+}
+.home__bg2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("@/assets/images/home/home_bg4.png");
+    background-repeat: no-repeat;
+    background-size: 250px;
+    // animation: fail2 10s infinite linear;
+    animation: fail2 15s infinite linear;
+    animation-delay: 7s;
+    // animation: none;
+    z-index: -1;
+}
+.home__bg3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("@/assets/images/home/home_bg4.png");
+    background-repeat: no-repeat;
+    background-size: 300px;
+    // animation: fail3 10s infinite linear;
+    animation: fail3 15s infinite linear;
+    animation-delay: 4s;
+    z-index: -1;
+}
+@keyframes fail {
+    0% {
+        // background-position: 0rem 0px;
+        background-position: -0.5rem 0px;
+    }
+    100% {
+        background-position: 1.5rem 100vh;
+    }
+}
+@keyframes fail2 {
+    0% {
+        // background-position: 3rem -90px;
+        background-position: 2.5rem -90px;
+    }
+    100% {
+        // background-position: 150px 100vh;
+        background-position: 4.5rem 100vh;
+    }
+}
+@keyframes fail3 {
+    0% {
+        // background-position: 0 0;
+        background-position: -0.5rem 0px;
+    }
+    100% {
+        background-position: 1.5rem 100vh;
+    }
+}

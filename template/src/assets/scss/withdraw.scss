@@ -1,0 +1,709 @@
+// 出售
+.payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.2rem;
+    height: 3rem;
+    font-size: 0.35rem;
+    color: #fff;
+    background-image: url("@/assets/images/withdraw/withdraw_top_bg.png") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+
+    &.arrive {
+        position: relative;
+        padding: 0.1rem 0.2rem;
+        margin: 0 auto;
+        margin-top: 0.225rem;
+        width: calc(100% - 0.45rem);
+        height: auto;
+        min-height: 2.7rem;
+        background-image: url("@/assets/images/withdraw/background_wallet.png") !important;
+        background-size: 100% 100% !important;
+    }
+
+    &-wallet {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        color: #fff8b6;
+
+        &-refresh {
+            flex: 0 0 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+                width: 0.5rem;
+                height: 0.5rem;
+                background: url("@/assets/images/withdraw/arrangeverticalcircle.png") no-repeat center / cover;
+            }
+        }
+
+        &-amount {
+            @apply flex-1 pr-3 w-full;
+
+            &__row {
+                @apply flex justify-between w-full;
+            }
+
+            &__title {
+                display: flex;
+                align-items: center;
+                color: #fff;
+                white-space: pre;
+                word-break: break-all;
+            }
+
+            &__dallor {
+                @apply flex-1 text-right whitespace-nowrap;
+                font-size: 0.36rem;
+
+                &::before {
+                    content: "$ ";
+                    font-size: 0.28rem;
+                }
+            }
+
+        }
+
+        .question-mark {
+            margin-left: 0.15rem;
+            display: block;
+            width: 0.32rem;
+            height: 0.32rem;
+            background: url("@/assets/images/withdraw/kimon.svg") no-repeat center / cover;
+        }
+    }
+
+    &-foot {
+        @apply flex justify-between items-end w-full;
+        height: 1rem;
+    }
+
+    &__progress {
+        flex: 1;
+
+        &--full {
+            flex: none !important;
+            width: 96%;
+            margin: 0 auto;
+        }
+
+        &__bar {
+            position: relative;
+            width: 100%;
+            height: 0.17rem;
+            background-image: url("@/assets/images/withdraw/img_progress_bg.png");
+            background-repeat: no-repeat;
+            background-size: 100% 0.17rem;
+
+            &__wrapper {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background: url("@/assets/images/withdraw/img_progress_top.png");
+                background-repeat: no-repeat;
+                background-position: left;
+                background-size: cover;
+                background-attachment: scroll;
+
+                &__point {
+                    width: 0.4rem;
+                    height: 0.4rem;
+                    background: url("@/assets/images/withdraw/img_progress_light.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    right: -0.12rem;
+                    top: -0.12rem;
+                }
+            }
+
+
+        }
+
+        &__text {
+            display: flex;
+            width: calc(100% / 11 + 100%);
+            justify-content: space-between;
+            transform: translateX(calc(100% / 22 * -1));
+
+            &__item {
+                color: #fc8356;
+                font-size: 0.2rem;
+                scale: 0.8;
+                flex: 1;
+                text-align: center;
+
+                &:first-child {
+                    transform: translateX(20%);
+                }
+
+                &--achieve {
+                    color: #fff;
+                }
+
+                @media (max-width: 375px) {
+                    &:first-child {
+                        transform: translateX(0);
+                    }
+
+                    &:nth-child(2n) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__chest {
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 1rem;
+        height: 1rem;
+
+        &__obj {
+            position: relative;
+            pointer-events: none;
+
+            &--canvas {
+                width: 2.5rem;
+                height: 1.25rem;
+                transform: translate3d(-0.625rem, -0.15rem, 1px);
+            }
+
+            &--img {
+                width: 1rem;
+                height: 1.15rem;
+                object-fit: cover;
+                transform: translate3d(0.2rem, -0.15rem, 1px);
+                transform-origin: 0.4rem 0.65rem;
+            }
+
+            &--hide {
+                opacity: 0;
+            }
+        }
+    }
+
+    &-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0.225rem;
+        margin-top: 0.3rem;
+
+        &>a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 49%;
+            height: 1rem;
+            font-size: 0.3rem;
+            background: #ffffff;
+            box-shadow: 0px 2px 6px #cccccc;
+            border-radius: 4px;
+
+            .text {
+                margin-left: 0.3rem;
+            }
+
+            &.hover {
+                background: #cccccc;
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+.btn-icon {
+    position: relative;
+    width: 0.6rem;
+    height: 0.62rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    &.promotion //豪華盛宴
+
+        {
+        background-image: url("@/assets/images/home/icon_gift_member.png");
+    }
+
+    &.chart //排行榜
+
+        {
+        background-image: url("@/assets/images/home/icon_ranking_member.png");
+    }
+}
+
+@media (min-width: 500px) {
+    .payment {
+        &-progressbar {
+            &-item {
+                .line {
+                    left: -6.5vw;
+                    width: 6.5vw;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 400px) {
+    .payment {
+        &-progressbar {
+            &-item {
+                .line {
+                    left: -6.4vw;
+                    width: 6.4vw;
+                }
+            }
+        }
+    }
+}
+
+.amount {
+    padding: 0.3rem 0.2rem;
+
+    .content {
+        display: flex;
+        align-items: center;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid #d6d4d4;
+
+        .label {
+            margin-right: 0.2rem;
+            white-space: nowrap;
+        }
+    }
+
+    input {
+        width: 80%;
+        font-size: 0.3rem;
+        outline: none;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+}
+
+
+.account {
+    padding: 0.2rem;
+
+    .label {
+        padding-bottom: 0.2rem;
+        border-bottom: 1px solid #d6d4d4;
+
+        .ex {
+            font-size: 0.28rem;
+            color: #c3c3c3;
+        }
+    }
+
+    .card {
+        position: relative;
+        margin: 0.2rem auto;
+        width: 85%;
+        height: 3.8rem;
+        background-image: url("@/assets/images/withdraw/icon_bankcard.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &__account {
+            position: absolute;
+            bottom: 1.17rem;
+            left: 0.4rem;
+            letter-spacing: 0.15rem;
+            font-size: 0.28rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        &__username {
+            position: absolute;
+            bottom: 0.1rem;
+            left: 0.65rem;
+            width: 1.95rem;
+            font-size: 0.2rem;
+            text-align: center;
+        }
+
+        &__bankname {
+            position: absolute;
+            top: 0.3rem;
+            right: 1rem;
+            width: 2rem;
+            font-size: 0.2rem;
+            color: #fff;
+            text-align: center;
+        }
+    }
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.45rem;
+    padding-bottom: 1rem;
+
+    .submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 6.8rem;
+        padding: 0.2rem 0;
+        color: #fff;
+        font-size: 0.28rem;
+        cursor: pointer;
+
+        background: linear-gradient(90deg, #FF7070 1%, #D90404 97.72%);
+        border-radius: 4px;
+        // background: linear-gradient(24deg, #949dce 28%, #707feb 71%);
+        // border-radius: 6px;
+    }
+
+    .submit.disabled {
+        background: #cccccc;
+    }
+
+    .question {
+        font-size: 0.3rem;
+        color: #c0c1c5;
+        text-align: center;
+
+        .link {
+            color: #fc8356;
+
+            &.orange {
+                color: #fc8356;
+            }
+        }
+    }
+}
+
+.record {
+    margin: 0.2rem 0;
+    padding: 0 0.2rem;
+    font-size: 0.28rem;
+    background: #fff;
+
+    .date {
+        padding: 0.1rem 0;
+        font-size: 0.3rem;
+        background: #f8f8f8;
+    }
+
+    ul {
+        li {
+            display: flex;
+            align-items: center;
+
+            // padding: .2rem 0;
+            .icon {
+                margin-right: 0.15rem;
+                width: 0.6rem;
+                height: 0.6rem;
+                background-image: url("@/assets/images/trade/icon_trade.webp");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0.1rem 0;
+                padding-right: 0.15rem;
+                width: calc(100% - 0.6rem);
+                height: 100%;
+                border-bottom: 1px solid #d6d4d4;
+
+                .state {
+                    color: #7e7e80;
+                    font-size: 0.3rem;
+
+                    .time {
+                        font-size: 0.2rem;
+                    }
+                }
+
+                .btn {
+                    padding: 0.12rem 0.2rem;
+                    color: #fff;
+                    border-radius: 6px;
+                    background: linear-gradient(24deg, #949dce 28%, #707feb 71%);
+                }
+            }
+        }
+    }
+}
+
+// 帳戶管理
+
+.to__create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+
+    .bg {
+        width: 3rem;
+        height: 3rem;
+        background-image: url("@/assets/images/withdraw/bank_image_empty.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .add__card {
+        width: 90%;
+        color: #000;
+        font-size: 0.3rem;
+        background: #fff;
+        border-radius: 6px;
+
+        .icon {
+            color: #000;
+        }
+    }
+
+    .ex {
+        font-size: 0.28rem;
+        color: #c3c3c3;
+    }
+}
+
+.bank__list {
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            a {
+                position: relative;
+                display: flex;
+                padding: 0.2rem;
+                width: 90%;
+                border-radius: 10px;
+                background: #fff;
+            }
+
+            img {
+                width: 1.5rem;
+                height: 1rem;
+            }
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding: 0 0.2rem;
+                font-size: 0.3rem;
+
+                .bank__name {
+                    font-weight: 500;
+                    font-size: 0.31rem;
+                }
+
+                .bank__account {
+                    color: #5c5c5e;
+                }
+            }
+
+            div:nth-child(3) {
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.2rem;
+                height: 100%;
+            }
+        }
+    }
+
+    .icon {
+        width: 0.18rem;
+        height: 0.3rem;
+        background-image: url("@/assets/images/withdraw/icon_arrow_right.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+//新增銀行卡
+.creates {
+    position: relative;
+    padding: 0.2rem;
+    width: 100%;
+    font-size: 0.3rem;
+    background: #fff;
+    border-bottom: 1px solid #d6d4d4;
+
+    input {
+        width: 100%;
+        color: #7e7e80;
+        outline: none;
+        //去除focus的border
+    }
+
+    select {
+        position: relative;
+        width: 100%;
+        height: 0.5rem;
+        color: #7e7e80;
+        border: none;
+        // background-color: #fff!important;
+        background: url("@/assets/images/withdraw/icon_arrow_right.webp") no-repeat scroll right center;
+        /*將預設箭頭拿掉，右側放上自設小箭頭圖案*/
+        background-size: 0.2rem;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        z-index: 1;
+    }
+
+    .bank__data {
+        position: absolute;
+        top: 50%;
+        color: #7e7e80;
+    }
+
+    &.reject {
+        @apply bg-red-100 text-red-600 border-b-0 flex gap-4 font-bold py-8;
+    }
+}
+
+
+.creates.addfile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.25rem;
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // width: 1.2rem;
+        padding: 0 0.2rem;
+        height: 0.6rem;
+        font-size: 0.3rem;
+        color: #fff;
+        white-space: nowrap;
+        background: #707feb;
+        border-radius: 15px;
+    }
+
+    .lebel {
+        max-width: 80%;
+    }
+}
+
+.create__ex {
+    padding: 0.2rem;
+    font-size: 0.26rem;
+}
+
+.create__ex.bg-w {
+    padding-top: 0.4rem;
+}
+
+.footer.create {
+    margin: 0;
+    padding: 0.3rem 0;
+}
+
+.question.create {
+    position: relative;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.3rem;
+    color: #c0c1c5;
+
+    .link {
+        color: #8ea8d2;
+    }
+
+    .del__btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 0.1rem 0.2rem;
+        font-size: 0.25rem;
+        color: #fff;
+        background: #e52d17;
+        border-radius: 6px;
+    }
+}
+
+.margin-t {
+    margin-top: 0.3rem;
+}
+
+.margin-t-sm {
+    margin-top: 0.1rem;
+}
+
+.bg-w {
+    background: #fff;
+}
+
+.label {
+    font-size: 0.3rem;
+
+    .required {
+        color: red;
+    }
+}
+
+.add__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    font-size: 0.28rem;
+    color: #0b34cc;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon {
+        font-size: 0.4rem;
+        color: #0095fe;
+    }
+
+    &__href {
+        @apply text-red-500;
+        display: block !important;
+        text-align: center;
+
+        .icon {
+            @apply inline-block w-10 h-10 align-bottom text-red-500;
+        }
+    }
+}

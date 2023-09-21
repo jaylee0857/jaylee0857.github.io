@@ -1,0 +1,1123 @@
+---
+kind: pipeline
+name: Pro168_H5UAt
+
+workspace:
+  base: /home
+  path: src/github.com/woolves/lilian_vietvip_web
+
+clone:
+  #depth: 1
+  tags: true
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host:
+      - 172.31.32.190
+    username: loluser
+    password:
+      from_secret: ssh_password
+    port: 55160
+    command_timeout: 3m
+    source: ./*
+    target: 
+      - /tmp/drone_tmp/lilian_vietvip_web
+    rm: true
+
+- name: ssh
+  image: appleboy/drone-ssh:1.6.6-linux-amd64
+  settings:
+    host:
+      - 172.31.32.190
+    username: loluser
+    password:
+      from_secret: ssh_password
+    port: 55160
+    command_timeout: 30m
+    script:
+        # lili
+        - cp -Rf /tmp/drone_tmp/lilian_vietvip_web/. /home/pro168_h5web/
+        - cd /home/pro168_h5web/
+        - yarn install --frozen-lockfile
+        - yarn build:demo
+
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channe: drone-uat
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}*: <https://github.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}: Build `#{{ build.number }}` * (type: `{{ build.event }}`)
+      {{/if}}
+      
+      *Site:* LiLi
+      
+      *RepoName:* `{{repo.name}}` - <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
+      
+      *Author:* {{ build.author.name }}
+      
+      *Message:* {{build.Message}}
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    status: [ success, failure ]
+
+trigger:
+  branch:
+  - master
+  event: [ promote ]
+  target: [ demo-pro168-h5 ]
+
+node:
+  wolves: agentJP
+
+
+---
+kind: pipeline
+name: VIVI_H5Prod
+
+workspace:
+  base: /home
+  path: src/github.com/woolves/lilian_vietvip_web
+
+clone:
+  #depth: 1
+  tags: true
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host:
+      - 192.168.50.61
+      - 192.168.60.62
+      - 192.168.70.63
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 3m
+    source: ./*
+    target: 
+      - /tmp/drone_tmp/vivi_h5web
+    rm: true
+
+- name: ssh
+  image: appleboy/drone-ssh:1.6.6-linux-amd64
+  settings:
+    host:
+      - 192.168.50.61
+      - 192.168.60.62
+      - 192.168.70.63
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 30m
+    script:
+        # lili
+        - cp -Rf /tmp/drone_tmp/vivi_h5web/. /home/vivi_h5web/
+        - cd /home/vivi_h5web/
+        - yarn install --frozen-lockfile
+        - yarn build
+        - cp /usr/local/bin/check.php /home/vivi_h5web/dist/check.php
+        - cp -ra /tmp/drone_tmp/vivi_h5web/import.js /home/vivi_h5web/dist/import.js
+
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channe: drone-prod
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}*: <https://github.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}: Build `#{{ build.number }}` * (type: `{{ build.event }}`)
+      {{/if}}
+      
+      *Site:* ViVi
+      
+      *RepoName:* `{{repo.name}}` - <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
+      
+      *Author:* {{ build.author.name }}
+      
+      *Message:* {{build.Message}}
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    status: [ success, failure ]
+
+trigger:
+  branch:
+  - master
+  event: [ promote ]
+  target: [ prod-vivi-h5 ]
+
+node:
+  wolves: agentHK
+  
+---
+kind: pipeline
+name: Prod_VIVI_h5web01
+
+workspace:
+  base: /home
+  path: src/github.com/woolves/lilian_vietvip_web
+
+clone:
+  #depth: 1
+  tags: true
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host:
+      - 192.168.50.61
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 3m
+    source: ./*
+    target: 
+      - /tmp/drone_tmp/vivi_h5web
+    rm: true
+
+- name: ssh
+  image: appleboy/drone-ssh:1.6.6-linux-amd64
+  settings:
+    host:
+      - 192.168.50.61
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 30m
+    script:
+        # lili
+        - cp -Rf /tmp/drone_tmp/vivi_h5web/. /home/vivi_h5web/
+        - cd /home/vivi_h5web/
+        - yarn install --frozen-lockfile
+        - yarn build
+        - cp /usr/local/bin/check.php /home/vivi_h5web/dist/check.php
+        - cp -ra /tmp/drone_tmp/vivi_h5web/import.js /home/vivi_h5web/dist/import.js
+
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channe: drone-prod
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}*: <https://github.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}: Build `#{{ build.number }}` * (type: `{{ build.event }}`)
+      {{/if}}
+      
+      *Site:* ViVi
+      
+      *RepoName:* `{{repo.name}}` - <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
+      
+      *Author:* {{ build.author.name }}
+      
+      *Message:* {{build.Message}}
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    status: [ success, failure ]
+
+trigger:
+  branch:
+  - master
+  event: [ promote ]
+  target: [ prod-vivi-h5web01 ]
+
+node:
+  wolves: agentHK
+
+---
+kind: pipeline
+name: Prod_VIVI_h5web02
+
+workspace:
+  base: /home
+  path: src/github.com/woolves/lilian_vietvip_web
+
+clone:
+  #depth: 1
+  tags: true
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host:
+      - 192.168.60.62
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 3m
+    source: ./*
+    target: 
+      - /tmp/drone_tmp/vivi_h5web
+    rm: true
+
+- name: ssh
+  image: appleboy/drone-ssh:1.6.6-linux-amd64
+  settings:
+    host:
+      - 192.168.60.62
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 30m
+    script:
+        # lili
+        - cp -Rf /tmp/drone_tmp/vivi_h5web/. /home/vivi_h5web/
+        - cd /home/vivi_h5web/
+        - yarn install --frozen-lockfile
+        - yarn build
+        - cp /usr/local/bin/check.php /home/vivi_h5web/dist/check.php
+        - cp -ra /tmp/drone_tmp/vivi_h5web/import.js /home/vivi_h5web/dist/import.js
+
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channe: drone-prod
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}*: <https://github.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}: Build `#{{ build.number }}` * (type: `{{ build.event }}`)
+      {{/if}}
+      
+      *Site:* ViVi
+      
+      *RepoName:* `{{repo.name}}` - <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
+      
+      *Author:* {{ build.author.name }}
+      
+      *Message:* {{build.Message}}
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    status: [ success, failure ]
+
+trigger:
+  branch:
+  - master
+  event: [ promote ]
+  target: [ prod-vivi-h5web02 ]
+
+node:
+  wolves: agentHK
+
+---
+kind: pipeline
+name: Prod_VIVI_h5web03
+
+workspace:
+  base: /home
+  path: src/github.com/woolves/lilian_vietvip_web
+
+clone:
+  #depth: 1
+  tags: true
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host:
+      - 192.168.70.63
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 3m
+    source: ./*
+    target: 
+      - /tmp/drone_tmp/vivi_h5web
+    rm: true
+
+- name: ssh
+  image: appleboy/drone-ssh:1.6.6-linux-amd64
+  settings:
+    host:
+      - 192.168.70.63
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 30m
+    script:
+        # lili
+        - cp -Rf /tmp/drone_tmp/vivi_h5web/. /home/vivi_h5web/
+        - cd /home/vivi_h5web/
+        - yarn install --frozen-lockfile
+        - yarn build
+        - cp /usr/local/bin/check.php /home/vivi_h5web/dist/check.php
+        - cp -ra /tmp/drone_tmp/vivi_h5web/import.js /home/vivi_h5web/dist/import.js
+
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channe: drone-prod
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}*: <https://github.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}: Build `#{{ build.number }}` * (type: `{{ build.event }}`)
+      {{/if}}
+      
+      *Site:* ViVi
+      
+      *RepoName:* `{{repo.name}}` - <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
+      
+      *Author:* {{ build.author.name }}
+      
+      *Message:* {{build.Message}}
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    status: [ success, failure ]
+
+trigger:
+  branch:
+  - master
+  event: [ promote ]
+  target: [ prod-vivi-h5web03 ]
+
+node:
+  wolves: agentHK
+
+---
+kind: pipeline
+name: KO168_H5Prod
+
+workspace:
+  base: /home
+  path: src/github.com/woolves/lilian_vietvip_web
+
+clone:
+  #depth: 1
+  tags: true
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host:
+      - 192.168.50.61
+      - 192.168.60.62
+      - 192.168.70.63
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 3m
+    source: ./*
+    target: 
+      - /tmp/drone_tmp/ko168_h5web
+    rm: true
+
+- name: ssh
+  image: appleboy/drone-ssh:1.6.6-linux-amd64
+  settings:
+    host:
+      - 192.168.50.61
+      - 192.168.60.62
+      - 192.168.70.63
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 30m
+    script:
+        # lili
+        - cp -Rf /tmp/drone_tmp/ko168_h5web/. /home/ko168_h5web/
+        - cd /home/ko168_h5web/
+        - yarn install --frozen-lockfile
+        - yarn build:ko
+        - cp /usr/local/bin/check.php /home/ko168_h5web/dist/check.php
+
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channe: drone-prod
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}*: <https://github.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}: Build `#{{ build.number }}` * (type: `{{ build.event }}`)
+      {{/if}}
+      
+      *Site:* ko168
+      
+      *RepoName:* `{{repo.name}}` - <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
+      
+      *Author:* {{ build.author.name }}
+      
+      *Message:* {{build.Message}}
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    status: [ success, failure ]
+
+trigger:
+  branch:
+  - master
+  event: [ promote ]
+  target: [ prod-ko168-h5 ]
+
+node:
+  wolves: agentHK
+  
+---
+kind: pipeline
+name: Prod_ko168_h5web01
+
+workspace:
+  base: /home
+  path: src/github.com/woolves/lilian_vietvip_web
+
+clone:
+  #depth: 1
+  tags: true
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host:
+      - 192.168.50.61
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 3m
+    source: ./*
+    target: 
+      - /tmp/drone_tmp/ko168_h5web
+    rm: true
+
+- name: ssh
+  image: appleboy/drone-ssh:1.6.6-linux-amd64
+  settings:
+    host:
+      - 192.168.50.61
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 30m
+    script:
+        # lili
+        - cp -Rf /tmp/drone_tmp/ko168_h5web/. /home/ko168_h5web/
+        - cd /home/ko168_h5web/
+        - yarn install --frozen-lockfile
+        - yarn build:ko
+        - cp /usr/local/bin/check.php /home/ko168_h5web/dist/check.php
+
+
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channe: drone-prod
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}*: <https://github.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}: Build `#{{ build.number }}` * (type: `{{ build.event }}`)
+      {{/if}}
+      
+      *Site:* ko168
+      
+      *RepoName:* `{{repo.name}}` - <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
+      
+      *Author:* {{ build.author.name }}
+      
+      *Message:* {{build.Message}}
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    status: [ success, failure ]
+
+trigger:
+  branch:
+  - master
+  event: [ promote ]
+  target: [ prod-ko168-h5web01 ]
+
+node:
+  wolves: agentHK
+
+---
+kind: pipeline
+name: Prod_ko168_h5web02
+
+workspace:
+  base: /home
+  path: src/github.com/woolves/lilian_vietvip_web
+
+clone:
+  #depth: 1
+  tags: true
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host:
+      - 192.168.60.62
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 3m
+    source: ./*
+    target: 
+      - /tmp/drone_tmp/ko168_h5web
+    rm: true
+
+- name: ssh
+  image: appleboy/drone-ssh:1.6.6-linux-amd64
+  settings:
+    host:
+      - 192.168.60.62
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 30m
+    script:
+        # lili
+        - cp -Rf /tmp/drone_tmp/ko168_h5web/. /home/ko168_h5web/
+        - cd /home/ko168_h5web/
+        - yarn install --frozen-lockfile
+        - yarn build:ko
+        - cp /usr/local/bin/check.php /home/ko168_h5web/dist/check.php
+
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channe: drone-prod
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}*: <https://github.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}: Build `#{{ build.number }}` * (type: `{{ build.event }}`)
+      {{/if}}
+      
+      *Site:* ko168
+      
+      *RepoName:* `{{repo.name}}` - <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
+      
+      *Author:* {{ build.author.name }}
+      
+      *Message:* {{build.Message}}
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    status: [ success, failure ]
+
+trigger:
+  branch:
+  - master
+  event: [ promote ]
+  target: [ prod-ko168-h5web02 ]
+
+node:
+  wolves: agentHK
+
+---
+kind: pipeline
+name: Prod_ko168_h5web03
+
+workspace:
+  base: /home
+  path: src/github.com/woolves/lilian_vietvip_web
+
+clone:
+  #depth: 1
+  tags: true
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host:
+      - 192.168.70.63
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 3m
+    source: ./*
+    target: 
+      - /tmp/drone_tmp/ko168_h5web
+    rm: true
+
+- name: ssh
+  image: appleboy/drone-ssh:1.6.6-linux-amd64
+  settings:
+    host:
+      - 192.168.70.63
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 30m
+    script:
+        # lili
+        - cp -Rf /tmp/drone_tmp/ko168_h5web/. /home/ko168_h5web/
+        - cd /home/ko168_h5web/
+        - yarn install --frozen-lockfile
+        - yarn build:ko
+        - cp /usr/local/bin/check.php /home/ko168_h5web/dist/check.php
+
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channe: drone-prod
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}*: <https://github.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}: Build `#{{ build.number }}` * (type: `{{ build.event }}`)
+      {{/if}}
+      
+      *Site:* ko168
+      
+      *RepoName:* `{{repo.name}}` - <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
+      
+      *Author:* {{ build.author.name }}
+      
+      *Message:* {{build.Message}}
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    status: [ success, failure ]
+
+trigger:
+  branch:
+  - master
+  event: [ promote ]
+  target: [ prod-ko168-h5web03 ]
+
+node:
+  wolves: agentHK
+
+---
+kind: pipeline
+name: Phivip_H5Prod
+
+workspace:
+  base: /home
+  path: src/github.com/woolves/lilian_vietvip_web
+
+clone:
+  #depth: 1
+  tags: true
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host:
+      - 192.168.50.61
+      - 192.168.60.62
+      - 192.168.70.63
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 3m
+    source: ./*
+    target: 
+      - /tmp/drone_tmp/phivip_h5web
+    rm: true
+
+- name: ssh
+  image: appleboy/drone-ssh:1.6.6-linux-amd64
+  settings:
+    host:
+      - 192.168.50.61
+      - 192.168.60.62
+      - 192.168.70.63
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 30m
+    script:
+        # lili
+        - cp -Rf /tmp/drone_tmp/phivip_h5web/. /home/phivip_h5web/
+        - cd /home/phivip_h5web/
+        - yarn install --frozen-lockfile
+        - yarn build:phivip
+        - cp /usr/local/bin/check.php /home/phivip_h5web/dist/check.php
+
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channe: drone-prod
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}*: <https://github.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}: Build `#{{ build.number }}` * (type: `{{ build.event }}`)
+      {{/if}}
+      
+      *Site:* Phivip
+      
+      *RepoName:* `{{repo.name}}` - <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
+      
+      *Author:* {{ build.author.name }}
+      
+      *Message:* {{build.Message}}
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    status: [ success, failure ]
+
+trigger:
+  branch:
+  - master
+  event: [ promote ]
+  target: [ prod-phivip-h5 ]
+
+node:
+  wolves: agentHK
+
+---
+kind: pipeline
+name: Prod_phivip_h5web01
+
+workspace:
+  base: /home
+  path: src/github.com/woolves/lilian_vietvip_web
+
+clone:
+  #depth: 1
+  tags: true
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host:
+      - 192.168.50.61
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 3m
+    source: ./*
+    target: 
+      - /tmp/drone_tmp/phivip_h5web
+    rm: true
+
+- name: ssh
+  image: appleboy/drone-ssh:1.6.6-linux-amd64
+  settings:
+    host:
+      - 192.168.50.61
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 30m
+    script:
+        # lili
+        - cp -Rf /tmp/drone_tmp/phivip_h5web/. /home/phivip_h5web/
+        - cd /home/phivip_h5web/
+        - yarn install --frozen-lockfile
+        - yarn build:phivip
+        - cp /usr/local/bin/check.php /home/phivip_h5web/dist/check.php
+
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channe: drone-prod
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}*: <https://github.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}: Build `#{{ build.number }}` * (type: `{{ build.event }}`)
+      {{/if}}
+      
+      *Site:* Phivip
+      
+      *RepoName:* `{{repo.name}}` - <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
+      
+      *Author:* {{ build.author.name }}
+      
+      *Message:* {{build.Message}}
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    status: [ success, failure ]
+
+trigger:
+  branch:
+  - master
+  event: [ promote ]
+  target: [ prod-phivip-h5web01 ]
+
+node:
+  wolves: agentHK
+  
+---
+kind: pipeline
+name: Prod_phivip_h5web02
+
+workspace:
+  base: /home
+  path: src/github.com/woolves/lilian_vietvip_web
+
+clone:
+  #depth: 1
+  tags: true
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host:
+      - 192.168.60.62
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 3m
+    source: ./*
+    target: 
+      - /tmp/drone_tmp/phivip_h5web
+    rm: true
+
+- name: ssh
+  image: appleboy/drone-ssh:1.6.6-linux-amd64
+  settings:
+    host:
+      - 192.168.60.62
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 30m
+    script:
+        # lili
+        - cp -Rf /tmp/drone_tmp/phivip_h5web/. /home/phivip_h5web/
+        - cd /home/phivip_h5web/
+        - yarn install --frozen-lockfile
+        - yarn build:phivip
+        - cp /usr/local/bin/check.php /home/phivip_h5web/dist/check.php
+
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channe: drone-prod
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}*: <https://github.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}: Build `#{{ build.number }}` * (type: `{{ build.event }}`)
+      {{/if}}
+      
+      *Site:* Phivip
+      
+      *RepoName:* `{{repo.name}}` - <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
+      
+      *Author:* {{ build.author.name }}
+      
+      *Message:* {{build.Message}}
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    status: [ success, failure ]
+
+trigger:
+  branch:
+  - master
+  event: [ promote ]
+  target: [ prod-phivip-h5web02 ]
+
+node:
+  wolves: agentHK
+
+---
+kind: pipeline
+name: Prod_phivip_h5web03
+
+workspace:
+  base: /home
+  path: src/github.com/woolves/lilian_vietvip_web
+
+clone:
+  #depth: 1
+  tags: true
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host:
+      - 192.168.70.63
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 3m
+    source: ./*
+    target: 
+      - /tmp/drone_tmp/phivip_h5web
+    rm: true
+
+- name: ssh
+  image: appleboy/drone-ssh:1.6.6-linux-amd64
+  settings:
+    host:
+      - 192.168.70.63
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 30m
+    script:
+        # lili
+        - cp -Rf /tmp/drone_tmp/phivip_h5web/. /home/phivip_h5web/
+        - cd /home/phivip_h5web/
+        - yarn install --frozen-lockfile
+        - yarn build:phivip
+        - cp /usr/local/bin/check.php /home/phivip_h5web/dist/check.php
+
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channe: drone-prod
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}*: <https://github.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}: Build `#{{ build.number }}` * (type: `{{ build.event }}`)
+      {{/if}}
+      
+      *Site:* Phivip
+      
+      *RepoName:* `{{repo.name}}` - <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
+      
+      *Author:* {{ build.author.name }}
+      
+      *Message:* {{build.Message}}
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    status: [ success, failure ]
+
+trigger:
+  branch:
+  - master
+  event: [ promote ]
+  target: [ prod-phivip-h5web03 ]
+
+node:
+  wolves: agentHK
+
+---
+kind: pipeline
+name: Beta_VIVI_h5
+
+workspace:
+  base: /home
+  path: src/github.com/woolves/lilian_vietvip_web
+
+clone:
+  #depth: 1
+  tags: true
+
+steps:
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host:
+      - 192.168.60.64
+      - 192.168.50.65
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 3m
+    source: ./*
+    target: 
+      - /tmp/drone_tmp/vivi_h5web
+    rm: true
+
+- name: ssh
+  image: appleboy/drone-ssh:1.6.6-linux-amd64
+  settings:
+    host:
+      - 192.168.60.64
+      - 192.168.50.65
+    username: prouser
+    password:
+      from_secret: prod_password
+    port: 55160
+    command_timeout: 30m
+    script:
+        # lili
+        - cp -Rf /tmp/drone_tmp/vivi_h5web/. /home/vivi_h5web/
+        - cd /home/vivi_h5web/
+        - yarn install --frozen-lockfile
+        - yarn build:beta
+
+
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channe: drone-prod
+    template: >
+      {{#if build.pull }}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}*: <https://github.com/{{ repo.owner }}/{{ repo.name }}/pull/{{ build.pull }}|Pull Request #{{ build.pull }}>
+      {{else}}
+        *{{#success build.status}}:white_check_mark:{{ else }}:x:{{/success}} {{ uppercasefirst build.status }}: Build `#{{ build.number }}` * (type: `{{ build.event }}`)
+      {{/if}}
+      
+      *Site:* ViVi
+      
+      *RepoName:* `{{repo.name}}` - <https://github.com/{{ repo.owner }}/{{ repo.name }}/commits/{{ build.branch }}|{{ build.branch }}>
+      
+      *Author:* {{ build.author.name }}
+      
+      *Message:* {{build.Message}}
+      <{{ build.link }}|Visit build page ↗>
+  when:
+    status: [ success, failure ]
+
+trigger:
+  branch:
+  - master
+  event: [ promote ]
+  target: [ beta-vivi-h5 ]
+
+node:
+  wolves: agentHK

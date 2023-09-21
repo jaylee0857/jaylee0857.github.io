@@ -1,0 +1,168 @@
+.game__link {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  // left: 70vw;
+  right: 0;
+  top: 2.4rem;
+  width: 2rem;
+  height: 2.5rem;
+  background-image: url("@/assets/images/home/icon_redEnvelope_pop.png");
+  background-size: cover;
+  z-index: 10;
+  animation: baloon_1 3s infinite;
+  animation-delay: 2.5s;
+  &.outside {
+    top: 6.5rem;
+    display: block;
+    animation: none;
+    background-image: none;
+    .outside__icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2rem;
+      height: 2.5rem;
+      background-image: url("@/assets/images/home/world_cup_btn.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 10;
+      animation: baloon_1 3s infinite;
+      animation-delay: 2.5s;
+    }
+    .outside__icon1 {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-image: url("@/assets/images/home/coin-1.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 1rem;
+      height: 0.7rem;
+      z-index: 11;
+    }
+    .outside__icon2 {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 1rem;
+      height: 0.8rem;
+      background-image: url("@/assets/images/home/coin-2.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 11;
+    }
+    .outside__icon3 {
+      position: absolute;
+      top: 1rem;
+      width: 1rem;
+      height: 1rem;
+      background-image: url("@/assets/images/home/paper-1.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 11;
+    }
+    .outside__icon4 {
+      position: absolute;
+      right: 0;
+      top: 1rem;
+      width: 0.55rem;
+      height: 0.3rem;
+      background-image: url("@/assets/images/home/paper-2.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 11;
+    }
+  }
+  @keyframes antzone {
+    //左右擺動 animation: antzone 1s infinite both;
+    0% {
+      transform: none;
+    }
+    15% {
+      transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+    30% {
+      transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+    45% {
+      transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+    60% {
+      transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+    75% {
+      transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+    100% {
+      transform: none;
+    }
+  }
+
+  @keyframes baloon_1 {
+    //上下晃動 animation: baloon_1 3s infinite;
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  .buoy__icon {
+    position: relative;
+    width: 0.5rem;
+    height: 0.5rem;
+    animation: toLeft 2s forwards cubic-bezier(0.02, 0.01, 0.21, 1);
+    // z-index: 1;
+  }
+  .buoy__icon::after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 0.9rem;
+    height: 0.8rem;
+    background-image: url("@/assets/images/home/icon_redEnvelope_pop_tiger_middle.png");
+    background-size: cover;
+    animation: toBottom 2.5s forwards cubic-bezier(0.3, 0.27, 0.07, 1.64);
+  }
+  @keyframes toLeft {
+    100% {
+      animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+      transform: translateX(-1.5rem);
+    }
+  }
+  @keyframes toBottom {
+    100% {
+      animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+      transform: translateY(1.8rem);
+    }
+  }
+  .buoy__title {
+    position: absolute;
+    bottom: 0.55rem;
+    left: 0.55rem;
+    width: 0.9rem;
+    height: 0.3rem;
+    background-image: url("@/assets/images/home/btn_redEnvelope_pop.png");
+    background-size: cover;
+    z-index: 1;
+  }
+  .buoy__num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0.1rem;
+    right: 0.15rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    font-size: 0.22rem;
+    font-weight: bold;
+    color: #fff;
+    background-image: url("@/assets/images/home/btn_icon_prompt.jpeg");
+    background-size: cover;
+  }
+}

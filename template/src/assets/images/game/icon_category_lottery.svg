@@ -1,0 +1,16 @@
+<svg id="icon_category_lottery" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1926" data-name="Rectangle 1926" width="44" height="44" transform="translate(9 9)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b72e2d"/>
+      <stop offset="1" stop-color="#320100"/>
+    </linearGradient>
+  </defs>
+  <g id="Mask_Group_120" data-name="Mask Group 120" transform="translate(-9 -9)" clip-path="url(#clip-path)">
+    <g id="Group_6544" data-name="Group 6544" transform="translate(8.999 9)">
+      <path id="Union_10" data-name="Union 10" d="M0,22A22,22,0,1,1,22,44,21.975,21.975,0,0,1,0,22Zm10.4,0A11.6,11.6,0,1,0,22,10.4,11.615,11.615,0,0,0,10.4,22Zm2.579,0A9.023,9.023,0,1,1,22,31.023,9.032,9.032,0,0,1,12.977,22Zm5.154-2.576A3.85,3.85,0,0,0,19.119,22a3.867,3.867,0,1,0,5.758,0,3.831,3.831,0,0,0,.988-2.576,3.867,3.867,0,0,0-7.734,0Zm2.34,5.141A1.34,1.34,0,0,1,21.933,23.4a1.34,1.34,0,0,1,1.462,1.168,1.343,1.343,0,0,1-1.462,1.171A1.342,1.342,0,0,1,20.471,24.563Zm0-5.264a1.342,1.342,0,0,1,1.462-1.171A1.342,1.342,0,0,1,23.395,19.3a1.342,1.342,0,0,1-1.462,1.171A1.342,1.342,0,0,1,20.471,19.3Z" transform="translate(0.001)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

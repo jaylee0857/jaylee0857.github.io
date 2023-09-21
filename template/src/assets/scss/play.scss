@@ -1,0 +1,24 @@
+.go-back
+{
+    position: fixed;
+    left: 10vw;
+    top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: .6rem;
+    height: .6rem;
+    background: #75a8e7;
+    border: 5px solid #496ef3;
+    border-radius: 50%;
+    z-index: 10;
+    .icon
+    {
+        position: relative;
+        bottom: .02rem;
+        width: .35rem;
+        height: .35rem;
+        background-image: url('@/assets/images/play/icon_back_home.png');
+        background-size: cover;
+    }
+}

@@ -1,0 +1,21 @@
+export default {
+  "date-picker.text.year": "{year}/",
+  "date-picker.text.month": "{month}/",
+  "date-picker.text.day": "{day}",
+  "chat.title": "Customer service",
+  "chat.no.link": "No customer service available, please try again later.",
+  "chat.connect.failed": "Failed to create chat room, please try again later.",
+  "chat.connect.close": "Chat room connection lost, please try again later.",
+  "chat.answer.empty": "Sorry, no matching questions found for your inquiry.",
+  "chat.not.submit.yet":
+    "Unsent text will be lost. Do you really want to leave current chat?",
+  "chat.not.support.ext": "Unsupported file type",
+  "chat.connect.status.PENDING": "Preparing...",
+  "chat.connect.status.PROGRESSING": "Connecting...",
+  "chat.connect.status.SUCCESS": "Please enter your question.",
+  "chat.connect.status.FAILED": "Connection failed.",
+  "chat.welcome.message": "Please enter your question. :)",
+  "chat.list.title": "Please select a question.",
+  "chat.date.limit.today": "Today",
+  "chat.date.limit.yesterday": "Yesterday",
+};

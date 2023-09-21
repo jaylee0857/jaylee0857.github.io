@@ -1,0 +1,41 @@
+.w-text-field {
+ position: relative;
+ width: 100%;
+ font-size: 0.3rem;
+
+ &__title {
+  font-size: 0.3rem;
+  padding-bottom: 0.1rem;
+  white-space: nowrap;
+ }
+
+ &__field {
+  position: relative;
+  width: 100%;
+ }
+
+ &__input {
+  width: 100%;
+  color: #7e7e80;
+  outline: none;
+  background-color: transparent;
+ }
+
+ &__placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #abb0bb;
+ }
+
+ &--inline {
+  display: flex;
+  gap: 0.3rem;
+
+  .w-text-field__title{
+   padding-bottom: 0;
+  }
+ }
+}

@@ -1,0 +1,25 @@
+export default {
+  password: "修改密碼",
+  feedback: "意見反饋",
+  logout: "退出",
+
+  /** @deprecation */
+  // "clear.cache": "清除緩存",
+  // "clear.cache.running": "正在清理緩存...",
+  // "clear.cache.done": "清理緩存已完成",
+  // device: "設備信息",
+  // upgrade: "檢查更新",
+  // "upgrade.placeholder": "當前版本v{version}",
+  // "upgrade.is.latest": "當前已是最新版本",
+  // "device.model": "設備型號",
+  // "device.interface": "登入端口",
+  // "device.ip": "登入IP",
+  // "device.system": "系統版本",
+  // "device.version": "當前版本",
+  // "device.time": "當前時間",
+  // "device.time.format": "yyyy年MM月dd日 HH:mm:ss",
+  // "device.uuid": "設備標識",
+  // "device.screenshot": "一鍵截圖",
+  // "device.screenshot.success": "保存成功, 請在相冊中查看!",
+  // "device.screenshot.failed": "保存失敗!",
+};

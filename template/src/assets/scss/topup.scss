@@ -1,0 +1,408 @@
+.payment {
+    padding: 0.2rem;
+    font-size: 0.3rem;
+    .tag {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 46%;
+            height: 0.75rem;
+            color: #fff;
+            background: #c4a47f;
+            border-radius: 4px;
+            white-space: nowrap;
+            cursor: pointer;
+            .icon {
+                margin-right: 0.1rem;
+                width: 0.46rem;
+                height: 0.45rem;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .icon.cvs {
+                background-image: url("@/assets/images/trade/icon_payment_store.png");
+            }
+            .icon.card {
+                background-image: url("@/assets/images/trade/icon_payment_card.png");
+            }
+        }
+        .btn.disabled {
+            background: #cccccc;
+        }
+        .btn.vi {
+            width: 2.9rem;
+            // height: .9rem;
+        }
+    }
+    .illustrate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0.3rem auto;
+        margin-top: 0.5rem;
+        width: 99%;
+        height: 0.75rem;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: 0px 0px 8px 0px #cacaca;
+        &-text {
+            font-size: 0.29rem;
+            margin-left: 0.1rem;
+            color: #4f4f4f;
+        }
+    }
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        overflow-x: auto;
+        gap: 0.35rem;
+        margin-bottom: 0.2rem;
+        li {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0.2rem 0.2rem;
+            width: 1.5rem;
+            font-size: 0.22rem;
+            text-align: center;
+            border: 1px solid #d6d4d4;
+            border-radius: 6px;
+            cursor: pointer;
+            overflow: hidden;
+            .icon,
+            .text {
+                position: relative;
+                z-index: 1;
+            }
+            .text {
+                margin-top: 0.2rem;
+                width: 1.5rem;
+                min-height: 0.4rem;
+                padding: 0 0.125rem;
+            }
+            .active {
+                position: absolute;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                right: 0;
+                bottom: 0;
+                padding: 0.02rem;
+                width: 0.4rem;
+                height: 0.4rem;
+                background: linear-gradient(135deg, #fff, #fff 62%, #4f70ee 62%, #4f70ee 100%);
+                .tick {
+                    width: 0.15rem;
+                    height: 0.15rem;
+                    background: url("@/assets/images/trade/icon_selected.png");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+        li.active {
+            border: 1px solid #4f70ee;
+        }
+
+        li:nth-child(1),
+        li:nth-child(6) {
+            margin-left: 0;
+        }
+
+        .icon {
+            width: 0.75rem;
+            height: 0.75rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .icon.remit //轉帳 icon
+        {
+            background-image: url("@/assets/images/trade/icon_remit.png");
+        }
+        .icon.seven //seven icon
+        {
+            background-image: url("@/assets/images/trade/icon_seven.png");
+        }
+        .icon.family //全家icon
+        {
+            background-image: url("@/assets/images/trade/icon_family.png");
+        }
+        .icon.ok //ok
+        {
+            background-image: url("@/assets/images/trade/deposit_way_csv_ok.png");
+        }
+        .icon.hilife //萊爾富icon
+        {
+            background-image: url("@/assets/images/trade/deposit_way_csv_hi_life.png");
+        }
+        .icon.total //萊爾富icon
+        {
+            background-image: url("@/assets/images/trade/deposit_way_csv.png");
+        }
+    }
+}
+
+.amount {
+    padding: 0.3rem 0.2rem;
+    .content {
+        display: flex;
+        align-items: center;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid #d6d4d4;
+        .label {
+            margin-right: 0.2rem;
+        }
+    }
+    input {
+        font-size: 0.3rem;
+        outline: none;
+    }
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    //去除上下icon
+}
+
+.fastEnter {
+    padding: 0.2rem;
+    .label {
+        margin-bottom: 0.2rem;
+        padding-bottom: 0.2rem;
+        border-bottom: 1px solid #d6d4d4;
+    }
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.1rem 0;
+            margin-left: 0.23rem;
+            width: 1.6rem;
+            height: 0.7rem;
+            font-size: 0.3rem;
+            border: 1px solid #d6d4d4;
+            border-radius: 6px;
+        }
+        li:nth-child(1),
+        li:nth-child(5) {
+            margin-left: 0;
+        }
+        li:active {
+            background: #e2e2e2;
+        }
+    }
+    .icon {
+        margin-right: 0.1rem;
+        width: 0.36rem;
+        height: 0.36rem;
+        background-image: url("@/assets/images/trade/icon_money.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.45rem;
+    .submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 6.8rem;
+        padding: 0.2rem 0;
+        color: #fff;
+        font-size: 0.28rem;
+        cursor: pointer;
+
+        // background: linear-gradient(24deg, #949dce 28%, #707feb 71%);
+        // border-radius: 6px;
+        background: linear-gradient(90deg, #ff7070 1%, #d90404 97.72%);
+        border-radius: 4px;
+    }
+    .submit.disabled {
+        background: #cccccc;
+    }
+    .question {
+        padding: 0.5rem;
+        font-size: 0.3rem;
+        color: #c0c1c5;
+        text-align: center;
+        .link {
+            color: #8ea8d2;
+        }
+    }
+}
+
+.record {
+    margin: 0.2rem 0;
+    // padding: 0 0.2rem;
+    font-size: 0.28rem;
+    background: #fff;
+    .date {
+        padding: 0.1rem 0.2rem;
+        font-size: 0.3rem;
+        background: #eeefee;
+    }
+    ul {
+        li {
+            display: flex;
+            align-items: center;
+            // padding: .2rem 0;
+            padding: 0 0.2rem;
+            .icon {
+                margin-right: 0.15rem;
+                width: 0.6rem;
+                height: 0.6rem;
+                background-image: url("@/assets/images/trade/icon_trade.webp");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0.1rem 0;
+                padding-right: 0.15rem;
+                width: calc(100% - 0.6rem);
+                height: 100%;
+                border-bottom: 1px solid #d6d4d4;
+                .state {
+                    color: #7e7e80;
+                    font-size: 0.3rem;
+                    .time {
+                        font-size: 0.2rem;
+                    }
+                }
+                .btn {
+                    padding: 0.12rem 0.2rem;
+                    color: #fff;
+                    border-radius: 6px;
+                    background: linear-gradient(24deg, #949dce 28%, #707feb 71%);
+                }
+            }
+            .actions {
+                display: flex;
+                align-items: center;
+                .btn {
+                    margin-right: 0.2rem;
+                }
+            }
+        }
+    }
+}
+
+/** paging */
+.illustrate-paging {
+    font-size: 0.3rem;
+    padding: 0.2rem;
+    &-block {
+        padding: 0.4rem 0.3rem 0.5rem;
+        margin-bottom: 0.3rem;
+        background: #fff;
+        border-radius: 8px;
+        h1 {
+            margin-bottom: 0.25rem;
+            font-size: 0.35rem;
+        }
+        h2 {
+            margin-bottom: 0.2rem;
+            font-size: 0.32rem;
+        }
+        p {
+            margin-top: 0.4rem;
+        }
+        .caption {
+            color: #656565;
+        }
+        &--cvs {
+            padding: 0.4rem 0.15rem 0.5rem;
+            h1 {
+                padding: 0 0.15rem;
+            }
+            .illustrate-paging-list-question {
+                padding: 0.2rem 0.15rem;
+            }
+        }
+    }
+    &-list {
+        &-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.2rem 0;
+            border-bottom: 1px solid #ececec;
+        }
+        &-answer {
+            padding: 0 0.1rem;
+            // height: 0;
+            // overflow: hidden;
+            &-item {
+                // &-img {
+                //     min-height: 5rem;
+                // }
+                img {
+                    margin: 0.2rem auto;
+                }
+                
+            }
+            // &--show {
+            //     transition: all 1s;
+            //     height: 100%;
+            // }
+        }
+    }
+}
+
+.illustrate-attention {
+    padding: 0.2rem 0.2rem 0.4rem;
+    font-size: 0.3rem;
+    background: #fff;
+    h2 {
+        margin-bottom: 0.1rem;
+    }
+    p {
+        font-size: 0.28rem;
+        color: #656565;
+    }
+    & > div {
+        padding: 0.2rem;
+        border: 1px solid #E0E0E0;
+        border-radius: 4px;
+    }
+}
+
+.illustrate-icon {
+    width: 0.38rem;
+    height: 0.38rem;
+}
+
+.margin-t {
+    margin-top: 0.3rem;
+}
+.margin-t-sm {
+    margin-top: 0.1rem;
+}
+
+.bg-w {
+    background: #fff;
+}
+
+.label {
+    font-size: 0.3rem;
+    .required {
+        color: red;
+    }
+}

@@ -1,0 +1,14 @@
+<svg id="icon_category_esport" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1921" data-name="Rectangle 1921" width="44" height="44" transform="translate(527 64)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b72e2d"/>
+      <stop offset="1" stop-color="#320100"/>
+    </linearGradient>
+  </defs>
+  <g id="Mask_Group_115" data-name="Mask Group 115" transform="translate(-527 -64)" clip-path="url(#clip-path)">
+    <path id="gamepad_4" data-name="gamepad 4" d="M43.853,19.381,40.9,6.848A8.883,8.883,0,0,0,32.258,0H11.742A8.884,8.884,0,0,0,3.1,6.848L.146,19.381a5.425,5.425,0,0,0,5.281,6.666,4.278,4.278,0,0,0,3.65-2.067l2.272-3.786a2.172,2.172,0,0,1,1.854-1.05H30.8a2.173,2.173,0,0,1,1.854,1.05l2.272,3.785a4.279,4.279,0,0,0,3.652,2.067,5.425,5.425,0,0,0,5.28-6.666Zm-27.376-8.52H15.005v1.472a1.289,1.289,0,0,1-2.578,0V10.861H10.955a1.289,1.289,0,0,1,0-2.578h1.472V6.811a1.289,1.289,0,0,1,2.578,0V8.283h1.472a1.289,1.289,0,0,1,0,2.578Zm11.044,0a1.289,1.289,0,1,1,1.289-1.289A1.289,1.289,0,0,1,27.522,10.861Zm2.761,2.761a1.289,1.289,0,1,1,1.289-1.289A1.29,1.29,0,0,1,30.283,13.622Zm0-5.522a1.289,1.289,0,1,1,1.289-1.289A1.29,1.29,0,0,1,30.283,8.1Zm2.761,2.761a1.289,1.289,0,1,1,1.289-1.289A1.29,1.29,0,0,1,33.044,10.861Zm0,0" transform="translate(527 73)" stroke="rgba(0,0,0,0)" stroke-width="1" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+.w-dallor-accum {
+ padding: 0.2rem;
+
+ &__title {
+  margin-bottom: 0.2rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #d6d4d4;
+  font-size: 0.3rem;
+
+  &--required::before {
+   content: "*";
+   color: red;
+   margin-right: 5px;
+  }
+ }
+
+ &__list {
+  @apply grid grid-cols-4 gap-5;
+ }
+
+ &__item {
+  @apply flex justify-between items-center py-2.5 pl-2 pr-4;
+  font-size: 0.3rem;
+  border: 1px solid #d6d4d4;
+  border-radius: 6px;
+
+  &:active {
+   background: #e2e2e2;
+  }
+ }
+
+ &__icon {
+  width: 0.4rem;
+  height: 0.4rem;
+  background-image: url("@/assets/images/trade/icon_money.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+}

@@ -1,0 +1,46 @@
+export default {
+  "cards.placehodler": "最多支持添加1張銀行卡",
+  "cards.button": "添加銀行卡",
+  "cards.update.title": "修改銀行卡",
+  "field.name": "持卡人姓名",
+  "field.name.placeholder":
+    '請輸入持卡人姓名，僅支援中文、英文、越南文、菲律賓文、符號"."',
+  "field.description":
+    "為了您的資金能夠迅速到帳，請確保填寫的姓名與銀行卡的開戶姓名一致",
+  "field.status": "審核狀態",
+  "field.status.0": "審核中",
+  "field.status.1": "通過",
+  "field.status.3": "拒絕",
+  "field.bank": "所屬銀行",
+  "field.bank.placeholder": "請選擇銀行",
+  "field.bank.loading": "準備中",
+  "field.bank.empty": "尚無可添加的銀行",
+  "field.bankid": "銀行卡號",
+  "field.bankid.placeholder": "請輸入銀行卡號",
+  "field.finalcheck": "請認真校對銀行卡號，卡號錯誤資金將無法到帳",
+  "field.cover": "上傳存簿圖片",
+  "field.idcard": "上傳證件圖片",
+  "field.tackidcard": "上傳手持身分證",
+  "field.cover.button": "瀏覽",
+  "field.submit": "確認添加",
+  "add.notice.line.2": "如需幫助，請 ",
+  "add.notice.line.2.params.0": "聯繫客服",
+  "modify.empty": "讀取錯誤",
+  "modify.format": "照片格式錯誤",
+  "modify.empty.desc": "請重新選擇銀行卡",
+  "modify.empty.button": "返回列表",
+  "modify.form.submit": "確認修改",
+  "modify.form.remove": "刪除",
+  // 新增開始
+  "add.changeSuccees": "修改成功",
+  "add.createSuccees": "新增成功",
+  "add.changeFail": "修改失敗",
+  "add.createFail": "新增失敗",
+  "cards.my.button": "我的銀行卡",
+  //新增結束
+
+  // 審核失敗
+  "field.reject.reason.1": "審核失敗: 未通過實名",
+  "field.reject.reason.2": "審核失敗: 圖片缺失",
+  "field.reject.reason.3": "審核失敗: 其他",
+};

@@ -1,0 +1,21 @@
+<svg id="icon_category_fishing" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1927" data-name="Rectangle 1927" width="44" height="44" transform="translate(9 9)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b72e2d"/>
+      <stop offset="1" stop-color="#320100"/>
+    </linearGradient>
+  </defs>
+  <g id="Mask_Group_121" data-name="Mask Group 121" transform="translate(-9 -9)" clip-path="url(#clip-path)">
+    <g id="Group_6545" data-name="Group 6545" transform="translate(9 9)">
+      <path id="Path_3709" data-name="Path 3709" d="M127.525,47.919a1.866,1.866,0,0,0,1.155-1.245,1.914,1.914,0,0,0-.314-1.685c-2.287-3-6.227-4.527-8.909-5.254a26.282,26.282,0,0,1,2.76,10.1Z" transform="translate(-91.938 -30.856)" fill="url(#linear-gradient)"/>
+      <path id="Path_3710" data-name="Path 3710" d="M25.25,88.239c-.914,2.657-1.783,6.519-.78,9.928A1.865,1.865,0,0,0,25.633,99.4a1.811,1.811,0,0,0,1.663-.24L30.723,96.7a22.478,22.478,0,0,1-4.789-6.758Q25.554,89.107,25.25,88.239Z" transform="translate(-18.488 -67.948)" fill="url(#linear-gradient)"/>
+      <path id="Path_3711" data-name="Path 3711" d="M68.5,35.111a.914.914,0,0,0-.852-.4c-.073.008-7.362.723-11.518-3.108a9.714,9.714,0,0,1-2.9-7.485c0-11.125-4.806-16.554-8.839-19.149A18.931,18.931,0,0,0,35.513,2a.93.93,0,0,0-.881.592c-3.139,8.014-3.426,14.949-.855,20.612,2.945,6.484,9.513,11.386,20.079,14.983,3.58,1.22,7.433,3.89,7.433,6.872a.937.937,0,0,0,.71.916.915.915,0,0,0,1.036-.5,5.686,5.686,0,0,0,.046-3.129,10.889,10.889,0,0,1-.18-2.034c3.742-.413,5.581-4.082,5.662-4.247A.958.958,0,0,0,68.5,35.111ZM39.4,12.823a1.883,1.883,0,1,1,1.843-1.882A1.863,1.863,0,0,1,39.4,12.823Z" transform="translate(-24.661 -2)" fill="url(#linear-gradient)"/>
+      <ellipse id="Ellipse_308" data-name="Ellipse 308" cx="1.843" cy="1.882" rx="1.843" ry="1.882" transform="translate(36.859 5.176)" fill="url(#linear-gradient)"/>
+      <ellipse id="Ellipse_309" data-name="Ellipse 309" cx="1.843" cy="1.882" rx="1.843" ry="1.882" transform="translate(14.744 39.058)" fill="url(#linear-gradient)"/>
+      <ellipse id="Ellipse_310" data-name="Ellipse 310" cx="1.843" cy="1.882" rx="1.843" ry="1.882" transform="translate(0 12.47)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

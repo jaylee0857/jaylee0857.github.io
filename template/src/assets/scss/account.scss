@@ -1,0 +1,215 @@
+@import "./$sprites/account.scss";
+
+@mixin sprite-ratio($sprite, $custom-width, $custom-height) {
+ // 設置背景圖像和位置
+ @include sprite-image($sprite);
+
+ // 提取雪碧圖的元信息
+ $sprite-width: nth($sprite, 5);
+ $sprite-height: nth($sprite, 6);
+ $sprite-offset-x: nth($sprite, 3);
+ $sprite-offset-y: nth($sprite, 4);
+ $sprite-image: nth($sprite, 9);
+ $spritesheet-total-width: nth($sprite, 7);
+ $spritesheet-total-height: nth($sprite, 8);
+
+ // 計算縮放因子
+ $scale-factor-width: $custom-width / $sprite-width;
+ $scale-factor-height: $custom-height / $sprite-height;
+
+ // 設置元素的寬度和高度
+ width: $custom-width;
+ height: $custom-height;
+ background-size: ($spritesheet-total-width * $scale-factor-width) ($spritesheet-total-height * $scale-factor-height);
+ background-position: ($sprite-offset-x * $scale-factor-width) ($sprite-offset-y * $scale-factor-height);
+}
+
+.icon-account-management {
+ @include sprite-ratio($icon_account_management, 0.8rem, 0.8rem);
+}
+
+.icon-account-deposit {
+ @include sprite-ratio($icon_deposit, 0.8rem, 0.8rem);
+}
+
+.icon-account-bet-records {
+ @include sprite-ratio($icon_bet_records, 0.8rem, 0.8rem);
+}
+
+.icon-account-download {
+ @include sprite-ratio($icon_download, 0.8rem, 0.8rem);
+}
+
+.icon-account-promotion {
+ @include sprite-ratio($icon_promotion, 0.8rem, 0.8rem);
+}
+
+.icon-account-transaction-records {
+ @include sprite-ratio($icon_transaction_records,
+  0.8rem,
+  0.8rem);
+}
+
+.icon-account-withdraw {
+ @include sprite-ratio($icon_withdrawal, 0.8rem, 0.8rem);
+}
+
+.icon-account-envelope {
+ @include sprite-ratio($icon_red_envelope, 0.8rem, 0.8rem);
+}
+
+.icon-account-amount {
+ @include sprite-ratio($icon_amount, 1rem, 1rem);
+ margin: 0.15rem auto;
+}
+
+.icon-ticket {
+  @include sprite-ratio($icon_ticket, 0.8rem, 0.8rem);
+ }
+ 
+.layout {
+ position: relative;
+ min-height: 100vh;
+ background-color: #f8f8f8;
+ background-image: url("@/assets/images/account/account_bg.png");
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-position: 0 -50px;
+}
+
+.vip-info {
+ position: relative;
+ display: block;
+ width: 100%;
+ height: 4.5rem;
+ padding: 0 0.2rem;
+
+ &__background {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+ }
+
+ &__avatar {
+  position: absolute;
+  top: 1rem;
+  left: 0.65rem;
+  z-index: 0;
+  width: 2rem;
+  height: 2rem;
+ }
+
+ &__title {
+  position: absolute;
+  left: 2.52rem;
+  bottom: 0.9rem;
+  z-index: 20;
+  color: white;
+  font-size: 0.35rem;
+  width: 4.2rem;
+  white-space: nowrap;
+  text-align: center;
+ }
+
+ &__account {
+  position: absolute;
+  bottom: 0.42rem;
+  left: 4.5rem;
+  z-index: 20;
+  width: 2.5rem;
+  overflow: hidden;
+  color: white;
+  font-weight: 600;
+  font-size: 0.3rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+ }
+}
+
+.promote {
+ padding: 0.1rem;
+ box-shadow: 0 0 0.1rem #e1e1e1;
+
+ &__icon {
+  width: 1.26rem;
+  height: 1.26rem;
+ }
+
+ &__pick {
+  &__credit {
+   color: #424553;
+   font-weight: 600;
+   font-size: 0.32rem;
+  }
+
+  &__title {
+   color: #a6a9b2;
+   font-size: 0.16rem;
+   text-align: center;
+  }
+ }
+}
+
+.divide-min {
+ position: relative;
+
+ &::before {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 1px;
+  height: 0.5rem;
+  background-color: #eee;
+  content: "";
+ }
+}
+
+.tab_clip-tw {
+ clip-path: path("M0,0 L250,0 A15,15 0 0 1 262,9 L267,15 A15,15 0 0 0 280,21 L277,50 L0,50 Z"
+  );
+}
+
+.tab_clip-en {
+ clip-path: path("M0,0 L185,0 A15,15 0 0 1 197,9 L202,15 A15,15 0 0 0 215,21 L212,50 L0,50 Z"
+  );
+}
+
+.tab_clip-vn,
+.tab_clip-ph {
+ clip-path: path("M0,0 L210,0 A15,15 0 0 1 222,9 L227,15 A15,15 0 0 0 240,21 L237,50 L0,50 Z"
+  );
+}
+
+.label-tw {
+ width: 1.6rem;
+}
+
+.label-en {
+ width: 2.8rem;
+}
+
+.label-vn {
+ width: 2.4rem;
+}
+
+.label-ph {
+ width: 2.4rem;
+}
+
+.px-r-coustom {
+ padding-right: 0.35rem;
+}
+
+.notify-tip {
+ &::after {
+  right: 0.75rem !important;
+ }
+
+ &.promote {
+  &::after {
+   top: 0.1rem !important;
+   right: 0.2rem !important;
+  }
+ }
+}

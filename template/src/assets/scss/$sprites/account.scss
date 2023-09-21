@@ -1,0 +1,189 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-account-management-name: 'icon_account_management';
+$icon-account-management-x: 100px;
+$icon-account-management-y: 0px;
+$icon-account-management-offset-x: -100px;
+$icon-account-management-offset-y: 0px;
+$icon-account-management-width: 88px;
+$icon-account-management-height: 88px;
+$icon-account-management-total-width: 364px;
+$icon-account-management-total-height: 276px;
+$icon-account-management-image: '@/assets/images/$sprites/account.png';
+$icon-account-management: (100px, 0px, -100px, 0px, 88px, 88px, 364px, 276px, '@/assets/images/$sprites/account.png', 'icon_account_management', );
+$icon-amount-name: 'icon_amount';
+$icon-amount-x: 0px;
+$icon-amount-y: 0px;
+$icon-amount-offset-x: 0px;
+$icon-amount-offset-y: 0px;
+$icon-amount-width: 100px;
+$icon-amount-height: 100px;
+$icon-amount-total-width: 364px;
+$icon-amount-total-height: 276px;
+$icon-amount-image: '@/assets/images/$sprites/account.png';
+$icon-amount: (0px, 0px, 0px, 0px, 100px, 100px, 364px, 276px, '@/assets/images/$sprites/account.png', 'icon_amount', );
+$icon-bet-records-name: 'icon_bet_records';
+$icon-bet-records-x: 0px;
+$icon-bet-records-y: 100px;
+$icon-bet-records-offset-x: 0px;
+$icon-bet-records-offset-y: -100px;
+$icon-bet-records-width: 88px;
+$icon-bet-records-height: 88px;
+$icon-bet-records-total-width: 364px;
+$icon-bet-records-total-height: 276px;
+$icon-bet-records-image: '@/assets/images/$sprites/account.png';
+$icon-bet-records: (0px, 100px, 0px, -100px, 88px, 88px, 364px, 276px, '@/assets/images/$sprites/account.png', 'icon_bet_records', );
+$icon-deposit-name: 'icon_deposit';
+$icon-deposit-x: 88px;
+$icon-deposit-y: 100px;
+$icon-deposit-offset-x: -88px;
+$icon-deposit-offset-y: -100px;
+$icon-deposit-width: 88px;
+$icon-deposit-height: 88px;
+$icon-deposit-total-width: 364px;
+$icon-deposit-total-height: 276px;
+$icon-deposit-image: '@/assets/images/$sprites/account.png';
+$icon-deposit: (88px, 100px, -88px, -100px, 88px, 88px, 364px, 276px, '@/assets/images/$sprites/account.png', 'icon_deposit', );
+$icon-download-name: 'icon_download';
+$icon-download-x: 188px;
+$icon-download-y: 0px;
+$icon-download-offset-x: -188px;
+$icon-download-offset-y: 0px;
+$icon-download-width: 88px;
+$icon-download-height: 88px;
+$icon-download-total-width: 364px;
+$icon-download-total-height: 276px;
+$icon-download-image: '@/assets/images/$sprites/account.png';
+$icon-download: (188px, 0px, -188px, 0px, 88px, 88px, 364px, 276px, '@/assets/images/$sprites/account.png', 'icon_download', );
+$icon-promotion-name: 'icon_promotion';
+$icon-promotion-x: 188px;
+$icon-promotion-y: 88px;
+$icon-promotion-offset-x: -188px;
+$icon-promotion-offset-y: -88px;
+$icon-promotion-width: 88px;
+$icon-promotion-height: 88px;
+$icon-promotion-total-width: 364px;
+$icon-promotion-total-height: 276px;
+$icon-promotion-image: '@/assets/images/$sprites/account.png';
+$icon-promotion: (188px, 88px, -188px, -88px, 88px, 88px, 364px, 276px, '@/assets/images/$sprites/account.png', 'icon_promotion', );
+$icon-red-envelope-name: 'icon_red_envelope';
+$icon-red-envelope-x: 0px;
+$icon-red-envelope-y: 188px;
+$icon-red-envelope-offset-x: 0px;
+$icon-red-envelope-offset-y: -188px;
+$icon-red-envelope-width: 88px;
+$icon-red-envelope-height: 88px;
+$icon-red-envelope-total-width: 364px;
+$icon-red-envelope-total-height: 276px;
+$icon-red-envelope-image: '@/assets/images/$sprites/account.png';
+$icon-red-envelope: (0px, 188px, 0px, -188px, 88px, 88px, 364px, 276px, '@/assets/images/$sprites/account.png', 'icon_red_envelope', );
+$icon-ticket-name: 'icon_ticket';
+$icon-ticket-x: 88px;
+$icon-ticket-y: 188px;
+$icon-ticket-offset-x: -88px;
+$icon-ticket-offset-y: -188px;
+$icon-ticket-width: 88px;
+$icon-ticket-height: 88px;
+$icon-ticket-total-width: 364px;
+$icon-ticket-total-height: 276px;
+$icon-ticket-image: '@/assets/images/$sprites/account.png';
+$icon-ticket: (88px, 188px, -88px, -188px, 88px, 88px, 364px, 276px, '@/assets/images/$sprites/account.png', 'icon_ticket', );
+$icon-transaction-records-name: 'icon_transaction_records';
+$icon-transaction-records-x: 176px;
+$icon-transaction-records-y: 188px;
+$icon-transaction-records-offset-x: -176px;
+$icon-transaction-records-offset-y: -188px;
+$icon-transaction-records-width: 88px;
+$icon-transaction-records-height: 88px;
+$icon-transaction-records-total-width: 364px;
+$icon-transaction-records-total-height: 276px;
+$icon-transaction-records-image: '@/assets/images/$sprites/account.png';
+$icon-transaction-records: (176px, 188px, -176px, -188px, 88px, 88px, 364px, 276px, '@/assets/images/$sprites/account.png', 'icon_transaction_records', );
+$icon-withdrawal-name: 'icon_withdrawal';
+$icon-withdrawal-x: 276px;
+$icon-withdrawal-y: 0px;
+$icon-withdrawal-offset-x: -276px;
+$icon-withdrawal-offset-y: 0px;
+$icon-withdrawal-width: 88px;
+$icon-withdrawal-height: 88px;
+$icon-withdrawal-total-width: 364px;
+$icon-withdrawal-total-height: 276px;
+$icon-withdrawal-image: '@/assets/images/$sprites/account.png';
+$icon-withdrawal: (276px, 0px, -276px, 0px, 88px, 88px, 364px, 276px, '@/assets/images/$sprites/account.png', 'icon_withdrawal', );
+$spritesheet-width: 364px;
+$spritesheet-height: 276px;
+$spritesheet-image: '@/assets/images/$sprites/account.png';
+$spritesheet-sprites: ($icon-account-management, $icon-amount, $icon-bet-records, $icon-deposit, $icon-download, $icon-promotion, $icon-red-envelope, $icon-ticket, $icon-transaction-records, $icon-withdrawal, );
+$spritesheet: (364px, 276px, '@/assets/images/$sprites/account.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

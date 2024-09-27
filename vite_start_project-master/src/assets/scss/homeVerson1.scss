@@ -1,0 +1,197 @@
+:root {
+  --forward:1s
+}
+
+.home-bg {
+  &-person,
+  &-line,
+  &-left-icon,
+  &-left-string,
+  &-middle {
+    position: absolute;
+  }
+  &-person {
+    bottom: 0;
+    left: 55%;
+    transform: translate(-50%, 0%);
+    width: 30%;
+    min-width: 357px;
+    min-height: 548px;
+    z-index: 5;
+    animation: personChange var(--forward) forwards;
+    // background: url("@/assets/images/home/person.png") no-repeat;
+  }
+  // &-person {
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0;
+  //   left: 0;
+  //   // min-width: 357px;
+  //   // min-height: 548px;
+  //   z-index: 2;
+  //   background: url("@/assets/images/home/person.png") no-repeat;
+  //   background-position: 55% bottom;
+  //   background-size: 357px 548px;
+  // }
+  &-middle {
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url("@/assets/images/home/bg-master.png") no-repeat center;
+    background-size: 100%;
+    filter: blur(5px);
+    // scale: 1.5;
+    animation: middleChange var(--forward) forwards;
+    // transition: all 1.5s;
+    // &.forward {
+    //   filter: blur(0);
+    //   background-size: 85%;
+    // }
+  }
+
+  &-line {
+    top: 20%;
+    right: 5%;
+    width: 4px;
+    height: 70%;
+    object-fit: cover;
+    animation: lineChange var(--forward) forwards;
+  }
+
+  &-left {
+    &-icon {
+      left: 5%;
+      top: 20%;
+      animation: leftItemChange var(--forward) forwards;
+    }
+    &-string {
+      left: 5%;
+      top: 60%;
+      animation: leftItemChange var(--forward) forwards;
+    }
+  }
+}
+
+.home-nav {
+  display: flex;
+  position: absolute;
+  bottom: 3.5%;
+  width: 70%;
+  z-index: 5;
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 3%;
+    width: 100%;
+    // font-weight: bold;
+    background: #fff;
+    li {
+      margin: 0 3%;
+      cursor: pointer;
+    }
+  }
+  &-svg {
+    margin-left: -1px;
+  }
+  // &-triangle {
+  //   width: 0px;
+  //   height: 0px;
+  //   border-color: transparent #c3c3c3;
+  //   border-width: 5px 50px 0px 0px;
+  //   border-style: solid;
+  // }
+}
+
+@keyframes middleChange {
+  0% {
+    filter: blur(5px);
+    width: 100%;
+  }
+  100% {
+    filter: blur(0);
+    width: 85%;
+  }
+}
+
+@keyframes middleMobileChange {
+  0% {
+    filter: blur(5px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+
+@keyframes personChange {
+  0% {
+    width: 30%;
+  }
+  100% {
+    width: 35%;
+  }
+}
+
+@keyframes lineChange {
+  0% {
+    height: 10%;
+  }
+  100% {
+    height: 70%;
+  }
+}
+
+@keyframes leftItemChange {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 5%;
+  }
+}
+
+@media (max-width:768px) {
+  .home-nav {
+    width: 75%;
+    &-link {
+      li {
+        margin: 0 2%;
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .home-bg {
+    &-person {
+      min-width: 500px;
+      left: 62%;
+    }
+    &-middle {
+      background-size: 200%;
+      animation: middleMobileChange var(--forward) forwards;
+    }
+    &-line {
+      display: none;
+    }
+    &-left {
+      &-icon {
+        display: none;
+      }
+      &-string {
+        display: none;
+      }
+    }
+  }
+  .mobile-hide {
+    display: none;
+  }
+  .home-nav {
+    width: 100%;
+    &-link {
+      padding-right: 16%;
+    }
+  }
+}

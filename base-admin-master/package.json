@@ -26,7 +26,7 @@
     "store2": "2.12.0",
     "sweetalert2": "10.12.5",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@2.2.17",
-    "vite": "2.8.6",
+    "vite": "2.9.13",
     "vue": "3.2.25",
     "vue-router": "4.0.0-rc.1",
     "vuex": "4.0.0-beta.4"

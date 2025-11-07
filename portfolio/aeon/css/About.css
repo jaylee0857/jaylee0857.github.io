@@ -6,24 +6,20 @@
     padding: 8px 0;
   }
 }
-
 @media (max-width: 1199px) {
   main .banner .container {
     margin: unset !important;
     padding-left: 25px;
   }
 }
-
 main .banner .container .page-title h1 {
   font-size: 50px !important;
 }
-
 @media (max-width: 1199px) {
   main .banner .container .page-title h1 {
     font-size: 30px !important;
   }
 }
-
 main .banner .container .page-title::before {
   height: 2px;
 }
@@ -44,7 +40,6 @@ main .banner .container .page-title::before {
 .content {
   padding: 0px;
 }
-
 .content .block-2-bg {
   width: 100%;
   min-height: 450px;
@@ -54,151 +49,123 @@ main .banner .container .page-title::before {
   background-position: center;
   background-color: rgba(0, 0, 0, 0.9);
   background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .content .container {
   padding: 0 30px;
 }
-
 @media (max-width: 1199px) {
   .content .container {
     padding: unset;
   }
 }
-
 .content .container .row {
   margin: 0;
 }
-
 .content .container .block-1,
 .content .container .block-2 {
   padding: 70px 0;
 }
-
 .content .container .block-1 .col-12,
 .content .container .block-2 .col-12 {
   max-width: 790px;
   padding: 0px;
 }
-
 .content .container .block-1 .col-12 .title,
 .content .container .block-2 .col-12 .title {
   position: relative;
   font-size: 50px;
   font-weight: 600;
-  font-family: 'Sorts Mill Goudy', serif;
+  font-family: "Sorts Mill Goudy", serif;
   margin-bottom: 40px;
 }
-
 .content .container .block-1 .col-12 .article,
 .content .container .block-2 .col-12 .article {
   text-align: justify;
-  text-align-last: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
   font-size: 20px;
-  font-family: 'Noto Sans TC', serif;
+  font-family: "Noto Sans TC", serif;
 }
-
 .content .container .block-1 {
   background-color: white;
   padding: 100px 0;
 }
-
 @media (max-width: 1199px) {
   .content .container .block-1 {
     padding: 50px 0;
   }
 }
-
 .content .container .block-1 .title {
   color: #000;
 }
-
 .content .container .block-1 .title::after {
-  content: ' ';
+  content: " ";
   border-bottom: 2px solid #BE1518;
   padding: 1px 15%;
   position: absolute;
   bottom: 0px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 .content .container .block-1 .article {
   color: #848484;
 }
-
 @media (max-width: 576px) {
   .content .container .block-1 .article {
     padding: 0 15px;
   }
 }
-
 .content .container .block-2 .title {
   color: #fff;
 }
-
 .content .container .block-2 .title::after {
-  content: ' ';
+  content: " ";
   border-bottom: 2px solid #BE1518;
   padding: 1px 15%;
   position: absolute;
   bottom: 0px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 .content .container .block-2 .article {
   color: #fff;
 }
-
 @media (max-width: 576px) {
   .content .container .block-2 .article {
     padding: 0 15px;
   }
 }
-
 .content .container .block-3 {
   padding: 70px 0;
   font-weight: 400;
 }
-
 @media (max-width: 1199px) {
   .content .container .block-3 {
     padding: 30px 0;
   }
 }
-
 .content .container .block-3 .history {
   padding-right: 80px;
 }
-
 .content .container .block-3 .history .history-years {
   position: relative;
   z-index: 3;
   font-size: 100px;
-  font-family: 'Arial';
+  font-family: "Arial";
   font-weight: 300;
 }
-
 .content .container .block-3 .history .history-years::before {
   position: absolute;
   right: -20px;
   bottom: 28px;
   z-index: -1;
-  content: '';
+  content: "";
   width: 160px;
   height: 30px;
   background-color: rgba(244, 201, 206, 0.8);
 }
-
 @media (max-width: 1199px) {
   .content .container .block-3 .history .history-years::before {
     right: unset;
@@ -206,43 +173,36 @@ main .banner .container .page-title::before {
     bottom: 35px;
   }
 }
-
 .content .container .block-3 .history .history-years::after {
   position: absolute;
   right: 85px;
   top: 152px;
-  content: '';
+  content: "";
   padding: 100px 0px;
   border-left: 1.5px solid #BE1518;
 }
-
 @media (max-width: 1199px) {
   .content .container .block-3 .history .history-years::after {
     padding: unset;
     border-left: none;
   }
 }
-
 .content .container .block-3 .custom-mb {
   margin-bottom: 215px;
 }
-
 @media (max-width: 1199px) {
   .content .container .block-3 .custom-mb {
     margin-bottom: 15px;
   }
 }
-
 .content .container .block-3 .history-content {
   padding: 88px 18% 0 0;
 }
-
 @media (max-width: 1199px) {
   .content .container .block-3 .history-content {
     padding: unset;
   }
 }
-
 .content .container .block-3 .history-content .title {
   position: relative;
   font-size: 30px;
@@ -250,24 +210,22 @@ main .banner .container .page-title::before {
   margin-bottom: 25px;
   letter-spacing: 1px;
 }
-
 .content .container .block-3 .history-content .title::after {
   position: absolute;
   left: 0;
   bottom: -10px;
-  content: '';
+  content: "";
   padding: 0px 20px;
   border-bottom: 1.5px solid #BE1518;
 }
-
 .content .container .block-3 .history-content .article {
   font-size: 20px;
   color: #848484;
   font-weight: 400;
   text-align: justify;
-  text-align-last: left;
+  -moz-text-align-last: left;
+       text-align-last: left;
 }
-
 @media (max-width: 1199px) {
   .content .container .block-3 .history-content .article {
     padding-bottom: 60px;
@@ -282,13 +240,11 @@ main .banner .container .page-title::before {
   background-size: 100%;
   background-repeat: no-repeat;
 }
-
 @media (max-width: 1199px) {
   .block-4.block-4-bg {
     padding-bottom: 0;
   }
 }
-
 .block-4 .title {
   margin-top: 8%;
   position: relative;
@@ -296,43 +252,36 @@ main .banner .container .page-title::before {
   color: #fff;
   margin-bottom: 100px;
 }
-
 @media (max-width: 1199px) {
   .block-4 .title {
     margin-bottom: 100px;
     font-size: 30px;
   }
 }
-
 .block-4 .title::after {
-  content: '';
+  content: "";
   border-bottom: 1.5px solid #BE1518;
   padding: 0 40px;
   position: absolute;
   bottom: 10px;
   left: 18px;
 }
-
 @media (max-width: 1199px) {
   .block-4 .title::after {
     bottom: 0px;
     left: 18px;
   }
 }
-
 @media (max-width: 1199px) {
   .block-4 .share-platform {
     margin-bottom: 30px;
   }
 }
-
 .block-4 .share-platform .fb-root {
   text-align: right;
 }
-
 @media (max-width: 1199px) {
   .block-4 .share-platform .fb-root {
     text-align: center;
   }
-}
-/*# sourceMappingURL=About.css.map */
+}/*# sourceMappingURL=About.css.map */

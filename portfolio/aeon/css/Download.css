@@ -5,14 +5,12 @@
     padding: 8px 0;
   }
 }
-
 @media (max-width: 1199px) {
   .banner .container {
     margin: unset !important;
     padding-left: 25px;
   }
 }
-
 @media (max-width: 1199px) {
   .banner .container .page-title h1 {
     font-size: 40px;
@@ -22,137 +20,102 @@
 .content {
   padding: 100px 0;
 }
-
 @media (max-width: 1199px) {
   .content {
     padding: 60px 0;
   }
 }
-
 .content .row .profile_cards {
   padding: 0 0 15px 0;
 }
-
 .content .row .profile_cards a {
   text-decoration: none;
 }
-
 .content .row .profile_cards a .preview {
   width: 100%;
   height: 300px;
   background-color: lightblue;
   color: #fff;
 }
-
 .content .row .profile_cards a .preview .download_mask {
   opacity: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   font-size: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: 1s;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   transition: 1s;
 }
-
 .content .row .profile_cards a .preview .download_mask:hover {
   opacity: 1;
 }
-
 .content .row .profile_cards a .preview .download_mask .icon {
   width: 100px;
   height: 60px;
   text-align: center;
 }
-
 .content .row .profile_cards a .preview .download_mask .icon i {
   font-size: 55px;
 }
-
 .content .row .profile_cards a .preview .download_mask span {
   border-bottom: 1px solid #BE1518;
 }
-
 .content .row .profile_cards a .profile_name {
   color: #000;
   font-weight: 900;
   padding: 15px 0;
 }
-
 .content .navigation .pagination .page-item + .active .page-link {
   color: #fff;
   background: #BE1518;
   border-radius: 50%;
 }
-
 .content .navigation .pagination .page-item .page-link {
   border: unset;
   color: #000;
   padding: 6px;
   margin: 0 15px;
 }
-
 .content .navigation .pagination .page-item .page-link:hover {
   color: #fff;
   background-color: #BE1518;
   border-radius: 50%;
 }
-
 .content .navigation .pagination .page-item .page-link:focus {
-  -webkit-box-shadow: unset;
-          box-shadow: unset;
+  box-shadow: unset;
 }
-
 .content .navigation .pagination .arrow:nth-child(2) {
   margin-left: -5px;
 }
-
 .content .navigation .pagination .arrow:nth-child(6) {
   margin-left: -5px;
 }
-
 .content .navigation .pagination .arrow .page-link {
   color: #D1D1D1;
   border: 1px solid #D1D1D1;
   border-radius: 50%;
   padding: 4px 8px;
 }
-
 .content .navigation .pagination .arrow .page-link i {
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
+  transform: translateY(1px);
 }
-
 .content .navigation .pagination .arrow .page-link:hover {
   border: unset;
 }
-
 .content .mobile_navigation .dropdown .btn-drop {
   width: 290px;
   border: 1px solid #BE1518;
   color: #000;
   position: relative;
 }
-
 .content .mobile_navigation .dropdown .btn-drop::after {
   position: absolute;
   right: 15px;
   top: 50%;
 }
-
 .content .mobile_navigation .dropdown-menu {
   width: 290px;
-}
-/*# sourceMappingURL=Download.css.map */
+}/*# sourceMappingURL=Download.css.map */
